@@ -78,6 +78,92 @@ export default function Curriculum() {
                     </div>
                 </section>
 
+                {/* The Mapleford Edge */}
+                <section className="py-20 bg-white overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="flex flex-col items-center gap-12 text-center">
+                            {/* Unified Shadow Box containing Title, Description, and Images */}
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: "-100px" }}
+                                variants={fadeInUp}
+                                transition={{ duration: 0.8 }}
+                                className="w-full max-w-[1400px] mx-auto bg-white rounded-3xl shadow-[0_30px_100px_rgba(0,0,0,0.08)] p-8 md:p-14 border border-gray-50 flex flex-col items-center"
+                            >
+                                {/* Title and Description */}
+                                <div className="max-w-5xl mx-auto mb-16">
+                                    <h2
+                                        className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight"
+                                        style={{
+                                            fontFamily: "'Raleway', Arial, Helvetica, sans-serif",
+                                            color: '#000000'
+                                        }}
+                                    >
+                                        The Mapleford Edge
+                                    </h2>
+                                    <div className="space-y-6 text-lg" style={{ color: '#000000', lineHeight: '1.8', fontFamily: '"Lato", Arial, Helvetica, sans-serif' }}>
+                                        <p className="text-xl leading-relaxed">
+                                            Rooted in the proud three-decade legacy of Megacity High School, a purposeful, progressive co-educational institution, Mapleford International School carries forward time-tested values while redefining learning in a rapidly changing world.
+                                        </p>
+                                        <p className="text-xl leading-relaxed">
+                                            Anchored in the strength of the CBSE curriculum and enriched through global learning pathways through our academic collaboration with Maple Bear Global Schools, Canada, students gain international perspectives through contemporary teaching approaches and the confidence to navigate global opportunities.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* 3 Images Grid */}
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center w-full">
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }}
+                                        className="flex items-center justify-center h-[180px]"
+                                    >
+                                        <img
+                                            src="/images/Screenshot 2026-02-09 at 2.44.22 PM.png"
+                                            alt="Evolution 1"
+                                            className="max-h-full w-auto object-contain"
+                                        />
+                                    </motion.div>
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }}
+                                        className="flex items-center justify-center h-[180px]"
+                                    >
+                                        <img
+                                            src="/images/Screenshot 2026-02-09 at 2.44.26 PM.png"
+                                            alt="Evolution 2"
+                                            className="max-h-full w-auto object-contain"
+                                        />
+                                    </motion.div>
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }}
+                                        className="flex items-center justify-center h-[180px]"
+                                    >
+                                        <img
+                                            src="/images/Screenshot 2026-02-09 at 2.44.30 PM.png"
+                                            alt="Evolution 3"
+                                            className="max-h-full w-auto object-contain"
+                                        />
+                                    </motion.div>
+                                </div>
+                            </motion.div>
+
+                            {/* Button outside the box */}
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: "-100px" }}
+                                variants={fadeInUp}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                className="w-full"
+                            >
+                                <Button href="/about" variant="tab" showTriangle={true} className="py-5 text-base font-bold">
+                                    <span className="tracking-widest uppercase text-sm">Read More about Mapleford Edge</span>
+                                </Button>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* SECTION 3 — SEAMLESS BLEND */}
                 <section className="py-12 bg-slate-50 px-4 overflow-hidden">
                     <div className="max-w-7xl mx-auto">
@@ -232,8 +318,8 @@ export default function Curriculum() {
                                         <p className="text-xl leading-relaxed text-gray-700 font-medium">
                                             {stage.description}
                                         </p>
-                                        <Button href="/admissions" variant="primary" size="lg" className="px-10 py-5 rounded-full font-black text-xs uppercase tracking-widest shadow-xl shadow-red-100">
-                                            Apply for {stage.title}
+                                        <Button href="/admissions" variant="tab" showTriangle={true} size="lg">
+                                            <span className="tracking-widest uppercase text-sm">Apply for {stage.title}</span>
                                         </Button>
                                     </div>
                                     <div className="w-full lg:w-7/12 relative group">
@@ -260,10 +346,10 @@ export default function Curriculum() {
                                 Give your child the edge of a Canadian pedagogy and the strength of a CBSE curriculum.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-8 justify-center mt-16">
-                                <Button href="/admissions" variant="primary" size="lg" className="bg-white text-[#d0302b] hover:bg-gray-50 rounded-full px-16 py-6 font-black uppercase tracking-widest text-sm shadow-2xl">
+                                <Button href="/admissions" variant="white" size="lg" className="px-16 py-6 font-black uppercase tracking-widest text-sm shadow-2xl">
                                     Enroll Now
                                 </Button>
-                                <Button href="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white/10 rounded-full px-16 py-6 font-black uppercase tracking-widest text-sm backdrop-blur-sm">
+                                <Button href="/contact" variant="outline-white" size="lg" className="px-16 py-6 font-black uppercase tracking-widest text-sm">
                                     Connect Us
                                 </Button>
                             </div>

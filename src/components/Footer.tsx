@@ -56,7 +56,7 @@ export default function Footer() {
               <span className="text-[13px] uppercase tracking-widest font-bold" style={{ fontFamily: 'var(--font-body)', color: '#FFFFFF' }}>Quick Connect</span>
               <div className="space-y-1">
                 {[
-                  { label: 'Contact', value: '+91 90005 68416', href: 'tel:+919000568416' },
+                  { label: 'Contact', value: '+91 93466 48486', href: 'tel:+919346648486' },
                   { label: 'Admissions', value: 'admissions@mapleford.edu.in', href: 'mailto:admissions@mapleford.edu.in' },
                   { label: 'Mail', value: 'info@mapleford.edu.in', href: 'mailto:info@mapleford.edu.in' }
                 ].map((item) => (

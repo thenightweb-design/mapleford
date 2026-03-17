@@ -234,8 +234,8 @@ export default function Campus() {
                   Our admissions team will be happy to guide you through the campus and answer your questions.
                 </p>
                 <div className="pt-10">
-                  <Button href="/enquiry" variant="secondary" size="lg" className="px-12 py-5 text-base font-bold">
-                    Enquiry Form
+                  <Button href="/contact" variant="tab-white" showTriangle={true} triangleColor="#FFFFFF" size="lg">
+                    <span className="tracking-widest uppercase text-sm font-bold">Enquiry Form</span>
                   </Button>
                 </div>
               </div>

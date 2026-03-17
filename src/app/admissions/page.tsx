@@ -292,11 +292,11 @@ export default function Admissions() {
 
                     <div className="pt-6">
                       <Button
-                        type="submit" variant="primary" size="lg"
-                        className="w-full h-20 bg-white text-[#d0302b] hover:bg-gray-50 rounded-full font-black uppercase tracking-widest shadow-2xl"
+                        type="submit" variant="tab-white" size="lg"
+                        showTriangle={true} triangleColor="#FFFFFF"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? 'Submitting...' : 'Send Enquiry'}
+                        <span className="tracking-widest uppercase text-sm">{isSubmitting ? 'Submitting...' : 'Send Enquiry'}</span>
                       </Button>
                     </div>
                   </form>
@@ -307,7 +307,9 @@ export default function Admissions() {
                   <h3 className="text-4xl font-black">Enquiry Sent!</h3>
                   <p className="text-xl text-white/80 font-medium">Our admissions team will contact you shortly to guide you through the next steps.</p>
                   <div className="pt-8">
-                    <Button variant="outline" size="lg" className="border-white text-white rounded-full px-12" onClick={() => setFormSubmitted(false)}>Send Another</Button>
+                    <Button variant="outline-white" size="lg" onClick={() => setFormSubmitted(false)}>
+                      <span className="tracking-widest uppercase text-sm">Send Another</span>
+                    </Button>
                   </div>
                 </div>
               )}

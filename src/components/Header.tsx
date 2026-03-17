@@ -326,7 +326,7 @@ export default function Header() {
               </Button>
 
               <a
-                href="https://wa.me/919000568416"
+                href="https://wa.me/919346648486"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 mt-4 py-3 text-[#000000] hover:text-[#000000] transition-colors font-semibold"

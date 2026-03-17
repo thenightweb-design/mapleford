@@ -187,7 +187,7 @@ export default function PrivacyPolicy() {
                       </p>
                       <p className="flex items-center gap-3">
                         <span className="text-[#d0302b] text-xl">📞</span>
-                        <span><strong>Phone:</strong> +91 90005 68416</span>
+                        <span><strong>Phone:</strong> +91 93466 48486</span>
                       </p>
                       <p className="flex items-start gap-3">
                         <span className="text-[#d0302b] text-xl">📍</span>

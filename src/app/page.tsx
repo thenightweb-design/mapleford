@@ -156,86 +156,53 @@ export default function Home() {
                 </motion.div>
             </section>
 
-            {/* The Mapleford Edge */}
-            <section className="py-20 bg-white overflow-hidden">
+            {/* Campus Section */}
+            <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col items-center gap-12 text-center">
-                        {/* Unified Shadow Box containing Title, Description, and Images */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: true }}
                             variants={fadeInUp}
                             transition={{ duration: 0.8 }}
-                            className="w-full max-w-[1400px] mx-auto bg-white rounded-3xl shadow-[0_30px_100px_rgba(0,0,0,0.08)] p-8 md:p-14 border border-gray-50 flex flex-col items-center"
                         >
-                            {/* Title and Description */}
-                            <div className="max-w-5xl mx-auto mb-16">
-                                <h2
-                                    className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight"
-                                    style={{
-                                        fontFamily: "'Raleway', Arial, Helvetica, sans-serif",
-                                        color: '#000000'
-                                    }}
-                                >
-                                    The Mapleford Edge
-                                </h2>
-                                <div className="space-y-6 text-lg" style={{ color: '#000000', lineHeight: '1.8', fontFamily: '"Lato", Arial, Helvetica, sans-serif' }}>
-                                    <p className="text-xl leading-relaxed">
-                                        Rooted in the proud three-decade legacy of Megacity High School, a purposeful, progressive co-educational institution, Mapleford International School carries forward time-tested values while redefining learning in a rapidly changing world.
-                                    </p>
-                                    <p className="text-xl leading-relaxed">
-                                        Anchored in the strength of the CBSE curriculum and enriched through global learning pathways through our academic collaboration with Maple Bear Global Schools, Canada, students gain international perspectives through contemporary teaching approaches and the confidence to navigate global opportunities.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* 3 Images Grid */}
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center w-full">
-                                <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    className="flex items-center justify-center h-[180px]"
-                                >
-                                    <img
-                                        src="/images/Screenshot 2026-02-09 at 2.44.22 PM.png"
-                                        alt="Evolution 1"
-                                        className="max-h-full w-auto object-contain"
-                                    />
-                                </motion.div>
-                                <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    className="flex items-center justify-center h-[180px]"
-                                >
-                                    <img
-                                        src="/images/Screenshot 2026-02-09 at 2.44.26 PM.png"
-                                        alt="Evolution 2"
-                                        className="max-h-full w-auto object-contain"
-                                    />
-                                </motion.div>
-                                <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    className="flex items-center justify-center h-[180px]"
-                                >
-                                    <img
-                                        src="/images/Screenshot 2026-02-09 at 2.44.30 PM.png"
-                                        alt="Evolution 3"
-                                        className="max-h-full w-auto object-contain"
-                                    />
-                                </motion.div>
-                            </div>
+                            <h2
+                                className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight"
+                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#000000' }}
+                            >
+                                <span style={{ color: '#000000' }}>Campus</span>
+                            </h2>
+                            <h3 className="text-3xl font-bold mb-6" style={{ fontFamily: "'Raleway', sans-serif", color: '#000000' }}>
+                                A Space That Opens Horizons
+                            </h3>
+                            <p className="text-lg mb-8" style={{ color: '#000000', lineHeight: '1.8', fontFamily: '"Lato", Arial, Helvetica, sans-serif' }}>
+                                Set across a sprawling 4-acre campus, Mapleford International School offers students the freedom to explore, learn, and thrive in an open, thoughtfully designed environment. Lush green landscapes, modern classrooms, innovation labs, sports arenas, and creative spaces come together to create an environment that supports academic focus, physical vitality, and overall well-being.
+                            </p>
+                            <Button href="/campus" variant="tab" showTriangle={true} size="lg">
+                                <span className="tracking-widest uppercase text-sm">Read more about Our Campus</span>
+                            </Button>
                         </motion.div>
-
-                        {/* Button outside the box */}
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: true }}
                             variants={fadeInUp}
-                            transition={{ duration: 0.8, delay: 0.2 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                            className="relative"
                         >
-                            <Button href="/about" variant="primary" size="lg" className="px-10 py-5 text-base font-bold">
-                                Read More about Mapleford Edge
-                            </Button>
+                            <motion.div
+                                whileHover={{ scale: 1.02 }}
+                                transition={{ duration: 0.3 }}
+                                className="aspect-square rounded-3xl overflow-hidden shadow-2xl"
+                            >
+                                <img
+                                    src="/images/mapleford_campus_branded.png"
+                                    alt="Mapleford International School Campus"
+                                    className="w-full h-full object-cover"
+                                />
+                            </motion.div>
+                            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#D6B25E]/20 rounded-full blur-3xl -z-10"></div>
                         </motion.div>
                     </div>
                 </div>
@@ -285,8 +252,8 @@ export default function Home() {
                             </p>
 
                             <div className="flex justify-start">
-                                <Button href="/curriculum" variant="secondary" size="lg">
-                                    Read More about Our Curriculum
+                                <Button href="/curriculum" variant="tab-white" showTriangle={true} triangleColor="#FFFFFF" size="lg">
+                                    <span className="tracking-widest uppercase text-sm">Read More about Our Curriculum</span>
                                 </Button>
                             </div>
                         </motion.div>
@@ -416,11 +383,10 @@ export default function Home() {
                                     <div className="w-full">
                                         <Button
                                             href={`/curriculum#${stage.id}`}
-                                            variant="primary"
+                                            variant="tab"
+                                            showTriangle={true}
                                             size="md"
-                                            className="w-full !rounded-none font-black transition-all duration-500 py-4 !shadow-none !bg-[#d0302b] !bg-none relative flex justify-end items-center pr-10 group"
                                         >
-                                            <div className="absolute -top-2 right-12 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[12px] border-b-[#d0302b]" />
                                             <span className="tracking-widest uppercase text-sm">Read More</span>
                                         </Button>
                                     </div>
@@ -694,58 +660,6 @@ export default function Home() {
             </section>
 
 
-            {/* Campus Section */}
-            <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={fadeInUp}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <h2
-                                className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight"
-                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#000000' }}
-                            >
-                                <span style={{ color: '#000000' }}>Campus</span>
-                            </h2>
-                            <h3 className="text-3xl font-bold mb-6" style={{ fontFamily: "'Raleway', sans-serif", color: '#000000' }}>
-                                A Space That Opens Horizons
-                            </h3>
-                            <p className="text-lg mb-8" style={{ color: '#000000', lineHeight: '1.8', fontFamily: '"Lato", Arial, Helvetica, sans-serif' }}>
-                                Set across a sprawling 4-acre campus, Mapleford International School offers students the freedom to explore, learn, and thrive in an open, thoughtfully designed environment. Lush green landscapes, modern classrooms, innovation labs, sports arenas, and creative spaces come together to create an environment that supports academic focus, physical vitality, and overall well-being.
-                            </p>
-                            <Button href="/campus" variant="primary" size="lg">
-                                Read more about Our Campus
-                            </Button>
-                        </motion.div>
-                        <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={fadeInUp}
-                            transition={{ duration: 0.8, delay: 0.3 }}
-                            className="relative"
-                        >
-                            <motion.div
-                                whileHover={{ scale: 1.02 }}
-                                transition={{ duration: 0.3 }}
-                                className="aspect-square rounded-3xl overflow-hidden shadow-2xl"
-                            >
-                                <img
-                                    src="/images/mapleford_campus_branded.png"
-                                    alt="Mapleford International School Campus"
-                                    className="w-full h-full object-cover"
-                                />
-                            </motion.div>
-                            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#D6B25E]/20 rounded-full blur-3xl -z-10"></div>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
 
             {/* Sports Arena Section */}
             <section className="py-20 bg-[#d0302b] relative overflow-hidden">
@@ -834,8 +748,8 @@ export default function Home() {
                                 At Mapleford International School, growth isn’t limited to books and classrooms; it thrives on the field, on the court, and in every challenge that builds spirit and strength. Every match played, every goal scored, and every serve perfected shapes not just an athlete, but a resilient, disciplined, and determined individual. With a vibrant sporting culture at its heart, Mapleford nurtures young talent through Football, Badminton, Tennis, and Athletics, encouraging every student to discover the joy of play and the power of perseverance. Our state-of-the-art infrastructure, from modern sports arenas to safe, well-equipped training zones, forms the backbone of an environment that fosters confidence, team spirit, and leadership.
                             </p>
 
-                            <Button href="/campus" variant="secondary" size="lg">
-                                Read more about Sports Facilities
+                            <Button href="/campus" variant="tab-white" showTriangle={true} triangleColor="#FFFFFF" size="lg">
+                                <span className="tracking-widest uppercase text-sm">Read more about Sports Facilities</span>
                             </Button>
                         </motion.div>
                     </div>
@@ -975,11 +889,11 @@ export default function Home() {
                             <div className="flex flex-col sm:flex-row items-center gap-6">
                                 <Button
                                     onClick={() => setIsModalOpen(true)}
-                                    variant="primary"
+                                    variant="tab"
+                                    showTriangle={true}
                                     size="lg"
-                                    className="w-full sm:w-auto px-12"
                                 >
-                                    Enroll Now
+                                    <span className="tracking-widest uppercase text-sm">Enroll Now</span>
                                 </Button>
                             </div>
                         </motion.div>

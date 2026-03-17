@@ -159,14 +159,14 @@ export default function Brochure() {
                                     <p className="text-[#4F4F4F] mb-6 leading-relaxed" style={{ fontFamily: '"Lato", sans-serif' }}>{brochure.desc}</p>
                                     <p className="text-sm text-[#d0302b] font-semibold mb-6">File size: {brochure.size}</p>
                                     <Button
-                                        variant="primary"
+                                        variant="tab"
+                                        showTriangle={true}
                                         size="lg"
-                                        className="w-full text-lg shadow-lg hover:shadow-xl"
                                         onClick={() => {
                                             alert(`${brochure.title} download will be available soon!`);
                                         }}
                                     >
-                                        Download PDF
+                                        <span className="tracking-widest uppercase text-sm">Download PDF</span>
                                     </Button>
                                 </div>
                             </motion.div>
@@ -187,19 +187,18 @@ export default function Brochure() {
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Button
                             href="/contact"
-                            variant="primary"
+                            variant="tab"
+                            showTriangle={true}
                             size="lg"
-                            className="text-lg shadow-xl hover:shadow-2xl"
                         >
-                            Contact Us
+                            <span className="tracking-widest uppercase text-sm">Contact Us</span>
                         </Button>
                         <Button
                             href="/admissions"
                             variant="outline"
                             size="lg"
-                            className="text-lg"
                         >
-                            Start Admission Process
+                            <span className="tracking-widest uppercase text-sm">Start Admission Process</span>
                         </Button>
                     </div>
                 </div>

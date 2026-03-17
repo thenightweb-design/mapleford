@@ -4,13 +4,15 @@ interface ButtonProps {
   href?: string;
   onClick?: () => void;
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'white' | 'outline-white';
+  variant?: 'primary' | 'secondary' | 'outline' | 'white' | 'outline-white' | 'tab' | 'tab-white';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   target?: string;
   rel?: string;
+  showTriangle?: boolean;
+  triangleColor?: string;
 }
 
 export default function Button({
@@ -23,10 +25,13 @@ export default function Button({
   type = 'button',
   disabled = false,
   target,
-  rel
+  rel,
+  showTriangle = false,
+  triangleColor = '#d0302b'
 }: ButtonProps) {
   // Base styles
-  const baseStyles = 'inline-block rounded-xl font-bold transition-all duration-300 text-center';
+  const isTab = variant === 'tab' || variant === 'tab-white';
+  const baseStyles = `${isTab ? 'inline-flex justify-end items-center pr-10 rounded-none' : 'inline-block rounded-xl'} font-bold transition-all duration-300 text-center relative group`;
 
   // Size styles
   const sizeStyles = {
@@ -36,7 +41,7 @@ export default function Button({
   };
 
   // Hover scale and shadow
-  const hoverStyles = (variant !== 'outline' && variant !== 'outline-white') ? 'hover:scale-[1.05] hover:shadow-xl' : '';
+  const hoverStyles = (!isTab && variant !== 'outline' && variant !== 'outline-white') ? 'hover:scale-[1.05] hover:shadow-xl' : '';
 
   const disabledStyles = disabled ? 'opacity-50 cursor-not-allowed hover:scale-100' : '';
 
@@ -88,9 +93,41 @@ export default function Button({
         color: '#FFFFFF',
         background: 'transparent'
       }
+    } else if (variant === 'tab') {
+      return {
+        fontFamily: '"Lato", sans-serif',
+        color: '#FFFFFF',
+        background: '#d0302b',
+        boxShadow: 'none',
+        width: '100%',
+      }
+    } else if (variant === 'tab-white') {
+      return {
+        fontFamily: '"Lato", sans-serif',
+        color: '#d0302b',
+        background: '#FFFFFF',
+        boxShadow: 'none',
+        width: '100%',
+      }
     }
     return {};
   };
+
+  const Triangle = () => (
+    showTriangle ? (
+      <div 
+        className="absolute -top-2 right-12 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[12px]" 
+        style={{ borderBottomColor: triangleColor }}
+      />
+    ) : null
+  );
+
+  const content = (
+    <>
+      <Triangle />
+      {children}
+    </>
+  );
 
   if (href && !disabled) {
     const isExternal = href.startsWith('http') || href.startsWith('mailto:');
@@ -104,7 +141,7 @@ export default function Button({
           target={target || '_blank'}
           rel={rel || 'noopener noreferrer'}
         >
-          {children}
+          {content}
         </a>
       );
     }
@@ -117,7 +154,7 @@ export default function Button({
         target={target}
         rel={rel}
       >
-        {children}
+        {content}
       </Link>
     );
   }
@@ -130,7 +167,7 @@ export default function Button({
       style={getInlineStyles()}
       disabled={disabled}
     >
-      {children}
+      {content}
     </button>
   );
 }

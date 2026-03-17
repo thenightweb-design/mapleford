@@ -7,7 +7,7 @@ export default function WhatsAppChat() {
   const [isOpen, setIsOpen] = useState(false);
   
   // Replace with your actual WhatsApp number (format: country code + number without + or spaces)
-  const whatsappNumber = '919000568416';
+  const whatsappNumber = '919346648486';
   const defaultMessage = 'Hello! I would like to know more about Mapleford International School.';
 
   const handleWhatsAppClick = () => {

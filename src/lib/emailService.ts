@@ -117,12 +117,12 @@ export async function sendConfirmationEmail(inquiryData: InquiryData) {
         <p>In the meantime, feel free to explore our website to learn more about our programs, curriculum, and facilities.</p>
         
         <center>
-          <a href="https://wa.me/919000568416" class="button">Chat with Us on WhatsApp</a>
+          <a href="https://wa.me/919346648486" class="button">Chat with Us on WhatsApp</a>
         </center>
         
         <p style="margin-top: 30px; font-size: 14px; color: #666;">
           If you have any immediate questions, please don't hesitate to contact us at:
-          <br><strong>Phone:</strong> +91 90005 68416
+          <br><strong>Phone:</strong> +91 93466 48486
           <br><strong>Email:</strong> admissions@mapleford.edu.in
         </p>
       </div>

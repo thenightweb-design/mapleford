@@ -62,7 +62,7 @@ export default function Contact() {
                 <div className="space-y-4">
                   {[
                     { title: "Our Location", value: "Hayathnagar, Hyderabad, Telangana", icon: "📍", desc: "Visit our state-of-the-art campus" },
-                    { title: "Call Us", value: "+91 90005 68416", icon: "📞", desc: "Mon-Sat, 8:30am - 4:30pm" },
+                    { title: "Call Us", value: "+91 93466 48486", icon: "📞", desc: "Mon-Sat, 8:30am - 4:30pm" },
                     { title: "Mail Us", value: "info@mapleford.edu.in", icon: "✉️", desc: "For general & administrative queries" }
                   ].map((item, idx) => (
                     <motion.div
