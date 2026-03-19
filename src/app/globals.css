@@ -399,16 +399,6 @@ a:hover {
   background-color: #FFFFFF !important;
 }
 
-.bg-white h1,
-.bg-white h2,
-.bg-white h3,
-.bg-white h4,
-.bg-white p,
-.bg-white-section p,
-.bg-white-section h2 {
-  color: #000000 !important;
-}
-
 /* Red Background sections */
 .bg-\[\#d0302b\],
 [class*="bg-[#d0302b]"],
@@ -446,6 +436,16 @@ footer.bg-\[\#d0302b\] {
 .bg-red-section strong,
 .bg-red-section span:not(.text-gold):not(.steam-letter) {
   color: #FFFFFF !important;
+}
+
+/* Custom class for testimonial cards on red backgrounds to force black text */
+.testimonial-card-text-black h1,
+.testimonial-card-text-black h2,
+.testimonial-card-text-black h3,
+.testimonial-card-text-black h4,
+.testimonial-card-text-black p,
+.testimonial-card-text-black span {
+  color: #000000 !important;
 }
 
 /* Force STEAM center letters to be black */

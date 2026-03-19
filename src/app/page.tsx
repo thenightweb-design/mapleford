@@ -796,28 +796,28 @@ export default function Home() {
                                         initial={{ opacity: 0, y: 30 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: offset * 0.1 }}
-                                        className="bg-white rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.15)] px-8 py-10 text-center flex flex-col items-center h-full"
+                                        className="bg-white rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.15)] px-8 py-10 text-center flex flex-col items-center h-full testimonial-card-text-black"
                                     >
                                         {/* Quote icon */}
                                         <div className="mb-6">
-                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="#d0302b">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="#000000">
                                                 <path d="M14.017 21L14.017 18C14.017 16.8954 14.9125 16 16.0171 16H19.0171C19.5694 16 20.0171 15.5523 20.0171 15V9C20.0171 8.44772 19.5694 8 19.0171 8H15.0171C14.4648 8 14.0171 8.44772 14.0171 9V12C14.0171 12.5523 13.5694 13 13.0171 13H11.0171L11.0171 4H21.0171V15C21.0171 17.7614 18.7785 20 16.0171 20L14.017 21ZM3.01711 21L3.01711 18C3.01711 16.8954 3.91255 16 5.01711 16H8.01711C8.56939 16 9.01711 15.5523 9.01711 15V9C9.01711 8.44772 8.56939 8 8.01711 8H4.01711C3.46482 8 3.01711 8.44772 3.01711 9V12C3.01711 12.5523 2.56939 13 2.01711 13H0.0171094L0.0171094 4H10.0171V15C10.0171 17.7614 7.77853 20 5.01711 20L3.01711 21Z" />
                                             </svg>
                                         </div>
 
                                         {/* Content */}
-                                        <p className="text-base leading-relaxed mb-8 italic flex-grow font-semibold" style={{ color: '#d0302b', fontFamily: '"Lato", sans-serif' }}>
+                                        <p className="text-base leading-relaxed mb-8 italic flex-grow font-bold text-black" style={{ color: '#000000', fontFamily: '"Lato", sans-serif' }}>
                                             &quot;{t.content}&quot;
                                         </p>
 
                                         {/* Avatar + Name */}
                                         <div className="flex flex-col items-center gap-3 mt-auto">
-                                            <div className="w-12 h-12 rounded-full bg-[#d0302b] flex items-center justify-center border-2 border-[#d0302b]/20">
+                                            <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center border-2 border-black/20">
                                                 <span className="text-white font-black text-sm" style={{ fontFamily: "'Raleway', sans-serif" }}>{t.initials}</span>
                                             </div>
                                             <div>
-                                                <h4 className="font-black text-base" style={{ fontFamily: "'Raleway', sans-serif", color: '#000000' }}>{t.name}</h4>
-                                                <p className="text-xs font-bold" style={{ color: '#000000' }}>{t.role}</p>
+                                                <h4 className="font-black text-base text-black" style={{ fontFamily: "'Raleway', sans-serif", color: '#000000' }}>{t.name}</h4>
+                                                <p className="text-xs font-bold text-black" style={{ color: '#000000' }}>{t.role}</p>
                                             </div>
                                         </div>
                                     </motion.div>
