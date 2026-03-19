@@ -27,18 +27,18 @@ export default function Careers() {
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
 
         {/* BANNER — Red */}
-        <section className="bg-[#d0302b] py-16 sm:py-20 px-4 text-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10 pointer-events-none">
-            <div className="absolute -top-20 -right-20 w-96 h-96 bg-white rounded-full blur-3xl" />
-            <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-white rounded-full blur-3xl" />
+        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
+          <div className="absolute inset-0 z-0">
+            <img src="/images/Image28.png" alt="Careers Background" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-[#d0302b]/80" />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <p className="text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Grow With Us</p>
-              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black text-white leading-tight" style={{ fontFamily: "'Raleway', sans-serif" }}>
+              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black text-white leading-tight mb-4" style={{ fontFamily: "'Raleway', sans-serif" }}>
                 Careers
               </h1>
-              <p className="text-white/90 text-lg sm:text-xl mt-4 max-w-2xl mx-auto font-medium leading-relaxed">
+              <p className="text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic">
                 Join our mission to shape young minds and create future leaders.
               </p>
             </motion.div>

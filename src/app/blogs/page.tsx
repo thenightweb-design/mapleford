@@ -64,29 +64,32 @@ export default function Blogs() {
       <div className="pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
           {/* Hero Section */}
-          <section className="relative py-32 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-red-600/10 via-red-700/5 to-red-800/10"></div>
-            <div className="absolute top-20 left-20 w-64 h-64 bg-red-200/20 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-red-300/20 rounded-full blur-3xl"></div>
-
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <motion.h1
+          <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
+            <div className="absolute inset-0 z-0">
+              <img src="/images/Image26.png" alt="Blog Background" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-[#d0302b]/80" />
+            </div>
+            <div className="relative z-10 max-w-4xl mx-auto">
+              <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-6xl lg:text-8xl font-black mb-6"
-                style={{ fontFamily: '"Raleway", sans-serif', color: '#1A1A1A' }}
               >
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Blog</span>
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed"
-              >
-                Insights, stories, and perspectives from <span className="text-[#d0302b] font-bold">Mapleford International School</span> community.
-              </motion.p>
+                <h1
+                  className="text-[48px] sm:text-[64px] lg:text-[80px] font-black text-white leading-tight mb-4"
+                  style={{ fontFamily: '"Raleway", sans-serif' }}
+                >
+                  Our Blog
+                </h1>
+                <motion.p
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic"
+                >
+                  Insights, stories, and perspectives from the Mapleford International School community.
+                </motion.p>
+              </motion.div>
             </div>
           </section>
 

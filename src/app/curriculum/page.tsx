@@ -331,13 +331,21 @@ export default function Curriculum() {
                             <p className="text-xl sm:text-2xl text-white font-bold max-w-2xl mx-auto mt-8">
                                 Give your child the edge of a Canadian pedagogy and the strength of a CBSE curriculum.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-8 justify-center mt-16">
-                                <Button href="/admissions" variant="tab-golden" showTriangle={true} size="lg" className="px-16 py-6 font-black uppercase tracking-widest text-sm shadow-2xl">
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-16">
+                                <a
+                                    href="/admissions"
+                                    className="inline-block px-10 py-4 bg-white text-[#d0302b] font-black text-sm uppercase tracking-widest rounded-full shadow-2xl hover:bg-gray-50 hover:scale-105 transition-all duration-300"
+                                    style={{ fontFamily: '"Lato", sans-serif' }}
+                                >
                                     Enroll Now
-                                </Button>
-                                <Button href="/contact" variant="white" size="lg" className="px-16 py-6 font-black uppercase tracking-widest text-sm">
+                                </a>
+                                <a
+                                    href="/contact"
+                                    className="inline-block px-10 py-4 border-2 border-white text-white font-black text-sm uppercase tracking-widest rounded-full hover:bg-white/10 hover:scale-105 transition-all duration-300"
+                                    style={{ fontFamily: '"Lato", sans-serif' }}
+                                >
                                     Contact Us
-                                </Button>
+                                </a>
                             </div>
                         </motion.div>
                     </div>
