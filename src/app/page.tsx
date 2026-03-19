@@ -865,14 +865,14 @@ export default function Home() {
                 </div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-[#1A1A1A]">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={fadeInUp}
                             transition={{ duration: 0.8 }}
-                            className="text-[#1A1A1A]"
+                            className="text-[#1A1A1A] flex flex-col justify-center"
                         >
                             <h2
                                 className="text-[44px] lg:text-[68px] font-black mb-8 leading-tight uppercase tracking-tighter"
@@ -906,22 +906,14 @@ export default function Home() {
                             viewport={{ once: true }}
                             variants={fadeInUp}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative h-[500px]"
+                            className="relative"
                         >
-                            <div className="absolute top-0 right-10 w-[85%] rounded-[2.5rem] overflow-hidden shadow-2xl z-20 bg-white">
+                            <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-white lg:max-w-[85%] lg:ml-auto h-full">
                                 <motion.img
-                                    whileHover={{ scale: 1.05 }}
-                                    src="/images/Screenshot 2026-02-23 at 3.46.14 PM.png"
-                                    alt="Collaborative Learning"
-                                    className="w-full h-auto object-contain"
-                                />
-                            </div>
-                            <div className="absolute bottom-4 left-0 w-[55%] rounded-[2rem] overflow-hidden shadow-xl z-30 border-8 border-white bg-white">
-                                <motion.img
-                                    whileHover={{ scale: 1.05 }}
-                                    src="/images/Screenshot 2026-02-23 at 3.46.21 PM.png"
-                                    alt="Innovation"
-                                    className="w-full h-auto object-contain"
+                                    whileHover={{ scale: 1.02 }}
+                                    src="/images/WhatsApp Image 2026-03-20 at 00.06.04.jpeg"
+                                    alt="Start Your Journey"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
                             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#D6B25E]/15 rounded-full blur-3xl -z-10"></div>

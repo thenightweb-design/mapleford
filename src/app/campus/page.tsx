@@ -215,29 +215,27 @@ export default function Campus() {
           </div>
         </section>
 
-        {/* SCHEDULE A VISIT — Red & Gold */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
+        {/* SCHEDULE A VISIT */}
+        <section className="py-16 px-4 bg-white border-t border-gray-100">
+          <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-              className="bg-[#d0302b] p-16 sm:p-24 rounded-[4rem] text-center space-y-10 shadow-[0_50px_100px_rgba(208,48,43,0.3)] relative overflow-hidden"
+              className="space-y-6"
             >
-              <div className="absolute inset-0 opacity-10 pointer-events-none">
-                <div className="absolute -top-20 -right-20 w-96 h-96 bg-white rounded-full blur-3xl" />
-                <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-white rounded-full blur-3xl" />
-              </div>
-              <div className="relative z-10">
-                <h2 className="text-[44px] sm:text-[64px] font-black text-white leading-tight uppercase tracking-tighter mb-6" style={{ fontFamily: "'Raleway', sans-serif" }}>
-                  Schedule a <span className="text-white/40">Campus Visit</span>
-                </h2>
-                <p className="text-xl sm:text-2xl text-white/90 font-bold max-w-3xl mx-auto leading-relaxed">
-                  Our admissions team will be happy to guide you through the campus and answer your questions.
-                </p>
-                <div className="pt-10">
-                  <Button href="/contact" variant="tab-golden" showTriangle={true} triangleColor="#D6B25E" size="lg">
-                    <span className="tracking-widest uppercase text-sm font-bold">Schedule a Visit</span>
-                  </Button>
-                </div>
+              <h2 className="text-[32px] sm:text-[40px] font-black text-[#000000] leading-tight uppercase tracking-tighter" style={{ fontFamily: "'Raleway', sans-serif" }}>
+                Schedule a <span className="text-[#d0302b]">Campus Visit</span>
+              </h2>
+              <p className="text-lg text-gray-600 font-medium max-w-xl mx-auto" style={{ fontFamily: "'Lato', sans-serif" }}>
+                Our admissions team will be happy to guide you through the campus and answer your questions.
+              </p>
+              <div className="pt-2">
+                <a
+                  href="/contact"
+                  className="inline-block px-8 py-3 bg-[#d0302b] text-white font-bold text-sm uppercase tracking-widest rounded-lg hover:bg-[#b02020] hover:scale-105 transition-all duration-300 shadow-md"
+                  style={{ fontFamily: '"Lato", sans-serif' }}
+                >
+                  Schedule a Visit
+                </a>
               </div>
             </motion.div>
           </div>

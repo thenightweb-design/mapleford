@@ -91,9 +91,12 @@ export default function Footer() {
         </div>
 
         {/* Global Branding Attribution */}
-        <div className="text-center pt-2 border-t border-white/5">
+        <div className="text-center pt-2 border-t border-white/5 space-y-1">
           <p className="text-[16px] font-normal transition-colors" style={{ fontFamily: 'var(--font-body)', color: '#FFFFFF' }}>
             © {new Date().getFullYear()} by Mapleford International School Group
+          </p>
+          <p className="text-[13px] font-normal opacity-80" style={{ fontFamily: 'var(--font-body)', color: '#FFFFFF' }}>
+            co managed by Swathi Educational Society
           </p>
         </div>
       </div>
