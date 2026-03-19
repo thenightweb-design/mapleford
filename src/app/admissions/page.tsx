@@ -111,21 +111,20 @@ export default function Admissions() {
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
 
         {/* BANNER */}
-        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[420px] flex items-center justify-center">
+        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[420px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0">
-            <img src="/images/Image25.png" alt="Admissions Background" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-[#d0302b]/80" />
+            <img src="/images/Image25.png" alt="Admissions Background" className="w-full h-full object-cover opacity-40" />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <p className="text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Your Journey Starts Here</p>
+              <p className="!text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Your Journey Starts Here</p>
               <h1
-                className="text-[52px] sm:text-[68px] lg:text-[88px] font-black text-white leading-tight mb-4 uppercase tracking-tighter"
+                className="text-[52px] sm:text-[68px] lg:text-[88px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter"
                 style={{ fontFamily: "'Raleway', sans-serif" }}
               >
                 Admissions
               </h1>
-              <p className="text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
+              <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
                 A Holistic Education for a Global Future
               </p>
             </motion.div>

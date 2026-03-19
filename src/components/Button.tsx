@@ -59,18 +59,19 @@ export default function Button({
   const getInlineStyles = () => {
     const baseStyle = {
       fontFamily: '"Lato", sans-serif',
-      color: '#FFFFFF',  // White by default for primary and secondary
     };
 
     if (variant === 'primary') {
       return {
         ...baseStyle,
+        color: '#D6B25E',
         background: 'linear-gradient(135deg, #d0302b 0%, #8d211d 100%)',
         boxShadow: '0 4px 12px rgba(208,48,43,0.2)',
       };
     } else if (variant === 'secondary') {
       return {
         ...baseStyle,
+        color: '#000000',
         background: 'linear-gradient(135deg, #D6B25E 0%, #C5A04D 100%)',
         boxShadow: '0 4px 12px rgba(214,178,94,0.2)',
       };
@@ -96,7 +97,7 @@ export default function Button({
     } else if (variant === 'tab') {
       return {
         fontFamily: '"Lato", sans-serif',
-        color: '#FFFFFF',
+        color: '#D6B25E',
         background: '#d0302b',
         boxShadow: 'none',
         width: '100%',
@@ -112,7 +113,7 @@ export default function Button({
     } else if (variant === 'tab-golden') {
       return {
         fontFamily: '"Lato", sans-serif',
-        color: '#FFFFFF',
+        color: '#000000',
         background: '#D6B25E',
         boxShadow: 'none',
         width: '100%',

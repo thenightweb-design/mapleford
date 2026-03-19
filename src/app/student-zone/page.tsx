@@ -25,18 +25,17 @@ export default function StudentZone() {
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
 
         {/* BANNER — Standard Red */}
-        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
+        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0">
-            <img src="/images/Image24.png" alt="Student Zone Background" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-[#d0302b]/80" />
+            <img src="/images/Image24.png" alt="Student Zone Background" className="w-full h-full object-cover opacity-40" />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <p className="text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Life at Mapleford</p>
-              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black text-white leading-tight uppercase tracking-tighter" style={{ fontFamily: "'Raleway', sans-serif" }}>
+              <p className="!text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Life at Mapleford</p>
+              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight uppercase tracking-tighter" style={{ fontFamily: "'Raleway', sans-serif" }}>
                 Student Zone
               </h1>
-              <p className="text-white/90 text-lg sm:text-xl mt-4 max-w-2xl mx-auto font-medium leading-relaxed italic">
+              <p className="!text-white/90 text-lg sm:text-xl mt-4 max-w-2xl mx-auto font-medium leading-relaxed italic leading-tight">
                 &quot;Where talent meets opportunity and spirit meets action.&quot;
               </p>
             </motion.div>

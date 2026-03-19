@@ -73,6 +73,7 @@ export default function Footer() {
         {/* Navigation & Legal Links */}
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 pt-1 border-t border-white/10 mb-0">
           {[
+            { label: 'Mandatory Disclosure', href: '/mandatory-disclosure' },
             { label: 'Privacy Policy', href: '/privacy-policy' },
             { label: 'Terms & Conditions', href: '/terms-of-service' },
             { label: 'Cancellation & Refund', href: '/refund-policy' },
