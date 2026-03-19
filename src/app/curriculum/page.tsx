@@ -40,10 +40,9 @@ export default function Curriculum() {
             <Header />
             <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
                 {/* SECTION 1 — HERO BANNER */}
-                <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
+                <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
                     <div className="absolute inset-0 z-0">
-                        <img src="/images/Image23.png" alt="Curriculum Background" className="w-full h-full object-cover" />
-                        <div className="absolute inset-0 bg-[#d0302b]/80" />
+                        <img src="/images/Image23.png" alt="Curriculum Background" className="w-full h-full object-cover opacity-40" />
                     </div>
                     <div className="relative z-10 max-w-4xl mx-auto">
                         <motion.div
@@ -52,12 +51,12 @@ export default function Curriculum() {
                             transition={{ duration: 0.8 }}
                         >
                             <h1
-                                className="text-[48px] sm:text-[64px] lg:text-[80px] font-black text-white leading-tight mb-4"
+                                className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter"
                                 style={{ fontFamily: "'Raleway', sans-serif" }}
                             >
                                 Curriculum
                             </h1>
-                            <p className="text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic">
+                            <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
                                 Where CBSE Excellence Meets Canadian Innovation
                             </p>
                         </motion.div>
