@@ -61,7 +61,7 @@ export default function Button({
       fontFamily: '"Lato", sans-serif',
     };
 
-      return {
+    if (variant === 'primary') {
         ...baseStyle,
         color: '#D6B25E',
         background: 'linear-gradient(135deg, #d0302b 0%, #8d211d 100%)',
