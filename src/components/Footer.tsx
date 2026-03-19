@@ -57,8 +57,8 @@ export default function Footer() {
               <div className="space-y-1">
                 {[
                   { label: 'Contact', value: '+91 93466 48486', href: 'tel:+919346648486' },
-                  { label: 'Admissions', value: 'admissions@mapleford.edu.in', href: 'mailto:admissions@mapleford.edu.in' },
-                  { label: 'Mail', value: 'info@mapleford.edu.in', href: 'mailto:info@mapleford.edu.in' }
+                  { label: 'Admissions', value: 'admissions@maplefordinternational.com', href: 'mailto:admissions@maplefordinternational.com' },
+                  { label: 'Mail', value: 'info@maplefordinternational.com', href: 'mailto:info@maplefordinternational.com' }
                 ].map((item) => (
                   <p key={item.label} className="text-[17px] font-normal transition-colors" style={{ fontFamily: 'var(--font-body)', color: '#FFFFFF' }}>
                     <span className="mr-2 text-[14px] font-bold" style={{ color: '#FFFFFF' }}>{item.label}:</span>

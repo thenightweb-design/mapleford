@@ -183,7 +183,7 @@ export default function PrivacyPolicy() {
                     <div className="space-y-3 text-gray-700">
                       <p className="flex items-center gap-3">
                         <span className="text-[#d0302b] text-xl">📧</span>
-                        <span><strong>Email:</strong> info@mapleford.edu.in</span>
+                        <span><strong>Email:</strong> info@maplefordinternational.com</span>
                       </p>
                       <p className="flex items-center gap-3">
                         <span className="text-[#d0302b] text-xl">📞</span>

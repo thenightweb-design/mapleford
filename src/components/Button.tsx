@@ -4,7 +4,7 @@ interface ButtonProps {
   href?: string;
   onClick?: () => void;
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'white' | 'outline-white' | 'tab' | 'tab-white';
+  variant?: 'primary' | 'secondary' | 'outline' | 'white' | 'outline-white' | 'tab' | 'tab-white' | 'tab-golden';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   type?: 'button' | 'submit' | 'reset';
@@ -30,8 +30,8 @@ export default function Button({
   triangleColor = '#d0302b'
 }: ButtonProps) {
   // Base styles
-  const isTab = variant === 'tab' || variant === 'tab-white';
-  const baseStyles = `${isTab ? 'inline-flex justify-end items-center pr-10 rounded-none' : 'inline-block rounded-xl'} font-bold transition-all duration-300 text-center relative group`;
+  const isTab = variant === 'tab' || variant === 'tab-white' || variant === 'tab-golden';
+  const baseStyles = `${isTab ? 'inline-flex justify-start items-center pl-10 rounded-none' : 'inline-block rounded-xl text-center'} font-bold transition-all duration-300 relative group`;
 
   // Size styles
   const sizeStyles = {
@@ -106,6 +106,14 @@ export default function Button({
         fontFamily: '"Lato", sans-serif',
         color: '#d0302b',
         background: '#FFFFFF',
+        boxShadow: 'none',
+        width: '100%',
+      }
+    } else if (variant === 'tab-golden') {
+      return {
+        fontFamily: '"Lato", sans-serif',
+        color: '#FFFFFF',
+        background: '#D6B25E',
         boxShadow: 'none',
         width: '100%',
       }

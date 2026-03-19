@@ -40,10 +40,10 @@ export default function Curriculum() {
             <Header />
             <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
                 {/* SECTION 1 — HERO BANNER */}
-                <section className="bg-[#d0302b] py-20 px-4 text-center relative overflow-hidden">
-                    <div className="absolute inset-0 opacity-10 pointer-events-none">
-                        <div className="absolute -top-20 -left-20 w-96 h-96 bg-white rounded-full blur-3xl" />
-                        <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-white rounded-full blur-3xl" />
+                <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
+                    <div className="absolute inset-0 z-0">
+                        <img src="/images/Image23.png" alt="Curriculum Background" className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 bg-[#d0302b]/80" />
                     </div>
                     <div className="relative z-10 max-w-4xl mx-auto">
                         <motion.div
@@ -145,21 +145,6 @@ export default function Curriculum() {
                                         />
                                     </motion.div>
                                 </div>
-                            </motion.div>
-
-                            {/* Button outside the box */}
-                            <motion.div
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true, margin: "-100px" }}
-                                variants={fadeInUp}
-                                transition={{ duration: 0.8, delay: 0.2 }}
-                                className="w-full"
-                            >
-                                <Button href="/about" variant="tab" showTriangle={true} className="py-5 text-base font-bold">
-                                    <span className="tracking-widest uppercase text-sm">Read More about Mapleford Edge</span>
-                                </Button>
-                            </motion.div>
                         </div>
                     </div>
                 </section>
@@ -340,17 +325,17 @@ export default function Curriculum() {
                     <div className="max-w-5xl mx-auto text-center space-y-12 relative z-10">
                         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                             <h2 className="text-[48px] sm:text-[72px] lg:text-[84px] font-black text-white leading-none tracking-tighter uppercase" style={{ fontFamily: "'Raleway', sans-serif" }}>
-                                Prepare Your <br /> <span className="text-white/30">Global Future</span>
+                                Prepare Your <br /> Global Future
                             </h2>
-                            <p className="text-xl sm:text-2xl text-white/90 font-bold max-w-2xl mx-auto mt-8">
+                            <p className="text-xl sm:text-2xl text-white font-bold max-w-2xl mx-auto mt-8">
                                 Give your child the edge of a Canadian pedagogy and the strength of a CBSE curriculum.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-8 justify-center mt-16">
-                                <Button href="/admissions" variant="white" size="lg" className="px-16 py-6 font-black uppercase tracking-widest text-sm shadow-2xl">
+                                <Button href="/admissions" variant="tab-golden" showTriangle={true} size="lg" className="px-16 py-6 font-black uppercase tracking-widest text-sm shadow-2xl">
                                     Enroll Now
                                 </Button>
-                                <Button href="/contact" variant="outline-white" size="lg" className="px-16 py-6 font-black uppercase tracking-widest text-sm">
-                                    Connect Us
+                                <Button href="/contact" variant="white" size="lg" className="px-16 py-6 font-black uppercase tracking-widest text-sm">
+                                    Contact Us
                                 </Button>
                             </div>
                         </motion.div>

@@ -123,7 +123,7 @@ export async function sendConfirmationEmail(inquiryData: InquiryData) {
         <p style="margin-top: 30px; font-size: 14px; color: #666;">
           If you have any immediate questions, please don't hesitate to contact us at:
           <br><strong>Phone:</strong> +91 93466 48486
-          <br><strong>Email:</strong> admissions@mapleford.edu.in
+          <br><strong>Email:</strong> admissions@maplefordinternational.com
         </p>
       </div>
       

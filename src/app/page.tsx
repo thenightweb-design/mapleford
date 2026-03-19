@@ -9,9 +9,9 @@ import Button from '../components/Button';
 import AdmissionModal from '../components/AdmissionModal';
 
 const testimonials = [
-    { name: "Srinivas Rao", role: "Parent (Grade 8)", content: "Mapleford International School fosters a love for learning while maintaining high academic standards. Our son has excelled in ways we couldn’t have imagined, thanks to the dedicated teachers.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop" },
-    { name: "Dr. Priya Reddy", role: "Parent (Nursery)", content: "The way Mapleford International School integrates real-world applications into the curriculum is outstanding. My child is learning skills that prepare them for the future, and we couldn’t be happier.", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop" },
-    { name: "Arjun Sharma", role: "Parent (Grade 4)", content: "We are incredibly grateful to Mapleford International School for nurturing our child both academically and emotionally. The focus on values, discipline, and creativity has truly shaped a well-rounded individual.", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop" },
+    { name: "Srinivas Rao", role: "Parent (Grade 8)", content: "Mapleford International School fosters a love for learning while maintaining high academic standards. Our son has excelled in ways we couldn’t have imagined, thanks to the dedicated teachers.", initials: "SR" },
+    { name: "Dr. Priya Reddy", role: "Parent (Nursery)", content: "The way Mapleford International School integrates real-world applications into the curriculum is outstanding. My child is learning skills that prepare them for the future, and we couldn’t be happier.", initials: "PR" },
+    { name: "Arjun Sharma", role: "Parent (Grade 4)", content: "We are incredibly grateful to Mapleford International School for nurturing our child both academically and emotionally. The focus on values, discipline, and creativity has truly shaped a well-rounded individual.", initials: "AS" },
 ];
 
 export default function Home() {
@@ -157,15 +157,16 @@ export default function Home() {
             </section>
 
             {/* Campus Section */}
-            <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+            <section className="py-10 bg-gradient-to-br from-slate-50 via-white to-blue-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={fadeInUp}
                             transition={{ duration: 0.8 }}
+                            className="flex flex-col"
                         >
                             <h2
                                 className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight"
@@ -189,17 +190,17 @@ export default function Home() {
                             viewport={{ once: true }}
                             variants={fadeInUp}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="relative"
+                            className="relative flex items-start pt-2"
                         >
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 transition={{ duration: 0.3 }}
-                                className="aspect-square rounded-3xl overflow-hidden shadow-2xl"
+                                className="w-full rounded-3xl overflow-hidden shadow-2xl"
                             >
                                 <img
-                                    src="/images/mapleford_campus_branded.png"
+                                    src="/images/Image19.png"
                                     alt="Mapleford International School Campus"
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-auto object-cover"
                                 />
                             </motion.div>
                             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#D6B25E]/20 rounded-full blur-3xl -z-10"></div>
@@ -210,13 +211,13 @@ export default function Home() {
 
 
             {/* Curriculum Section */}
-            <section className="py-20 bg-[#d0302b] relative overflow-hidden">
+            <section className="py-10 bg-[#d0302b] relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
                     <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
                 </div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
                         {/* Left Side - Content */}
                         <motion.div
                             initial="hidden"
@@ -227,7 +228,7 @@ export default function Home() {
                             className="text-white"
                         >
                             <h2
-                                className="text-[44px] lg:text-[68px] font-black mb-8 leading-tight"
+                                className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight"
                                 style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#FFFFFF' }}
                             >
                                 <span style={{ color: '#FFFFFF' }}>Curriculum</span>
@@ -252,7 +253,7 @@ export default function Home() {
                             </p>
 
                             <div className="flex justify-start">
-                                <Button href="/curriculum" variant="tab-white" showTriangle={true} triangleColor="#FFFFFF" size="lg">
+                                <Button href="/curriculum" variant="tab-golden" showTriangle={true} triangleColor="#D6B25E" size="lg">
                                     <span className="tracking-widest uppercase text-sm">Read More about Our Curriculum</span>
                                 </Button>
                             </div>
@@ -273,7 +274,7 @@ export default function Home() {
                                 className="rounded-[3rem] overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-[600px] border-8 border-white/10"
                             >
                                 <img
-                                    src="/images/Screenshot 2026-02-23 at 3.45.51 PM.png"
+                                    src="/images/curriculum_indian.png"
                                     alt="Canadian Pedagogy + CBSE Curriculum"
                                     className="w-full h-full object-cover"
                                 />
@@ -286,9 +287,9 @@ export default function Home() {
 
 
             {/* The Continuum of Learning */}
-            <section className="py-12 bg-white" id="continuum">
+            <section className="py-10 bg-white" id="continuum">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-16">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -296,10 +297,10 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                         >
                             <h2
-                                className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight text-[#000000]"
+                                className="text-[44px] lg:text-[56px] font-black mb-6 leading-tight text-[#000000]"
                                 style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif" }}
                             >
-                                The Continuum of Learning
+                                The <span className="text-[#000000]">Continuum</span> of Learning
                             </h2>
                             <p className="max-w-4xl mx-auto text-[#000000]" style={{ lineHeight: '1.8', fontFamily: '"Lato", Arial, Helvetica, sans-serif', fontSize: '16px' }}>
                                 Every stage of learning is a critical milestone in a child’s developmental journey. Our curriculum is designed as a continuous and coherent pathway, where knowledge, skills, and values are systematically strengthened year after year.
@@ -314,28 +315,28 @@ export default function Home() {
                                 stage: 'Pre-School',
                                 grades: 'Nursery - UKG',
                                 description: 'Play-based early learning that builds curiosity, confidence, and strong foundations.',
-                                image: '/images/continuum_preschool.png'
+                                image: '/images/continuum_preschool_indian.png'
                             },
                             {
                                 id: 'elementary',
-                                stage: 'Elementary',
+                                stage: 'Elementary School',
                                 grades: 'Grade 1 - 5',
-                                description: 'Concept-driven learning that blends CBSE rigour with Canadian teaching practices.',
-                                image: '/images/continuum_elementary.png'
+                                description: "Engaging and inquiry-led learning that blends CBSE milestones with Canadian instructional excellence.",
+                                image: '/images/continuum_elementary_indian.png'
                             },
                             {
-                                id: 'middle-school',
+                                id: 'middle',
                                 stage: 'Middle School',
                                 grades: 'Grade 6 - 8',
-                                description: 'Deeper subject learning with a focus on thinking, application, and collaboration.',
-                                image: '/images/continuum_middleschool.png'
+                                description: "Analytical thinking and real-world application through interdisciplinary Canadian teaching methods.",
+                                image: '/images/continuum_middle_indian.png'
                             },
                             {
-                                id: 'high-school',
+                                id: 'high',
                                 stage: 'High School',
                                 grades: 'Grade 9 - 10',
                                 description: "A CBSE-aligned programme that prepares students for academic success and future pathways.",
-                                image: '/images/continuum_highschool.png'
+                                image: '/images/continuum_high_indian.png'
                             }
                         ].map((stage, index) => (
                             <motion.div
@@ -367,7 +368,7 @@ export default function Home() {
                                     <div className="space-y-4 p-8 pb-4">
                                         <h3
                                             className="font-bold"
-                                            style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#000000', fontSize: 'clamp(24px, 3vw, 31px)' }}
+                                            style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#000000', fontSize: 'clamp(18px, 2.5vw, 24px)' }}
                                         >
                                             {stage.stage}
                                         </h3>
@@ -398,14 +399,14 @@ export default function Home() {
             </section>
 
             {/* STEAM Section */}
-            <section className="pt-4 pb-12 bg-[#d0302b] relative overflow-hidden">
+            <section className="py-4 bg-[#d0302b] relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-20 left-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
                     <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
                 </div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
                         {/* Left Column: Pure-SVG Circular Ring */}
                         <div className="relative w-full h-[600px] flex items-center justify-center">
                             <svg
@@ -662,14 +663,14 @@ export default function Home() {
 
 
             {/* Sports Arena Section */}
-            <section className="py-20 bg-[#d0302b] relative overflow-hidden">
+            <section className="py-10 bg-white relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-20 left-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+                    <div className="absolute top-20 left-10 w-96 h-96 bg-[#d0302b]/5 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#D6B25E]/10 rounded-full blur-3xl"></div>
                 </div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
@@ -684,7 +685,7 @@ export default function Home() {
                                     className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
                                 >
                                     <img
-                                        src="/images/sports_football.png"
+                                        src="/images/WhatsApp Image 2026-03-19 at 13.19.19.jpeg"
                                         alt="Football"
                                         className="w-full h-full object-cover"
                                     />
@@ -694,7 +695,7 @@ export default function Home() {
                                     className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
                                 >
                                     <img
-                                        src="/images/sports_badminton.png"
+                                        src="/images/WhatsApp Image 2026-03-19 at 13.19.20.jpeg"
                                         alt="Badminton"
                                         className="w-full h-full object-cover"
                                     />
@@ -704,7 +705,7 @@ export default function Home() {
                                     className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
                                 >
                                     <img
-                                        src="/images/sports_tennis.png"
+                                        src="/images/WhatsApp Image 2026-03-19 at 13.19.20 (1).jpeg"
                                         alt="Tennis"
                                         className="w-full h-full object-cover"
                                     />
@@ -714,7 +715,7 @@ export default function Home() {
                                     className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
                                 >
                                     <img
-                                        src="/images/sports_athletics.png"
+                                        src="/images/WhatsApp Image 2026-03-19 at 13.19.20 (2).jpeg"
                                         alt="Athletics"
                                         className="w-full h-full object-cover"
                                     />
@@ -727,28 +728,25 @@ export default function Home() {
                             viewport={{ once: true }}
                             variants={fadeInUp}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="order-1 lg:order-2 text-white"
+                            className="order-1 lg:order-2 text-[#000000]"
                         >
                             <h2
                                 className="text-[44px] lg:text-[68px] font-black mb-8 leading-tight"
-                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#FFFFFF' }}
+                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#000000' }}
                             >
-                                Sports <span className="text-white">Arena</span>
+                                Sports <span style={{ color: '#000000' }}>Arena</span>
                             </h2>
                             <p
-                                className="text-3xl font-bold mb-2 text-white"
+                                className="text-3xl font-bold mb-2 text-[#d0302b]"
                                 style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif" }}
                             >
-                                Chasing Goals! Soaring Spirits High!
+                                Build Spirit. Play Strong.
                             </p>
-                            <p className="text-xl font-medium mb-8 opacity-90" style={{ color: '#FFFFFF' }}>
-                                Where passion charges the field, and every sport, a lesson in excellence
-                            </p>
-                            <p className="mb-8 text-xl leading-relaxed" style={{ fontFamily: '"Lato", Arial, Helvetica, sans-serif', color: 'rgba(255,255,255,1)' }}>
+                            <p className="text-xl leading-relaxed mb-10" style={{ fontFamily: '"Lato", Arial, Helvetica, sans-serif', color: '#000000' }}>
                                 At Mapleford International School, growth isn’t limited to books and classrooms; it thrives on the field, on the court, and in every challenge that builds spirit and strength. Every match played, every goal scored, and every serve perfected shapes not just an athlete, but a resilient, disciplined, and determined individual. With a vibrant sporting culture at its heart, Mapleford nurtures young talent through Football, Badminton, Tennis, and Athletics, encouraging every student to discover the joy of play and the power of perseverance. Our state-of-the-art infrastructure, from modern sports arenas to safe, well-equipped training zones, forms the backbone of an environment that fosters confidence, team spirit, and leadership.
                             </p>
 
-                            <Button href="/campus" variant="tab-white" showTriangle={true} triangleColor="#FFFFFF" size="lg">
+                            <Button href="/campus" variant="tab" showTriangle={true} size="lg">
                                 <span className="tracking-widest uppercase text-sm">Read more about Sports Facilities</span>
                             </Button>
                         </motion.div>
@@ -760,10 +758,14 @@ export default function Home() {
 
 
             {/* Testimonials Section */}
-            <section className="py-20 bg-slate-50 relative overflow-hidden">
+            <section className="py-20 bg-[#d0302b] relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-20 left-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+                </div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     {/* Heading */}
-                    <div className="text-center mb-14">
+                    <div className="text-center mb-14 relative z-30">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -772,11 +774,11 @@ export default function Home() {
                         >
                             <h2
                                 className="text-[44px] lg:text-[56px] font-black mb-4 leading-tight"
-                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#000000' }}
+                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#ffffff', textShadow: '0 2px 8px rgba(0,0,0,0.25)' }}
                             >
                                 Words from Our Community
                             </h2>
-                            <p className="max-w-2xl mx-auto text-lg" style={{ fontFamily: '"Lato", sans-serif', color: '#000000' }}>
+                            <p className="max-w-2xl mx-auto text-lg font-bold" style={{ color: '#ffffff', fontFamily: '"Lato", sans-serif' }}>
                                 Discover why families trust Mapleford International school for their child&apos;s educational journey.
                             </p>
                         </motion.div>
@@ -790,11 +792,11 @@ export default function Home() {
                                 const t = testimonials[index];
                                 return (
                                     <motion.div
-                                        key={index}
+                                        key={`${testimonialIndex}-${offset}`}
                                         initial={{ opacity: 0, y: 30 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: offset * 0.1 }}
-                                        className="bg-white rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-gray-100 px-8 py-10 text-center flex flex-col items-center h-full"
+                                        className="bg-white rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.15)] px-8 py-10 text-center flex flex-col items-center h-full"
                                     >
                                         {/* Quote icon */}
                                         <div className="mb-6">
@@ -804,18 +806,18 @@ export default function Home() {
                                         </div>
 
                                         {/* Content */}
-                                        <p className="text-base leading-relaxed mb-8 italic flex-grow" style={{ fontFamily: '"Lato", sans-serif', color: '#000000' }}>
+                                        <p className="text-base leading-relaxed mb-8 italic flex-grow font-semibold" style={{ color: '#d0302b', fontFamily: '"Lato", sans-serif' }}>
                                             &quot;{t.content}&quot;
                                         </p>
 
                                         {/* Avatar + Name */}
                                         <div className="flex flex-col items-center gap-3 mt-auto">
-                                            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#d0302b]/20">
-                                                <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
+                                            <div className="w-12 h-12 rounded-full bg-[#d0302b] flex items-center justify-center border-2 border-[#d0302b]/20">
+                                                <span className="text-white font-black text-sm" style={{ fontFamily: "'Raleway', sans-serif" }}>{t.initials}</span>
                                             </div>
                                             <div>
                                                 <h4 className="font-black text-base" style={{ fontFamily: "'Raleway', sans-serif", color: '#000000' }}>{t.name}</h4>
-                                                <p className="text-xs font-semibold" style={{ color: '#666666' }}>{t.role}</p>
+                                                <p className="text-xs font-bold" style={{ color: '#000000' }}>{t.role}</p>
                                             </div>
                                         </div>
                                     </motion.div>
@@ -845,7 +847,7 @@ export default function Home() {
                                 <button
                                     key={i}
                                     onClick={() => setTestimonialIndex(i)}
-                                    className={`h-2.5 rounded-full transition-all duration-300 ${i === testimonialIndex ? 'w-8 bg-[#d0302b]' : 'w-2.5 bg-gray-300 hover:bg-gray-400'}`}
+                                    className={`h-2.5 rounded-full transition-all duration-300 ${i === testimonialIndex ? 'w-8 bg-white' : 'w-2.5 bg-white/30 hover:bg-white/50'}`}
                                 />
                             ))}
                         </div>
@@ -856,14 +858,14 @@ export default function Home() {
 
 
             {/* Get in Touch CTA Section */}
-            <section className="py-24 relative overflow-hidden bg-gradient-to-br from-amber-50 via-white to-red-50">
+            <section className="py-12 relative overflow-hidden bg-gradient-to-br from-amber-50 via-white to-red-50">
                 <div className="absolute inset-0 opacity-100">
                     <div className="absolute top-0 left-0 w-96 h-96 bg-[#D6B25E]/10 rounded-full blur-3xl"></div>
                     <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#d0302b]/10 rounded-full blur-3xl"></div>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-[#1A1A1A]">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                         <motion.div
                             initial="hidden"
                             whileInView="visible"

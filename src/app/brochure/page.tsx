@@ -16,10 +16,14 @@ export default function Brochure() {
             <Header />
 
             {/* Hero Section */}
-            <section className="relative py-32 lg:py-48 overflow-hidden bg-gradient-to-br from-amber-50 via-white to-red-50">
-                <div className="absolute inset-0">
-                    <div className="absolute top-0 right-0 w-1/2 h-full bg-[#D6B25E]/10 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[#d0302b]/5 rounded-full blur-3xl"></div>
+            <section className="py-24 lg:py-32 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
+                <div className="absolute inset-0 z-0">
+                    <img 
+                        src="/images/Image25.png" 
+                        alt="Brochure Background" 
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-[#d0302b]/80 backdrop-blur-sm" />
                 </div>
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div
@@ -30,12 +34,12 @@ export default function Brochure() {
                     >
                         <span className="text-5xl mb-4 block">📚</span>
                         <h1
-                            className="text-[44px] lg:text-[68px] font-black mb-6 text-[#1A1A1A]"
+                            className="text-[44px] lg:text-[68px] font-black mb-6 text-white"
                             style={{ fontFamily: '"Raleway", sans-serif' }}
                         >
-                            School <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Brochure</span>
+                            School <span className="text-white">Brochure</span>
                         </h1>
-                        <p className="text-xl lg:text-2xl text-[#4F4F4F] max-w-3xl mx-auto leading-relaxed " style={{ fontFamily: '"Lato", sans-serif' }}>
+                        <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed " style={{ fontFamily: '"Lato", sans-serif' }}>
                             "Your gateway to understanding Mapleford International School — where excellence meets opportunity."
                         </p>
                     </motion.div>

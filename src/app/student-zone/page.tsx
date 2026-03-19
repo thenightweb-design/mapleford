@@ -25,10 +25,10 @@ export default function StudentZone() {
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
 
         {/* BANNER — Standard Red */}
-        <section className="bg-[#d0302b] py-20 px-4 text-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10 pointer-events-none">
-            <div className="absolute -top-20 -right-20 w-96 h-96 bg-white rounded-full blur-3xl" />
-            <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-white rounded-full blur-3xl" />
+        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
+          <div className="absolute inset-0 z-0">
+            <img src="/images/Image24.png" alt="Student Zone Background" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-[#d0302b]/80" />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -112,25 +112,6 @@ export default function StudentZone() {
                 </motion.div>
               ))}
             </div>
-
-            {/* School Chant — Impactful & Standardized */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="relative rounded-[4rem] overflow-hidden shadow-[0_50px_100px_rgba(208,48,43,0.2)]"
-            >
-              <div className="absolute inset-0 bg-[#d0302b]" />
-              <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
-              <div className="absolute -top-32 -right-32 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
-              <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#D6B25E]/20 rounded-full blur-3xl" />
-
-              <div className="relative z-10 py-16 sm:py-24 px-8 text-center">
-                <h3 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight uppercase tracking-tighter" style={{ fontFamily: '"Raleway", sans-serif' }}>
-                  Earth and Fire! Air and Space!<br className="hidden sm:block" />
-                  Four strong houses—one proud place!<br />
-                  <span className="text-[#D6B25E] text-6xl sm:text-8xl lg:text-[10rem] mt-10 block transition-transform hover:scale-105 duration-500 leading-none drop-shadow-2xl">MAPLEFORD!</span>
-                </h3>
-              </div>
-            </motion.div>
           </div>
         </section>
 
@@ -172,12 +153,12 @@ export default function StudentZone() {
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-8 justify-center mt-24">
-              <Button href="/campus" variant="primary" size="lg" className="px-12 py-5 text-base font-bold shadow-xl shadow-red-100">
-                Explore Campus
+            <div className="flex flex-col sm:flex-row gap-8 justify-center mt-16">
+              <Button href="/campus" variant="tab" showTriangle={true} size="lg">
+                <span className="tracking-widest uppercase text-sm font-bold">Explore Campus</span>
               </Button>
-              <Button href="/contact" variant="outline" size="lg" className="px-12 py-5 text-base font-bold border-[#d0302b] text-[#d0302b] hover:bg-[#d0302b]/5">
-                Join the Community
+              <Button href="/contact" variant="tab" showTriangle={true} size="lg">
+                <span className="tracking-widest uppercase text-sm font-bold">Join the Community</span>
               </Button>
             </div>
           </div>

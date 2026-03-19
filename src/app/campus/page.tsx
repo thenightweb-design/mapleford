@@ -68,10 +68,10 @@ export default function Campus() {
       <Header />
 
       <main className="pt-[90px] lg:pt-[120px]">
-        <section className="bg-[#d0302b] py-20 px-4 text-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10 pointer-events-none">
-            <div className="absolute -top-20 -left-20 w-96 h-96 bg-white rounded-full blur-3xl" />
-            <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-white rounded-full blur-3xl" />
+        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
+          <div className="absolute inset-0 z-0">
+            <img src="/images/Image24_000.png" alt="Campus Background" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-[#d0302b]/80" />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div
@@ -234,8 +234,8 @@ export default function Campus() {
                   Our admissions team will be happy to guide you through the campus and answer your questions.
                 </p>
                 <div className="pt-10">
-                  <Button href="/contact" variant="tab-white" showTriangle={true} triangleColor="#FFFFFF" size="lg">
-                    <span className="tracking-widest uppercase text-sm font-bold">Enquiry Form</span>
+                  <Button href="/contact" variant="tab-golden" showTriangle={true} triangleColor="#D6B25E" size="lg">
+                    <span className="tracking-widest uppercase text-sm font-bold">Schedule a Visit</span>
                   </Button>
                 </div>
               </div>

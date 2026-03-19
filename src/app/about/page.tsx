@@ -21,10 +21,10 @@ export default function About() {
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
 
         {/* HERO SECTION — Who We Are */}
-        <section className="bg-[#d0302b] py-20 px-4 text-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10 pointer-events-none">
-            <div className="absolute -top-20 -left-20 w-96 h-96 bg-white rounded-full blur-3xl" />
-            <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-white rounded-full blur-3xl" />
+        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
+          <div className="absolute inset-0 z-0">
+            <img src="/images/Image22.png" alt="About Mapleford" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-[#d0302b]/80" />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div
@@ -46,7 +46,7 @@ export default function About() {
         </section>
 
         {/* SECTION 1 — The Story */}
-        <section className="py-16 sm:py-24 bg-white">
+        <section className="py-10 sm:py-14 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
               <motion.div
@@ -76,7 +76,7 @@ export default function About() {
                 className="relative rounded-[2.5rem] overflow-hidden shadow-2xl min-h-[400px]"
               >
                 <img
-                  src="/images/ChatGPT Image Feb 25, 2026, 12_00_58 AM.png"
+                  src="/images/Image22.png"
                   alt="Mapleford Legacy"
                   className="w-full h-full object-cover"
                 />
@@ -86,7 +86,7 @@ export default function About() {
         </section>
 
         {/* SECTION 2 — Our School of Thought */}
-        <section className="py-16 sm:py-24 bg-[#d0302b] relative overflow-hidden">
+        <section className="py-10 sm:py-14 bg-[#d0302b] relative overflow-hidden">
           <div className="absolute inset-0 opacity-10 pointer-events-none">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl" />
@@ -121,7 +121,7 @@ export default function About() {
                 </div>
               </motion.div>
 
-              {/* Emblem Part */}
+              {/* Image Part */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -129,11 +129,11 @@ export default function About() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="relative w-full flex items-center justify-center lg:mt-0 mt-8"
               >
-                <div className="relative z-10 w-full max-w-[650px]">
+                <div className="relative z-10 w-full max-w-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20">
                   <img
-                    src="/images/hhh.png"
+                    src="/images/WhatsApp Image 2026-03-19 at 13.48.35.jpeg"
                     alt="Our School of Thought"
-                    className="w-full h-auto object-contain drop-shadow-2xl"
+                    className="w-full h-auto object-cover"
                   />
                 </div>
               </motion.div>
@@ -142,26 +142,9 @@ export default function About() {
           </div>
         </section>
 
-        {/* RED SECTION — Philosophy/Impact */}
-        <section className="py-20 bg-[#d0302b] relative overflow-hidden text-white">
-          <div className="absolute inset-0 opacity-10 pointer-events-none">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-white rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-white rounded-full blur-3xl" />
-          </div>
-          <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-              <h2 className="text-4xl sm:text-6xl font-black mb-8 leading-tight uppercase tracking-tighter" style={{ fontFamily: "'Raleway', sans-serif" }}>
-                Education is a <span className="text-white/40">Sacred Trust</span>
-              </h2>
-              <p className="text-xl sm:text-3xl font-bold opacity-90 italic">
-                &quot;We don&apos;t just build students; we nurture the future stewards of integrity, innovation, and humanitarian values.&quot;
-              </p>
-            </motion.div>
-          </div>
-        </section>
 
         {/* SECTION 3 — Our Team */}
-        <section className="py-16 sm:py-24 bg-white">
+        <section className="py-10 sm:py-14 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-[36px] sm:text-[48px] lg:text-[56px] font-black text-[#000000] mb-6" style={{ fontFamily: '"Raleway", sans-serif' }}>
@@ -173,7 +156,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="space-y-32 pt-8">
+            <div className="space-y-20 pt-6">
               {/* Leader 1: Chairman */}
               <motion.div
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
@@ -202,7 +185,7 @@ export default function About() {
               {/* Leader 2: Assistant Director - RED SECTION */}
               <motion.div
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-                className="relative -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-20 bg-[#d0302b] rounded-[4rem] text-white overflow-hidden shadow-2xl"
+                className="relative -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-14 bg-[#d0302b] rounded-[4rem] text-white overflow-hidden shadow-2xl"
               >
                 <div className="absolute inset-0 opacity-10 pointer-events-none">
                   <div className="absolute -top-20 -right-20 w-96 h-96 bg-white rounded-full blur-3xl" />
