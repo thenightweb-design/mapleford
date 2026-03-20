@@ -228,13 +228,9 @@ export default function Campus() {
                 Our admissions team will be happy to guide you through the campus and answer your questions.
               </p>
               <div className="pt-2">
-                <a
-                  href="/contact"
-                  className="inline-block px-8 py-3 bg-[#d0302b] text-white font-bold text-sm uppercase tracking-widest rounded-lg hover:bg-[#b02020] hover:scale-105 transition-all duration-300 shadow-md"
-                  style={{ fontFamily: '"Lato", sans-serif' }}
-                >
-                  Schedule a Visit
-                </a>
+                <Button href="/contact" variant="primary" size="lg">
+                  Schedule a Campus Visit
+                </Button>
               </div>
             </motion.div>
           </div>

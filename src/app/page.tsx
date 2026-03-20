@@ -252,9 +252,9 @@ export default function Home() {
                                 At Mapleford International School, learning is shaped by a powerful collaboration with <span className="font-black">Maple Bear Global Schools, Canada</span>, a world leader in bilingual, inquiry-based education operating across 35+ countries and 450+ schools. Through this framework, our students benefit from the proven strengths of the Canadian education system, consistently ranked among the world’s best, while staying firmly aligned to India’s robust CBSE curriculum.
                             </p>
 
-                            <div className="flex justify-start">
-                                <Button href="/curriculum" variant="tab-golden" showTriangle={true} triangleColor="#D6B25E" size="lg">
-                                    <span className="tracking-widest uppercase text-sm">Read More about Our Curriculum</span>
+                            <div className="w-full">
+                                <Button href="/curriculum" variant="tab-golden" align="right" showTriangle={true} triangleColor="#D6B25E" size="lg">
+                                    <span className="tracking-widest uppercase text-sm !text-black">Read More about Our Curriculum</span>
                                 </Button>
                             </div>
                         </motion.div>
