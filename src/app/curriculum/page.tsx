@@ -331,20 +331,12 @@ export default function Curriculum() {
                                 Give your child the edge of a Canadian pedagogy and the strength of a CBSE curriculum.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-16">
-                                <a
-                                    href="/admissions"
-                                    className="inline-block px-10 py-4 bg-white text-[#d0302b] font-black text-sm uppercase tracking-widest rounded-full shadow-2xl hover:bg-gray-50 hover:scale-105 transition-all duration-300"
-                                    style={{ fontFamily: '"Lato", sans-serif' }}
-                                >
-                                    Enroll Now
-                                </a>
-                                <a
-                                    href="/contact"
-                                    className="inline-block px-10 py-4 border-2 border-white text-white font-black text-sm uppercase tracking-widest rounded-full hover:bg-white/10 hover:scale-105 transition-all duration-300"
-                                    style={{ fontFamily: '"Lato", sans-serif' }}
-                                >
+                                <Button href="/admissions" variant="secondary" size="lg">
+                                    <span className="!text-black">Enroll Now</span>
+                                </Button>
+                                <Button href="/contact" variant="outline" size="lg" className="border-[#D6B25E] text-[#D6B25E] hover:bg-[#D6B25E] hover:text-[#000000]">
                                     Contact Us
-                                </a>
+                                </Button>
                             </div>
                         </motion.div>
                     </div>
