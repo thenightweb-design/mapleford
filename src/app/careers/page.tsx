@@ -34,7 +34,7 @@ export default function Careers() {
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <p className="!text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Grow With Us</p>
-              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter" style={{ fontFamily: "'Raleway', sans-serif" }}>
+              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter shadow-sm">
                 Careers
               </h1>
               <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
@@ -49,7 +49,7 @@ export default function Careers() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16">
               <p className="text-[#d0302b] font-black uppercase tracking-[0.4em] text-xs mb-3">Our Workplace</p>
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[52px] font-black text-[#000000]" style={{ fontFamily: '"Raleway", sans-serif' }}>
+              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-[#000000] uppercase tracking-tighter shadow-sm">
                 Why Join Mapleford?
               </h2>
               <p className="text-lg text-[#000000] max-w-2xl mx-auto mt-4">Be part of a community dedicated to excellence in education.</p>
@@ -84,7 +84,7 @@ export default function Careers() {
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[52px] font-black text-white" style={{ fontFamily: '"Raleway", sans-serif' }}>
+              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-white uppercase tracking-tighter shadow-sm">
                 Current Openings
               </h2>
               <p className="text-white/80 text-lg mt-3">Explore exciting career opportunities with us.</p>
@@ -120,7 +120,7 @@ export default function Careers() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <p className="text-[#d0302b] font-black uppercase tracking-[0.4em] text-xs mb-3">Simple & Transparent</p>
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[52px] font-black text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>
+              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-[#1A1A1A] uppercase tracking-tighter shadow-sm">
                 How to Apply
               </h2>
             </div>
@@ -156,7 +156,7 @@ export default function Careers() {
           </div>
           <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
-              <h2 className="text-[36px] sm:text-[48px] font-black text-white leading-tight" style={{ fontFamily: '"Raleway", sans-serif' }}>
+              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-white leading-tight uppercase tracking-tighter shadow-sm">
                 Ready to Make a Difference?
               </h2>
               <p className="text-lg text-white/90 max-w-xl mx-auto leading-relaxed">

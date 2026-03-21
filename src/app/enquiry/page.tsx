@@ -86,7 +86,7 @@ export default function EnquiryDashboard() {
                     className="w-full max-w-md bg-white p-12 rounded-[3rem] shadow-xl border border-gray-100"
                 >
                     <div className="text-center mb-10">
-                        <h1 className="text-3xl font-black text-[#000000] mb-2" style={{ fontFamily: '"Raleway", sans-serif' }}>Enquiry Portal</h1>
+                        <h1 className="text-3xl font-black text-[#000000] mb-2 uppercase tracking-tighter shadow-sm">Enquiry Portal</h1>
                         <p className="text-gray-500 font-medium uppercase tracking-widest text-[10px]">Secure Admin Access</p>
                     </div>
                     <form onSubmit={handleLogin} className="space-y-6">
@@ -115,7 +115,7 @@ export default function EnquiryDashboard() {
                 <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
                     <div className="space-y-2">
                         <span className="text-[#d0302b] font-black uppercase tracking-[0.4em] text-[10px] block">Management Console</span>
-                        <h1 className="text-5xl font-black text-[#000000]" style={{ fontFamily: '"Raleway", sans-serif' }}>Admission <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Inquiries</span></h1>
+                        <h1 className="text-5xl font-black text-[#000000] uppercase tracking-tighter shadow-sm">Admission Inquiries</h1>
                     </div>
                     <div className="flex gap-4">
                         <Button variant="outline" size="md" onClick={() => { localStorage.removeItem('adminToken'); setIsLoggedIn(false); }}>Logout</Button>

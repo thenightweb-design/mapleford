@@ -39,7 +39,7 @@ export default function Setup() {
                 className="bg-white p-8 rounded-3xl shadow-2xl max-w-md w-full border border-[#D6B25E]/20"
             >
                 <div className="text-center mb-6">
-                    <h1 className="text-3xl font-black mb-2 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>
+                    <h1 className="text-3xl font-black mb-2 text-[#1A1A1A] uppercase tracking-tighter shadow-sm">
                         Admin Setup
                     </h1>
                     <p className="text-[#4F4F4F]">Create your admin account</p>

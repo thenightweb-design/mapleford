@@ -89,8 +89,8 @@ export default function AdmissionModal({ isOpen, onClose }: AdmissionModalProps)
                                 <>
                                     <div className="mb-8 text-center">
                                         <span className="text-[#d0302b] font-black uppercase tracking-[0.3em] text-xs block mb-3">Admission Enquiry</span>
-                                        <h2 className="text-3xl md:text-4xl font-black text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>
-                                            Start Your Child's <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Journey</span>
+                                        <h2 className="text-3xl md:text-4xl font-black text-[#1A1A1A] uppercase tracking-tighter">
+                                            Start Your Child's Journey
                                         </h2>
                                         <p className="mt-2 text-gray-500 font-medium">Join our community of excellence</p>
                                     </div>

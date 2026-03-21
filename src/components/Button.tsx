@@ -29,11 +29,12 @@ export default function Button({
   rel,
   showTriangle = false,
   triangleColor = '#d0302b',
-  align = 'left'
+  align
 }: ButtonProps) {
   // Base styles
   const isTab = variant === 'tab' || variant === 'tab-white' || variant === 'tab-golden';
-  const alignmentClass = align === 'right' ? 'justify-end pr-10 pl-0' : 'justify-start pl-10 pr-0';
+  const effectiveAlign = align || (isTab ? 'right' : 'left');
+  const alignmentClass = effectiveAlign === 'right' ? 'justify-end pr-10 pl-0' : 'justify-start pl-10 pr-0';
   const colorClass = (variant === 'tab-golden' || variant === 'secondary') ? 'text-black' : '';
   const baseStyles = `${isTab ? `flex ${alignmentClass} items-center rounded-none w-full` : 'inline-block rounded-xl text-center'} ${colorClass} font-bold transition-all duration-300 relative group`;
 
@@ -129,7 +130,7 @@ export default function Button({
   const Triangle = () => (
     showTriangle ? (
       <div 
-        className={`absolute -top-2 ${align === 'right' ? 'right-12' : 'left-12'} w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[12px]`} 
+        className={`absolute -top-2 ${effectiveAlign === 'right' ? 'right-12' : 'left-12'} w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[12px]`} 
         style={{ borderBottomColor: triangleColor }}
       />
     ) : null

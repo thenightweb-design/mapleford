@@ -27,7 +27,7 @@ export default function Programs() {
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <p className="text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Educational Excellence</p>
-              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black text-white leading-tight" style={{ fontFamily: "'Raleway', sans-serif" }}>
+              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black text-white leading-tight uppercase tracking-tighter shadow-sm">
                 Programs
               </h1>
               <p className="text-white/90 text-lg sm:text-xl mt-4 max-w-2xl mx-auto font-medium leading-relaxed">
@@ -43,7 +43,7 @@ export default function Programs() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="space-y-6">
                 <p className="text-[#d0302b] font-black uppercase tracking-[0.4em] text-xs">Strategic Partnership</p>
-                <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-black text-[#000000] leading-tight" style={{ fontFamily: '"Raleway", sans-serif' }}>
+                <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-black text-[#000000] leading-tight uppercase tracking-tighter shadow-sm">
                   A Seamless Blend of Two Powerful Systems
                 </h2>
                 <div className="space-y-4 text-lg text-[#000000] leading-relaxed">
@@ -73,7 +73,7 @@ export default function Programs() {
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[52px] font-black text-white" style={{ fontFamily: '"Raleway", sans-serif' }}>
+              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-white uppercase tracking-tighter shadow-sm">
                 What This Means for Learners
               </h2>
             </div>
@@ -106,7 +106,7 @@ export default function Programs() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <p className="text-[#d0302b] font-black uppercase tracking-[0.4em] text-xs mb-3">Academic Stages</p>
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[52px] font-black text-[#000000]" style={{ fontFamily: '"Raleway", sans-serif' }}>
+              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-[#000000] uppercase tracking-tighter shadow-sm">
                 Curriculum Pathway
               </h2>
             </div>
@@ -160,7 +160,7 @@ export default function Programs() {
           </div>
           <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
-              <h2 className="text-[36px] sm:text-[48px] font-black text-white leading-tight" style={{ fontFamily: '"Raleway", sans-serif' }}>
+              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-white leading-tight uppercase tracking-tighter shadow-sm">
                 Invest in Their Future.
               </h2>
               <p className="text-lg text-white/90 max-w-xl mx-auto leading-relaxed">

@@ -193,7 +193,7 @@ export default function AdminPanel() {
           animate={{ opacity: 1, y: 0 }}
           className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full"
         >
-          <h1 className="text-2xl font-bold text-center mb-6">Admin Login</h1>
+          <h1 className="text-2xl font-black text-center mb-6 uppercase tracking-tighter shadow-sm">Admin Login</h1>
           <form onSubmit={handleLogin}>
             <div className="mb-4">
               <label className="block text-gray-700 mb-2">Username</label>
@@ -232,7 +232,7 @@ export default function AdminPanel() {
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <h1 className="text-2xl font-bold text-gray-900">Admin Panel</h1>
+            <h1 className="text-2xl font-black text-gray-900 uppercase tracking-tighter shadow-sm">Admin Panel</h1>
             <button
               onClick={handleLogout}
               className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"

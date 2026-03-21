@@ -88,51 +88,45 @@ export default function Home() {
                         <div className="flex items-center justify-center" style={{ minHeight: '120px' }}>
                             <AnimatePresence mode="wait">
                                 {showFrenchMotto ? (
-                                    <motion.h1
-                                        key="french"
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: -20 }}
-                                        transition={{ duration: 0.8 }}
-                                        className="font-bold"
-                                        style={{
-                                            fontFamily: '"Raleway", Arial, Helvetica, sans-serif',
-                                            textShadow: '0 4px 30px rgba(0,0,0,0.5)',
-                                            letterSpacing: '0.05em',
-                                            lineHeight: '1.2',
-                                            fontSize: 'clamp(24px, 5vw, 56px)',
-                                            background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 50%, #D6B25E 100%)',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                            filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
-                                        }}
-                                    >
-                                        Le Savoir | Intégrité | L&apos;Excellence
-                                    </motion.h1>
-                                ) : (
-                                    <motion.h1
-                                        key="english"
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: -20 }}
-                                        transition={{ duration: 0.8 }}
-                                        className="font-bold flex flex-col items-center"
-                                        style={{
-                                            fontFamily: '"Raleway", Arial, Helvetica, sans-serif',
-                                            textShadow: '0 4px 30px rgba(0,0,0,0.5)',
-                                            letterSpacing: '0.05em',
-                                            lineHeight: '1.2',
-                                            fontSize: 'clamp(24px, 5vw, 56px)',
-                                            background: 'linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #FFA500 100%)',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                            filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
-                                        }}
-                                    >
-                                        <span className="mb-2">Knowledge | Integrity | Excellence</span>
-                                    </motion.h1>
+                                        <motion.h1
+                                            key="french"
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -20 }}
+                                            transition={{ duration: 0.8 }}
+                                            className="font-black uppercase tracking-tighter text-[28px] sm:text-[42px] lg:text-[56px] whitespace-nowrap"
+                                            style={{
+                                                textShadow: '0 4px 30px rgba(0,0,0,0.5)',
+                                                lineHeight: '1.2',
+                                                background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 50%, #D6B25E 100%)',
+                                                WebkitBackgroundClip: 'text',
+                                                WebkitTextFillColor: 'transparent',
+                                                backgroundClip: 'text',
+                                                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+                                            }}
+                                        >
+                                            Le Savoir | Intégrité | L&apos;Excellence
+                                        </motion.h1>
+                                    ) : (
+                                        <motion.h1
+                                            key="english"
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -20 }}
+                                            transition={{ duration: 0.8 }}
+                                            className="font-black uppercase tracking-tighter text-[28px] sm:text-[42px] lg:text-[56px] whitespace-nowrap"
+                                            style={{
+                                                textShadow: '0 4px 30px rgba(0,0,0,0.5)',
+                                                lineHeight: '1.2',
+                                                background: 'linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #FFA500 100%)',
+                                                WebkitBackgroundClip: 'text',
+                                                WebkitTextFillColor: 'transparent',
+                                                backgroundClip: 'text',
+                                                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+                                            }}
+                                        >
+                                            Knowledge | Integrity | Excellence
+                                        </motion.h1>
                                 )}
                             </AnimatePresence>
                         </div>
@@ -168,16 +162,13 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                             className="flex flex-col"
                         >
-                            <h2
-                                className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight"
-                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#000000' }}
-                            >
-                                <span style={{ color: '#000000' }}>Campus</span>
+                            <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight tracking-tighter uppercase shadow-sm">
+                                Campus
                             </h2>
-                            <h3 className="text-3xl font-bold mb-6" style={{ fontFamily: "'Raleway', sans-serif", color: '#000000' }}>
+                            <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-[#d0302b]">
                                 A Space That Opens Horizons
                             </h3>
-                            <p className="text-lg mb-8" style={{ color: '#000000', lineHeight: '1.8', fontFamily: '"Lato", Arial, Helvetica, sans-serif' }}>
+                            <p className="text-lg lg:text-xl mb-8 text-[#333333] leading-relaxed">
                                 Set across a sprawling 4-acre campus, Mapleford International School offers students the freedom to explore, learn, and thrive in an open, thoughtfully designed environment. Lush green landscapes, modern classrooms, innovation labs, sports arenas, and creative spaces come together to create an environment that supports academic focus, physical vitality, and overall well-being.
                             </p>
                             <Button href="/campus" variant="tab" showTriangle={true} size="lg">
@@ -227,16 +218,13 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                             className="text-white"
                         >
-                            <h2
-                                className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight"
-                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#FFFFFF' }}
-                            >
-                                <span style={{ color: '#FFFFFF' }}>Curriculum</span>
+                            <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight tracking-tighter uppercase shadow-sm">
+                                Curriculum
                             </h2>
-                            <h3 className="text-3xl font-bold mb-4" style={{ color: '#FFFFFF' }}>
+                            <h3 className="text-2xl lg:text-3xl font-bold mb-4">
                                 A Seamless Blend of Two Powerful Systems
                             </h3>
-                            <h4 className="text-2xl font-medium mb-8 opacity-90" style={{ color: '#FFFFFF', fontFamily: "'Raleway', sans-serif" }}>
+                            <h4 className="text-xl lg:text-2xl font-medium mb-8 opacity-90">
                                 Canadian Pedagogy + CBSE Curriculum
                             </h4>
 
@@ -296,13 +284,10 @@ export default function Home() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2
-                                className="text-[44px] lg:text-[56px] font-black mb-6 leading-tight text-[#000000]"
-                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif" }}
-                            >
-                                The <span className="text-[#000000]">Continuum</span> of Learning
+                            <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-6 leading-tight tracking-tighter uppercase shadow-sm">
+                                The Continuum of Learning
                             </h2>
-                            <p className="max-w-4xl mx-auto text-[#000000]" style={{ lineHeight: '1.8', fontFamily: '"Lato", Arial, Helvetica, sans-serif', fontSize: '16px' }}>
+                            <p className="max-w-4xl mx-auto text-lg lg:text-xl text-[#333333] leading-relaxed">
                                 Every stage of learning is a critical milestone in a child’s developmental journey. Our curriculum is designed as a continuous and coherent pathway, where knowledge, skills, and values are systematically strengthened year after year.
                             </p>
                         </motion.div>
@@ -633,8 +618,8 @@ export default function Home() {
                             <motion.div
                                 animate={{ y: [0, -10, 0] }}
                             >
-                                <h2 className="text-[32px] lg:text-[44px] font-black mb-6 leading-tight" style={{ color: '#FFFFFF', fontFamily: "'Raleway', sans-serif" }}>
-                                    Where Logic Meets <br /><span className="text-white">Imagination</span>
+                                <h2 className="text-[32px] lg:text-[44px] font-black mb-6 leading-tight uppercase tracking-tighter shadow-sm" style={{ color: '#FFFFFF' }}>
+                                    Where Logic Meets Imagination
                                 </h2>
 
                                 <div className="space-y-6 text-base leading-relaxed" style={{ fontFamily: '"Lato", sans-serif' }}>
@@ -730,19 +715,13 @@ export default function Home() {
                             transition={{ duration: 0.8, delay: 0.3 }}
                             className="order-1 lg:order-2 text-[#000000]"
                         >
-                            <h2
-                                className="text-[44px] lg:text-[68px] font-black mb-8 leading-tight"
-                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#000000' }}
-                            >
-                                Sports <span style={{ color: '#000000' }}>Arena</span>
+                            <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight tracking-tighter uppercase shadow-sm">
+                                Sports Arena
                             </h2>
-                            <p
-                                className="text-3xl font-bold mb-2 text-[#d0302b]"
-                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif" }}
-                            >
+                            <p className="text-2xl lg:text-3xl font-bold mb-4 text-[#d0302b]">
                                 Build Spirit. Play Strong.
                             </p>
-                            <p className="text-xl leading-relaxed mb-10" style={{ fontFamily: '"Lato", Arial, Helvetica, sans-serif', color: '#000000' }}>
+                            <p className="text-lg lg:text-xl leading-relaxed mb-10 text-[#333333]">
                                 At Mapleford International School, growth isn’t limited to books and classrooms; it thrives on the field, on the court, and in every challenge that builds spirit and strength. Every match played, every goal scored, and every serve perfected shapes not just an athlete, but a resilient, disciplined, and determined individual. With a vibrant sporting culture at its heart, Mapleford nurtures young talent through Football, Badminton, Tennis, and Athletics, encouraging every student to discover the joy of play and the power of perseverance. Our state-of-the-art infrastructure, from modern sports arenas to safe, well-equipped training zones, forms the backbone of an environment that fosters confidence, team spirit, and leadership.
                             </p>
 
@@ -772,13 +751,10 @@ export default function Home() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2
-                                className="text-[44px] lg:text-[56px] font-black mb-4 leading-tight"
-                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#ffffff', textShadow: '0 2px 8px rgba(0,0,0,0.25)' }}
-                            >
+                            <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-4 leading-tight tracking-tighter uppercase shadow-sm">
                                 Words from Our Community
                             </h2>
-                            <p className="max-w-2xl mx-auto text-lg font-bold" style={{ color: '#ffffff', fontFamily: '"Lato", sans-serif' }}>
+                            <p className="max-w-2xl mx-auto text-lg lg:text-xl font-bold opacity-90">
                                 Discover why families trust Mapleford International school for their child&apos;s educational journey.
                             </p>
                         </motion.div>
@@ -875,10 +851,9 @@ export default function Home() {
                             className="text-[#1A1A1A] flex flex-col justify-center"
                         >
                             <h2
-                                className="text-[44px] lg:text-[68px] font-black mb-8 leading-tight uppercase tracking-tighter"
-                                style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif" }}
+                                className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight uppercase tracking-tighter shadow-sm"
                             >
-                                Start Your Child&apos;s <span style={{ color: '#1A1A1A' }}>Journey</span>
+                                Start Your Child&apos;s Journey
                             </h2>
                             <h3 className="text-3xl font-bold mb-8" style={{ color: '#d0302b' }}>
                                 Connect with Mapleford

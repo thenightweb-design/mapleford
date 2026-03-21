@@ -78,10 +78,7 @@ export default function Campus() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1
-                className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter"
-                style={{ fontFamily: "'Raleway', sans-serif" }}
-              >
+              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter shadow-sm">
                 Campus
               </h1>
               <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
@@ -110,15 +107,15 @@ export default function Campus() {
 
                   <div className="w-full lg:w-1/2 space-y-8">
                     <div className="space-y-4">
-                      <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-black text-[#000000] leading-tight" style={{ fontFamily: "'Raleway', sans-serif" }}>
+                      <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-[#000000] leading-tight tracking-tighter uppercase shadow-sm">
                         {fac.title}
                       </h2>
-                      <p className="text-[#d0302b] text-xl font-bold italic" style={{ fontFamily: "'Raleway', sans-serif" }}>
+                      <p className="text-[#d0302b] text-xl lg:text-2xl font-bold italic">
                         {fac.subtitle}
                       </p>
                       <div className="w-24 h-1.5 bg-[#d0302b] rounded-full" />
                     </div>
-                    <p className="text-xl text-gray-700 leading-relaxed font-medium" style={{ fontFamily: "'Lato', sans-serif" }}>
+                    <p className="text-lg lg:text-xl text-gray-700 leading-relaxed font-medium">
                       {fac.description}
                     </p>
                   </div>
@@ -136,10 +133,10 @@ export default function Campus() {
           </div>
           <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-              <h2 className="text-3xl sm:text-5xl font-black mb-8 leading-tight" style={{ fontFamily: "'Raleway', sans-serif" }}>
+              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight tracking-tighter uppercase shadow-sm">
                 Designed for Excellence, Built for the Future.
               </h2>
-              <p className="text-xl sm:text-2xl font-medium opacity-90 italic">
+              <p className="text-xl lg:text-2xl font-bold opacity-90 italic">
                 &quot;Every corner of Mapleford is a catalyst for discovery, blending modern technology with a nurturing environment.&quot;
               </p>
             </motion.div>
@@ -150,11 +147,11 @@ export default function Campus() {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center mb-16">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                <h2 className="text-[56px] sm:text-[72px] lg:text-[100px] font-black text-[#000000] leading-none uppercase tracking-tighter mb-8" style={{ fontFamily: "'Raleway', sans-serif" }}>
+                <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-[#000000] leading-none uppercase tracking-tighter mb-8 shadow-sm">
                   Sports Arena
                 </h2>
                 <div className="w-32 h-2 bg-[#d0302b] mx-auto mb-10 rounded-full" />
-                <p className="text-2xl sm:text-3xl text-gray-600 font-bold max-w-4xl mx-auto" style={{ fontFamily: "'Raleway', sans-serif" }}>
+                <p className="text-2xl lg:text-3xl text-gray-600 font-bold max-w-4xl mx-auto">
                   Spaces designed to build strength, confidence, and teamwork
                 </p>
               </motion.div>
@@ -186,7 +183,7 @@ export default function Campus() {
                       >
                         {sport.icon}
                       </motion.div>
-                      <h3 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tighter text-center" style={{ fontFamily: "'Raleway', sans-serif" }}>
+                      <h3 className="text-2xl lg:text-3xl font-black text-gray-900 uppercase tracking-tighter text-center">
                         {sport.name}
                       </h3>
                       <div className="w-12 h-1 bg-[#d0302b] mt-4 opacity-20" />
@@ -221,10 +218,10 @@ export default function Campus() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
               className="space-y-6"
             >
-              <h2 className="text-[32px] sm:text-[40px] font-black text-[#000000] leading-tight uppercase tracking-tighter" style={{ fontFamily: "'Raleway', sans-serif" }}>
-                Schedule a <span className="text-[#d0302b]">Campus Visit</span>
+              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-[#000000] leading-tight uppercase tracking-tighter shadow-sm">
+                Schedule a Campus Visit
               </h2>
-              <p className="text-lg text-gray-600 font-medium max-w-xl mx-auto" style={{ fontFamily: "'Lato', sans-serif" }}>
+              <p className="text-lg lg:text-xl text-gray-600 font-bold max-w-xl mx-auto">
                 Our admissions team will be happy to guide you through the campus and answer your questions.
               </p>
               <div className="pt-2">

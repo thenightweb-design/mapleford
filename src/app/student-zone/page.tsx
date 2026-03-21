@@ -32,10 +32,10 @@ export default function StudentZone() {
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <p className="!text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Life at Mapleford</p>
-              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight uppercase tracking-tighter" style={{ fontFamily: "'Raleway', sans-serif" }}>
+              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight uppercase tracking-tighter shadow-sm">
                 Student Zone
               </h1>
-              <p className="!text-white/90 text-lg sm:text-xl mt-4 max-w-2xl mx-auto font-medium leading-relaxed italic leading-tight">
+              <p className="!text-white/90 text-xl lg:text-2xl mt-4 max-w-2xl mx-auto font-black leading-relaxed italic uppercase tracking-wider">
                 &quot;Where talent meets opportunity and spirit meets action.&quot;
               </p>
             </motion.div>
@@ -49,13 +49,13 @@ export default function StudentZone() {
             <div className="text-center mb-16">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <p className="text-[#d0302b] font-black uppercase tracking-[0.4em] text-xs mb-4">Four Elements. One Unstoppable Spirit.</p>
-                <h2 className="text-[44px] lg:text-[72px] font-black leading-none uppercase tracking-tighter text-[#000000]" style={{ fontFamily: '"Raleway", sans-serif' }}>
+                <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black leading-none uppercase tracking-tighter text-[#000000]">
                   The House Arena
                 </h2>
                 <div className="w-24 h-1.5 bg-[#d0302b] mx-auto mt-8 mb-10 rounded-full" />
                 <div className="max-w-3xl mx-auto space-y-4">
-                  <p className="text-2xl sm:text-3xl font-bold text-[#000000] leading-tight">Every Mapleite belongs to a force of nature.</p>
-                  <p className="text-xl text-gray-500 font-medium leading-relaxed" style={{ fontFamily: '"Lato", sans-serif' }}>The House Arena makes the elements come alive — Earth, Fire, Air, and Space — each shaping how students learn, lead, play, compete, and celebrate together!</p>
+                  <p className="text-2xl lg:text-3xl font-bold text-[#d0302b] uppercase tracking-tighter">Every Mapleite belongs to a force of nature.</p>
+                  <p className="text-lg lg:text-xl text-gray-500 font-medium leading-relaxed">The House Arena makes the elements come alive — Earth, Fire, Air, and Space — each shaping how students learn, lead, play, compete, and celebrate together!</p>
                 </div>
               </motion.div>
             </div>
@@ -94,7 +94,7 @@ export default function StudentZone() {
                       </motion.div>
                       <div className="text-right">
                         <p className="text-white/60 text-sm font-black uppercase tracking-[0.2em] mb-1">{house.text}</p>
-                        <h3 className="text-5xl sm:text-6xl font-black uppercase tracking-tighter leading-none" style={{ fontFamily: '"Raleway", sans-serif' }}>{house.name}</h3>
+                        <h3 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-none">{house.name}</h3>
                       </div>
                     </div>
 
@@ -105,7 +105,7 @@ export default function StudentZone() {
                         </div>
                         <p className="text-white/80 text-lg sm:text-xl italic font-bold leading-relaxed border-l-4 border-[#D6B25E] pl-6">&quot;{house.rhyme}&quot;</p>
                       </div>
-                      <p className="text-white/90 leading-relaxed text-lg font-medium" style={{ fontFamily: '"Lato", sans-serif' }}>{house.desc}</p>
+                      <p className="text-white/90 leading-relaxed text-lg lg:text-xl font-medium">{house.desc}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -119,8 +119,8 @@ export default function StudentZone() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                <h2 className="text-[44px] lg:text-[72px] font-black leading-[1.1] uppercase tracking-tighter text-[#000000]" style={{ fontFamily: '"Raleway", sans-serif' }}>
-                  Life at Mapleford is<br className="hidden sm:block" /> More Than <span className="text-[#d0302b]">Lessons</span>
+                <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black leading-[1.1] uppercase tracking-tighter text-[#000000]">
+                  Life at Mapleford is<br className="hidden sm:block" /> More Than Lessons
                 </h2>
                 <div className="w-24 h-1.5 bg-[#d0302b] mx-auto mt-8 mb-10 rounded-full" />
                 <p className="text-xl sm:text-2xl text-gray-600 max-w-2xl mx-auto italic font-bold">
@@ -146,8 +146,8 @@ export default function StudentZone() {
                   className="bg-white rounded-[3rem] p-12 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 group flex flex-col items-center text-center"
                 >
                   <div className="text-5xl mb-8 bg-slate-50 w-24 h-24 flex items-center justify-center rounded-[2rem] group-hover:scale-110 group-hover:bg-[#d0302b]/5 transition-all duration-500 shadow-sm">{item.icon}</div>
-                  <h3 className="text-2xl font-black text-[#000000] mb-4 uppercase tracking-tight" style={{ fontFamily: '"Raleway", sans-serif' }}>{item.title}</h3>
-                  <p className="text-gray-500 leading-relaxed font-medium text-lg" style={{ fontFamily: '"Lato", sans-serif' }}>{item.desc}</p>
+                  <h3 className="text-2xl lg:text-3xl font-black text-[#000000] mb-4 uppercase tracking-tight">{item.title}</h3>
+                  <p className="text-gray-500 leading-relaxed font-medium text-lg lg:text-xl">{item.desc}</p>
                 </motion.div>
               ))}
             </div>

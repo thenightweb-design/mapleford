@@ -31,17 +31,15 @@ export default function Team() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-[44px] lg:text-[68px] font-bold mb-8 leading-tight"
-                    style={{ fontFamily: '"Raleway", sans-serif', color: '#1A1A1A' }}
+                    className="text-[48px] sm:text-[64px] lg:text-[80px] font-black mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter shadow-sm"
                   >
-                    Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d0302b] to-[#D6B25E]">Team</span>
+                    Our Team
                   </motion.h1>
                   <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-xl lg:text-2xl text-[#4F4F4F] max-w-4xl mx-auto leading-relaxed"
-                    style={{ fontFamily: '"Lato", sans-serif' }}
+                    className="text-xl lg:text-2xl text-[#4F4F4F] max-w-4xl mx-auto leading-relaxed font-black opacity-80 uppercase italic"
                   >
                     The heart of Mapleford is an empathetic, compassionate, dynamic, and visionary team, a committed leadership, and devoted mentors at its core. Our compass guides students toward steadiness and inspiration.
                   </motion.p>
@@ -62,18 +60,18 @@ export default function Team() {
                       <div className="absolute -inset-4 bg-[#FDF6E3] rounded-[2rem] -z-10 transform rotate-3"></div>
                       <div className="bg-white p-10 rounded-[2rem] shadow-xl border border-[#D6B25E]/20">
                         <span className="text-4xl mb-6 block">✉️</span>
-                        <h2 className="text-[32px] lg:text-[44px] font-black mb-6" style={{ fontFamily: '"Raleway", sans-serif', color: '#1A1A1A' }}>
-                          Chairman's <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Message</span>
+                        <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">
+                          Chairman&apos;s Message
                         </h2>
-                        <div className="space-y-6 text-lg text-[#4F4F4F] leading-relaxed" style={{ fontFamily: '"Lato", sans-serif' }}>
+                        <div className="space-y-6 text-lg lg:text-xl text-[#4F4F4F] leading-relaxed font-medium">
                           <p>
-                            "At Mapleford International School, we believe that education is not merely the transfer of knowledge but the cultivation of character, curiosity, and compassion. As we carry forward the distinguished legacy of Megacity High School, our mission remains grounded in a simple truth: children learn best when they feel valued, supported, and inspired to discover who they are."
+                            &quot;At Mapleford International School, we believe that education is not merely the transfer of knowledge but the cultivation of character, curiosity, and compassion. As we carry forward the distinguished legacy of Megacity High School, our mission remains grounded in a simple truth: children learn best when they feel valued, supported, and inspired to discover who they are.&quot;
                           </p>
                           <p>
-                            "For three decades, our journey has been shaped by the belief that schooling must prepare students for life, not just for examinations. Today, Mapleford stands as an evolution of that belief, embracing global perspectives while staying anchored in timeless values. We strive to create an environment where learning is joyful, where discipline is self-driven, and where every accomplishment is measured not only by success, but by sincerity and effort."
+                            &quot;For three decades, our journey has been shaped by the belief that schooling must prepare students for life, not just for examinations. Today, Mapleford stands as an evolution of that belief, embracing global perspectives while staying anchored in timeless values. We strive to create an environment where learning is joyful, where discipline is self-driven, and where every accomplishment is measured not only by success, but by sincerity and effort.&quot;
                           </p>
                           <p>
-                            "I remain deeply committed to fostering a school community where every child feels empowered to learn, lead, and contribute meaningfully to society. Together, let us shape a future where every learning matters — the spark in a question, the pride in a goal, and the courage to try again."
+                            &quot;I remain deeply committed to fostering a school community where every child feels empowered to learn, lead, and contribute meaningfully to society. Together, let us shape a future where every learning matters — the spark in a question, the pride in a goal, and the courage to try again.&quot;
                           </p>
                         </div>
                         <div className="mt-8 pt-6 border-t border-[#D6B25E]/30">
@@ -122,18 +120,18 @@ export default function Team() {
                       <div className="absolute -inset-4 bg-[#FDF6E3] rounded-[2rem] -z-10 transform -rotate-2"></div>
                       <div className="bg-white p-10 rounded-[2rem] shadow-xl border border-[#D6B25E]/20">
                         <span className="text-4xl mb-6 block">🎓</span>
-                        <h2 className="text-[32px] lg:text-[44px] font-black mb-6" style={{ fontFamily: '"Raleway", sans-serif', color: '#1A1A1A' }}>
-                          Principal's <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Message</span>
+                        <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">
+                          Principal&apos;s Message
                         </h2>
-                        <div className="space-y-6 text-lg text-[#4F4F4F] leading-relaxed" style={{ fontFamily: '"Lato", sans-serif' }}>
+                        <div className="space-y-6 text-lg lg:text-xl text-[#4F4F4F] leading-relaxed font-medium">
                           <p>
-                            "Education, to us, is not a race but a journey. It is augmented through attentive listening, thoughtful guidance, and learning experiences that encourage children to think independently and understand deeply."
+                            &quot;Education, to us, is not a race but a journey. It is augmented through attentive listening, thoughtful guidance, and learning experiences that encourage children to think independently and understand deeply.&quot;
                           </p>
                           <p>
-                            "Our faculty brings together expertise and empathy, ensuring that every learner is seen not just for their academic abilities, but for the individual they are becoming. We emphasize balance—between discipline and creativity, reflection and action, ambition and humility—so that students develop the confidence to succeed and the character to choose wisely."
+                            &quot;Our faculty brings together expertise and empathy, ensuring that every learner is seen not just for their academic abilities, but for the individual they are becoming. We emphasize balance—between discipline and creativity, reflection and action, ambition and humility—so that students develop the confidence to succeed and the character to choose wisely.&quot;
                           </p>
                           <p>
-                            "As Mapleford steps into a new chapter, my vision is to lead a school where learning feels alive, and every child leaves each day a little more empowered than the last. Together, we aim to shape individuals who not only excel in the world but also enrich it with their integrity, kindness, and courage."
+                            &quot;As Mapleford steps into a new chapter, my vision is to lead a school where learning feels alive, and every child leaves each day a little more empowered than the last. Together, we aim to shape individuals who not only excel in the world but also enrich it with their integrity, kindness, and courage.&quot;
                           </p>
                         </div>
                         <div className="mt-8 pt-6 border-t border-[#D6B25E]/30">
@@ -155,8 +153,8 @@ export default function Team() {
                     viewport={{ once: true }}
                     className="text-center mb-20"
                   >
-                    <h2 className="text-[32px] lg:text-[44px] font-black text-[#1A1A1A] mb-6" style={{ fontFamily: '"Raleway", sans-serif' }}>
-                      Leadership <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Team</span>
+                    <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-[#1A1A1A] mb-6 uppercase tracking-tighter">
+                      Leadership Team
                     </h2>
                     <div className="w-24 h-1.5 bg-[#D6B25E] mx-auto rounded-full"></div>
                   </motion.div>
@@ -224,11 +222,8 @@ export default function Team() {
                       transition={{ duration: 0.8 }}
                     >
                       <span className="text-5xl mb-4 block">🤝</span>
-                      <h2
-                        className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight"
-                        style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#1A1A1A' }}
-                      >
-                        Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Mission</span>
+                      <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter">
+                        Join Our Mission
                       </h2>
                       <h3 className="text-2xl font-semibold mb-6" style={{ color: '#d0302b' }}>
                         Building Tomorrow's Leaders Together
@@ -245,7 +240,7 @@ export default function Team() {
                         <span className="text-xl font-semibold" style={{ color: '#8d211d' }}>Impact</span>
                       </div>
 
-                      <p className="text-lg leading-relaxed mb-8" style={{ color: '#4F4F4F', fontFamily: '"Lato", Arial, Helvetica, sans-serif' }}>
+                      <p className="text-lg lg:text-xl leading-relaxed mb-8 text-[#4F4F4F]">
                         Be part of a community dedicated to shaping young minds and creating future leaders grounded in integrity. At Mapleford, we believe that great educators inspire greatness in others. Join us in our mission to transform education and empower the next generation.
                       </p>
 

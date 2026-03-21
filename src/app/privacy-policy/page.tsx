@@ -19,11 +19,8 @@ export default function PrivacyPolicy() {
                 transition={{ duration: 0.8 }}
                 className="text-center"
               >
-                <h1
-                  className="text-5xl lg:text-7xl font-bold mb-6 leading-tight"
-                  style={{ fontFamily: '"Raleway", sans-serif' }}
-                >
-                  Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d0302b] to-[#D6B25E]">Policy</span>
+                <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight uppercase tracking-tighter">
+                  Privacy Policy
                 </h1>
                 <p className="text-lg text-gray-600">
                   Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
@@ -44,7 +41,7 @@ export default function PrivacyPolicy() {
                 <div className="space-y-12">
                   {/* Introduction */}
                   <div className="bg-gradient-to-br from-[#FDF6E3]/50 to-white p-8 rounded-3xl border border-[#D6B25E]/20">
-                    <h2 className="text-3xl font-bold mb-4 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Introduction</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-4 text-[#1A1A1A] uppercase tracking-tighter">Introduction</h2>
                     <p className="text-gray-700 leading-relaxed">
                       At Mapleford International School, we are committed to protecting the privacy and security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or interact with our services.
                     </p>
@@ -52,7 +49,7 @@ export default function PrivacyPolicy() {
 
                   {/* Information We Collect */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Information We Collect</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Information We Collect</h2>
                     <div className="space-y-6">
                       <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                         <h3 className="text-xl font-bold mb-3 text-[#d0302b]">Personal Information</h3>
@@ -81,7 +78,7 @@ export default function PrivacyPolicy() {
 
                   {/* How We Use Your Information */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>How We Use Your Information</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">How We Use Your Information</h2>
                     <div className="bg-gradient-to-br from-[#FDF6E3]/30 to-white p-8 rounded-3xl border border-[#D6B25E]/20">
                       <p className="text-gray-700 leading-relaxed mb-4">
                         We use the information we collect to:
@@ -113,7 +110,7 @@ export default function PrivacyPolicy() {
 
                   {/* Information Sharing */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Information Sharing and Disclosure</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Information Sharing and Disclosure</h2>
                     <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                       <p className="text-gray-700 leading-relaxed mb-4">
                         We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:
@@ -129,7 +126,7 @@ export default function PrivacyPolicy() {
 
                   {/* Data Security */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Data Security</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Data Security</h2>
                     <div className="bg-gradient-to-br from-[#FDF6E3]/50 to-white p-8 rounded-3xl border border-[#D6B25E]/20">
                       <p className="text-gray-700 leading-relaxed">
                         We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
@@ -139,7 +136,7 @@ export default function PrivacyPolicy() {
 
                   {/* Your Rights */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Your Rights</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Your Rights</h2>
                     <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                       <p className="text-gray-700 leading-relaxed mb-4">
                         You have the right to:
@@ -156,7 +153,7 @@ export default function PrivacyPolicy() {
 
                   {/* Children's Privacy */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Children's Privacy</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Children&apos;s Privacy</h2>
                     <div className="bg-gradient-to-br from-[#FDF6E3]/30 to-white p-8 rounded-3xl border border-[#D6B25E]/20">
                       <p className="text-gray-700 leading-relaxed">
                         We are committed to protecting the privacy of children. We do not knowingly collect personal information from children under 13 without parental consent. If you believe we have collected information from a child under 13, please contact us immediately.
@@ -166,7 +163,7 @@ export default function PrivacyPolicy() {
 
                   {/* Changes to Privacy Policy */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Changes to This Privacy Policy</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Changes to This Privacy Policy</h2>
                     <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                       <p className="text-gray-700 leading-relaxed">
                         We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically for any changes.
@@ -176,7 +173,7 @@ export default function PrivacyPolicy() {
 
                   {/* Contact Us */}
                   <div className="bg-gradient-to-br from-[#d0302b]/5 to-[#D6B25E]/5 p-10 rounded-3xl border-2 border-[#D6B25E]/30">
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Contact Us</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Contact Us</h2>
                     <p className="text-gray-700 leading-relaxed mb-6">
                       If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:
                     </p>
