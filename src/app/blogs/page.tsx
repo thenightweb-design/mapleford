@@ -74,14 +74,14 @@ export default function Blogs() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter shadow-sm">
+                <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter ">
                   Our Blog
                 </h1>
                 <motion.p
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-black tracking-wide italic leading-tight uppercase"
+                  className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight uppercase"
                 >
                   Insights, stories, and perspectives from the Mapleford International School community.
                 </motion.p>
@@ -143,7 +143,7 @@ export default function Blogs() {
                 transition={{ duration: 0.8 }}
                 className="bg-white/80 backdrop-blur-sm border border-white/50 rounded-3xl p-12 shadow-xl"
               >
-                <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">
+                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-6 text-[#1A1A1A] uppercase tracking-tighter">
                   Stay <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Updated</span>
                 </h2>
                 <p className="text-xl text-gray-600 mb-8">

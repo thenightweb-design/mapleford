@@ -34,7 +34,7 @@ export default function Careers() {
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <p className="!text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Grow With Us</p>
-              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter shadow-sm">
+              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter ">
                 Careers
               </h1>
               <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
@@ -48,8 +48,8 @@ export default function Careers() {
         <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16">
-              <p className="text-[#d0302b] font-black uppercase tracking-[0.4em] text-xs mb-3">Our Workplace</p>
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-[#000000] uppercase tracking-tighter shadow-sm">
+              <p className="text-[#d0302b] font-bold uppercase tracking-[0.4em] text-xs mb-3">Our Workplace</p>
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] uppercase tracking-tighter ">
                 Why Join Mapleford?
               </h2>
               <p className="text-lg text-[#000000] max-w-2xl mx-auto mt-4">Be part of a community dedicated to excellence in education.</p>
@@ -68,7 +68,7 @@ export default function Careers() {
                   className="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
                 >
                   <div className="text-4xl mb-4">{b.icon}</div>
-                  <h3 className="text-xl font-black text-[#000000] mb-3">{b.title}</h3>
+                  <h3 className="text-xl font-bold text-[#000000] mb-3">{b.title}</h3>
                   <p className="text-[#000000] leading-relaxed text-sm">{b.desc}</p>
                 </motion.div>
               ))}
@@ -84,7 +84,7 @@ export default function Careers() {
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-white uppercase tracking-tighter shadow-sm">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white uppercase tracking-tighter ">
                 Current Openings
               </h2>
               <p className="text-white/80 text-lg mt-3">Explore exciting career opportunities with us.</p>
@@ -99,7 +99,7 @@ export default function Careers() {
                 >
                   <div className="flex items-start justify-between mb-4 gap-4">
                     <div>
-                      <h3 className="text-xl font-black text-[#000000]">{job.title}</h3>
+                      <h3 className="text-xl font-bold text-[#000000]">{job.title}</h3>
                       <p className="text-[#d0302b] font-bold mt-1">{job.department}</p>
                     </div>
                     <span className="shrink-0 px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">{job.type}</span>
@@ -107,7 +107,7 @@ export default function Careers() {
                   <p className="text-[#000000] mb-5 leading-relaxed">{job.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400 font-bold">📍 Hyderabad</span>
-                    <button className="px-6 py-2 bg-[#d0302b] text-white rounded-full text-sm font-black hover:bg-[#b02020] transition-colors">Apply Now</button>
+                    <button className="px-6 py-2 bg-[#d0302b] text-white rounded-full text-sm font-bold hover:bg-[#b02020] transition-colors">Apply Now</button>
                   </div>
                 </motion.div>
               ))}
@@ -119,8 +119,8 @@ export default function Careers() {
         <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <p className="text-[#d0302b] font-black uppercase tracking-[0.4em] text-xs mb-3">Simple & Transparent</p>
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-[#1A1A1A] uppercase tracking-tighter shadow-sm">
+              <p className="text-[#d0302b] font-bold uppercase tracking-[0.4em] text-xs mb-3">Simple & Transparent</p>
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#1A1A1A] uppercase tracking-tighter ">
                 How to Apply
               </h2>
             </div>
@@ -137,10 +137,10 @@ export default function Careers() {
                   transition={{ delay: idx * 0.1 }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-[#d0302b] rounded-full flex items-center justify-center text-white font-black text-lg mx-auto mb-5 shadow-lg">
+                  <div className="w-16 h-16 bg-[#d0302b] rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-5 shadow-lg">
                     {s.step}
                   </div>
-                  <h3 className="text-lg font-black text-[#000000] mb-2">{s.title}</h3>
+                  <h3 className="text-lg font-bold text-[#000000] mb-2">{s.title}</h3>
                   <p className="text-[#000000] leading-relaxed text-sm">{s.desc}</p>
                 </motion.div>
               ))}
@@ -156,7 +156,7 @@ export default function Careers() {
           </div>
           <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-white leading-tight uppercase tracking-tighter shadow-sm">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white leading-tight uppercase tracking-tighter ">
                 Ready to Make a Difference?
               </h2>
               <p className="text-lg text-white/90 max-w-xl mx-auto leading-relaxed">

@@ -69,7 +69,7 @@ export default function PreSchool() {
                                 viewport={{ once: true }}
                                 className="space-y-8"
                             >
-                                <h2 className="text-[32px] lg:text-[44px] font-black" style={{ fontFamily: '"Raleway", sans-serif' }}>The Foundation <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Years</span></h2>
+                                <h2 className="text-[32px] lg:text-[44px] font-bold" style={{ fontFamily: '"Raleway", sans-serif' }}>The Foundation <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Years</span></h2>
                                 <div className="w-20 h-1.5 bg-[#D6B25E] rounded-full"></div>
                                 <p className="text-xl text-[#4F4F4F] leading-relaxed">
                                     The foundation years where curiosity blossoms and imagination leads learning. Through play-based exploration, storytelling, and creative discovery, pre-schoolers develop early confidence, communication skills, and joy in learning.
@@ -96,7 +96,7 @@ export default function PreSchool() {
                 {/* Curriculum Pillars */}
                 <section className="py-32 bg-[#FDF6E3]/20">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <h2 className="text-[32px] lg:text-[56px] font-black mb-20" style={{ fontFamily: '"Raleway", sans-serif' }}>Curriculum <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Pillars</span></h2>
+                        <h2 className="text-[32px] lg:text-[56px] font-bold mb-20" style={{ fontFamily: '"Raleway", sans-serif' }}>Curriculum <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Pillars</span></h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                             {[
                                 { title: "Cognitive", icon: "🧠", desc: "Developing problem-solving skills and logical reasoning through hands-on activities." },
@@ -132,7 +132,7 @@ export default function PreSchool() {
                             >
                                 <span className="text-5xl mb-4 block">🚀</span>
                                 <h2
-                                    className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight"
+                                    className="text-[44px] lg:text-[56px] font-bold mb-8 leading-tight"
                                     style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif" }}
                                 >
                                     Start Your Child's <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Journey</span>

@@ -26,7 +26,7 @@ export default function RefundPolicy() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter shadow-sm">
+              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter ">
                 Cancellation & Refund
               </h1>
               <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
@@ -46,22 +46,22 @@ export default function RefundPolicy() {
               variants={fadeInUp}
               className="prose prose-lg max-w-none text-[#000000]"
             >
-              <h2 className="text-[32px] sm:text-[44px] font-black text-[#1A1A1A] mb-8 uppercase tracking-tighter shadow-sm">
+              <h2 className="text-[32px] sm:text-[44px] font-bold text-[#1A1A1A] mb-8 uppercase tracking-tighter ">
                 Refund Policy
               </h2>
               <div className="space-y-6 text-lg leading-relaxed font-medium">
                 <p>
                   At Mapleford International School, we strive to provide the best educational experience for our students. Please read our refund policy carefully.
                 </p>
-                <h3 className="text-2xl font-black text-[#d0302b] uppercase mt-8">Admission Fees</h3>
+                <h3 className="text-2xl font-bold text-[#d0302b] uppercase mt-8">Admission Fees</h3>
                 <p>
                   The Admission Fee and Registration Fee are non-refundable under any circumstances.
                 </p>
-                <h3 className="text-2xl font-black text-[#d0302b] uppercase mt-8">Tuition Fees</h3>
+                <h3 className="text-2xl font-bold text-[#d0302b] uppercase mt-8">Tuition Fees</h3>
                 <p>
                   Tuition fees once paid are generally non-refundable. However, in exceptional cases (e.g., student withdrawal before the commencement of the academic session), a partial refund may be considered at the discretion of the management.
                 </p>
-                <h3 className="text-2xl font-black text-[#d0302b] uppercase mt-8">Process</h3>
+                <h3 className="text-2xl font-bold text-[#d0302b] uppercase mt-8">Process</h3>
                 <p>
                   All refund requests must be submitted in writing to the school administration office. Refunds, if approved, will be processed within 30-45 working days.
                 </p>

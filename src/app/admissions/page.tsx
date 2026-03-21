@@ -118,10 +118,10 @@ export default function Admissions() {
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <p className="!text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Your Journey Starts Here</p>
-              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter shadow-sm">
+              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter ">
                 Admissions
               </h1>
-              <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-black tracking-wide italic leading-tight uppercase">
+              <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight uppercase">
                 A Holistic Education for a Global Future
               </p>
             </motion.div>
@@ -142,11 +142,11 @@ export default function Admissions() {
                   className="text-center group cursor-pointer"
                 >
                   <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-[#d0302b]/10 flex items-center justify-center group-hover:bg-[#d0302b] transition-colors duration-300">
-                    <span className="text-2xl font-black text-[#d0302b] group-hover:text-white transition-colors duration-300">
+                    <span className="text-2xl font-bold text-[#d0302b] group-hover:text-white transition-colors duration-300">
                       {step.number}
                     </span>
                   </div>
-                  <p className="text-sm font-black uppercase tracking-widest text-[#000000]">
+                  <p className="text-sm font-bold uppercase tracking-widest text-[#000000]">
                     {step.subtitle}
                   </p>
                 </motion.div>
@@ -186,14 +186,14 @@ export default function Admissions() {
                   >
                     {/* Step number */}
                     <div className="flex items-center gap-4 mb-6">
-                      <span className={`text-[80px] lg:text-[100px] font-black leading-none select-none ${isRed ? 'text-white/20' : 'text-[#d0302b]/10'}`}>
+                      <span className={`text-[80px] lg:text-[100px] font-bold leading-none select-none ${isRed ? 'text-white/20' : 'text-[#d0302b]/10'}`}>
                         {step.number}
                       </span>
                       <div>
-                        <p className={`text-xs font-black uppercase tracking-[0.2em] mb-1 ${isRed ? 'text-white/70' : 'text-[#d0302b]'}`}>
+                        <p className={`text-xs font-bold uppercase tracking-[0.2em] mb-1 ${isRed ? 'text-white/70' : 'text-[#d0302b]'}`}>
                           {step.subtitle}
                         </p>
-                        <h2 className={`text-[32px] lg:text-[44px] font-black leading-tight uppercase tracking-tighter shadow-sm ${isRed ? 'text-white' : 'text-[#000000]'}`}>
+                        <h2 className={`text-[32px] lg:text-[44px] font-bold leading-tight uppercase tracking-tighter  ${isRed ? 'text-white' : 'text-[#000000]'}`}>
                           {step.title}
                         </h2>
                       </div>
@@ -274,8 +274,8 @@ export default function Admissions() {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <p className="text-[#d0302b] uppercase tracking-[0.3em] text-sm font-black mb-4">Ready to Begin?</p>
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-6 leading-tight text-[#000000] uppercase tracking-tighter shadow-sm">
+              <p className="text-[#d0302b] uppercase tracking-[0.3em] text-sm font-bold mb-4">Ready to Begin?</p>
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-6 leading-tight text-[#000000] uppercase tracking-tighter ">
                 Take Your Child&apos;s First Step Forward
               </h2>
               <p className="text-[#555555] text-lg lg:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium">

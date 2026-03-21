@@ -193,7 +193,7 @@ export default function AdminPanel() {
           animate={{ opacity: 1, y: 0 }}
           className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full"
         >
-          <h1 className="text-2xl font-black text-center mb-6 uppercase tracking-tighter shadow-sm">Admin Login</h1>
+          <h1 className="text-2xl font-bold text-center mb-6 uppercase tracking-tighter ">Admin Login</h1>
           <form onSubmit={handleLogin}>
             <div className="mb-4">
               <label className="block text-gray-700 mb-2">Username</label>
@@ -229,10 +229,10 @@ export default function AdminPanel() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <header className="bg-white shadow-sm">
+      <header className="bg-white ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <h1 className="text-2xl font-black text-gray-900 uppercase tracking-tighter shadow-sm">Admin Panel</h1>
+            <h1 className="text-2xl font-bold text-gray-900 uppercase tracking-tighter ">Admin Panel</h1>
             <button
               onClick={handleLogout}
               className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
@@ -363,7 +363,7 @@ export default function AdminPanel() {
                         type="text"
                         value={blogForm.title}
                         onChange={(e) => setBlogForm({ ...blogForm, title: e.target.value })}
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                        className="mt-1 block w-full border border-gray-300 rounded-md  py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
                         required
                       />
                     </div>
@@ -373,7 +373,7 @@ export default function AdminPanel() {
                         type="text"
                         value={blogForm.author}
                         onChange={(e) => setBlogForm({ ...blogForm, author: e.target.value })}
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                        className="mt-1 block w-full border border-gray-300 rounded-md  py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
                         required
                       />
                     </div>
@@ -384,7 +384,7 @@ export default function AdminPanel() {
                       rows={6}
                       value={blogForm.content}
                       onChange={(e) => setBlogForm({ ...blogForm, content: e.target.value })}
-                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                      className="mt-1 block w-full border border-gray-300 rounded-md  py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
                       required
                     />
                   </div>
@@ -395,7 +395,7 @@ export default function AdminPanel() {
                         type="text"
                         value={blogForm.tags}
                         onChange={(e) => setBlogForm({ ...blogForm, tags: e.target.value })}
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                        className="mt-1 block w-full border border-gray-300 rounded-md  py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
                       />
                     </div>
                     <div>
@@ -404,7 +404,7 @@ export default function AdminPanel() {
                         type="url"
                         value={blogForm.featuredImage}
                         onChange={(e) => setBlogForm({ ...blogForm, featuredImage: e.target.value })}
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                        className="mt-1 block w-full border border-gray-300 rounded-md  py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
                       />
                     </div>
                   </div>
@@ -414,7 +414,7 @@ export default function AdminPanel() {
                         type="checkbox"
                         checked={blogForm.published}
                         onChange={(e) => setBlogForm({ ...blogForm, published: e.target.checked })}
-                        className="rounded border-gray-300 text-red-600 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50"
+                        className="rounded border-gray-300 text-red-600  focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50"
                       />
                       <span className="ml-2 text-sm text-gray-700">Publish immediately</span>
                     </label>

@@ -50,7 +50,7 @@ export default function Curriculum() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter shadow-sm">
+                            <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter ">
                                 Curriculum
                             </h1>
                             <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
@@ -68,7 +68,7 @@ export default function Curriculum() {
                             className="bg-white rounded-[3rem] p-10 sm:p-20 shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)] border border-gray-50 text-center"
                         >
                             <p className="text-xl sm:text-2xl lg:text-3xl leading-relaxed text-[#000000] font-medium">
-                                At Mapleford International School, learning is shaped by a powerful collaboration with <span className="text-[#d0302b] font-black underline decoration-red-200 underline-offset-8">Maple Bear Global Schools, Canada</span>, a world leader in bilingual, inquiry-based education operating across 35+ countries and 450+ schools. This association helps students benefit from the proven strengths of the Canadian education system, consistently ranked among the world’s best, while staying firmly aligned to India’s esteemed CBSE framework.
+                                At Mapleford International School, learning is shaped by a powerful collaboration with <span className="text-[#d0302b] font-bold underline decoration-red-200 underline-offset-8">Maple Bear Global Schools, Canada</span>, a world leader in bilingual, inquiry-based education operating across 35+ countries and 450+ schools. This association helps students benefit from the proven strengths of the Canadian education system, consistently ranked among the world’s best, while staying firmly aligned to India’s esteemed CBSE framework.
                             </p>
                         </motion.div>
                     </div>
@@ -89,7 +89,7 @@ export default function Curriculum() {
                             >
                                 {/* Title and Description */}
                                 <div className="max-w-5xl mx-auto mb-16">
-                                    <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight tracking-tighter uppercase">
+                                    <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter uppercase">
                                         The Mapleford Edge
                                     </h2>
                                     <div className="space-y-6 text-lg lg:text-xl text-[#333333] leading-relaxed">
@@ -145,7 +145,7 @@ export default function Curriculum() {
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-24">
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                                <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 text-[#000000] leading-tight tracking-tighter uppercase">
+                                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 text-[#000000] leading-tight tracking-tighter uppercase">
                                     A Seamless Blend <br className="hidden sm:block" /> of Two Powerful Systems
                                 </h2>
                                 <p className="text-2xl sm:text-3xl font-bold text-gray-500 flex items-center justify-center gap-6">
@@ -174,7 +174,7 @@ export default function Curriculum() {
                                 className="order-1 lg:order-2 space-y-12"
                             >
                                 <div className="space-y-4">
-                                    <h3 className="text-2xl lg:text-3xl font-black uppercase tracking-wider text-gray-900">Holistic Approach</h3>
+                                    <h3 className="text-2xl lg:text-3xl font-bold uppercase tracking-wider text-gray-900">Holistic Approach</h3>
                                     <div className="w-24 h-1.5 bg-[#d0302b] rounded-full" />
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -187,9 +187,9 @@ export default function Curriculum() {
                                         { text: "Creativity", icon: "🎨" },
                                         { text: "Communication", icon: "💬" }
                                     ].map((val) => (
-                                        <div key={val.text} className="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                                        <div key={val.text} className="flex items-center gap-4 p-5 bg-white rounded-2xl  border border-gray-100 hover:shadow-md transition-shadow">
                                             <span className="text-2xl">{val.icon}</span>
-                                            <span className="text-sm font-black uppercase tracking-widest text-gray-800">{val.text}</span>
+                                            <span className="text-sm font-bold uppercase tracking-widest text-gray-800">{val.text}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -203,7 +203,7 @@ export default function Curriculum() {
                         >
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
                                 <div className="relative z-10 flex flex-col justify-center">
-                                    <h3 className="text-4xl sm:text-5xl font-black mb-8 text-[#000000] leading-tight uppercase tracking-tighter shadow-sm">What this means for learners:</h3>
+                                    <h3 className="text-4xl sm:text-5xl font-bold mb-8 text-[#000000] leading-tight uppercase tracking-tighter ">What this means for learners:</h3>
                                     <div className="w-20 h-2 bg-[#D6B25E] rounded-full" />
                                 </div>
                                 <div className="relative z-10 grid grid-cols-1 gap-6">
@@ -219,7 +219,7 @@ export default function Curriculum() {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                                 </svg>
                                             </div>
-                                            <p className="text-lg font-black text-[#000000] uppercase tracking-wide text-sm">{item}</p>
+                                            <p className="text-lg font-bold text-[#000000] uppercase tracking-wide text-sm">{item}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -230,7 +230,7 @@ export default function Curriculum() {
                             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
                             className="text-center p-12 bg-[#d0302b]/5 rounded-[3rem] border border-[#d0302b]/10"
                         >
-                            <p className="text-2xl lg:text-4xl font-black leading-relaxed text-gray-900 uppercase tracking-tighter">
+                            <p className="text-2xl lg:text-4xl font-bold leading-relaxed text-gray-900 uppercase tracking-tighter">
                                 Dual Approach. Academic Excellence. Global Exposure
                             </p>
                         </motion.div>
@@ -242,8 +242,8 @@ export default function Curriculum() {
                     <div className="max-w-7xl mx-auto relative z-10">
                         <div className="flex flex-col lg:flex-row gap-20 items-center">
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="w-full lg:w-1/2">
-                                <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-10 text-white leading-none uppercase tracking-tighter shadow-sm">
-                                    Curriculum Pathway: <br className="hidden lg:block" /> <span className="text-xl lg:text-2xl font-black opacity-80 uppercase italic">From Early Years to Senior School</span>
+                                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-10 text-white leading-none uppercase tracking-tighter ">
+                                    Curriculum Pathway: <br className="hidden lg:block" /> <span className="text-xl lg:text-2xl font-bold opacity-80 uppercase italic">From Early Years to Senior School</span>
                                 </h2>
                                 <div className="space-y-10">
                                     <div className="p-10 bg-white/10 backdrop-blur-md rounded-[3rem] border border-white/20">
@@ -285,7 +285,7 @@ export default function Curriculum() {
                                     <div className="w-full lg:w-5/12 space-y-10">
                                         <div className="space-y-4">
 
-                                            <h3 className="text-[32px] lg:text-[44px] font-black text-[#000000] leading-none uppercase tracking-tighter mb-4 shadow-sm">
+                                            <h3 className="text-[32px] lg:text-[44px] font-bold text-[#000000] leading-none uppercase tracking-tighter mb-4 ">
                                                 {stage.title}
                                             </h3>
                                             <p className="text-xl font-bold text-gray-400 uppercase tracking-widest">{stage.grades}</p>
@@ -315,10 +315,10 @@ export default function Curriculum() {
                 <section className="py-12 bg-[#d0302b] px-4 relative overflow-hidden">
                     <div className="max-w-5xl mx-auto text-center space-y-12 relative z-10">
                         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                            <h2 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black text-white leading-none tracking-tighter uppercase shadow-sm">
+                            <h2 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold text-white leading-none tracking-tighter uppercase ">
                                 Prepare Your <br /> Global Future
                             </h2>
-                            <p className="text-xl lg:text-2xl text-white font-black max-w-2xl mx-auto mt-8 uppercase tracking-wide">
+                            <p className="text-xl lg:text-2xl text-white font-bold max-w-2xl mx-auto mt-8 uppercase tracking-wide">
                                 Give your child the edge of a Canadian pedagogy and the strength of a CBSE curriculum.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-16">
