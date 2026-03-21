@@ -94,9 +94,9 @@ export default function Home() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: -20 }}
                                             transition={{ duration: 0.8 }}
-                                            className="font-black uppercase tracking-tighter text-[28px] sm:text-[42px] lg:text-[56px] whitespace-nowrap"
+                                            className="font-bold uppercase tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
                                             style={{
-                                                textShadow: '0 4px 30px rgba(0,0,0,0.5)',
+                                                textShadow: '0 2px 20px rgba(0,0,0,0.3)',
                                                 lineHeight: '1.2',
                                                 background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 50%, #D6B25E 100%)',
                                                 WebkitBackgroundClip: 'text',
@@ -114,9 +114,9 @@ export default function Home() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: -20 }}
                                             transition={{ duration: 0.8 }}
-                                            className="font-black uppercase tracking-tighter text-[28px] sm:text-[42px] lg:text-[56px] whitespace-nowrap"
+                                            className="font-bold uppercase tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
                                             style={{
-                                                textShadow: '0 4px 30px rgba(0,0,0,0.5)',
+                                                textShadow: '0 2px 20px rgba(0,0,0,0.3)',
                                                 lineHeight: '1.2',
                                                 background: 'linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #FFA500 100%)',
                                                 WebkitBackgroundClip: 'text',
@@ -162,7 +162,7 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                             className="flex flex-col"
                         >
-                            <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight tracking-tighter uppercase shadow-sm">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter uppercase">
                                 Campus
                             </h2>
                             <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-[#d0302b]">
@@ -218,7 +218,7 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                             className="text-white"
                         >
-                            <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight tracking-tighter uppercase shadow-sm">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter uppercase">
                                 Curriculum
                             </h2>
                             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
@@ -231,13 +231,13 @@ export default function Home() {
                             <div
                                 className="inline-flex items-center gap-6 px-10 py-5 rounded-full mb-10 bg-gradient-to-r from-[#D6B25E] to-[#C5A04D] shadow-xl border border-[#B38D3C]"
                             >
-                                <span className="text-xl font-black" style={{ color: '#FFFFFF' }}>Canadian Pedagogy</span>
+                                <span className="text-xl font-bold" style={{ color: '#FFFFFF' }}>Canadian Pedagogy</span>
                                 <span className="text-3xl font-light opacity-50" style={{ color: '#FFFFFF' }}>|</span>
-                                <span className="text-xl font-black" style={{ color: '#FFFFFF' }}>CBSE Curriculum</span>
+                                <span className="text-xl font-bold" style={{ color: '#FFFFFF' }}>CBSE Curriculum</span>
                             </div>
 
                             <p className="text-xl leading-relaxed mb-10" style={{ fontFamily: '"Lato", Arial, Helvetica, sans-serif', color: '#FFFFFF' }}>
-                                At Mapleford International School, learning is shaped by a powerful collaboration with <span className="font-black">Maple Bear Global Schools, Canada</span>, a world leader in bilingual, inquiry-based education operating across 35+ countries and 450+ schools. Through this framework, our students benefit from the proven strengths of the Canadian education system, consistently ranked among the world’s best, while staying firmly aligned to India’s robust CBSE curriculum.
+                                At Mapleford International School, learning is shaped by a powerful collaboration with <span className="font-bold">Maple Bear Global Schools, Canada</span>, a world leader in bilingual, inquiry-based education operating across 35+ countries and 450+ schools. Through this framework, our students benefit from the proven strengths of the Canadian education system, consistently ranked among the world’s best, while staying firmly aligned to India’s robust CBSE curriculum.
                             </p>
 
                             <div className="w-full">
@@ -284,7 +284,7 @@ export default function Home() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-6 leading-tight tracking-tighter uppercase shadow-sm">
+                            <h2 className="text-[28px] sm:text-[44px] lg:text-[52px] font-bold mb-6 leading-tight tracking-tighter uppercase">
                                 The Continuum of Learning
                             </h2>
                             <p className="max-w-4xl mx-auto text-lg lg:text-xl text-[#333333] leading-relaxed">
@@ -618,7 +618,7 @@ export default function Home() {
                             <motion.div
                                 animate={{ y: [0, -10, 0] }}
                             >
-                                <h2 className="text-[32px] lg:text-[44px] font-black mb-6 leading-tight uppercase tracking-tighter shadow-sm" style={{ color: '#FFFFFF' }}>
+                                <h2 className="text-[32px] lg:text-[44px] font-bold mb-6 leading-tight uppercase tracking-tighter " style={{ color: '#FFFFFF' }}>
                                     Where Logic Meets Imagination
                                 </h2>
 
@@ -715,7 +715,7 @@ export default function Home() {
                             transition={{ duration: 0.8, delay: 0.3 }}
                             className="order-1 lg:order-2 text-[#000000]"
                         >
-                            <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight tracking-tighter uppercase shadow-sm">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter uppercase">
                                 Sports Arena
                             </h2>
                             <p className="text-2xl lg:text-3xl font-bold mb-4 text-[#d0302b]">
@@ -751,7 +751,7 @@ export default function Home() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-4 leading-tight tracking-tighter uppercase shadow-sm">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-4 leading-tight tracking-tighter uppercase">
                                 Words from Our Community
                             </h2>
                             <p className="max-w-2xl mx-auto text-lg lg:text-xl font-bold opacity-90">
@@ -789,10 +789,10 @@ export default function Home() {
                                         {/* Avatar + Name */}
                                         <div className="flex flex-col items-center gap-3 mt-auto">
                                             <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center border-2 border-black/20">
-                                                <span className="text-white font-black text-sm" style={{ fontFamily: "'Raleway', sans-serif" }}>{t.initials}</span>
+                                                <span className="text-white font-bold text-sm" style={{ fontFamily: "'Raleway', sans-serif" }}>{t.initials}</span>
                                             </div>
                                             <div>
-                                                <h4 className="font-black text-base text-black" style={{ fontFamily: "'Raleway', sans-serif", color: '#000000' }}>{t.name}</h4>
+                                                <h4 className="font-bold text-base text-black" style={{ fontFamily: "'Raleway', sans-serif", color: '#000000' }}>{t.name}</h4>
                                                 <p className="text-xs font-bold text-black" style={{ color: '#000000' }}>{t.role}</p>
                                             </div>
                                         </div>
@@ -851,7 +851,7 @@ export default function Home() {
                             className="text-[#1A1A1A] flex flex-col justify-center"
                         >
                             <h2
-                                className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight uppercase tracking-tighter shadow-sm"
+                                className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight uppercase tracking-tighter"
                             >
                                 Start Your Child&apos;s Journey
                             </h2>

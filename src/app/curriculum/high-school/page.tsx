@@ -73,7 +73,7 @@ export default function HighSchool() {
                                 viewport={{ once: true }}
                                 className="space-y-8"
                             >
-                                <h2 className="text-[32px] lg:text-[44px] font-black leading-tight" style={{ fontFamily: '"Raleway", sans-serif', color: '#1A1A1A' }}>The Transformation <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Years</span></h2>
+                                <h2 className="text-[32px] lg:text-[44px] font-bold leading-tight" style={{ fontFamily: '"Raleway", sans-serif', color: '#1A1A1A' }}>The Transformation <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Years</span></h2>
                                 <div className="w-20 h-1.5 bg-[#D6B25E] rounded-full"></div>
                                 <p className="text-xl text-[#4F4F4F] leading-relaxed">
                                     The transformation years that foster independence, discipline, and vision. With CBSE’s structured framework and global exposure, learners evolve into confident aspirants — ready to lead, innovate, and explore the world beyond boundaries.
@@ -101,7 +101,7 @@ export default function HighSchool() {
                 {/* STEAM Focus */}
                 <section className="py-32 bg-[#FDF6E3]/30">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <h2 className="text-[32px] lg:text-[44px] font-black mb-8" style={{ fontFamily: '"Raleway", sans-serif', color: '#1A1A1A' }}>STEAM & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Innovation</span></h2>
+                        <h2 className="text-[32px] lg:text-[44px] font-bold mb-8" style={{ fontFamily: '"Raleway", sans-serif', color: '#1A1A1A' }}>STEAM & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Innovation</span></h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-20 text-center">Where logic meets imagination across every discipline.</p>
                         <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
                             {[
@@ -137,7 +137,7 @@ export default function HighSchool() {
                             >
                                 <span className="text-5xl mb-4 block">👑</span>
                                 <h2
-                                    className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight"
+                                    className="text-[44px] lg:text-[56px] font-bold mb-8 leading-tight"
                                     style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#1A1A1A' }}
                                 >
                                     The Journey into <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Leadership</span>

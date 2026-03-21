@@ -76,10 +76,10 @@ body::before {
 /* H1 - Page Banner Headers */
 h1 {
   font-family: var(--font-heading);
-  font-size: clamp(48px, 8vw, 80px);
-  font-weight: 900;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 800;
   color: var(--text-heading);
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
   line-height: 1.1;
   text-transform: uppercase;
 }
@@ -87,8 +87,8 @@ h1 {
 /* H2 - Main Section Titles */
 h2 {
   font-family: var(--font-heading);
-  font-size: clamp(32px, 5vw, 56px);
-  font-weight: 800;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
   color: var(--text-heading);
   line-height: 1.2;
 }

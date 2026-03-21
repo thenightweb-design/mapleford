@@ -27,7 +27,7 @@ export default function Programs() {
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <p className="text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Educational Excellence</p>
-              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black text-white leading-tight uppercase tracking-tighter shadow-sm">
+              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold text-white leading-tight uppercase tracking-tighter ">
                 Programs
               </h1>
               <p className="text-white/90 text-lg sm:text-xl mt-4 max-w-2xl mx-auto font-medium leading-relaxed">
@@ -42,8 +42,8 @@ export default function Programs() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="space-y-6">
-                <p className="text-[#d0302b] font-black uppercase tracking-[0.4em] text-xs">Strategic Partnership</p>
-                <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-black text-[#000000] leading-tight uppercase tracking-tighter shadow-sm">
+                <p className="text-[#d0302b] font-bold uppercase tracking-[0.4em] text-xs">Strategic Partnership</p>
+                <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold text-[#000000] leading-tight uppercase tracking-tighter ">
                   A Seamless Blend of Two Powerful Systems
                 </h2>
                 <div className="space-y-4 text-lg text-[#000000] leading-relaxed">
@@ -51,9 +51,9 @@ export default function Programs() {
                   <p>Through this partnership, our students benefit from the proven strengths of the Canadian education system, while staying firmly aligned to India&apos;s respected CBSE framework.</p>
                 </div>
                 <div className="inline-flex items-center gap-4 px-6 py-4 rounded-full border-2 border-[#d0302b]/20 bg-[#d0302b]/5">
-                  <span className="font-black text-[#d0302b]">Canadian Pedagogy</span>
-                  <span className="text-2xl font-black text-[#000000]">+</span>
-                  <span className="font-black text-[#d0302b]">CBSE Curriculum</span>
+                  <span className="font-bold text-[#d0302b]">Canadian Pedagogy</span>
+                  <span className="text-2xl font-bold text-[#000000]">+</span>
+                  <span className="font-bold text-[#d0302b]">CBSE Curriculum</span>
                 </div>
               </motion.div>
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }}>
@@ -73,7 +73,7 @@ export default function Programs() {
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-white uppercase tracking-tighter shadow-sm">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white uppercase tracking-tighter ">
                 What This Means for Learners
               </h2>
             </div>
@@ -92,8 +92,8 @@ export default function Programs() {
                   transition={{ delay: idx * 0.08 }}
                   className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 hover:bg-white/20 transition-all duration-300"
                 >
-                  <div className="text-3xl font-black text-white/20 mb-3">{item.no}</div>
-                  <h3 className="text-xl font-black text-white mb-3">{item.title}</h3>
+                  <div className="text-3xl font-bold text-white/20 mb-3">{item.no}</div>
+                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-white/80 leading-relaxed text-sm">{item.desc}</p>
                 </motion.div>
               ))}
@@ -105,8 +105,8 @@ export default function Programs() {
         <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <p className="text-[#d0302b] font-black uppercase tracking-[0.4em] text-xs mb-3">Academic Stages</p>
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-[#000000] uppercase tracking-tighter shadow-sm">
+              <p className="text-[#d0302b] font-bold uppercase tracking-[0.4em] text-xs mb-3">Academic Stages</p>
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] uppercase tracking-tighter ">
                 Curriculum Pathway
               </h2>
             </div>
@@ -135,7 +135,7 @@ export default function Programs() {
                   className={`${stage.color} border p-8 sm:p-10 rounded-3xl hover:-translate-y-1 hover:shadow-xl transition-all duration-300`}
                 >
                   <div className="text-5xl mb-6">{stage.icon}</div>
-                  <h3 className="text-2xl font-black text-[#000000] mb-1">{stage.title}</h3>
+                  <h3 className="text-2xl font-bold text-[#000000] mb-1">{stage.title}</h3>
                   <p className="text-gray-400 font-bold text-sm mb-5">{stage.grades}</p>
                   <ul className="space-y-3 mb-6">
                     {stage.points.map((p, i) => (
@@ -145,7 +145,7 @@ export default function Programs() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={stage.href} className={`font-black ${stage.accent} hover:underline`}>Explore →</Link>
+                  <Link href={stage.href} className={`font-bold ${stage.accent} hover:underline`}>Explore →</Link>
                 </motion.div>
               ))}
             </div>
@@ -160,7 +160,7 @@ export default function Programs() {
           </div>
           <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
-              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-white leading-tight uppercase tracking-tighter shadow-sm">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white leading-tight uppercase tracking-tighter ">
                 Invest in Their Future.
               </h2>
               <p className="text-lg text-white/90 max-w-xl mx-auto leading-relaxed">

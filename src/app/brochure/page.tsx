@@ -34,7 +34,7 @@ export default function Brochure() {
                     >
                         <span className="text-5xl mb-4 block">📚</span>
                         <h1
-                            className="text-[48px] sm:text-[64px] lg:text-[80px] font-black mb-6 text-white uppercase tracking-tighter shadow-sm"
+                            className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold mb-6 text-white uppercase tracking-tighter "
                         >
                             School Brochure
                         </h1>
@@ -58,7 +58,7 @@ export default function Brochure() {
                         >
                             <span className="text-5xl mb-4 block">📖</span>
                             <h2
-                                className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter shadow-sm"
+                                className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter "
                             >
                                 Digital Prospectus
                             </h2>
@@ -110,7 +110,7 @@ export default function Brochure() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2
-                            className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter shadow-sm"
+                            className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter "
                         >
                             Download Our Brochure
                         </h2>
@@ -178,7 +178,7 @@ export default function Brochure() {
             {/* Call to Action */}
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 text-[#1A1A1A] uppercase tracking-tighter shadow-sm">
+                    <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 text-[#1A1A1A] uppercase tracking-tighter ">
                         Ready to Learn More?
                     </h2>
                     <p className="text-xl text-[#4F4F4F] mb-12 max-w-2xl mx-auto" style={{ fontFamily: '"Lato", sans-serif' }}>
