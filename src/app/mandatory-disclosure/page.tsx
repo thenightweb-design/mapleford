@@ -50,13 +50,10 @@ export default function MandatoryDisclosure() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1
-                className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter"
-                style={{ fontFamily: "'Raleway', sans-serif" }}
-              >
-                Mandatory <span className="opacity-60">Disclosure</span>
+              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter shadow-sm">
+                Mandatory Disclosure
               </h1>
-              <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
+              <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-black tracking-wide italic leading-tight uppercase">
                 Transparency in Excellence and Governance.
               </p>
             </motion.div>
@@ -95,7 +92,8 @@ export default function MandatoryDisclosure() {
                             href={item.link} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-6 py-2 bg-[#d0302b] text-white font-black text-xs uppercase tracking-widest rounded-full hover:bg-[#b02020] transition-all hover:scale-105 shadow-md shadow-red-100"
+                            className="inline-flex items-center justify-center px-6 py-2 bg-[#d0302b] font-black text-xs uppercase tracking-widest rounded-full hover:bg-[#b02020] transition-all hover:scale-105 shadow-md shadow-red-100"
+                            style={{ color: '#D6B25E' }}
                           >
                             View File
                           </a>

@@ -34,10 +34,9 @@ export default function Brochure() {
                     >
                         <span className="text-5xl mb-4 block">📚</span>
                         <h1
-                            className="text-[44px] lg:text-[68px] font-black mb-6 text-white"
-                            style={{ fontFamily: '"Raleway", sans-serif' }}
+                            className="text-[48px] sm:text-[64px] lg:text-[80px] font-black mb-6 text-white uppercase tracking-tighter shadow-sm"
                         >
-                            School <span className="text-white">Brochure</span>
+                            School Brochure
                         </h1>
                         <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed " style={{ fontFamily: '"Lato", sans-serif' }}>
                             "Your gateway to understanding Mapleford International School — where excellence meets opportunity."
@@ -59,10 +58,9 @@ export default function Brochure() {
                         >
                             <span className="text-5xl mb-4 block">📖</span>
                             <h2
-                                className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight text-[#1A1A1A]"
-                                style={{ fontFamily: '"Raleway", sans-serif' }}
+                                className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter shadow-sm"
                             >
-                                Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Prospectus</span>
+                                Digital Prospectus
                             </h2>
                             <div className="space-y-6 text-lg text-[#4F4F4F] leading-relaxed" style={{ fontFamily: '"Lato", sans-serif' }}>
                                 <p>
@@ -112,10 +110,9 @@ export default function Brochure() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2
-                            className="text-[44px] lg:text-[56px] font-black mb-8 leading-tight text-[#1A1A1A]"
-                            style={{ fontFamily: '"Raleway", sans-serif' }}
+                            className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter shadow-sm"
                         >
-                            Download Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Brochure</span>
+                            Download Our Brochure
                         </h2>
                         <p className="text-xl max-w-4xl mx-auto text-[#4F4F4F] leading-relaxed" style={{ fontFamily: '"Lato", sans-serif' }}>
                             Get detailed insights into our curriculum, facilities, admission process, and the Mapleford experience.
@@ -156,7 +153,6 @@ export default function Brochure() {
                                     <div className="text-6xl mb-6">{brochure.icon}</div>
                                     <h3
                                         className="text-2xl font-bold mb-4 text-[#1A1A1A]"
-                                        style={{ fontFamily: "'Raleway', sans-serif" }}
                                     >
                                         {brochure.title}
                                     </h3>
@@ -182,8 +178,8 @@ export default function Brochure() {
             {/* Call to Action */}
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-[32px] lg:text-[44px] font-black mb-8 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>
-                        Ready to Learn <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">More?</span>
+                    <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black mb-8 text-[#1A1A1A] uppercase tracking-tighter shadow-sm">
+                        Ready to Learn More?
                     </h2>
                     <p className="text-xl text-[#4F4F4F] mb-12 max-w-2xl mx-auto" style={{ fontFamily: '"Lato", sans-serif' }}>
                         Have questions about our programs or want to schedule a campus visit? We're here to help.

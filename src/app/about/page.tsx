@@ -35,10 +35,7 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1
-                className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter"
-                style={{ fontFamily: "'Raleway', sans-serif" }}
-              >
+              <h1 className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter shadow-sm">
                 Who We Are
               </h1>
               <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
@@ -56,7 +53,7 @@ export default function About() {
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
                 className="space-y-8 flex flex-col justify-center"
               >
-                <div className="space-y-6 text-lg text-[#000000] leading-relaxed" style={{ fontFamily: '"Lato", sans-serif' }}>
+                <div className="space-y-6 text-lg lg:text-xl text-[#000000] leading-relaxed">
                   <p>
                     Located in the heart of Hayathnagar, Hyderabad, <strong>Mapleford International School</strong> carries forward the distinguished three-decade legacy of <strong>Megacity High School</strong>, a trusted institution known for its strong values and commitment to quality education.
                   </p>
@@ -103,11 +100,11 @@ export default function About() {
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
                 className="space-y-8 lg:pr-8"
               >
-                <h2 className="text-[36px] sm:text-[48px] lg:text-[60px] font-black text-white" style={{ fontFamily: '"Raleway", sans-serif' }}>
+                <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-white uppercase tracking-tighter">
                   Our School of Thought
                 </h2>
-                <div className="space-y-6 text-lg sm:text-xl text-white/90 leading-relaxed" style={{ fontFamily: '"Lato", sans-serif' }}>
-                  <p className="font-black text-white text-2xl sm:text-3xl tracking-tight">
+                <div className="space-y-6 text-lg lg:text-xl text-white/90 leading-relaxed font-medium">
+                  <p className="font-black text-white text-2xl sm:text-3xl lg:text-4xl tracking-tight uppercase">
                     Knowledge in Pursuit of Integrity and Excellence
                   </p>
                   <div className="space-y-6">
@@ -150,12 +147,11 @@ export default function About() {
         <section className="py-10 sm:py-14 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-[36px] sm:text-[48px] lg:text-[56px] font-black text-[#000000] mb-6" style={{ fontFamily: '"Raleway", sans-serif' }}>
+              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-[#000000] mb-6 uppercase tracking-tighter">
                 Our Team
               </h2>
-              <p className="text-xl text-[#000000] max-w-4xl mx-auto leading-relaxed font-medium" style={{ fontFamily: '"Lato", sans-serif' }}>
-                The heart of Mapleford is an empathetic, compassionate, dynamic, and visionary team,<br />
-                a committed leadership, and devoted mentors at its core. Our compass guides students toward steadiness and inspiration.
+              <p className="text-xl lg:text-2xl text-[#000000] max-w-4xl mx-auto leading-relaxed font-black opacity-80 italic uppercase">
+                The heart of Mapleford is an empathetic, compassionate, dynamic, and visionary team, a committed leadership, and devoted mentors at its core.
               </p>
             </div>
 
@@ -173,12 +169,12 @@ export default function About() {
                 </div>
                 <div className="lg:col-span-8 space-y-6">
                   <div className="space-y-2">
-                    <h3 className="text-3xl sm:text-4xl font-black text-[#d0302b]" style={{ fontFamily: '"Raleway", sans-serif' }}>P Subba Reddy</h3>
+                    <h3 className="text-2xl lg:text-3xl font-black text-[#d0302b] uppercase tracking-tighter">P Subba Reddy</h3>
                     <p className="text-gray-500 font-black uppercase tracking-widest text-sm">Chairman</p>
                   </div>
-                  <h4 className="text-2xl sm:text-3xl font-black text-[#000000]" style={{ fontFamily: '"Raleway", sans-serif' }}>Vision for the Future</h4>
+                  <h4 className="text-xl lg:text-2xl font-black text-[#000000] uppercase">Vision for the Future</h4>
                   <div className="w-20 h-1.5 bg-[#d0302b] rounded-full" />
-                  <div className="space-y-6 text-lg text-gray-700 leading-relaxed font-medium" style={{ fontFamily: '"Lato", sans-serif' }}>
+                  <div className="space-y-6 text-lg lg:text-xl text-gray-700 leading-relaxed font-medium">
                     <p>At Mapleford International School, we believe that education is not merely the transfer of knowledge but the cultivation of character, curiosity, and compassion. As we carry forward the distinguished legacy of Megacity High School, our mission remains grounded in a simple truth: children learn best when they feel valued, supported, and inspired to discover who they are.</p>
                     <p>Our journey has been shaped by the belief that schooling must prepare students for life, not just for examinations. Mapleford stands as an evolution of that belief, embracing global perspectives while staying anchored in timeless values.</p>
                   </div>
@@ -198,10 +194,10 @@ export default function About() {
                 <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
                   <div className="lg:col-span-8 space-y-6 order-2 lg:order-1">
                     <div className="space-y-2">
-                      <h3 className="text-3xl sm:text-4xl font-black text-white" style={{ fontFamily: '"Raleway", sans-serif' }}>CH Swetha Reddy</h3>
+                      <h3 className="text-2xl lg:text-3xl font-black text-white uppercase tracking-tighter">CH Swetha Reddy</h3>
                       <p className="text-white/60 font-black uppercase tracking-widest text-sm">Assistant Director</p>
                     </div>
-                    <h4 className="text-2xl sm:text-3xl font-black text-white/90" style={{ fontFamily: '"Raleway", sans-serif' }}>Driven by Purpose</h4>
+                    <h4 className="text-xl lg:text-2xl font-black text-white/90 uppercase tracking-tighter">Driven by Purpose</h4>
                     <div className="w-20 h-1.5 bg-white/30 rounded-full" />
                     <div className="space-y-6 text-lg text-white/80 leading-relaxed font-medium">
                       <p>At Mapleford, we are committed to creating a space where every child can flourish. My focus is on ensuring that our operational excellence meets our academic vision, providing students with the best possible resources and environment to grow.</p>
@@ -230,12 +226,12 @@ export default function About() {
                 </div>
                 <div className="lg:col-span-8 space-y-6">
                   <div className="space-y-2">
-                    <h3 className="text-3xl sm:text-4xl font-black text-[#d0302b]" style={{ fontFamily: '"Raleway", sans-serif' }}>P Varalaxmi</h3>
+                    <h3 className="text-2xl lg:text-3xl font-black text-[#d0302b] uppercase tracking-tighter">P Varalaxmi</h3>
                     <p className="text-gray-500 font-black uppercase tracking-widest text-sm">Principal</p>
                   </div>
-                  <h4 className="text-2xl sm:text-3xl font-black text-[#000000]" style={{ fontFamily: '"Raleway", sans-serif' }}>Excellence in Learning</h4>
+                  <h4 className="text-xl lg:text-2xl font-black text-[#000000] uppercase tracking-tighter">Excellence in Learning</h4>
                   <div className="w-20 h-1.5 bg-[#d0302b] rounded-full" />
-                  <div className="space-y-6 text-lg text-gray-700 leading-relaxed font-medium" style={{ fontFamily: '"Lato", sans-serif' }}>
+                  <div className="space-y-6 text-lg lg:text-xl text-gray-700 leading-relaxed font-medium">
                     <p>Education, to us, is not a race but a journey. It is augmented through attentive listening, thoughtful guidance, and learning experiences that encourage children to think independently and understand deeply.</p>
                     <p>Our faculty brings together expertise and empathy, ensuring that every learner is seen not just for their academic abilities, but for the individual they are becoming. We emphasize balance—between discipline and creativity, reflection and action, ambition and humility.</p>
                   </div>

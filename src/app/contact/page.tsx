@@ -39,10 +39,9 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
             >
               <h1
-                className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter"
-                style={{ fontFamily: "'Raleway', sans-serif" }}
+                className="text-[48px] sm:text-[64px] lg:text-[80px] font-black !text-white leading-tight mb-4 uppercase tracking-tighter shadow-sm"
               >
-                Contact <span className="!text-white/60">Us</span>
+                Contact Us
               </h1>
               <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
                 We&apos;re here to listen and help your child&apos;s journey.
@@ -60,8 +59,8 @@ export default function Contact() {
               <div className="lg:col-span-5 space-y-8">
                 <div>
                   <p className="text-[#d0302b] font-black uppercase tracking-[0.4em] text-xs mb-3">Contact Points</p>
-                  <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-black text-[#000000] leading-tight" style={{ fontFamily: '"Raleway", sans-serif' }}>
-                    Reach out <br /><span className="text-[#d0302b]">Directly.</span>
+                  <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-black text-[#000000] leading-tight uppercase tracking-tighter shadow-sm">
+                    Reach out Directly
                   </h2>
                 </div>
                 <div className="space-y-4">
@@ -175,7 +174,7 @@ export default function Contact() {
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-10">
-              <h2 className="text-[32px] sm:text-[44px] font-black text-white" style={{ fontFamily: '"Raleway", sans-serif' }}>Find Us Here</h2>
+              <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-black text-white uppercase tracking-tighter shadow-sm">Find Us Here</h2>
               <p className="text-white/80 mt-3 text-lg">Hayathnagar, Hyderabad, Telangana - 500070</p>
             </div>
             <div className="relative h-[350px] sm:h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">

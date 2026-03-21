@@ -19,11 +19,8 @@ export default function TermsOfService() {
                 transition={{ duration: 0.8 }}
                 className="text-center"
               >
-                <h1
-                  className="text-5xl lg:text-7xl font-bold mb-6 leading-tight"
-                  style={{ fontFamily: '"Raleway", sans-serif' }}
-                >
-                  Terms of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d0302b] to-[#D6B25E]">Service</span>
+                <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight uppercase tracking-tighter">
+                  Terms of Service
                 </h1>
                 <p className="text-lg text-gray-600">
                   Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
@@ -44,7 +41,7 @@ export default function TermsOfService() {
                 <div className="space-y-12">
                   {/* Introduction */}
                   <div className="bg-gradient-to-br from-[#FDF6E3]/50 to-white p-8 rounded-3xl border border-[#D6B25E]/20">
-                    <h2 className="text-3xl font-bold mb-4 text-[#000000]" style={{ fontFamily: '"Raleway", sans-serif' }}>Welcome to Mapleford International School</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-4 text-[#000000] uppercase tracking-tighter">Welcome to Mapleford International School</h2>
                     <p className="text-gray-700 leading-relaxed">
                       These Terms of Service ("Terms") govern your access to and use of the Mapleford International School website and services. By accessing or using our website, you agree to be bound by these Terms. If you do not agree with any part of these Terms, please do not use our website.
                     </p>
@@ -52,7 +49,7 @@ export default function TermsOfService() {
 
                   {/* Acceptance of Terms */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#000000]" style={{ fontFamily: '"Raleway", sans-serif' }}>Acceptance of Terms</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#000000] uppercase tracking-tighter">Acceptance of Terms</h2>
                     <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                       <p className="text-[#000000] leading-relaxed">
                         By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. Additionally, when using particular services, you shall be subject to any posted guidelines or rules applicable to such services.
@@ -62,7 +59,7 @@ export default function TermsOfService() {
 
                   {/* Use of Website */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#000000]" style={{ fontFamily: '"Raleway", sans-serif' }}>Use of Website</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#000000] uppercase tracking-tighter">Use of Website</h2>
                     <div className="space-y-6">
                       <div className="bg-gradient-to-br from-[#FDF6E3]/30 to-white p-8 rounded-3xl border border-[#D6B25E]/20">
                         <h3 className="text-xl font-bold mb-3 text-[#d0302b]">Permitted Use</h3>
@@ -93,7 +90,7 @@ export default function TermsOfService() {
 
                   {/* Intellectual Property */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Intellectual Property Rights</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Intellectual Property Rights</h2>
                     <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                       <p className="text-gray-700 leading-relaxed mb-4">
                         The content on this website, including but not limited to text, graphics, logos, images, and software, is the property of Mapleford International School and is protected by copyright, trademark, and other intellectual property laws.
@@ -106,7 +103,7 @@ export default function TermsOfService() {
 
                   {/* User Submissions */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>User Submissions</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">User Submissions</h2>
                     <div className="bg-gradient-to-br from-[#FDF6E3]/50 to-white p-8 rounded-3xl border border-[#D6B25E]/20">
                       <p className="text-gray-700 leading-relaxed mb-4">
                         By submitting any content to our website (including forms, comments, or feedback), you grant Mapleford International School a non-exclusive, royalty-free, perpetual, and worldwide license to use, reproduce, modify, and distribute such content.
@@ -119,7 +116,7 @@ export default function TermsOfService() {
 
                   {/* Admission Process */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Admission Process</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Admission Process</h2>
                     <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                       <p className="text-gray-700 leading-relaxed mb-4">
                         Submission of an admission inquiry or application through our website does not guarantee admission to Mapleford International School. All admissions are subject to:
@@ -136,7 +133,7 @@ export default function TermsOfService() {
 
                   {/* Disclaimer of Warranties */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Disclaimer of Warranties</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Disclaimer of Warranties</h2>
                     <div className="bg-gradient-to-br from-[#FDF6E3]/30 to-white p-8 rounded-3xl border border-[#D6B25E]/20">
                       <p className="text-gray-700 leading-relaxed mb-4">
                         This website is provided on an "as is" and "as available" basis. Mapleford International School makes no representations or warranties of any kind, express or implied, regarding:
@@ -160,7 +157,7 @@ export default function TermsOfService() {
 
                   {/* Limitation of Liability */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Limitation of Liability</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Limitation of Liability</h2>
                     <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                       <p className="text-gray-700 leading-relaxed">
                         To the fullest extent permitted by law, Mapleford International School shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from your access to or use of the website.
@@ -170,7 +167,7 @@ export default function TermsOfService() {
 
                   {/* External Links */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>External Links</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">External Links</h2>
                     <div className="bg-gradient-to-br from-[#FDF6E3]/50 to-white p-8 rounded-3xl border border-[#D6B25E]/20">
                       <p className="text-gray-700 leading-relaxed">
                         Our website may contain links to third-party websites. These links are provided for your convenience only. We do not endorse or assume any responsibility for the content, privacy policies, or practices of any third-party websites.
@@ -180,7 +177,7 @@ export default function TermsOfService() {
 
                   {/* Modifications to Terms */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Modifications to Terms</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Modifications to Terms</h2>
                     <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                       <p className="text-gray-700 leading-relaxed">
                         We reserve the right to modify these Terms at any time. We will notify users of any material changes by posting the updated Terms on this page with a new "Last Updated" date. Your continued use of the website after such modifications constitutes your acceptance of the updated Terms.
@@ -190,7 +187,7 @@ export default function TermsOfService() {
 
                   {/* Governing Law */}
                   <div>
-                    <h2 className="text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: '"Raleway", sans-serif' }}>Governing Law</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#1A1A1A] uppercase tracking-tighter">Governing Law</h2>
                     <div className="bg-gradient-to-br from-[#FDF6E3]/30 to-white p-8 rounded-3xl border border-[#D6B25E]/20">
                       <p className="text-gray-700 leading-relaxed">
                         These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising from these Terms or your use of the website shall be subject to the exclusive jurisdiction of the courts in Hyderabad, Telangana.
@@ -200,7 +197,7 @@ export default function TermsOfService() {
 
                   {/* Contact Information */}
                   <div className="bg-gradient-to-br from-[#d0302b]/5 to-[#D6B25E]/5 p-10 rounded-3xl border-2 border-[#D6B25E]/30">
-                    <h2 className="text-3xl font-bold mb-6 text-[#000000]" style={{ fontFamily: '"Raleway", sans-serif' }}>Contact Us</h2>
+                    <h2 className="text-2xl lg:text-3xl font-black mb-6 text-[#000000] uppercase tracking-tighter">Contact Us</h2>
                     <p className="text-gray-700 leading-relaxed mb-6">
                       If you have any questions about these Terms of Service, please contact us:
                     </p>
