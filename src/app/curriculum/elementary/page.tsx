@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from '../../../components/Button';
 
 export default function ElementarySchool() {
@@ -81,10 +82,11 @@ export default function ElementarySchool() {
                                 className="order-1 lg:order-2"
                             >
                                 <div className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/3]">
-                                    <img
+                                    <Image
                                         src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&h=600&fit=crop"
                                         alt="Elementary Learning"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </div>
                             </motion.div>
@@ -165,12 +167,13 @@ export default function ElementarySchool() {
                                 <motion.div
                                     whileHover={{ scale: 1.02 }}
                                     transition={{ duration: 0.3 }}
-                                    className="rounded-3xl overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-full"
+                                    className="rounded-3xl overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-full min-h-[500px]"
                                 >
-                                    <img
+                                    <Image
                                         src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1000&h=1200&fit=crop"
                                         alt="Beyond the Textbooks"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                                     <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-[#D6B25E]/20">
@@ -229,11 +232,12 @@ export default function ElementarySchool() {
                                     whileHover={{ y: -10 }}
                                     className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500"
                                 >
-                                    <div className="aspect-video overflow-hidden">
-                                        <img
+                                    <div className="aspect-video overflow-hidden relative">
+                                        <Image
                                             src={stage.image}
                                             alt={`${stage.stage}`}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                            fill
+                                            className="object-cover group-hover:scale-110 transition-transform duration-700"
                                         />
                                     </div>
                                     <div className="p-8 text-center" style={{ background: stage.color }}>

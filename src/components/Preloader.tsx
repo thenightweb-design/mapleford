@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Preloader() {
   const [isVisible, setIsVisible] = useState(true);
@@ -74,10 +75,13 @@ export default function Preloader() {
                 transition={{ duration: 0.6, ease: [0.34, 1.56, 0.64, 1] }}
                 className="relative z-10 w-24 h-24 bg-white rounded-full shadow-2xl flex items-center justify-center"
               >
-                <img
+                <Image
                   src="/SHEI.png"
                   alt="Mapleford International School"
+                  width={80}
+                  height={80}
                   className="w-20 h-20 object-contain"
+                  priority
                 />
               </motion.div>
             </div>

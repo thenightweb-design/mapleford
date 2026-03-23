@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Image from 'next/image';
 import Button from '../../components/Button';
 
 export default function Brochure() {
@@ -18,10 +19,12 @@ export default function Brochure() {
             {/* Hero Section */}
             <section className="py-24 lg:py-32 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
                 <div className="absolute inset-0 z-0">
-                    <img 
+                    <Image 
                         src="/images/Image25.png" 
                         alt="Brochure Background" 
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        priority
                     />
                     <div className="absolute inset-0 bg-[#d0302b]/80 backdrop-blur-sm" />
                 </div>
@@ -89,10 +92,11 @@ export default function Brochure() {
                                 transition={{ duration: 0.3 }}
                                 className="rounded-3xl overflow-hidden shadow-2xl relative aspect-[3/4]"
                             >
-                                <img
+                                <Image
                                     src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=1000&fit=crop"
                                     alt="School Brochure Preview"
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    className="object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                                 <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-[#D6B25E]/20">

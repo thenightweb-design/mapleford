@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -56,9 +57,14 @@ export default function Programs() {
                   <span className="font-bold text-[#d0302b]">CBSE Curriculum</span>
                 </div>
               </motion.div>
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }}>
-                <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-                  <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&h=800&fit=crop" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Students learning" />
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }} className="w-full">
+                <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl relative">
+                  <Image
+                    src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&h=800&fit=crop"
+                    alt="Students learning"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
               </motion.div>
             </div>

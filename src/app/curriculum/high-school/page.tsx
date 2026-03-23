@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from '../../../components/Button';
 
 export default function HighSchool() {
@@ -56,10 +57,11 @@ export default function HighSchool() {
                                 className="relative"
                             >
                                 <div className="rounded-[4rem] overflow-hidden shadow-2xl aspect-[4/5] relative">
-                                    <img
+                                    <Image
                                         src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=1500&fit=crop"
                                         alt="High School Learning"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#d0302b]/40 to-transparent"></div>
                                     <div className="absolute bottom-12 left-12 right-12 text-white">
@@ -202,12 +204,13 @@ export default function HighSchool() {
                                 <motion.div
                                     whileHover={{ scale: 1.02 }}
                                     transition={{ duration: 0.3 }}
-                                    className="rounded-3xl overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-full"
+                                    className="rounded-3xl overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-full min-h-[500px]"
                                 >
-                                    <img
+                                    <Image
                                         src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1000&h=1200&fit=crop"
                                         alt="The Journey into Leadership"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                                     <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-[#D6B25E]/20">

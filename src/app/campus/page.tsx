@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -70,7 +71,13 @@ export default function Campus() {
       <main className="pt-[90px] lg:pt-[120px]">
         <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0">
-            <img src="/images/Image24_000.png" alt="Campus Background" className="w-full h-full object-cover opacity-40" />
+            <Image 
+              src="/images/Image24_000.png" 
+              alt="Campus Background" 
+              fill 
+              className="object-cover opacity-40" 
+              priority
+            />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div
@@ -101,7 +108,12 @@ export default function Campus() {
                   <div className="w-full lg:w-1/2 relative">
                     <div className="absolute -inset-4 bg-slate-50 rounded-[4rem] -z-10 rotate-2" />
                     <div className="relative aspect-[16/10] rounded-[3.5rem] overflow-hidden shadow-2xl group border-[12px] border-white">
-                      <img src={fac.image} alt={fac.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                      <Image 
+                        src={fac.image} 
+                        alt={fac.title} 
+                        fill 
+                        className="object-cover group-hover:scale-105 transition-transform duration-1000" 
+                      />
                     </div>
                   </div>
 

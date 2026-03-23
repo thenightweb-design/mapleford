@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from '../../../components/Button';
 
 export default function PreSchool() {
@@ -55,10 +56,11 @@ export default function PreSchool() {
                                 viewport={{ once: true }}
                             >
                                 <div className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-square">
-                                    <img
+                                    <Image
                                         src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&h=800&fit=crop"
                                         alt="Pre-School Learning"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                     <div className="absolute inset-0 bg-[#d0302b]/10"></div>
                                 </div>
@@ -144,11 +146,12 @@ export default function PreSchool() {
                                     Experience the unique blend of wisdom and wonder at Mapleford. Our pre-school program is designed to nurture curiosity, creativity, and confidence in every child, laying a strong foundation for lifelong learning.
                                 </p>
 
-                                <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl mb-8">
-                                    <img
+                                <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl mb-8 relative">
+                                    <Image
                                         src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&h=500&fit=crop"
                                         alt="Pre-School at Mapleford"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </div>
 

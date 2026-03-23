@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -42,7 +43,13 @@ export default function Curriculum() {
                 {/* SECTION 1 — HERO BANNER */}
                 <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
                     <div className="absolute inset-0 z-0">
-                        <img src="/images/Image23.png" alt="Curriculum Background" className="w-full h-full object-cover opacity-40" />
+                        <Image 
+                            src="/images/Image23.png" 
+                            alt="Curriculum Background" 
+                            fill 
+                            className="object-cover opacity-40" 
+                            priority 
+                        />
                     </div>
                     <div className="relative z-10 max-w-4xl mx-auto">
                         <motion.div
@@ -106,32 +113,35 @@ export default function Curriculum() {
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center w-full">
                                     <motion.div
                                         whileHover={{ scale: 1.05 }}
-                                        className="flex items-center justify-center h-[180px]"
+                                        className="flex items-center justify-center h-[180px] relative"
                                     >
-                                        <img
+                                        <Image
                                             src="/images/Screenshot 2026-02-09 at 2.44.22 PM.png"
                                             alt="Evolution 1"
-                                            className="max-h-full w-auto object-contain"
+                                            fill
+                                            className="object-contain"
                                         />
                                     </motion.div>
                                     <motion.div
                                         whileHover={{ scale: 1.05 }}
-                                        className="flex items-center justify-center h-[180px]"
+                                        className="flex items-center justify-center h-[180px] relative"
                                     >
-                                        <img
+                                        <Image
                                             src="/images/Screenshot 2026-02-09 at 2.44.26 PM.png"
                                             alt="Evolution 2"
-                                            className="max-h-full w-auto object-contain"
+                                            fill
+                                            className="object-contain"
                                         />
                                     </motion.div>
                                     <motion.div
                                         whileHover={{ scale: 1.05 }}
-                                        className="flex items-center justify-center h-[180px]"
+                                        className="flex items-center justify-center h-[180px] relative"
                                     >
-                                        <img
+                                        <Image
                                             src="/images/Screenshot 2026-02-09 at 2.44.30 PM.png"
                                             alt="Evolution 3"
-                                            className="max-h-full w-auto object-contain"
+                                            fill
+                                            className="object-contain"
                                         />
                                     </motion.div>
                                 </div>
@@ -162,10 +172,15 @@ export default function Curriculum() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 1 }}
-                                className="relative order-2 lg:order-1"
+                                className="relative order-2 lg:order-1 h-[400px] w-full"
                             >
-                                <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white">
-                                    <img src="/images/curriculum_blend.png" alt="Seamless Blend" className="w-full h-auto" />
+                                <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white w-full h-full">
+                                    <Image 
+                                        src="/images/curriculum_blend.png" 
+                                        alt="Seamless Blend" 
+                                        fill 
+                                        className="object-cover" 
+                                    />
                                 </div>
                             </motion.div>
 
@@ -261,10 +276,15 @@ export default function Curriculum() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 1 }}
-                                className="w-full lg:w-1/2 relative"
+                                className="w-full lg:w-1/2 relative h-[400px]"
                             >
-                                <div className="relative rounded-[3rem] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.3)] border-8 border-white/10">
-                                    <img src="/images/curriculum_pathway_intro.png" alt="Pathways Roadmap" className="w-full h-auto" />
+                                <div className="relative rounded-[3rem] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.3)] border-8 border-white/10 w-full h-full">
+                                    <Image 
+                                        src="/images/curriculum_pathway_intro.png" 
+                                        alt="Pathways Roadmap" 
+                                        fill 
+                                        className="object-cover" 
+                                    />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#d0302b]/80 via-transparent to-transparent" />
                                 </div>
                             </motion.div>
@@ -298,10 +318,15 @@ export default function Curriculum() {
                                             <span className="tracking-widest text-sm">Apply for {stage.title}</span>
                                         </Button>
                                     </div>
-                                    <div className="w-full lg:w-7/12 relative group">
+                                    <div className="w-full lg:w-7/12 relative group h-[400px]">
                                         <div className="absolute -inset-8 bg-slate-50 rounded-[4rem] -z-10 group-hover:scale-105 transition-transform duration-700" />
-                                        <div className="relative aspect-[16/10] rounded-[3.5rem] overflow-hidden shadow-2xl transform group-hover:rotate-1 transition-transform duration-700">
-                                            <img src={stage.img} alt={stage.title} className="w-full h-full object-cover" />
+                                        <div className="relative w-full h-full rounded-[3.5rem] overflow-hidden shadow-2xl transform group-hover:rotate-1 transition-transform duration-700">
+                                            <Image 
+                                                src={stage.img} 
+                                                alt={stage.title} 
+                                                fill 
+                                                className="object-cover" 
+                                            />
                                             <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent" />
                                         </div>
                                     </div>

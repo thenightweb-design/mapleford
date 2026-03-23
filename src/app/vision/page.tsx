@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -20,7 +21,13 @@ export default function Vision() {
         {/* BANNER — Red */}
         <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0">
-            <img src="/images/Image27.png" alt="Vision Background" className="w-full h-full object-cover opacity-40" />
+            <Image
+              src="/images/Image27.png"
+              alt="Vision Background"
+              fill
+              className="object-cover opacity-40"
+              priority
+            />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>

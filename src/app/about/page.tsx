@@ -2,6 +2,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AdmissionModal from '../../components/AdmissionModal';
@@ -23,10 +24,12 @@ export default function About() {
         {/* HERO SECTION — Who We Are */}
         <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0">
-            <img 
+            <Image 
               src="/images/Image22_000.png" 
               alt="About Mapleford" 
-              className="w-full h-full object-cover opacity-40"
+              fill
+              className="object-cover opacity-40"
+              priority
             />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
@@ -75,10 +78,11 @@ export default function About() {
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
                 className="relative rounded-[2.5rem] overflow-hidden shadow-2xl min-h-[400px]"
               >
-                <img
+                <Image
                   src="/images/Image22.png"
                   alt="Mapleford Legacy"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </motion.div>
             </div>
@@ -127,13 +131,14 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative w-full flex items-center justify-center lg:mt-0 mt-8"
+                className="relative w-full flex items-center justify-center lg:mt-0 mt-8 h-[400px]"
               >
-                <div className="relative z-10 w-full max-w-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20">
-                  <img
+                <div className="relative z-10 w-full max-w-[600px] h-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20">
+                  <Image
                     src="/images/WhatsApp Image 2026-03-19 at 13.48.35.jpeg"
                     alt="Our School of Thought"
-                    className="w-full h-auto object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </motion.div>
@@ -163,7 +168,7 @@ export default function About() {
               >
                 <div className="lg:col-span-4">
                   <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-slate-50">
-                    <img src="/images/01--Subba Reddy Director.jpg" alt="P Subba Reddy" className="w-full h-full object-cover" />
+                    <Image src="/images/01--Subba Reddy Director.jpg" alt="P Subba Reddy" fill className="object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                   </div>
                 </div>
@@ -206,7 +211,7 @@ export default function About() {
                   </div>
                   <div className="lg:col-span-4 order-1 lg:order-2">
                     <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white/10">
-                      <img src="/images/02--Swetha Madam.jpg" alt="CH Swetha Reddy" className="w-full h-full object-cover" />
+                      <Image src="/images/02--Swetha Madam.jpg" alt="CH Swetha Reddy" fill className="object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                     </div>
                   </div>
@@ -220,7 +225,7 @@ export default function About() {
               >
                 <div className="lg:col-span-4">
                   <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-slate-50">
-                    <img src="/images/03--Principal Madam.jpg" alt="P Varalaxmi" className="w-full h-full object-cover" />
+                    <Image src="/images/03--Principal Madam.jpg" alt="P Varalaxmi" fill className="object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                   </div>
                 </div>

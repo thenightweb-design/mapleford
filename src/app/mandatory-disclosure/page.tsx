@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -38,10 +39,12 @@ export default function MandatoryDisclosure() {
         {/* BANNER — Red theme consistent with other pages */}
         <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0 text-white">
-            <img 
+            <Image 
               src="/images/Image21.png" 
               alt="Mandatory Disclosure Background" 
-              className="w-full h-full object-cover opacity-40" 
+              fill
+              className="object-cover opacity-40" 
+              priority
             />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">

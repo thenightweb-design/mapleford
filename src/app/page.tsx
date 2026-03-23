@@ -1,8 +1,7 @@
-'use client';
-
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+
+const MotionImage = motion(Image);
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
@@ -181,17 +180,18 @@ export default function Home() {
                             viewport={{ once: true }}
                             variants={fadeInUp}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="relative flex items-start pt-2"
+                            className="relative flex items-start pt-2 h-[400px] w-full"
                         >
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 transition={{ duration: 0.3 }}
-                                className="w-full rounded-3xl overflow-hidden shadow-2xl"
+                                className="w-full h-full rounded-3xl overflow-hidden shadow-2xl relative"
                             >
-                                <img
+                                <Image
                                     src="/images/Image19.png"
                                     alt="Mapleford International School Campus"
-                                    className="w-full h-auto object-cover"
+                                    fill
+                                    className="object-cover"
                                 />
                             </motion.div>
                             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#D6B25E]/20 rounded-full blur-3xl -z-10"></div>
@@ -255,16 +255,18 @@ export default function Home() {
                             viewport={{ once: true }}
                             variants={fadeInUp}
                             transition={{ duration: 0.8, delay: 0.3 }}
+                            className="relative"
                         >
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 transition={{ duration: 0.3 }}
                                 className="rounded-[3rem] overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-[600px] border-8 border-white/10"
                             >
-                                <img
+                                <Image
                                     src="/images/curriculum_indian.png"
                                     alt="Canadian Pedagogy + CBSE Curriculum"
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    className="object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                             </motion.div>
@@ -341,10 +343,11 @@ export default function Home() {
                                 style={{ perspective: "1000px" }}
                             >
                                 <div className="h-[42%] overflow-hidden relative">
-                                    <img
+                                    <Image
                                         src={stage.image}
                                         alt={`${stage.stage}`}
-                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                        fill
+                                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
 
@@ -667,42 +670,46 @@ export default function Home() {
                             <div className="grid grid-cols-2 gap-4">
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
-                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
+                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10 relative"
                                 >
-                                    <img
+                                    <Image
                                         src="/images/WhatsApp Image 2026-03-19 at 13.19.19.jpeg"
                                         alt="Football"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </motion.div>
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
-                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
+                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10 relative"
                                 >
-                                    <img
+                                    <Image
                                         src="/images/WhatsApp Image 2026-03-19 at 13.19.20.jpeg"
                                         alt="Badminton"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </motion.div>
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
-                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
+                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10 relative"
                                 >
-                                    <img
+                                    <Image
                                         src="/images/WhatsApp Image 2026-03-19 at 13.19.20 (1).jpeg"
                                         alt="Tennis"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </motion.div>
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
-                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
+                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10 relative"
                                 >
-                                    <img
+                                    <Image
                                         src="/images/WhatsApp Image 2026-03-19 at 13.19.20 (2).jpeg"
                                         alt="Athletics"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </motion.div>
                             </div>
@@ -883,12 +890,13 @@ export default function Home() {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="relative"
                         >
-                            <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-white lg:max-w-[85%] lg:ml-auto h-full">
-                                <motion.img
+                            <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-white lg:max-w-[85%] lg:ml-auto h-[500px] relative">
+                                <MotionImage
                                     whileHover={{ scale: 1.02 }}
                                     src="/images/WhatsApp Image 2026-03-20 at 00.06.04.jpeg"
                                     alt="Start Your Journey"
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    className="object-cover"
                                 />
                             </div>
                             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#D6B25E]/15 rounded-full blur-3xl -z-10"></div>

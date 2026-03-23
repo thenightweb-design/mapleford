@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import Button from '../../../components/Button';
@@ -87,10 +88,11 @@ export default function Team() {
                       className="order-1 lg:order-2"
                     >
                       <div className="rounded-[3rem] overflow-hidden shadow-2xl relative aspect-[4/5]">
-                        <img
+                        <Image
                           src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=1000&fit=crop"
                           alt="Chairman"
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                       </div>
                     </motion.div>
@@ -104,10 +106,11 @@ export default function Team() {
                       viewport={{ once: true }}
                     >
                       <div className="rounded-[3rem] overflow-hidden shadow-2xl relative aspect-[4/5]">
-                        <img
+                        <Image
                           src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop"
                           alt="Principal"
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                       </div>
                     </motion.div>
@@ -188,11 +191,12 @@ export default function Team() {
                         transition={{ delay: index * 0.1 }}
                         className="bg-white rounded-[2rem] shadow-lg overflow-hidden border border-[#D6B25E]/10 group hover:shadow-2xl transition-all duration-500"
                       >
-                        <div className="aspect-[4/5] overflow-hidden">
-                          <img
+                        <div className="aspect-[4/5] overflow-hidden relative">
+                          <Image
                             src={member.image}
                             alt={member.name}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                           />
                         </div>
                         <div className="p-8 text-center bg-white">
@@ -285,12 +289,13 @@ export default function Team() {
                       <motion.div
                         whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.3 }}
-                        className="rounded-3xl overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-full"
+                        className="rounded-3xl overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-[500px]"
                       >
-                        <img
+                        <Image
                           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1000&h=1200&fit=crop"
                           alt="Join Our Mission"
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                         <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-[#D6B25E]/20">

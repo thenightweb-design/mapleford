@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import Button from './Button';
@@ -89,10 +90,13 @@ export default function Header() {
             {/* Left - Logo */}
             <div className="flex items-center h-full gap-3 sm:gap-6">
               <Link href="/" className="flex items-center h-full py-3">
-                <img
+                <Image
                   src="/ChatGPT Image Jan 14, 2026, 09_10_49 PM.png"
                   alt="Logo"
+                  width={280}
+                  height={80}
                   className="h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
+                  priority
                 />
               </Link>
             </div>
@@ -169,9 +173,11 @@ export default function Header() {
 
             {/* Middle Logo (CBSE Affiliation) */}
             <div className="hidden lg:flex flex-col items-center justify-center h-full px-4 mx-2">
-              <img
+              <Image
                 src="/images/logo.png"
                 alt="CBSE Logo"
+                width={80}
+                height={64}
                 className="h-16 w-auto object-contain"
               />
               <span className="text-[10px] font-bold text-gray-700 mt-1 leading-none">
@@ -236,9 +242,11 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center py-1.5">
                 <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
-                  <img
+                  <Image
                     src="/ChatGPT Image Jan 14, 2026, 09_10_49 PM.png"
                     alt="Mapleford International School Logo"
+                    width={160}
+                    height={64}
                     className="h-16 sm:h-20 w-auto"
                   />
                 </Link>
