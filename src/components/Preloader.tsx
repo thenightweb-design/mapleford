@@ -33,11 +33,19 @@ export default function Preloader() {
           className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white"
         >
           <div className="relative flex flex-col items-center">
-            {/* Logo image with simple fade/scale */}
+            {/* Logo image with simple fade/scale and continuous rotation */}
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              animate={{ 
+                scale: 1, 
+                opacity: 1,
+                rotate: 360
+              }}
+              transition={{ 
+                scale: { duration: 0.8, ease: "easeOut" },
+                opacity: { duration: 0.8, ease: "easeOut" },
+                rotate: { duration: 4, repeat: Infinity, ease: "linear" }
+              }}
               className="relative w-32 h-32 sm:w-40 sm:h-40"
             >
               <Image
