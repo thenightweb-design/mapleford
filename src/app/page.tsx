@@ -266,7 +266,7 @@ export default function Home() {
                                 className="rounded-[3rem] overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-[600px] border-8 border-white/10"
                             >
                                 <Image
-                                    src="/images/curriculum_indian.png"
+                                    src="/images/WhatsApp Image 2026-02-26 at 05.17.17.jpeg"
                                     alt="Canadian Pedagogy + CBSE Curriculum"
                                     fill
                                     className="object-cover"
@@ -292,7 +292,7 @@ export default function Home() {
                             <h2 className="text-[28px] sm:text-[44px] lg:text-[52px] font-bold mb-6 leading-tight tracking-tighter ">
                                 The Continuum of Learning
                             </h2>
-                            <p className="max-w-4xl mx-auto text-lg lg:text-xl text-[#333333] leading-relaxed">
+                            <p className="max-w-4xl mx-auto text-lg lg:text-xl text-[#333333] leading-relaxed line-clamp-2">
                                 Every stage of learning is a critical milestone in a child’s developmental journey. Our curriculum is designed as a continuous and coherent pathway, where knowledge, skills, and values are systematically strengthened year after year.
                             </p>
                         </motion.div>
@@ -358,7 +358,7 @@ export default function Home() {
                                 <div className="h-[58%] text-center flex flex-col justify-between items-center bg-white relative">
                                     <div className="space-y-4 p-8 pb-4">
                                         <h3
-                                            className="font-bold"
+                                            className="font-bold whitespace-nowrap"
                                             style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#000000', fontSize: 'clamp(18px, 2.5vw, 24px)' }}
                                         >
                                             {stage.stage}
@@ -896,7 +896,7 @@ export default function Home() {
                             <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-white lg:max-w-[85%] lg:ml-auto h-[500px] relative">
                                 <MotionImage
                                     whileHover={{ scale: 1.02 }}
-                                    src="/images/WhatsApp Image 2026-03-20 at 00.06.04.jpeg"
+                                    src="/images/WhatsApp Image 2026-03-24 at 02.20.14.jpeg"
                                     alt="Start Your Journey"
                                     fill
                                     className="object-cover"
