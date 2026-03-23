@@ -33,8 +33,8 @@ export default function Careers() {
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <p className="!text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Grow With Us</p>
-              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter ">
+              <p className="!text-white/80 tracking-[0.3em] text-sm font-bold mb-4">Grow With Us</p>
+              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
                 Careers
               </h1>
               <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
@@ -48,8 +48,8 @@ export default function Careers() {
         <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16">
-              <p className="text-[#d0302b] font-bold uppercase tracking-[0.4em] text-xs mb-3">Our Workplace</p>
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] uppercase tracking-tighter ">
+              <p className="text-[#d0302b] font-bold tracking-[0.4em] text-xs mb-3">Our Workplace</p>
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] tracking-tighter ">
                 Why Join Mapleford?
               </h2>
               <p className="text-lg text-[#000000] max-w-2xl mx-auto mt-4">Be part of a community dedicated to excellence in education.</p>
@@ -84,7 +84,7 @@ export default function Careers() {
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white uppercase tracking-tighter ">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white tracking-tighter ">
                 Current Openings
               </h2>
               <p className="text-white/80 text-lg mt-3">Explore exciting career opportunities with us.</p>
@@ -119,8 +119,8 @@ export default function Careers() {
         <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <p className="text-[#d0302b] font-bold uppercase tracking-[0.4em] text-xs mb-3">Simple & Transparent</p>
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#1A1A1A] uppercase tracking-tighter ">
+              <p className="text-[#d0302b] font-bold tracking-[0.4em] text-xs mb-3">Simple & Transparent</p>
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#1A1A1A] tracking-tighter ">
                 How to Apply
               </h2>
             </div>
@@ -156,7 +156,7 @@ export default function Careers() {
           </div>
           <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white leading-tight uppercase tracking-tighter ">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white leading-tight tracking-tighter ">
                 Ready to Make a Difference?
               </h2>
               <p className="text-lg text-white/90 max-w-xl mx-auto leading-relaxed">

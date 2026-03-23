@@ -81,7 +81,7 @@ h1 {
   color: var(--text-heading);
   letter-spacing: -0.02em;
   line-height: 1.1;
-  text-transform: uppercase;
+  text-transform: none !important;
 }
 
 /* H2 - Main Section Titles */
@@ -91,6 +91,7 @@ h2 {
   font-weight: 700;
   color: var(--text-heading);
   line-height: 1.2;
+  text-transform: none !important;
 }
 
 /* H3 - Feature/Component Titles */

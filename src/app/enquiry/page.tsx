@@ -86,12 +86,12 @@ export default function EnquiryDashboard() {
                     className="w-full max-w-md bg-white p-12 rounded-[3rem] shadow-xl border border-gray-100"
                 >
                     <div className="text-center mb-10">
-                        <h1 className="text-3xl font-bold text-[#000000] mb-2 uppercase tracking-tighter ">Enquiry Portal</h1>
-                        <p className="text-gray-500 font-medium uppercase tracking-widest text-[10px]">Secure Admin Access</p>
+                        <h1 className="text-3xl font-bold text-[#000000] mb-2 tracking-tighter ">Enquiry Portal</h1>
+                        <p className="text-gray-500 font-medium tracking-widest text-[10px]">Secure Admin Access</p>
                     </div>
                     <form onSubmit={handleLogin} className="space-y-6">
                         <div className="space-y-2">
-                            <label className="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Password</label>
+                            <label className="text-xs font-bold text-gray-400 tracking-widest ml-1">Password</label>
                             <input
                                 type="password"
                                 required
@@ -114,8 +114,8 @@ export default function EnquiryDashboard() {
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
                     <div className="space-y-2">
-                        <span className="text-[#d0302b] font-bold uppercase tracking-[0.4em] text-[10px] block">Management Console</span>
-                        <h1 className="text-5xl font-bold text-[#000000] uppercase tracking-tighter ">Admission Inquiries</h1>
+                        <span className="text-[#d0302b] font-bold tracking-[0.4em] text-[10px] block">Management Console</span>
+                        <h1 className="text-5xl font-bold text-[#000000] tracking-tighter ">Admission Inquiries</h1>
                     </div>
                     <div className="flex gap-4">
                         <Button variant="outline" size="md" onClick={() => { localStorage.removeItem('adminToken'); setIsLoggedIn(false); }}>Logout</Button>
@@ -132,12 +132,12 @@ export default function EnquiryDashboard() {
                             <table className="w-full text-left">
                                 <thead>
                                     <tr className="bg-gray-50 border-b border-gray-100">
-                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none">Date</th>
-                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none">Parent Name</th>
-                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none">Child Details</th>
-                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none">Contact Info</th>
-                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none">Grade</th>
-                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none">Status</th>
+                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 tracking-widest leading-none">Date</th>
+                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 tracking-widest leading-none">Parent Name</th>
+                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 tracking-widest leading-none">Child Details</th>
+                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 tracking-widest leading-none">Contact Info</th>
+                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 tracking-widest leading-none">Grade</th>
+                                        <th className="px-8 py-6 text-[10px] font-bold text-gray-400 tracking-widest leading-none">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
@@ -159,12 +159,12 @@ export default function EnquiryDashboard() {
                                                     <p className="text-xs font-medium text-gray-400">{inquiry.email}</p>
                                                 </td>
                                                 <td className="px-8 py-6">
-                                                    <p className="inline-block px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-[10px] font-bold uppercase tracking-widest uppercase">
+                                                    <p className="inline-block px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-[10px] font-bold tracking-widest ">
                                                         {inquiry.gradeApplying}
                                                     </p>
                                                 </td>
                                                 <td className="px-8 py-6">
-                                                    <span className={`px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest border ${inquiry.status === 'pending' ? 'bg-orange-50 text-orange-600 border-orange-100' : 'bg-green-50 text-green-600 border-green-100'
+                                                    <span className={`px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest border ${inquiry.status === 'pending' ? 'bg-orange-50 text-orange-600 border-orange-100' : 'bg-green-50 text-green-600 border-green-100'
                                                         }`}>
                                                         {inquiry.status}
                                                     </span>
@@ -174,7 +174,7 @@ export default function EnquiryDashboard() {
                                     ) : (
                                         <tr>
                                             <td colSpan={6} className="px-8 py-20 text-center">
-                                                <p className="text-gray-400 font-bold uppercase tracking-widest text-sm">No enquiries found</p>
+                                                <p className="text-gray-400 font-bold tracking-widest text-sm">No enquiries found</p>
                                             </td>
                                         </tr>
                                     )}

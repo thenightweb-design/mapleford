@@ -24,11 +24,11 @@ export default function Vision() {
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <p className="!text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Our Philosophy</p>
-              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter ">
+              <p className="!text-white/80 tracking-[0.3em] text-sm font-bold mb-4">Our Philosophy</p>
+              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
                 Vision &amp; Mission
               </h1>
-              <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight uppercase">
+              <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight ">
                 To be a leading international school recognised for excellence, integrity, and holistic development.
               </p>
             </motion.div>
@@ -44,7 +44,7 @@ export default function Vision() {
                 className="p-8 sm:p-12 rounded-3xl bg-gray-50 border border-gray-100"
               >
                 <div className="text-4xl mb-6">🎯</div>
-                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] mb-5 uppercase tracking-tighter">Our Vision</h2>
+                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] mb-5 tracking-tighter">Our Vision</h2>
                 <div className="space-y-4 text-lg lg:text-xl text-[#000000] leading-relaxed">
                   <p>
                     At Mapleford International School, we envision an educational ecosystem that transcends traditional boundaries, where learning becomes a lifelong adventure of discovery and growth.
@@ -60,7 +60,7 @@ export default function Vision() {
                 className="p-8 sm:p-12 rounded-3xl bg-[#d0302b]/5 border border-[#d0302b]/10"
               >
                 <div className="text-4xl mb-6">🚀</div>
-                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] mb-5 uppercase tracking-tighter">Our Mission</h2>
+                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] mb-5 tracking-tighter">Our Mission</h2>
                 <div className="space-y-4 text-lg lg:text-xl text-[#000000] leading-relaxed font-medium">
                   <p>
                     Our mission is to deliver outstanding education that is academically excellent, globally relevant, and firmly grounded in values.
@@ -85,10 +85,10 @@ export default function Vision() {
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white uppercase tracking-tighter ">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white tracking-tighter ">
                 Pillars of Our Vision
               </h2>
-              <p className="text-white text-xl lg:text-2xl mt-3 max-w-2xl mx-auto font-bold italic uppercase italic">Four fundamental pillars that guide our educational philosophy.</p>
+              <p className="text-white text-xl lg:text-2xl mt-3 max-w-2xl mx-auto font-bold italic italic">Four fundamental pillars that guide our educational philosophy.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
@@ -116,8 +116,8 @@ export default function Vision() {
         <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <p className="text-[#d0302b] font-bold uppercase tracking-[0.4em] text-xs mb-3">Looking Ahead</p>
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] uppercase tracking-tighter">
+              <p className="text-[#d0302b] font-bold tracking-[0.4em] text-xs mb-3">Looking Ahead</p>
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] tracking-tighter">
                 Long-term Goals
               </h2>
             </div>
@@ -152,10 +152,10 @@ export default function Vision() {
           </div>
           <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white leading-tight uppercase tracking-tighter ">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white leading-tight tracking-tighter ">
                 Be a Part of Our Journey.
               </h2>
-              <p className="text-xl lg:text-2xl text-white max-w-xl mx-auto leading-relaxed font-bold opacity-80 uppercase italic">
+              <p className="text-xl lg:text-2xl text-white max-w-xl mx-auto leading-relaxed font-bold opacity-80 italic">
                 Join us in shaping the future of education and creating lasting impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">

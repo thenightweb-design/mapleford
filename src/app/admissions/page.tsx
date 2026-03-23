@@ -117,11 +117,11 @@ export default function Admissions() {
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <p className="!text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Your Journey Starts Here</p>
-              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter ">
+              <p className="!text-white/80 tracking-[0.3em] text-sm font-bold mb-4">Your Journey Starts Here</p>
+              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
                 Admissions
               </h1>
-              <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight uppercase">
+              <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight ">
                 A Holistic Education for a Global Future
               </p>
             </motion.div>
@@ -146,7 +146,7 @@ export default function Admissions() {
                       {step.number}
                     </span>
                   </div>
-                  <p className="text-sm font-bold uppercase tracking-widest text-[#000000]">
+                  <p className="text-sm font-bold tracking-widest text-[#000000]">
                     {step.subtitle}
                   </p>
                 </motion.div>
@@ -190,10 +190,10 @@ export default function Admissions() {
                         {step.number}
                       </span>
                       <div>
-                        <p className={`text-xs font-bold uppercase tracking-[0.2em] mb-1 ${isRed ? 'text-white/70' : 'text-[#d0302b]'}`}>
+                        <p className={`text-xs font-bold tracking-[0.2em] mb-1 ${isRed ? 'text-white/70' : 'text-[#d0302b]'}`}>
                           {step.subtitle}
                         </p>
-                        <h2 className={`text-[32px] lg:text-[44px] font-bold leading-tight uppercase tracking-tighter  ${isRed ? 'text-white' : 'text-[#000000]'}`}>
+                        <h2 className={`text-[32px] lg:text-[44px] font-bold leading-tight tracking-tighter  ${isRed ? 'text-white' : 'text-[#000000]'}`}>
                           {step.title}
                         </h2>
                       </div>
@@ -223,7 +223,7 @@ export default function Admissions() {
                         triangleColor={isRed ? '#D6B25E' : undefined}
                         size="lg"
                       >
-                        <span className="tracking-widest uppercase text-sm">{step.cta}</span>
+                        <span className="tracking-widest text-sm">{step.cta}</span>
                       </Button>
                     )}
                   </motion.div>
@@ -274,8 +274,8 @@ export default function Admissions() {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <p className="text-[#d0302b] uppercase tracking-[0.3em] text-sm font-bold mb-4">Ready to Begin?</p>
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-6 leading-tight text-[#000000] uppercase tracking-tighter ">
+              <p className="text-[#d0302b] tracking-[0.3em] text-sm font-bold mb-4">Ready to Begin?</p>
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-6 leading-tight text-[#000000] tracking-tighter ">
                 Take Your Child&apos;s First Step Forward
               </h2>
               <p className="text-[#555555] text-lg lg:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
@@ -287,7 +287,7 @@ export default function Admissions() {
                 showTriangle
                 size="lg"
               >
-                <span className="tracking-widest uppercase text-sm">Begin Enrollment</span>
+                <span className="tracking-widest text-sm">Begin Enrollment</span>
               </Button>
             </motion.div>
           </div>

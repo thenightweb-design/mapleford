@@ -94,7 +94,7 @@ export default function Home() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: -20 }}
                                             transition={{ duration: 0.8 }}
-                                            className="font-bold uppercase tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
+                                            className="font-bold tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
                                             style={{
                                                 textShadow: '0 2px 20px rgba(0,0,0,0.3)',
                                                 lineHeight: '1.2',
@@ -114,7 +114,7 @@ export default function Home() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: -20 }}
                                             transition={{ duration: 0.8 }}
-                                            className="font-bold uppercase tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
+                                            className="font-bold tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
                                             style={{
                                                 textShadow: '0 2px 20px rgba(0,0,0,0.3)',
                                                 lineHeight: '1.2',
@@ -162,7 +162,7 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                             className="flex flex-col"
                         >
-                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter uppercase">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter ">
                                 Campus
                             </h2>
                             <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-[#d0302b]">
@@ -172,7 +172,7 @@ export default function Home() {
                                 Set across a sprawling 4-acre campus, Mapleford International School offers students the freedom to explore, learn, and thrive in an open, thoughtfully designed environment. Lush green landscapes, modern classrooms, innovation labs, sports arenas, and creative spaces come together to create an environment that supports academic focus, physical vitality, and overall well-being.
                             </p>
                             <Button href="/campus" variant="tab" showTriangle={true} size="lg">
-                                <span className="tracking-widest uppercase text-sm">Read more about Our Campus</span>
+                                <span className="tracking-widest text-sm">Read more about Our Campus</span>
                             </Button>
                         </motion.div>
                         <motion.div
@@ -218,7 +218,7 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                             className="text-white"
                         >
-                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter uppercase">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter ">
                                 Curriculum
                             </h2>
                             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
@@ -242,7 +242,7 @@ export default function Home() {
 
                             <div className="w-full">
                                 <Button href="/curriculum" variant="tab-golden" align="right" showTriangle={true} triangleColor="#D6B25E" size="lg">
-                                    <span className="tracking-widest uppercase text-sm !text-black">Read More about Our Curriculum</span>
+                                    <span className="tracking-widest text-sm !text-black">Read More about Our Curriculum</span>
                                 </Button>
                             </div>
                         </motion.div>
@@ -284,7 +284,7 @@ export default function Home() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-[28px] sm:text-[44px] lg:text-[52px] font-bold mb-6 leading-tight tracking-tighter uppercase">
+                            <h2 className="text-[28px] sm:text-[44px] lg:text-[52px] font-bold mb-6 leading-tight tracking-tighter ">
                                 The Continuum of Learning
                             </h2>
                             <p className="max-w-4xl mx-auto text-lg lg:text-xl text-[#333333] leading-relaxed">
@@ -358,7 +358,7 @@ export default function Home() {
                                             {stage.stage}
                                         </h3>
                                         <div className="inline-block px-4 py-1.5 rounded-full bg-gray-50 border border-gray-100">
-                                            <p className="font-bold text-[11px] tracking-[0.15em] uppercase text-[#d0302b]">
+                                            <p className="font-bold text-[11px] tracking-[0.15em] text-[#d0302b]">
                                                 {stage.grades}
                                             </p>
                                         </div>
@@ -373,7 +373,7 @@ export default function Home() {
                                             showTriangle={true}
                                             size="md"
                                         >
-                                            <span className="tracking-widest uppercase text-sm">Read More</span>
+                                            <span className="tracking-widest text-sm">Read More</span>
                                         </Button>
                                     </div>
                                 </div>
@@ -618,7 +618,7 @@ export default function Home() {
                             <motion.div
                                 animate={{ y: [0, -10, 0] }}
                             >
-                                <h2 className="text-[32px] lg:text-[44px] font-bold mb-6 leading-tight uppercase tracking-tighter " style={{ color: '#FFFFFF' }}>
+                                <h2 className="text-[32px] lg:text-[44px] font-bold mb-6 leading-tight tracking-tighter " style={{ color: '#FFFFFF' }}>
                                     Where Logic Meets Imagination
                                 </h2>
 
@@ -715,7 +715,7 @@ export default function Home() {
                             transition={{ duration: 0.8, delay: 0.3 }}
                             className="order-1 lg:order-2 text-[#000000]"
                         >
-                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter uppercase">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter ">
                                 Sports Arena
                             </h2>
                             <p className="text-2xl lg:text-3xl font-bold mb-4 text-[#d0302b]">
@@ -726,7 +726,7 @@ export default function Home() {
                             </p>
 
                             <Button href="/campus" variant="tab" showTriangle={true} size="lg">
-                                <span className="tracking-widest uppercase text-sm">Read more about Sports Facilities</span>
+                                <span className="tracking-widest text-sm">Read more about Sports Facilities</span>
                             </Button>
                         </motion.div>
                     </div>
@@ -751,7 +751,7 @@ export default function Home() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-4 leading-tight tracking-tighter uppercase">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-4 leading-tight tracking-tighter ">
                                 Words from Our Community
                             </h2>
                             <p className="max-w-2xl mx-auto text-lg lg:text-xl font-bold opacity-90">
@@ -851,7 +851,7 @@ export default function Home() {
                             className="text-[#1A1A1A] flex flex-col justify-center"
                         >
                             <h2
-                                className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight uppercase tracking-tighter"
+                                className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter"
                             >
                                 Start Your Child&apos;s Journey
                             </h2>
@@ -870,7 +870,7 @@ export default function Home() {
                                     showTriangle={true}
                                     size="lg"
                                 >
-                                    <span className="tracking-widest uppercase text-sm">Enroll Now</span>
+                                    <span className="tracking-widest text-sm">Enroll Now</span>
                                 </Button>
                             </div>
                         </motion.div>

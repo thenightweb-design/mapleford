@@ -20,7 +20,7 @@ export default function ElementarySchool() {
                         <motion.span
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-sm font-bold tracking-[0.3em] text-[#d0302b] uppercase mb-4 block"
+                            className="text-sm font-bold tracking-[0.3em] text-[#d0302b] mb-4 block"
                         >
                             Grades 1–5
                         </motion.span>

@@ -50,10 +50,10 @@ export default function MandatoryDisclosure() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter ">
+              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
                 Mandatory Disclosure
               </h1>
-              <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight uppercase">
+              <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight ">
                 Transparency in Excellence and Governance.
               </p>
             </motion.div>
@@ -74,9 +74,9 @@ export default function MandatoryDisclosure() {
                 <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="bg-gray-50 border-b border-gray-100">
-                      <th className="px-8 py-6 text-sm font-bold uppercase tracking-widest text-[#d0302b] w-24">Sl No.</th>
-                      <th className="px-8 py-6 text-sm font-bold uppercase tracking-widest text-[#d0302b]">List of Documents</th>
-                      <th className="px-8 py-6 text-sm font-bold uppercase tracking-widest text-[#d0302b] text-center w-48">Download</th>
+                      <th className="px-8 py-6 text-sm font-bold tracking-widest text-[#d0302b] w-24">Sl No.</th>
+                      <th className="px-8 py-6 text-sm font-bold tracking-widest text-[#d0302b]">List of Documents</th>
+                      <th className="px-8 py-6 text-sm font-bold tracking-widest text-[#d0302b] text-center w-48">Download</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -86,13 +86,13 @@ export default function MandatoryDisclosure() {
                         className={`border-b border-gray-50 hover:bg-slate-50 transition-colors duration-200 ${index % 2 === 0 ? 'bg-white' : 'bg-slate-50/30'}`}
                       >
                         <td className="px-8 py-6 font-bold text-gray-400">{item.id}</td>
-                        <td className="px-8 py-6 font-bold text-[#000000] text-lg uppercase tracking-tight">{item.title}</td>
+                        <td className="px-8 py-6 font-bold text-[#000000] text-lg tracking-tight">{item.title}</td>
                         <td className="px-8 py-6 text-center">
                           <a 
                             href={item.link} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center px-6 py-2 bg-[#d0302b] font-bold text-xs uppercase tracking-widest rounded-full hover:bg-[#b02020] transition-all hover:scale-105 shadow-md shadow-red-100"
+                            className="inline-flex items-center justify-center px-6 py-2 bg-[#d0302b] font-bold text-xs tracking-widest rounded-full hover:bg-[#b02020] transition-all hover:scale-105 shadow-md shadow-red-100"
                             style={{ color: '#D6B25E' }}
                           >
                             View File

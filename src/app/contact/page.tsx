@@ -39,7 +39,7 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
             >
               <h1
-                className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter "
+                className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter "
               >
                 Contact Us
               </h1>
@@ -58,8 +58,8 @@ export default function Contact() {
               {/* Left: Info */}
               <div className="lg:col-span-5 space-y-8">
                 <div>
-                  <p className="text-[#d0302b] font-bold uppercase tracking-[0.4em] text-xs mb-3">Contact Points</p>
-                  <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold text-[#000000] leading-tight uppercase tracking-tighter ">
+                  <p className="text-[#d0302b] font-bold tracking-[0.4em] text-xs mb-3">Contact Points</p>
+                  <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold text-[#000000] leading-tight tracking-tighter ">
                     Reach out Directly
                   </h2>
                 </div>
@@ -78,7 +78,7 @@ export default function Contact() {
                       <div className="flex items-start gap-5">
                         <div className="text-3xl w-12 h-12 rounded-2xl bg-white  flex items-center justify-center shrink-0">{item.icon}</div>
                         <div>
-                          <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{item.title}</p>
+                          <p className="text-xs font-bold text-gray-400 tracking-widest mb-1">{item.title}</p>
                           <p className="text-lg font-bold text-[#000000]">{item.value}</p>
                           <p className="text-sm font-medium text-[#000000]">{item.desc}</p>
                         </div>
@@ -96,7 +96,7 @@ export default function Contact() {
                 {!formSubmitted ? (
                   <div className="space-y-8">
                     <div>
-                      <h3 className="text-3xl font-bold text-[#000000] uppercase tracking-tight">Send a Message</h3>
+                      <h3 className="text-3xl font-bold text-[#000000] tracking-tight">Send a Message</h3>
                       <p className="text-[#000000] font-bold mt-2">We usually respond within 24 hours.</p>
                     </div>
                     <form
@@ -129,16 +129,16 @@ export default function Contact() {
                     >
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div className="space-y-2">
-                          <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Full Name</label>
+                          <label className="text-[10px] font-bold text-gray-400 tracking-widest">Full Name</label>
                           <input type="text" required value={formData.fullName} onChange={(e) => setFormData({ ...formData, fullName: e.target.value })} placeholder="Your Name" className="w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 text-[#000000] font-bold  focus:outline-none focus:ring-2 focus:ring-[#d0302b] transition-all" />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Email Address</label>
+                          <label className="text-[10px] font-bold text-gray-400 tracking-widest">Email Address</label>
                           <input type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="email@example.com" className="w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 text-[#000000] font-bold  focus:outline-none focus:ring-2 focus:ring-[#d0302b] transition-all" />
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Subject</label>
+                        <label className="text-[10px] font-bold text-gray-400 tracking-widest">Subject</label>
                         <select value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} className="w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 text-[#000000] font-bold  focus:outline-none focus:ring-2 focus:ring-[#d0302b] transition-all appearance-none cursor-pointer">
                           <option>General Inquiry</option>
                           <option>Admissions</option>
@@ -146,7 +146,7 @@ export default function Contact() {
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Message</label>
+                        <label className="text-[10px] font-bold text-gray-400 tracking-widest">Message</label>
                         <textarea required rows={4} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder="How can we help?" className="w-full bg-white border border-gray-200 rounded-2xl px-5 py-4 text-[#000000] font-bold  focus:outline-none focus:ring-2 focus:ring-[#d0302b] transition-all resize-none" />
                       </div>
                       <button type="submit" disabled={isSubmitting} className="w-full py-4 bg-[#d0302b] text-white font-bold rounded-full text-lg hover:bg-[#b02020] transition-all duration-200 shadow-lg disabled:opacity-60">
@@ -159,7 +159,7 @@ export default function Contact() {
                     <div className="text-7xl">🚀</div>
                     <h3 className="text-3xl font-bold text-[#000000]">Message Sent Successfully</h3>
                     <p className="text-lg text-[#000000] max-w-sm mx-auto">One of our representatives will be in touch with you shortly.</p>
-                    <button onClick={() => setFormSubmitted(false)} className="text-[#d0302b] font-bold uppercase tracking-widest text-sm border-b-2 border-current">Send another</button>
+                    <button onClick={() => setFormSubmitted(false)} className="text-[#d0302b] font-bold tracking-widest text-sm border-b-2 border-current">Send another</button>
                   </div>
                 )}
               </motion.div>
@@ -174,7 +174,7 @@ export default function Contact() {
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-10">
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white uppercase tracking-tighter ">Find Us Here</h2>
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white tracking-tighter ">Find Us Here</h2>
               <p className="text-white/80 mt-3 text-lg">Hayathnagar, Hyderabad, Telangana - 500070</p>
             </div>
             <div className="relative h-[350px] sm:h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
