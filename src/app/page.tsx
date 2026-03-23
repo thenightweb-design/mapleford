@@ -305,28 +305,28 @@ export default function Home() {
                                 stage: 'Pre-School',
                                 grades: 'Nursery - UKG',
                                 description: 'Play-based early learning that builds curiosity, confidence, and strong foundations.',
-                                image: '/images/continuum_preschool_indian.png'
+                                image: '/images/Pre-School.JPG'
                             },
                             {
                                 id: 'elementary',
                                 stage: 'Elementary School',
                                 grades: 'Grade 1 - 5',
                                 description: "Engaging and inquiry-led learning that blends CBSE milestones with Canadian instructional excellence.",
-                                image: '/images/continuum_elementary_indian.png'
+                                image: '/images/elementary.JPG'
                             },
                             {
                                 id: 'middle',
                                 stage: 'Middle School',
                                 grades: 'Grade 6 - 8',
                                 description: "Analytical thinking and real-world application through interdisciplinary Canadian teaching methods.",
-                                image: '/images/continuum_middle_indian.png'
+                                image: '/images/middle_school.png'
                             },
                             {
                                 id: 'high',
                                 stage: 'High School',
                                 grades: 'Grade 9 - 10',
                                 description: "A CBSE-aligned programme that prepares students for academic success and future pathways.",
-                                image: '/images/continuum_high_indian.png'
+                                image: '/images/high_school.png'
                             }
                         ].map((stage, index) => (
                             <motion.div
