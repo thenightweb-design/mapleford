@@ -174,7 +174,7 @@ export default function Home() {
                                 Set across a sprawling 4-acre campus, Mapleford International School offers students the freedom to explore, learn, and thrive in an open, thoughtfully designed environment. Lush green landscapes, modern classrooms, innovation labs, sports arenas, and creative spaces come together to create an environment that supports academic focus, physical vitality, and overall well-being.
                             </p>
                             <Button href="/campus" variant="tab" showTriangle={true} size="lg">
-                                <span className="tracking-widest text-sm">Read more about Our Campus</span>
+                                <span className="tracking-widest text-sm">READ MORE ABOUT OUR CAMPUS</span>
                             </Button>
                         </motion.div>
                         <motion.div
@@ -245,7 +245,7 @@ export default function Home() {
 
                             <div className="w-full">
                                 <Button href="/curriculum" variant="tab-golden" align="right" showTriangle={true} triangleColor="#D6B25E" size="lg">
-                                    <span className="tracking-widest text-sm !text-black">Read More about Our Curriculum</span>
+                                    <span className="tracking-widest text-sm !text-black">READ MORE ABOUT OUR CURRICULUM</span>
                                 </Button>
                             </div>
                         </motion.div>
@@ -266,7 +266,7 @@ export default function Home() {
                                 className="rounded-[3rem] overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-[600px] border-8 border-white/10"
                             >
                                 <Image
-                                    src="/images/WhatsApp Image 2026-02-26 at 05.17.17.jpeg"
+                                    src="/images/BRT_4033.JPG"
                                     alt="Canadian Pedagogy + CBSE Curriculum"
                                     fill
                                     className="object-cover"
@@ -379,7 +379,7 @@ export default function Home() {
                                             showTriangle={true}
                                             size="md"
                                         >
-                                            <span className="tracking-widest text-sm">Read More</span>
+                                            <span className="tracking-widest text-sm">READ MORE</span>
                                         </Button>
                                     </div>
                                 </div>
@@ -642,7 +642,7 @@ export default function Home() {
 
                                 <div className="mt-12 hidden">
                                     <Button href="/programs" variant="outline-white" size="lg" className="hover:bg-white hover:text-[#d0302b]">
-                                        Discover our Labs →
+                                        DISCOVER OUR LABS →
                                     </Button>
                                 </div>
                             </motion.div>
@@ -736,7 +736,7 @@ export default function Home() {
                             </p>
 
                             <Button href="/campus" variant="tab" showTriangle={true} size="lg">
-                                <span className="tracking-widest text-sm">Read more about Sports Facilities</span>
+                                <span className="tracking-widest text-sm">READ MORE ABOUT SPORTS FACILITIES</span>
                             </Button>
                         </motion.div>
                     </div>
@@ -880,7 +880,7 @@ export default function Home() {
                                     showTriangle={true}
                                     size="lg"
                                 >
-                                    <span className="tracking-widest text-sm">Enroll Now</span>
+                                    <span className="tracking-widest text-sm">ENROLL NOW</span>
                                 </Button>
                             </div>
                         </motion.div>
@@ -899,7 +899,7 @@ export default function Home() {
                                     src="/images/WhatsApp Image 2026-03-24 at 02.20.14.jpeg"
                                     alt="Start Your Journey"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover object-top"
                                 />
                             </div>
                             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#D6B25E]/15 rounded-full blur-3xl -z-10"></div>

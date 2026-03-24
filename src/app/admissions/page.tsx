@@ -19,7 +19,7 @@ const steps = [
       'Our campus fosters curiosity, creativity, and confidence, while our nurturing environment supports every child\'s holistic growth.',
       'Complete the enquiry form and take the first step toward your child\'s future.'
     ],
-    cta: 'Enquire Now',
+    cta: 'ENQUIRE NOW',
     image: '/images/admissions_step1.png',
     bg: 'white',
   },
@@ -262,7 +262,7 @@ export default function Admissions() {
                 showTriangle
                 size="lg"
               >
-                <span className="tracking-widest text-sm">Begin Enrollment</span>
+                <span className="tracking-widest text-sm">BEGIN ENROLLMENT</span>
               </Button>
             </motion.div>
           </div>
