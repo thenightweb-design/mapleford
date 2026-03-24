@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Image from 'next/image';
 import Button from '../../components/Button';
 
 export default function Brochure() {
@@ -18,10 +19,12 @@ export default function Brochure() {
             {/* Hero Section */}
             <section className="py-24 lg:py-32 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
                 <div className="absolute inset-0 z-0">
-                    <img 
+                    <Image 
                         src="/images/Image25.png" 
                         alt="Brochure Background" 
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        priority
                     />
                     <div className="absolute inset-0 bg-[#d0302b]/80 backdrop-blur-sm" />
                 </div>
@@ -34,7 +37,7 @@ export default function Brochure() {
                     >
                         <span className="text-5xl mb-4 block">📚</span>
                         <h1
-                            className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold mb-6 text-white uppercase tracking-tighter "
+                            className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold mb-6 text-white tracking-tighter "
                         >
                             School Brochure
                         </h1>
@@ -58,7 +61,7 @@ export default function Brochure() {
                         >
                             <span className="text-5xl mb-4 block">📖</span>
                             <h2
-                                className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter "
+                                className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight text-[#1A1A1A] tracking-tighter "
                             >
                                 Digital Prospectus
                             </h2>
@@ -89,10 +92,11 @@ export default function Brochure() {
                                 transition={{ duration: 0.3 }}
                                 className="rounded-3xl overflow-hidden shadow-2xl relative aspect-[3/4]"
                             >
-                                <img
+                                <Image
                                     src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=1000&fit=crop"
                                     alt="School Brochure Preview"
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    className="object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                                 <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-[#D6B25E]/20">
@@ -110,7 +114,7 @@ export default function Brochure() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2
-                            className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter "
+                            className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight text-[#1A1A1A] tracking-tighter "
                         >
                             Download Our Brochure
                         </h2>
@@ -166,7 +170,7 @@ export default function Brochure() {
                                             alert(`${brochure.title} download will be available soon!`);
                                         }}
                                     >
-                                        <span className="tracking-widest uppercase text-sm">Download PDF</span>
+                                        <span className="tracking-widest text-sm">Download PDF</span>
                                     </Button>
                                 </div>
                             </motion.div>
@@ -178,7 +182,7 @@ export default function Brochure() {
             {/* Call to Action */}
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 text-[#1A1A1A] uppercase tracking-tighter ">
+                    <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 text-[#1A1A1A] tracking-tighter ">
                         Ready to Learn More?
                     </h2>
                     <p className="text-xl text-[#4F4F4F] mb-12 max-w-2xl mx-auto" style={{ fontFamily: '"Lato", sans-serif' }}>
@@ -191,14 +195,14 @@ export default function Brochure() {
                             showTriangle={true}
                             size="lg"
                         >
-                            <span className="tracking-widest uppercase text-sm">Contact Us</span>
+                            <span className="tracking-widest text-sm">Contact Us</span>
                         </Button>
                         <Button
                             href="/admissions"
                             variant="outline"
                             size="lg"
                         >
-                            <span className="tracking-widest uppercase text-sm">Start Admission Process</span>
+                            <span className="tracking-widest text-sm">Start Admission Process</span>
                         </Button>
                     </div>
                 </div>

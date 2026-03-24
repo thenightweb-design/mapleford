@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import Button from '../../../components/Button';
@@ -23,7 +24,7 @@ export default function Team() {
                   <motion.span
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-sm font-bold tracking-[0.3em] text-[#d0302b] uppercase mb-4 block"
+                    className="text-sm font-bold tracking-[0.3em] text-[#d0302b] mb-4 block"
                   >
                     Leadership & Vision
                   </motion.span>
@@ -31,7 +32,7 @@ export default function Team() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter "
+                    className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold mb-8 leading-tight text-[#1A1A1A] tracking-tighter "
                   >
                     Our Team
                   </motion.h1>
@@ -39,7 +40,7 @@ export default function Team() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-xl lg:text-2xl text-[#4F4F4F] max-w-4xl mx-auto leading-relaxed font-bold opacity-80 uppercase italic"
+                    className="text-xl lg:text-2xl text-[#4F4F4F] max-w-4xl mx-auto leading-relaxed font-bold opacity-80 italic"
                   >
                     The heart of Mapleford is an empathetic, compassionate, dynamic, and visionary team, a committed leadership, and devoted mentors at its core. Our compass guides students toward steadiness and inspiration.
                   </motion.p>
@@ -60,7 +61,7 @@ export default function Team() {
                       <div className="absolute -inset-4 bg-[#FDF6E3] rounded-[2rem] -z-10 transform rotate-3"></div>
                       <div className="bg-white p-10 rounded-[2rem] shadow-xl border border-[#D6B25E]/20">
                         <span className="text-4xl mb-6 block">✉️</span>
-                        <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-6 text-[#1A1A1A] uppercase tracking-tighter">
+                        <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-6 text-[#1A1A1A] tracking-tighter">
                           Chairman&apos;s Message
                         </h2>
                         <div className="space-y-6 text-lg lg:text-xl text-[#4F4F4F] leading-relaxed font-medium">
@@ -87,10 +88,11 @@ export default function Team() {
                       className="order-1 lg:order-2"
                     >
                       <div className="rounded-[3rem] overflow-hidden shadow-2xl relative aspect-[4/5]">
-                        <img
+                        <Image
                           src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=1000&fit=crop"
                           alt="Chairman"
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                       </div>
                     </motion.div>
@@ -104,10 +106,11 @@ export default function Team() {
                       viewport={{ once: true }}
                     >
                       <div className="rounded-[3rem] overflow-hidden shadow-2xl relative aspect-[4/5]">
-                        <img
+                        <Image
                           src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop"
                           alt="Principal"
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                       </div>
                     </motion.div>
@@ -120,7 +123,7 @@ export default function Team() {
                       <div className="absolute -inset-4 bg-[#FDF6E3] rounded-[2rem] -z-10 transform -rotate-2"></div>
                       <div className="bg-white p-10 rounded-[2rem] shadow-xl border border-[#D6B25E]/20">
                         <span className="text-4xl mb-6 block">🎓</span>
-                        <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-6 text-[#1A1A1A] uppercase tracking-tighter">
+                        <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-6 text-[#1A1A1A] tracking-tighter">
                           Principal&apos;s Message
                         </h2>
                         <div className="space-y-6 text-lg lg:text-xl text-[#4F4F4F] leading-relaxed font-medium">
@@ -153,7 +156,7 @@ export default function Team() {
                     viewport={{ once: true }}
                     className="text-center mb-20"
                   >
-                    <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#1A1A1A] mb-6 uppercase tracking-tighter">
+                    <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#1A1A1A] mb-6 tracking-tighter">
                       Leadership Team
                     </h2>
                     <div className="w-24 h-1.5 bg-[#D6B25E] mx-auto rounded-full"></div>
@@ -188,16 +191,17 @@ export default function Team() {
                         transition={{ delay: index * 0.1 }}
                         className="bg-white rounded-[2rem] shadow-lg overflow-hidden border border-[#D6B25E]/10 group hover:shadow-2xl transition-all duration-500"
                       >
-                        <div className="aspect-[4/5] overflow-hidden">
-                          <img
+                        <div className="aspect-[4/5] overflow-hidden relative">
+                          <Image
                             src={member.image}
                             alt={member.name}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                           />
                         </div>
                         <div className="p-8 text-center bg-white">
                           <h3 className="text-2xl font-bold text-[#1A1A1A] mb-2">{member.name}</h3>
-                          <p className="text-[#d0302b] font-bold uppercase tracking-widest text-sm mb-4">{member.role}</p>
+                          <p className="text-[#d0302b] font-bold tracking-widest text-sm mb-4">{member.role}</p>
                           <p className="text-gray-600 leading-relaxed text-sm">{member.bio}</p>
                         </div>
                       </motion.div>
@@ -222,7 +226,7 @@ export default function Team() {
                       transition={{ duration: 0.8 }}
                     >
                       <span className="text-5xl mb-4 block">🤝</span>
-                      <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight text-[#1A1A1A] uppercase tracking-tighter">
+                      <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight text-[#1A1A1A] tracking-tighter">
                         Join Our Mission
                       </h2>
                       <h3 className="text-2xl font-semibold mb-6" style={{ color: '#d0302b' }}>
@@ -285,12 +289,13 @@ export default function Team() {
                       <motion.div
                         whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.3 }}
-                        className="rounded-3xl overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-full"
+                        className="rounded-3xl overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-[500px]"
                       >
-                        <img
+                        <Image
                           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1000&h=1200&fit=crop"
                           alt="Join Our Mission"
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                         <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-[#D6B25E]/20">

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -66,7 +67,13 @@ export default function Blogs() {
           {/* Hero Section */}
           <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
             <div className="absolute inset-0 z-0">
-              <img src="/images/Image26.png" alt="Blog Background" className="w-full h-full object-cover opacity-40" />
+              <Image 
+                src="/images/Image26.png" 
+                alt="Blog Background" 
+                fill
+                className="object-cover opacity-40" 
+                priority
+              />
             </div>
             <div className="relative z-10 max-w-4xl mx-auto">
               <motion.div
@@ -74,14 +81,14 @@ export default function Blogs() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter ">
+                <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
                   Our Blog
                 </h1>
                 <motion.p
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight uppercase"
+                  className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight "
                 >
                   Insights, stories, and perspectives from the Mapleford International School community.
                 </motion.p>
@@ -101,11 +108,12 @@ export default function Blogs() {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group"
                   >
-                    <div className="aspect-video overflow-hidden">
-                      <img
+                    <div className="aspect-video overflow-hidden relative">
+                      <Image
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
                     <div className="p-6">
@@ -143,7 +151,7 @@ export default function Blogs() {
                 transition={{ duration: 0.8 }}
                 className="bg-white/80 backdrop-blur-sm border border-white/50 rounded-3xl p-12 shadow-xl"
               >
-                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-6 text-[#1A1A1A] uppercase tracking-tighter">
+                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-6 text-[#1A1A1A] tracking-tighter">
                   Stay <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D6B25E] to-[#FFA500]">Updated</span>
                 </h2>
                 <p className="text-xl text-gray-600 mb-8">

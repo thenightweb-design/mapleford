@@ -1,14 +1,17 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer className="relative pt-8 pb-4 overflow-hidden bg-[#d0302b]/90" style={{ color: '#FFFFFF', fontStyle: 'normal' }}>
       {/* Background with Custom Image and Deep Red Overlay */}
       <div className="absolute inset-0 z-0 text-white">
-        <div
-          className="absolute inset-0 bg-center bg-cover opacity-50 mix-blend-overlay"
-          style={{ backgroundImage: 'url("/WhatsApp Image 2026-02-20 at 10.23.06.jpeg")' }}
-        ></div>
+        <Image 
+          src="/WhatsApp Image 2026-02-20 at 10.23.06.jpeg"
+          alt="Footer Background"
+          fill
+          className="object-cover opacity-50 mix-blend-overlay"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-[#d0302b]/80 via-[#d0302b]/70 to-[#8d211d]/60"></div>
       </div>
 
@@ -19,10 +22,12 @@ export default function Footer() {
           {/* Logo Section */}
           <div className="flex flex-col items-center md:items-start pr-8 md:border-r md:border-white/10 pt-2 pb-0 h-full w-full">
             <Link href="/" className="inline-block transition-all hover:scale-105 duration-500">
-              <img
+              <Image
                 src="/images/footer-logo.png"
                 alt="Mapleford International School Logo"
-                className="h-40 w-auto"
+                width={200}
+                height={160}
+                className="h-40 w-auto object-contain"
               />
             </Link>
           </div>

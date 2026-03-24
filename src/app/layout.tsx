@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Raleway, Lato } from "next/font/google";
 import "./globals.css";
 import WhatsAppChat from "../components/WhatsAppChat";
 import Preloader from "../components/Preloader";
@@ -16,6 +16,20 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   fallback: ["monospace"],
+  display: "swap",
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway",
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  display: "swap",
+});
+
+const lato = Lato({
+  variable: "--font-lato",
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
   display: "swap",
 });
 
@@ -67,6 +81,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png" },
       { url: "/icon.png", type: "image/png" },
     ],
     apple: [
@@ -91,7 +106,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} ${lato.variable} antialiased`}
+      >
         {/* Google Tag (gtag.js) */}
         <Script
           async
@@ -119,14 +136,6 @@ export default function RootLayout({
         </Script>
         {/* End Google Tag Manager */}
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet" />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -137,6 +146,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+
         <Preloader />
         {children}
         <WhatsAppChat />

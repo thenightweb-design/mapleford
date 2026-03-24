@@ -2,6 +2,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AdmissionModal from '../../components/AdmissionModal';
@@ -23,10 +24,12 @@ export default function About() {
         {/* HERO SECTION — Who We Are */}
         <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0">
-            <img 
+            <Image 
               src="/images/Image22_000.png" 
               alt="About Mapleford" 
-              className="w-full h-full object-cover opacity-40"
+              fill
+              className="object-cover opacity-40"
+              priority
             />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
@@ -35,7 +38,7 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-[40px] sm:text-[56px] lg:text-[72px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter">
+              <h1 className="text-[40px] sm:text-[56px] lg:text-[72px] font-bold !text-white leading-tight mb-4 tracking-tighter">
                 Who We Are
               </h1>
               <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
@@ -75,10 +78,11 @@ export default function About() {
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
                 className="relative rounded-[2.5rem] overflow-hidden shadow-2xl min-h-[400px]"
               >
-                <img
+                <Image
                   src="/images/Image22.png"
                   alt="Mapleford Legacy"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </motion.div>
             </div>
@@ -100,11 +104,11 @@ export default function About() {
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
                 className="space-y-8 lg:pr-8"
               >
-                <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold text-white uppercase tracking-tighter">
+                <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold text-white tracking-tighter">
                   Our School of Thought
                 </h2>
                 <div className="space-y-6 text-lg lg:text-xl text-white/90 leading-relaxed font-medium">
-                  <p className="font-bold text-white text-2xl sm:text-3xl lg:text-4xl tracking-tight uppercase">
+                  <p className="font-bold text-white text-2xl sm:text-3xl lg:text-4xl tracking-tight ">
                     Knowledge in Pursuit of Integrity and Excellence
                   </p>
                   <div className="space-y-6">
@@ -127,13 +131,14 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative w-full flex items-center justify-center lg:mt-0 mt-8"
+                className="relative w-full flex items-center justify-center lg:mt-0 mt-8 h-[400px]"
               >
-                <div className="relative z-10 w-full max-w-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20">
-                  <img
+                <div className="relative z-10 w-full max-w-[600px] h-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20">
+                  <Image
                     src="/images/WhatsApp Image 2026-03-19 at 13.48.35.jpeg"
                     alt="Our School of Thought"
-                    className="w-full h-auto object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </motion.div>
@@ -147,10 +152,10 @@ export default function About() {
         <section className="py-10 sm:py-14 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold text-[#000000] mb-6 uppercase tracking-tighter">
+              <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold text-[#000000] mb-6 tracking-tighter">
                 Our Team
               </h2>
-              <p className="text-xl lg:text-2xl text-[#000000] max-w-4xl mx-auto leading-relaxed font-bold opacity-80 italic uppercase">
+              <p className="text-xl lg:text-2xl text-[#000000] max-w-4xl mx-auto leading-relaxed font-bold opacity-80 italic ">
                 The heart of Mapleford is an empathetic, compassionate, dynamic, and visionary team, a committed leadership, and devoted mentors at its core.
               </p>
             </div>
@@ -163,16 +168,16 @@ export default function About() {
               >
                 <div className="lg:col-span-4">
                   <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-slate-50">
-                    <img src="/images/01--Subba Reddy Director.jpg" alt="P Subba Reddy" className="w-full h-full object-cover" />
+                    <Image src="/images/01--Subba Reddy Director.jpg" alt="P Subba Reddy" fill className="object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                   </div>
                 </div>
                 <div className="lg:col-span-8 space-y-6">
                   <div className="space-y-2">
-                    <h3 className="text-2xl lg:text-3xl font-bold text-[#d0302b] uppercase tracking-tighter">P Subba Reddy</h3>
-                    <p className="text-gray-500 font-bold uppercase tracking-widest text-sm">Chairman</p>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-[#d0302b] tracking-tighter">P Subba Reddy</h3>
+                    <p className="text-gray-500 font-bold tracking-widest text-sm">Chairman</p>
                   </div>
-                  <h4 className="text-xl lg:text-2xl font-bold text-[#000000] uppercase">Vision for the Future</h4>
+                  <h4 className="text-xl lg:text-2xl font-bold text-[#000000] ">Vision for the Future</h4>
                   <div className="w-20 h-1.5 bg-[#d0302b] rounded-full" />
                   <div className="space-y-6 text-lg lg:text-xl text-gray-700 leading-relaxed font-medium">
                     <p>At Mapleford International School, we believe that education is not merely the transfer of knowledge but the cultivation of character, curiosity, and compassion. As we carry forward the distinguished legacy of Megacity High School, our mission remains grounded in a simple truth: children learn best when they feel valued, supported, and inspired to discover who they are.</p>
@@ -194,10 +199,10 @@ export default function About() {
                 <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
                   <div className="lg:col-span-8 space-y-6 order-2 lg:order-1">
                     <div className="space-y-2">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-white uppercase tracking-tighter">CH Swetha Reddy</h3>
-                      <p className="text-white/60 font-bold uppercase tracking-widest text-sm">Assistant Director</p>
+                      <h3 className="text-2xl lg:text-3xl font-bold text-white tracking-tighter">CH Swetha Reddy</h3>
+                      <p className="text-white/60 font-bold tracking-widest text-sm">Assistant Director</p>
                     </div>
-                    <h4 className="text-xl lg:text-2xl font-bold text-white/90 uppercase tracking-tighter">Driven by Purpose</h4>
+                    <h4 className="text-xl lg:text-2xl font-bold text-white/90 tracking-tighter">Driven by Purpose</h4>
                     <div className="w-20 h-1.5 bg-white/30 rounded-full" />
                     <div className="space-y-6 text-lg text-white/80 leading-relaxed font-medium">
                       <p>At Mapleford, we are committed to creating a space where every child can flourish. My focus is on ensuring that our operational excellence meets our academic vision, providing students with the best possible resources and environment to grow.</p>
@@ -206,7 +211,7 @@ export default function About() {
                   </div>
                   <div className="lg:col-span-4 order-1 lg:order-2">
                     <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white/10">
-                      <img src="/images/02--Swetha Madam.jpg" alt="CH Swetha Reddy" className="w-full h-full object-cover" />
+                      <Image src="/images/02--Swetha Madam.jpg" alt="CH Swetha Reddy" fill className="object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                     </div>
                   </div>
@@ -220,16 +225,16 @@ export default function About() {
               >
                 <div className="lg:col-span-4">
                   <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-slate-50">
-                    <img src="/images/03--Principal Madam.jpg" alt="P Varalaxmi" className="w-full h-full object-cover" />
+                    <Image src="/images/03--Principal Madam.jpg" alt="P Varalaxmi" fill className="object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                   </div>
                 </div>
                 <div className="lg:col-span-8 space-y-6">
                   <div className="space-y-2">
-                    <h3 className="text-2xl lg:text-3xl font-bold text-[#d0302b] uppercase tracking-tighter">P Varalaxmi</h3>
-                    <p className="text-gray-500 font-bold uppercase tracking-widest text-sm">Principal</p>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-[#d0302b] tracking-tighter">P Varalaxmi</h3>
+                    <p className="text-gray-500 font-bold tracking-widest text-sm">Principal</p>
                   </div>
-                  <h4 className="text-xl lg:text-2xl font-bold text-[#000000] uppercase tracking-tighter">Excellence in Learning</h4>
+                  <h4 className="text-xl lg:text-2xl font-bold text-[#000000] tracking-tighter">Excellence in Learning</h4>
                   <div className="w-20 h-1.5 bg-[#d0302b] rounded-full" />
                   <div className="space-y-6 text-lg lg:text-xl text-gray-700 leading-relaxed font-medium">
                     <p>Education, to us, is not a race but a journey. It is augmented through attentive listening, thoughtful guidance, and learning experiences that encourage children to think independently and understand deeply.</p>

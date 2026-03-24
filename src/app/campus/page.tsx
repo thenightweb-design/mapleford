@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -70,7 +71,13 @@ export default function Campus() {
       <main className="pt-[90px] lg:pt-[120px]">
         <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0">
-            <img src="/images/Image24_000.png" alt="Campus Background" className="w-full h-full object-cover opacity-40" />
+            <Image 
+              src="/images/Image24_000.png" 
+              alt="Campus Background" 
+              fill 
+              className="object-cover opacity-40" 
+              priority
+            />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div
@@ -78,7 +85,7 @@ export default function Campus() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 uppercase tracking-tighter ">
+              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
                 Campus
               </h1>
               <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
@@ -101,13 +108,18 @@ export default function Campus() {
                   <div className="w-full lg:w-1/2 relative">
                     <div className="absolute -inset-4 bg-slate-50 rounded-[4rem] -z-10 rotate-2" />
                     <div className="relative aspect-[16/10] rounded-[3.5rem] overflow-hidden shadow-2xl group border-[12px] border-white">
-                      <img src={fac.image} alt={fac.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                      <Image 
+                        src={fac.image} 
+                        alt={fac.title} 
+                        fill 
+                        className="object-cover group-hover:scale-105 transition-transform duration-1000" 
+                      />
                     </div>
                   </div>
 
                   <div className="w-full lg:w-1/2 space-y-8">
                     <div className="space-y-4">
-                      <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] leading-tight tracking-tighter uppercase ">
+                      <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] leading-tight tracking-tighter ">
                         {fac.title}
                       </h2>
                       <p className="text-[#d0302b] text-xl lg:text-2xl font-bold italic">
@@ -133,7 +145,7 @@ export default function Campus() {
           </div>
           <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter uppercase ">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter ">
                 Designed for Excellence, Built for the Future.
               </h2>
               <p className="text-xl lg:text-2xl font-bold opacity-90 italic">
@@ -147,7 +159,7 @@ export default function Campus() {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center mb-16">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] leading-none uppercase tracking-tighter mb-8 ">
+                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] leading-none tracking-tighter mb-8 ">
                   Sports Arena
                 </h2>
                 <div className="w-32 h-2 bg-[#d0302b] mx-auto mb-10 rounded-full" />
@@ -183,7 +195,7 @@ export default function Campus() {
                       >
                         {sport.icon}
                       </motion.div>
-                      <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 uppercase tracking-tighter text-center">
+                      <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tighter text-center">
                         {sport.name}
                       </h3>
                       <div className="w-12 h-1 bg-[#d0302b] mt-4 opacity-20" />
@@ -194,7 +206,7 @@ export default function Campus() {
                       className="absolute inset-0 backface-hidden bg-[#d0302b] shadow-2xl flex flex-col justify-center p-10 text-white rotate-y-180 border-t border-white/20 rounded-3xl"
                       style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                     >
-                      <h4 className="text-sm font-bold mb-4 uppercase tracking-[0.3em] text-[#D6B25E]">
+                      <h4 className="text-sm font-bold mb-4 tracking-[0.3em] text-[#D6B25E]">
                         {sport.motto}
                       </h4>
                       <p className="text-base leading-relaxed font-medium opacity-100">
@@ -218,7 +230,7 @@ export default function Campus() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
               className="space-y-6"
             >
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] leading-tight uppercase tracking-tighter ">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] leading-tight tracking-tighter ">
                 Schedule a Campus Visit
               </h2>
               <p className="text-lg lg:text-xl text-gray-600 font-bold max-w-xl mx-auto">

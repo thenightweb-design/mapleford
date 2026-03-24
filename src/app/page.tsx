@@ -1,8 +1,10 @@
 'use client';
 
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+
+const MotionImage = motion(Image);
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
@@ -94,7 +96,7 @@ export default function Home() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: -20 }}
                                             transition={{ duration: 0.8 }}
-                                            className="font-bold uppercase tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
+                                            className="font-bold tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
                                             style={{
                                                 textShadow: '0 2px 20px rgba(0,0,0,0.3)',
                                                 lineHeight: '1.2',
@@ -114,7 +116,7 @@ export default function Home() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: -20 }}
                                             transition={{ duration: 0.8 }}
-                                            className="font-bold uppercase tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
+                                            className="font-bold tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
                                             style={{
                                                 textShadow: '0 2px 20px rgba(0,0,0,0.3)',
                                                 lineHeight: '1.2',
@@ -162,7 +164,7 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                             className="flex flex-col"
                         >
-                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter uppercase">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter ">
                                 Campus
                             </h2>
                             <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-[#d0302b]">
@@ -172,7 +174,7 @@ export default function Home() {
                                 Set across a sprawling 4-acre campus, Mapleford International School offers students the freedom to explore, learn, and thrive in an open, thoughtfully designed environment. Lush green landscapes, modern classrooms, innovation labs, sports arenas, and creative spaces come together to create an environment that supports academic focus, physical vitality, and overall well-being.
                             </p>
                             <Button href="/campus" variant="tab" showTriangle={true} size="lg">
-                                <span className="tracking-widest uppercase text-sm">Read more about Our Campus</span>
+                                <span className="tracking-widest text-sm">Read more about Our Campus</span>
                             </Button>
                         </motion.div>
                         <motion.div
@@ -181,17 +183,18 @@ export default function Home() {
                             viewport={{ once: true }}
                             variants={fadeInUp}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="relative flex items-start pt-2"
+                            className="relative flex items-start pt-2 h-[400px] w-full"
                         >
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 transition={{ duration: 0.3 }}
-                                className="w-full rounded-3xl overflow-hidden shadow-2xl"
+                                className="w-full h-full rounded-3xl overflow-hidden shadow-2xl relative"
                             >
-                                <img
+                                <Image
                                     src="/images/Image19.png"
                                     alt="Mapleford International School Campus"
-                                    className="w-full h-auto object-cover"
+                                    fill
+                                    className="object-cover"
                                 />
                             </motion.div>
                             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#D6B25E]/20 rounded-full blur-3xl -z-10"></div>
@@ -218,7 +221,7 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                             className="text-white"
                         >
-                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter uppercase">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter ">
                                 Curriculum
                             </h2>
                             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
@@ -242,7 +245,7 @@ export default function Home() {
 
                             <div className="w-full">
                                 <Button href="/curriculum" variant="tab-golden" align="right" showTriangle={true} triangleColor="#D6B25E" size="lg">
-                                    <span className="tracking-widest uppercase text-sm !text-black">Read More about Our Curriculum</span>
+                                    <span className="tracking-widest text-sm !text-black">Read More about Our Curriculum</span>
                                 </Button>
                             </div>
                         </motion.div>
@@ -255,16 +258,18 @@ export default function Home() {
                             viewport={{ once: true }}
                             variants={fadeInUp}
                             transition={{ duration: 0.8, delay: 0.3 }}
+                            className="relative"
                         >
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 transition={{ duration: 0.3 }}
                                 className="rounded-[3rem] overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-[600px] border-8 border-white/10"
                             >
-                                <img
-                                    src="/images/curriculum_indian.png"
+                                <Image
+                                    src="/images/WhatsApp Image 2026-02-26 at 05.17.17.jpeg"
                                     alt="Canadian Pedagogy + CBSE Curriculum"
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    className="object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                             </motion.div>
@@ -284,10 +289,10 @@ export default function Home() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-[28px] sm:text-[44px] lg:text-[52px] font-bold mb-6 leading-tight tracking-tighter uppercase">
+                            <h2 className="text-[28px] sm:text-[44px] lg:text-[52px] font-bold mb-6 leading-tight tracking-tighter ">
                                 The Continuum of Learning
                             </h2>
-                            <p className="max-w-4xl mx-auto text-lg lg:text-xl text-[#333333] leading-relaxed">
+                            <p className="max-w-4xl mx-auto text-lg lg:text-xl text-[#333333] leading-relaxed line-clamp-2">
                                 Every stage of learning is a critical milestone in a child’s developmental journey. Our curriculum is designed as a continuous and coherent pathway, where knowledge, skills, and values are systematically strengthened year after year.
                             </p>
                         </motion.div>
@@ -300,28 +305,28 @@ export default function Home() {
                                 stage: 'Pre-School',
                                 grades: 'Nursery - UKG',
                                 description: 'Play-based early learning that builds curiosity, confidence, and strong foundations.',
-                                image: '/images/continuum_preschool_indian.png'
+                                image: '/images/Pre-School.JPG'
                             },
                             {
                                 id: 'elementary',
                                 stage: 'Elementary School',
                                 grades: 'Grade 1 - 5',
                                 description: "Engaging and inquiry-led learning that blends CBSE milestones with Canadian instructional excellence.",
-                                image: '/images/continuum_elementary_indian.png'
+                                image: '/images/elementary.JPG'
                             },
                             {
                                 id: 'middle',
                                 stage: 'Middle School',
                                 grades: 'Grade 6 - 8',
                                 description: "Analytical thinking and real-world application through interdisciplinary Canadian teaching methods.",
-                                image: '/images/continuum_middle_indian.png'
+                                image: '/images/middle_school.png'
                             },
                             {
                                 id: 'high',
                                 stage: 'High School',
                                 grades: 'Grade 9 - 10',
                                 description: "A CBSE-aligned programme that prepares students for academic success and future pathways.",
-                                image: '/images/continuum_high_indian.png'
+                                image: '/images/high_school.png'
                             }
                         ].map((stage, index) => (
                             <motion.div
@@ -341,10 +346,11 @@ export default function Home() {
                                 style={{ perspective: "1000px" }}
                             >
                                 <div className="h-[42%] overflow-hidden relative">
-                                    <img
+                                    <Image
                                         src={stage.image}
                                         alt={`${stage.stage}`}
-                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                        fill
+                                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
 
@@ -352,13 +358,13 @@ export default function Home() {
                                 <div className="h-[58%] text-center flex flex-col justify-between items-center bg-white relative">
                                     <div className="space-y-4 p-8 pb-4">
                                         <h3
-                                            className="font-bold"
+                                            className="font-bold whitespace-nowrap"
                                             style={{ fontFamily: "'Raleway', Arial, Helvetica, sans-serif", color: '#000000', fontSize: 'clamp(18px, 2.5vw, 24px)' }}
                                         >
                                             {stage.stage}
                                         </h3>
                                         <div className="inline-block px-4 py-1.5 rounded-full bg-gray-50 border border-gray-100">
-                                            <p className="font-bold text-[11px] tracking-[0.15em] uppercase text-[#d0302b]">
+                                            <p className="font-bold text-[11px] tracking-[0.15em] text-[#d0302b]">
                                                 {stage.grades}
                                             </p>
                                         </div>
@@ -373,7 +379,7 @@ export default function Home() {
                                             showTriangle={true}
                                             size="md"
                                         >
-                                            <span className="tracking-widest uppercase text-sm">Read More</span>
+                                            <span className="tracking-widest text-sm">Read More</span>
                                         </Button>
                                     </div>
                                 </div>
@@ -618,7 +624,7 @@ export default function Home() {
                             <motion.div
                                 animate={{ y: [0, -10, 0] }}
                             >
-                                <h2 className="text-[32px] lg:text-[44px] font-bold mb-6 leading-tight uppercase tracking-tighter " style={{ color: '#FFFFFF' }}>
+                                <h2 className="text-[32px] lg:text-[44px] font-bold mb-6 leading-tight tracking-tighter " style={{ color: '#FFFFFF' }}>
                                     Where Logic Meets Imagination
                                 </h2>
 
@@ -667,42 +673,46 @@ export default function Home() {
                             <div className="grid grid-cols-2 gap-4">
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
-                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
+                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10 relative"
                                 >
-                                    <img
+                                    <Image
                                         src="/images/WhatsApp Image 2026-03-19 at 13.19.19.jpeg"
                                         alt="Football"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </motion.div>
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
-                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
+                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10 relative"
                                 >
-                                    <img
+                                    <Image
                                         src="/images/WhatsApp Image 2026-03-19 at 13.19.20.jpeg"
                                         alt="Badminton"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </motion.div>
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
-                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
+                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10 relative"
                                 >
-                                    <img
+                                    <Image
                                         src="/images/WhatsApp Image 2026-03-19 at 13.19.20 (1).jpeg"
                                         alt="Tennis"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </motion.div>
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
-                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10"
+                                    className="aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white/10 relative"
                                 >
-                                    <img
+                                    <Image
                                         src="/images/WhatsApp Image 2026-03-19 at 13.19.20 (2).jpeg"
                                         alt="Athletics"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </motion.div>
                             </div>
@@ -715,7 +725,7 @@ export default function Home() {
                             transition={{ duration: 0.8, delay: 0.3 }}
                             className="order-1 lg:order-2 text-[#000000]"
                         >
-                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter uppercase">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter ">
                                 Sports Arena
                             </h2>
                             <p className="text-2xl lg:text-3xl font-bold mb-4 text-[#d0302b]">
@@ -726,7 +736,7 @@ export default function Home() {
                             </p>
 
                             <Button href="/campus" variant="tab" showTriangle={true} size="lg">
-                                <span className="tracking-widest uppercase text-sm">Read more about Sports Facilities</span>
+                                <span className="tracking-widest text-sm">Read more about Sports Facilities</span>
                             </Button>
                         </motion.div>
                     </div>
@@ -751,7 +761,7 @@ export default function Home() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-4 leading-tight tracking-tighter uppercase">
+                            <h2 className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-4 leading-tight tracking-tighter ">
                                 Words from Our Community
                             </h2>
                             <p className="max-w-2xl mx-auto text-lg lg:text-xl font-bold opacity-90">
@@ -851,7 +861,7 @@ export default function Home() {
                             className="text-[#1A1A1A] flex flex-col justify-center"
                         >
                             <h2
-                                className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight uppercase tracking-tighter"
+                                className="text-[28px] sm:text-[40px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter"
                             >
                                 Start Your Child&apos;s Journey
                             </h2>
@@ -870,7 +880,7 @@ export default function Home() {
                                     showTriangle={true}
                                     size="lg"
                                 >
-                                    <span className="tracking-widest uppercase text-sm">Enroll Now</span>
+                                    <span className="tracking-widest text-sm">Enroll Now</span>
                                 </Button>
                             </div>
                         </motion.div>
@@ -883,12 +893,13 @@ export default function Home() {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="relative"
                         >
-                            <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-white lg:max-w-[85%] lg:ml-auto h-full">
-                                <motion.img
+                            <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-white lg:max-w-[85%] lg:ml-auto h-[500px] relative">
+                                <MotionImage
                                     whileHover={{ scale: 1.02 }}
-                                    src="/images/WhatsApp Image 2026-03-20 at 00.06.04.jpeg"
+                                    src="/images/WhatsApp Image 2026-03-24 at 02.20.14.jpeg"
                                     alt="Start Your Journey"
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    className="object-cover"
                                 />
                             </div>
                             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#D6B25E]/15 rounded-full blur-3xl -z-10"></div>

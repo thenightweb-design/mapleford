@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -26,8 +27,8 @@ export default function Programs() {
           </div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <p className="text-white/80 uppercase tracking-[0.3em] text-sm font-bold mb-4">Educational Excellence</p>
-              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold text-white leading-tight uppercase tracking-tighter ">
+              <p className="text-white/80 tracking-[0.3em] text-sm font-bold mb-4">Educational Excellence</p>
+              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold text-white leading-tight tracking-tighter ">
                 Programs
               </h1>
               <p className="text-white/90 text-lg sm:text-xl mt-4 max-w-2xl mx-auto font-medium leading-relaxed">
@@ -42,8 +43,8 @@ export default function Programs() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="space-y-6">
-                <p className="text-[#d0302b] font-bold uppercase tracking-[0.4em] text-xs">Strategic Partnership</p>
-                <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold text-[#000000] leading-tight uppercase tracking-tighter ">
+                <p className="text-[#d0302b] font-bold tracking-[0.4em] text-xs">Strategic Partnership</p>
+                <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold text-[#000000] leading-tight tracking-tighter ">
                   A Seamless Blend of Two Powerful Systems
                 </h2>
                 <div className="space-y-4 text-lg text-[#000000] leading-relaxed">
@@ -56,9 +57,14 @@ export default function Programs() {
                   <span className="font-bold text-[#d0302b]">CBSE Curriculum</span>
                 </div>
               </motion.div>
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }}>
-                <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-                  <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&h=800&fit=crop" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Students learning" />
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }} className="w-full">
+                <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl relative">
+                  <Image
+                    src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&h=800&fit=crop"
+                    alt="Students learning"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
               </motion.div>
             </div>
@@ -73,7 +79,7 @@ export default function Programs() {
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white uppercase tracking-tighter ">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white tracking-tighter ">
                 What This Means for Learners
               </h2>
             </div>
@@ -105,8 +111,8 @@ export default function Programs() {
         <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <p className="text-[#d0302b] font-bold uppercase tracking-[0.4em] text-xs mb-3">Academic Stages</p>
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] uppercase tracking-tighter ">
+              <p className="text-[#d0302b] font-bold tracking-[0.4em] text-xs mb-3">Academic Stages</p>
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] tracking-tighter ">
                 Curriculum Pathway
               </h2>
             </div>
@@ -160,7 +166,7 @@ export default function Programs() {
           </div>
           <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white leading-tight uppercase tracking-tighter ">
+              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white leading-tight tracking-tighter ">
                 Invest in Their Future.
               </h2>
               <p className="text-lg text-white/90 max-w-xl mx-auto leading-relaxed">
