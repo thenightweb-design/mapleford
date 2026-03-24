@@ -80,14 +80,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/SHEI.png", type: "image/png" },
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.png", type: "image/png" },
-      { url: "/icon.png", type: "image/png" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/SHEI.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "/SHEI.png",
   },
   robots: {
     index: true,

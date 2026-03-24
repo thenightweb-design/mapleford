@@ -193,7 +193,7 @@ export default function Header() {
                 size="md"
                 className="hidden sm:inline-block"
               >
-                Enroll Now
+                ENROLL NOW
               </Button>
 
               {/* Mobile Menu Button */}
@@ -330,7 +330,7 @@ export default function Header() {
                 size="lg"
                 className="block w-full"
               >
-                Enroll Now
+                ENROLL NOW
               </Button>
 
               <a
