@@ -96,10 +96,9 @@ export default function Home() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: -20 }}
                                             transition={{ duration: 0.8 }}
-                                            className="font-bold tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
+                                            className="font-bold tracking-tighter text-[22px] sm:text-[36px] lg:text-[48px] px-2 leading-[1.2]"
                                             style={{
                                                 textShadow: '0 2px 20px rgba(0,0,0,0.3)',
-                                                lineHeight: '1.2',
                                                 background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 50%, #D6B25E 100%)',
                                                 WebkitBackgroundClip: 'text',
                                                 WebkitTextFillColor: 'transparent',
@@ -116,10 +115,9 @@ export default function Home() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: -20 }}
                                             transition={{ duration: 0.8 }}
-                                            className="font-bold tracking-tighter text-[26px] sm:text-[36px] lg:text-[48px] whitespace-nowrap"
+                                            className="font-bold tracking-tighter text-[22px] sm:text-[36px] lg:text-[48px] px-2 leading-[1.2]"
                                             style={{
                                                 textShadow: '0 2px 20px rgba(0,0,0,0.3)',
-                                                lineHeight: '1.2',
                                                 background: 'linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #FFA500 100%)',
                                                 WebkitBackgroundClip: 'text',
                                                 WebkitTextFillColor: 'transparent',
@@ -177,13 +175,13 @@ export default function Home() {
                                 <span className="tracking-widest text-sm">READ MORE ABOUT OUR CAMPUS</span>
                             </Button>
                         </motion.div>
-                        <motion.div
+                         <motion.div
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={fadeInUp}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="relative flex items-start pt-2 h-[400px] w-full"
+                            className="relative flex items-start pt-2 h-[250px] sm:h-[400px] w-full"
                         >
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
@@ -263,7 +261,7 @@ export default function Home() {
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 transition={{ duration: 0.3 }}
-                                className="rounded-[3rem] overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-[600px] border-8 border-white/10"
+                                className="rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl relative aspect-square lg:aspect-auto h-[350px] sm:h-[500px] lg:h-[600px] border-4 sm:border-8 border-white/10"
                             >
                                 <Image
                                     src="/images/BRT_4033.JPG"
@@ -342,7 +340,7 @@ export default function Home() {
                                     transition: { duration: 0.4, ease: "easeOut" }
                                 }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="group bg-white rounded-none overflow-hidden flex flex-col h-[520px] shadow-[0_10px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_45px_120px_rgba(0,0,0,0.18)] transition-all duration-500 relative z-10 hover:z-20 border-t border-gray-50"
+                                className="group bg-white rounded-none overflow-hidden flex flex-col min-h-[480px] sm:min-h-[520px] h-auto shadow-[0_10px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_45px_120px_rgba(0,0,0,0.18)] transition-all duration-500 relative z-10 hover:z-20 border-t border-gray-50"
                                 style={{ perspective: "1000px" }}
                             >
                                 <div className="h-[42%] overflow-hidden relative">
@@ -399,7 +397,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
                         {/* Left Column: Pure-SVG Circular Ring */}
-                        <div className="relative w-full h-[600px] flex items-center justify-center">
+                        <div className="relative w-full h-[350px] sm:h-[500px] lg:h-[600px] flex items-center justify-center">
                             <svg
                                 className="w-full h-full"
                                 viewBox="0 0 600 600"

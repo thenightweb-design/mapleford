@@ -41,7 +41,7 @@ export default function Curriculum() {
             <Header />
             <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
                 {/* SECTION 1 — HERO BANNER */}
-                <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
+                <section className="py-16 sm:py-24 px-4 text-center relative overflow-hidden min-h-[300px] sm:min-h-[400px] flex items-center justify-center bg-[#d0302b]">
                     <div className="absolute inset-0 z-0">
                         <Image 
                             src="/images/Image23.png" 
@@ -57,7 +57,7 @@ export default function Curriculum() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
+                            <h1 className="text-[32px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
                                 Curriculum
                             </h1>
                             <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
@@ -72,7 +72,7 @@ export default function Curriculum() {
                     <div className="max-w-6xl mx-auto">
                         <motion.div
                             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-                            className="bg-white rounded-[3rem] p-10 sm:p-20 shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)] border border-gray-50 text-center"
+                            className="bg-white rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-20 shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)] border border-gray-50 text-center"
                         >
                             <p className="text-xl sm:text-2xl lg:text-3xl leading-relaxed text-[#000000] font-medium">
                                 At Mapleford International School, learning is shaped by a powerful collaboration with <span className="text-[#d0302b] font-bold underline decoration-red-200 underline-offset-8">Maple Bear Global Schools, Canada</span>, a world leader in bilingual, inquiry-based education operating across 35+ countries and 450+ schools. This association helps students benefit from the proven strengths of the Canadian education system, consistently ranked among the world’s best, while staying firmly aligned to India’s esteemed CBSE framework.
@@ -155,7 +155,7 @@ export default function Curriculum() {
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-24">
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                                <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 text-[#000000] leading-tight tracking-tighter ">
+                                <h2 className="text-[22px] sm:text-[38px] lg:text-[48px] font-bold mb-8 text-[#000000] leading-tight tracking-tighter ">
                                     A Seamless Blend <br className="hidden sm:block" /> of Two Powerful Systems
                                 </h2>
                                 <p className="text-2xl sm:text-3xl font-bold text-gray-500 flex items-center justify-center gap-6">
@@ -172,7 +172,7 @@ export default function Curriculum() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 1 }}
-                                className="relative order-2 lg:order-1 h-[400px] w-full"
+                                className="relative order-2 lg:order-1 h-[250px] sm:h-[400px] w-full"
                             >
                                 <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white w-full h-full">
                                     <Image 
@@ -276,7 +276,7 @@ export default function Curriculum() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 1 }}
-                                className="w-full lg:w-1/2 relative h-[400px]"
+                                className="w-full lg:w-1/2 relative h-[250px] sm:h-[400px]"
                             >
                                 <div className="relative rounded-[3rem] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.3)] border-8 border-white/10 w-full h-full">
                                     <Image 
@@ -318,7 +318,7 @@ export default function Curriculum() {
                                             <span className="tracking-widest text-sm">Apply for {stage.title}</span>
                                         </Button>
                                     </div>
-                                    <div className="w-full lg:w-7/12 relative group h-[400px]">
+                                    <div className="w-full lg:w-7/12 relative group h-[250px] sm:h-[400px]">
                                         <div className="absolute -inset-8 bg-slate-50 rounded-[4rem] -z-10 group-hover:scale-105 transition-transform duration-700" />
                                         <div className="relative w-full h-full rounded-[3.5rem] overflow-hidden shadow-2xl transform group-hover:rotate-1 transition-transform duration-700">
                                             <Image 
@@ -340,7 +340,7 @@ export default function Curriculum() {
                 <section className="py-12 bg-[#d0302b] px-4 relative overflow-hidden">
                     <div className="max-w-5xl mx-auto text-center space-y-12 relative z-10">
                         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                            <h2 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold text-white leading-none tracking-tighter ">
+                            <h2 className="text-[32px] sm:text-[54px] lg:text-[68px] font-bold text-white leading-none tracking-tighter ">
                                 Prepare Your <br /> Global Future
                             </h2>
                             <p className="text-xl lg:text-2xl text-white font-bold max-w-2xl mx-auto mt-8 tracking-wide">

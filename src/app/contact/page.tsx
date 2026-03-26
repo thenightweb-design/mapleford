@@ -29,7 +29,7 @@ export default function Contact() {
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
 
         {/* BANNER — Red */}
-        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
+        <section className="py-16 sm:py-24 px-4 text-center relative overflow-hidden min-h-[300px] sm:min-h-[400px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/Image26_000.png"
@@ -46,7 +46,7 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
             >
               <h1
-                className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter "
+                className="text-[32px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter "
               >
                 Contact Us
               </h1>
@@ -182,7 +182,7 @@ export default function Contact() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-10">
               <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white tracking-tighter ">Find Us Here</h2>
-              <p className="text-white/80 mt-3 text-lg">Hayathnagar, Hyderabad, Telangana - 500070</p>
+              <p className="text-white/80 mt-3 text-lg">Hayathnagar, Hyderabad, Telangana - 501505</p>
             </div>
             <div className="relative h-[350px] sm:h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
               <iframe
