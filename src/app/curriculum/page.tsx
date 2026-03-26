@@ -158,10 +158,10 @@ export default function Curriculum() {
                                 <h2 className="text-[22px] sm:text-[38px] lg:text-[48px] font-bold mb-8 text-[#000000] leading-tight tracking-tighter ">
                                     A Seamless Blend <br className="hidden sm:block" /> of Two Powerful Systems
                                 </h2>
-                                <p className="text-2xl sm:text-3xl font-bold text-gray-500 flex items-center justify-center gap-6">
-                                    <span className="w-12 h-1 bg-[#d0302b]" />
+                                <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-500 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                                    <span className="hidden sm:block w-12 h-1 bg-[#d0302b]" />
                                     Canadian Pedagogy + CBSE Curriculum
-                                    <span className="w-12 h-1 bg-[#d0302b]" />
+                                    <span className="hidden sm:block w-12 h-1 bg-[#d0302b]" />
                                 </p>
                             </motion.div>
                         </div>

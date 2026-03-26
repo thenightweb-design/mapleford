@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Raleway, Lato } from "next/font/google";
 import "./globals.css";
 import WhatsAppChat from "../components/WhatsAppChat";
-import Preloader from "../components/Preloader";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -146,7 +145,7 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
-        <Preloader />
+
         {children}
         <WhatsAppChat />
       </body>

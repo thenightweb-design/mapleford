@@ -82,8 +82,11 @@ export default function Header() {
         style={{
           background: '#FFFFFF',
           borderBottom: isScrolled ? '1px solid rgba(214, 178, 94, 0.2)' : '1px solid rgba(214, 178, 94, 0.15)',
-          height: isScrolled ? '90px' : '120px' // Increased for bigger logo
-        }}
+          height: isScrolled ? '70px' : '90px', // Responsive height
+          '@media (min-width: 1024px)': {
+            height: isScrolled ? '90px' : '120px'
+          }
+        } as any}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="flex justify-between items-center h-full">
@@ -93,9 +96,9 @@ export default function Header() {
                 <Image
                   src="/ChatGPT Image Jan 14, 2026, 09_10_49 PM.png"
                   alt="Logo"
-                  width={280}
-                  height={80}
-                  className="h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
+                  width={200}
+                  height={58}
+                  className="h-10 sm:h-12 lg:h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
                   priority
                 />
               </Link>
@@ -191,7 +194,7 @@ export default function Header() {
                 onClick={() => setIsModalOpen(true)}
                 variant="primary"
                 size="md"
-                className="hidden sm:inline-block"
+                className="!hidden lg:!inline-block"
               >
                 ENROLL NOW
               </Button>
@@ -245,9 +248,9 @@ export default function Header() {
                   <Image
                     src="/ChatGPT Image Jan 14, 2026, 09_10_49 PM.png"
                     alt="Mapleford International School Logo"
-                    width={160}
-                    height={64}
-                    className="h-16 sm:h-20 w-auto"
+                    width={140}
+                    height={56}
+                    className="h-12 sm:h-16 w-auto"
                   />
                 </Link>
                 <button
