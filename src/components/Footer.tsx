@@ -39,7 +39,7 @@ export default function Footer() {
                 <span className="text-[13px] uppercase tracking-widest font-bold" style={{ fontFamily: 'var(--font-body)', color: '#FFFFFF' }}>Location</span>
                 <p className="text-[17px] font-normal leading-relaxed" style={{ fontFamily: 'var(--font-body)', color: '#FFFFFF' }}>
                   Hayathnagar, Hyderabad,<br />
-                  Telangana - 500070
+                  Telangana - 501505
                 </p>
                 <a
                   href="https://maps.app.goo.gl/K8rPz5TjxR8eR6HSA"

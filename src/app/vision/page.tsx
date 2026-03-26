@@ -19,7 +19,7 @@ export default function Vision() {
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
 
         {/* BANNER — Red */}
-        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
+        <section className="py-16 sm:py-24 px-4 text-center relative overflow-hidden min-h-[300px] sm:min-h-[400px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/Image27.png"
@@ -32,7 +32,7 @@ export default function Vision() {
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <p className="!text-white/80 tracking-[0.3em] text-sm font-bold mb-4">Our Philosophy</p>
-              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
+              <h1 className="text-[32px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
                 Vision &amp; Mission
               </h1>
               <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight ">
@@ -48,7 +48,7 @@ export default function Vision() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
               <motion.div
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-                className="p-8 sm:p-12 rounded-3xl bg-gray-50 border border-gray-100"
+                className="p-6 sm:p-12 rounded-3xl bg-gray-50 border border-gray-100"
               >
                 <div className="text-4xl mb-6">🎯</div>
                 <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] mb-5 tracking-tighter">Our Vision</h2>
@@ -64,7 +64,7 @@ export default function Vision() {
               <motion.div
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
                 transition={{ delay: 0.15 }}
-                className="p-8 sm:p-12 rounded-3xl bg-[#d0302b]/5 border border-[#d0302b]/10"
+                className="p-6 sm:p-12 rounded-3xl bg-[#d0302b]/5 border border-[#d0302b]/10"
               >
                 <div className="text-4xl mb-6">🚀</div>
                 <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-[#000000] mb-5 tracking-tighter">Our Mission</h2>

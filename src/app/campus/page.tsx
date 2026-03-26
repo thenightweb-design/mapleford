@@ -69,7 +69,7 @@ export default function Campus() {
       <Header />
 
       <main className="pt-[90px] lg:pt-[120px]">
-        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
+        <section className="py-16 sm:py-24 px-4 text-center relative overflow-hidden min-h-[300px] sm:min-h-[400px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0">
             <Image 
               src="/images/Image24_000.png" 
@@ -85,7 +85,7 @@ export default function Campus() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
+              <h1 className="text-[32px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
                 Campus
               </h1>
               <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
@@ -107,7 +107,7 @@ export default function Campus() {
                 >
                   <div className="w-full lg:w-1/2 relative">
                     <div className="absolute -inset-4 bg-slate-50 rounded-[4rem] -z-10 rotate-2" />
-                    <div className="relative aspect-[16/10] rounded-[3.5rem] overflow-hidden shadow-2xl group border-[12px] border-white">
+                    <div className="relative aspect-square sm:aspect-[16/10] rounded-[2rem] sm:rounded-[3.5rem] overflow-hidden shadow-2xl group border-[6px] sm:border-[12px] border-white">
                       <Image 
                         src={fac.image} 
                         alt={fac.title} 

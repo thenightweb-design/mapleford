@@ -89,7 +89,7 @@ export default function Admissions() {
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
 
         {/* BANNER */}
-        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[420px] flex items-center justify-center bg-[#d0302b]">
+        <section className="py-16 sm:py-24 px-4 text-center relative overflow-hidden min-h-[300px] sm:min-h-[420px] flex items-center justify-center bg-[#d0302b]">
           <div className="absolute inset-0 z-0">
             <Image 
               src="/images/Image25.png" 
@@ -102,7 +102,7 @@ export default function Admissions() {
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <p className="!text-white/80 tracking-[0.3em] text-sm font-bold mb-4">Your Journey Starts Here</p>
-              <h1 className="text-[38px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
+              <h1 className="text-[32px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
                 Admissions
               </h1>
               <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight ">
@@ -177,7 +177,7 @@ export default function Admissions() {
                         <p className={`text-xs font-bold tracking-[0.2em] mb-1 ${isRed ? 'text-white/70' : 'text-[#d0302b]'}`}>
                           {step.subtitle}
                         </p>
-                        <h2 className={`text-[32px] lg:text-[44px] font-bold leading-tight tracking-tighter  ${isRed ? 'text-white' : 'text-[#000000]'}`}>
+                        <h2 className={`text-[24px] sm:text-[32px] lg:text-[44px] font-bold leading-tight tracking-tighter  ${isRed ? 'text-white' : 'text-[#000000]'}`}>
                           {step.title}
                         </h2>
                       </div>
@@ -250,7 +250,7 @@ export default function Admissions() {
               variants={fadeInUp}
             >
               <p className="text-[#d0302b] tracking-[0.3em] text-sm font-bold mb-4">Ready to Begin?</p>
-              <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-6 leading-tight text-[#000000] tracking-tighter ">
+              <h2 className="text-[22px] sm:text-[38px] lg:text-[48px] font-bold mb-6 leading-tight text-[#000000] tracking-tighter ">
                 Take Your Child&apos;s First Step Forward
               </h2>
               <p className="text-[#555555] text-lg lg:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
