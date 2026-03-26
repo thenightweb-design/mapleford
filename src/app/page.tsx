@@ -66,7 +66,7 @@ export default function Home() {
             <Header />
 
             {/* Hero Section with Video */}
-            <section className="relative overflow-hidden h-screen">
+            <section className="relative overflow-hidden h-[85vh] sm:h-screen">
                 <div className="absolute inset-0">
                     <video
                         autoPlay
@@ -98,12 +98,12 @@ export default function Home() {
                                             transition={{ duration: 0.8 }}
                                             className="font-bold tracking-tighter text-[22px] sm:text-[36px] lg:text-[48px] px-2 leading-[1.2]"
                                             style={{
-                                                textShadow: '0 2px 20px rgba(0,0,0,0.3)',
-                                                background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 50%, #D6B25E 100%)',
+                                                textShadow: '0 4px 30px rgba(0,0,0,0.8)',
+                                                background: 'linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #FFFFFF 100%)',
                                                 WebkitBackgroundClip: 'text',
                                                 WebkitTextFillColor: 'transparent',
                                                 backgroundClip: 'text',
-                                                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+                                                filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.5))'
                                             }}
                                         >
                                             Le Savoir | Intégrité | L&apos;Excellence
@@ -117,12 +117,12 @@ export default function Home() {
                                             transition={{ duration: 0.8 }}
                                             className="font-bold tracking-tighter text-[22px] sm:text-[36px] lg:text-[48px] px-2 leading-[1.2]"
                                             style={{
-                                                textShadow: '0 2px 20px rgba(0,0,0,0.3)',
-                                                background: 'linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #FFA500 100%)',
+                                                textShadow: '0 4px 30px rgba(0,0,0,0.8)',
+                                                background: 'linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #FFFFFF 100%)',
                                                 WebkitBackgroundClip: 'text',
                                                 WebkitTextFillColor: 'transparent',
                                                 backgroundClip: 'text',
-                                                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+                                                filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.5))'
                                             }}
                                         >
                                             Knowledge | Integrity | Excellence
@@ -133,21 +133,20 @@ export default function Home() {
                     </motion.div>
                 </div>
 
-                {/* Scroll indicator */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 2, duration: 1 }}
-                    className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30"
-                >
                     <motion.div
-                        animate={{ y: [0, 10, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
-                        className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 2, duration: 1 }}
+                        className="absolute bottom-6 sm:bottom-12 left-1/2 transform -translate-x-1/2 z-30"
                     >
-                        <motion.div className="w-1.5 h-3 bg-white/70 rounded-full" />
+                        <motion.div
+                            animate={{ y: [0, 10, 0] }}
+                            transition={{ duration: 1.5, repeat: Infinity }}
+                            className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2"
+                        >
+                            <motion.div className="w-1.5 h-3 bg-white/70 rounded-full" />
+                        </motion.div>
                     </motion.div>
-                </motion.div>
             </section>
 
             {/* Campus Section */}
