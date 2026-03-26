@@ -96,9 +96,9 @@ export default function Header() {
                 <Image
                   src="/ChatGPT Image Jan 14, 2026, 09_10_49 PM.png"
                   alt="Logo"
-                  width={200}
-                  height={58}
-                  className="h-10 sm:h-12 lg:h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
+                  width={250}
+                  height={72}
+                  className="h-14 sm:h-16 lg:h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
                   priority
                 />
               </Link>
@@ -248,9 +248,9 @@ export default function Header() {
                   <Image
                     src="/ChatGPT Image Jan 14, 2026, 09_10_49 PM.png"
                     alt="Mapleford International School Logo"
-                    width={140}
-                    height={56}
-                    className="h-12 sm:h-16 w-auto"
+                    width={180}
+                    height={72}
+                    className="h-16 sm:h-20 w-auto"
                   />
                 </Link>
                 <button
