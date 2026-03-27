@@ -40,7 +40,7 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="max-w-2xl bg-white/10 backdrop-blur-md border border-white/20 p-8 sm:p-12 rounded-[2.5rem] shadow-2xl"
             >
-              <h1 className="text-[32px] sm:text-[48px] lg:text-[60px] font-bold !text-white leading-tight mb-6 tracking-tighter">
+              <h1 className="text-[32px] sm:text-[48px] lg:text-[60px] font-semibold !text-white leading-tight mb-6 tracking-tighter">
                 Who We Are
               </h1>
               <p className="!text-white/90 text-lg sm:text-xl font-bold tracking-wide italic leading-tight border-l-4 border-[#d0302b] pl-6">

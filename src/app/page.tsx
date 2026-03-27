@@ -115,7 +115,7 @@ export default function Home() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: -20 }}
                                             transition={{ duration: 0.8 }}
-                                            className="font-bold tracking-tighter text-[22px] sm:text-[36px] lg:text-[42px] xl:text-[48px] px-2 leading-[1.2] lg:whitespace-nowrap"
+                                            className="font-semibold tracking-tighter text-[22px] sm:text-[36px] lg:text-[42px] xl:text-[48px] px-2 leading-[1.2] lg:whitespace-nowrap"
                                             style={{
                                                 textShadow: '0 4px 30px rgba(0,0,0,0.8)',
                                                 background: 'linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #FFFFFF 100%)',
