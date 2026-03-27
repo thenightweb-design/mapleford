@@ -77,16 +77,14 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-md py-1' : 'shadow-sm py-2'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+            ? 'shadow-md py-1 h-[70px] lg:h-[100px]'
+            : 'shadow-sm py-2 h-[90px] lg:h-[130px]'
           }`}
         style={{
           background: '#FFFFFF',
           borderBottom: isScrolled ? '1px solid rgba(214, 178, 94, 0.2)' : '1px solid rgba(214, 178, 94, 0.15)',
-          height: isScrolled ? '70px' : '90px', // Responsive height
-          '@media (min-width: 1024px)': {
-            height: isScrolled ? '90px' : '120px'
-          }
-        } as any}
+        }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="flex justify-between items-center h-full">
@@ -96,8 +94,8 @@ export default function Header() {
                 <Image
                   src="/ChatGPT Image Jan 14, 2026, 09_10_49 PM.png"
                   alt="Logo"
-                  width={320}
-                  height={92}
+                  width={380}
+                  height={110}
                   className="h-14 sm:h-16 lg:h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
                   priority
                 />
@@ -181,7 +179,7 @@ export default function Header() {
                 alt="CBSE Logo"
                 width={80}
                 height={64}
-                className="h-16 w-auto object-contain"
+                className={`${isScrolled ? 'h-12' : 'h-16'} w-auto object-contain transition-all duration-300`}
               />
               <span className="text-[10px] font-bold text-gray-700 mt-1 leading-none">
                 Affiliation No: 3630573
