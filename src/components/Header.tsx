@@ -77,26 +77,15 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-md py-1' : 'shadow-sm py-2'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+            ? 'shadow-md py-1 h-[70px] lg:h-[100px]'
+            : 'shadow-sm py-2 h-[90px] lg:h-[130px]'
           }`}
         style={{
           background: '#FFFFFF',
           borderBottom: isScrolled ? '1px solid rgba(214, 178, 94, 0.2)' : '1px solid rgba(214, 178, 94, 0.15)',
-          height: isScrolled ? 'var(--header-height-scrolled)' : 'var(--header-height-normal)'
         }}
       >
-        <style jsx>{`
-          header {
-            --header-height-normal: 90px;
-            --header-height-scrolled: 70px;
-          }
-          @media (min-width: 1024px) {
-            header {
-              --header-height-normal: 130px;
-              --header-height-scrolled: 100px;
-            }
-          }
-        `}</style>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="flex justify-between items-center h-full">
             {/* Left - Logo */}
