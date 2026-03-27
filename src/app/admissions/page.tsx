@@ -59,7 +59,7 @@ const steps = [
       'With warmth and clarity, families are guided every step of the way. Marking the beginning of a meaningful and inspiring journey together.'
     ],
     cta: null,
-    image: '/images/admissions_step4_new.png',
+    image: '/images/admissions_step4_v2.png',
     bg: 'red',
   }
 ];
@@ -106,8 +106,7 @@ export default function Admissions() {
               transition={{ duration: 0.8 }}
               className="max-w-2xl bg-white/5 backdrop-blur-md border border-white/10 p-10 sm:p-14 rounded-[3rem] shadow-2xl"
             >
-              <p className="text-[#d0302b] tracking-[0.4em] text-xs font-bold mb-6 uppercase">Your Journey Starts Here</p>
-              <h1 className="text-[36px] sm:text-[52px] lg:text-[64px] font-extrabold !text-white leading-[1.1] mb-6 tracking-tighter">
+              <h1 className="text-[36px] sm:text-[52px] lg:text-[64px] font-bold !text-white leading-[1.1] mb-6 tracking-tighter">
                 Admissions
               </h1>
               <p className="!text-white/90 text-lg sm:text-xl font-medium leading-relaxed italic border-l-4 border-[#d0302b] pl-6">
