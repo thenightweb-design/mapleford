@@ -78,8 +78,8 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-            ? 'shadow-md py-1 h-[70px] lg:h-[100px]'
-            : 'shadow-sm py-2 h-[90px] lg:h-[130px]'
+            ? 'shadow-md py-1 h-[70px] lg:h-[90px]'
+            : 'shadow-sm py-2 h-[85px] lg:h-[120px]'
           }`}
         style={{
           background: '#FFFFFF',
@@ -94,9 +94,9 @@ export default function Header() {
                 <Image
                   src="/ChatGPT Image Jan 14, 2026, 09_10_49 PM.png"
                   alt="Logo"
-                  width={380}
-                  height={110}
-                  className="h-14 sm:h-16 lg:h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
+                  width={320}
+                  height={90}
+                  className="h-12 sm:h-14 lg:h-[85%] w-auto object-contain transition-transform duration-300 hover:scale-105"
                   priority
                 />
               </Link>
@@ -111,7 +111,7 @@ export default function Header() {
                       <button
                         onClick={() => setActiveDropdown(activeDropdown === item.title ? null : item.title)}
                         onMouseEnter={() => setActiveDropdown(item.title)}
-                        className={`menu-link px-3 py-2 text-[14px] font-bold transition-all duration-300 flex items-center gap-1 rounded-lg ${activeDropdown === item.title
+                        className={`menu-link px-2 xl:px-3 py-2 text-[13px] xl:text-[14px] font-bold transition-all duration-300 flex items-center gap-0.5 xl:gap-1 rounded-lg ${activeDropdown === item.title
                           ? 'bg-black/5'
                           : 'hover:bg-black/5'
                           }`}
@@ -153,7 +153,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href || '/'}
-                      className={`menu-link px-3 py-2 text-[14px] font-bold transition-all duration-300 rounded-lg relative ${pathname === (item.href || '/')
+                      className={`menu-link px-1.5 xl:px-3 py-2 text-[14px] font-bold transition-all duration-300 rounded-lg relative ${pathname === (item.href || '/')
                         ? 'text-black'
                         : 'hover:bg-black/5'
                         }`}
@@ -191,8 +191,16 @@ export default function Header() {
               <Button
                 onClick={() => setIsModalOpen(true)}
                 variant="primary"
-                size="md"
-                className="!hidden lg:!inline-block"
+                size="sm"
+                className="!hidden xl:!inline-block px-6 py-2.5 text-sm"
+              >
+                ENROLL NOW
+              </Button>
+              <Button
+                onClick={() => setIsModalOpen(true)}
+                variant="primary"
+                size="sm"
+                className="!hidden lg:!inline-block xl:!hidden px-3 py-2 text-xs"
               >
                 ENROLL NOW
               </Button>

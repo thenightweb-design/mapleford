@@ -79,13 +79,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/SHEI.png", type: "image/png" },
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-maple.png", type: "image/png" },
+      { url: "/favicon-maple.png", sizes: "any" },
     ],
     apple: [
-      { url: "/SHEI.png", sizes: "180x180", type: "image/png" },
+      { url: "/favicon-maple.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/SHEI.png",
+    shortcut: "/favicon-maple.png",
   },
   robots: {
     index: true,

@@ -115,7 +115,7 @@ export default function Home() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: -20 }}
                                             transition={{ duration: 0.8 }}
-                                            className="font-bold tracking-tighter text-[22px] sm:text-[36px] lg:text-[42px] xl:text-[48px] px-2 leading-[1.2] lg:whitespace-nowrap"
+                                            className="font-semibold tracking-tighter text-[22px] sm:text-[36px] lg:text-[42px] xl:text-[48px] px-2 leading-[1.2] lg:whitespace-nowrap"
                                             style={{
                                                 textShadow: '0 4px 30px rgba(0,0,0,0.8)',
                                                 background: 'linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #FFFFFF 100%)',
@@ -309,21 +309,21 @@ export default function Home() {
                                 stage: 'Elementary School',
                                 grades: 'Grade 1 - 5',
                                 description: "Engaging and inquiry-led learning that blends CBSE milestones with Canadian instructional excellence.",
-                                image: '/images/elementary.JPG'
+                                image: '/images/Elementry.png'
                             },
                             {
                                 id: 'middle',
                                 stage: 'Middle School',
                                 grades: 'Grade 6 - 8',
                                 description: "Analytical thinking and real-world application through interdisciplinary Canadian teaching methods.",
-                                image: '/images/middle_school.png'
+                                image: '/images/Middle School.png'
                             },
                             {
                                 id: 'high',
                                 stage: 'High School',
                                 grades: 'Grade 9 - 10',
                                 description: "A CBSE-aligned programme that prepares students for academic success and future pathways.",
-                                image: '/images/high_school.png'
+                                image: '/images/High School.png'
                             }
                         ].map((stage, index) => (
                             <motion.div

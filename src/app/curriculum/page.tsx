@@ -19,19 +19,19 @@ const curriculumStages = [
         title: "Elementary School",
         grades: "Grade 1 to Grade 5",
         description: "Our Elementary programme integrates CBSE learning milestones with Canadian instructional strategies in a progressive, concept-driven framework. Through hands-on experiences and Instruction in English strengthens bilingual skills in a well-rounded, immersive learning environment, while equal emphasis on intellectual, social, and emotional growth prepares learners for sustained academic success.",
-        img: "/images/stage_elementary.png"
+        img: "/images/Elementry.png"
     },
     {
         title: "Middle School",
         grades: "Grade 6 - Grade 8",
         description: "A transition-focused, application-oriented curriculum where CBSE academic frameworks are strengthened through Canadian inquiry-based and interdisciplinary teaching. Lessons emphasise analytical thinking, problem-solving, and real-world application of concepts.",
-        img: "/images/stage_middle.png"
+        img: "/images/Middle School.png"
     },
     {
         title: "High School",
         grades: "Grade 9 and Grade 10",
         description: "A strong CBSE academic roadmap strengthened by: Critical thinking frameworks, skill-based projects. Through the Global Connect program, students engage virtually with peers around the world, fostering international collaborations, cultural exchanges, and broader global perspectives.",
-        img: "/images/stage_high.png"
+        img: "/images/High School.png"
     }
 ];
 
@@ -41,27 +41,29 @@ export default function Curriculum() {
             <Header />
             <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
                 {/* SECTION 1 — HERO BANNER */}
-                <section className="py-16 sm:py-24 px-4 text-center relative overflow-hidden min-h-[300px] sm:min-h-[400px] flex items-center justify-center bg-[#d0302b]">
+                <section className="py-16 sm:py-24 px-4 relative overflow-hidden min-h-[350px] sm:min-h-[450px] flex items-center bg-slate-900">
                     <div className="absolute inset-0 z-0">
                         <Image 
                             src="/images/Image23.png" 
                             alt="Curriculum Background" 
                             fill 
-                            className="object-cover opacity-40" 
+                            className="object-cover opacity-60" 
                             priority 
                         />
+                        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-transparent" />
                     </div>
-                    <div className="relative z-10 max-w-4xl mx-auto">
+                    <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
                         <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
+                            className="max-w-3xl bg-white/10 backdrop-blur-md border border-white/20 p-8 sm:p-12 rounded-[2.5rem] shadow-2xl"
                         >
-                            <h1 className="text-[32px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
-                                Curriculum
+                            <h1 className="text-[32px] sm:text-[48px] lg:text-[60px] font-semibold !text-white leading-tight mb-6 tracking-tighter">
+                                A Continuum of Learning
                             </h1>
-                            <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
-                                Where CBSE Excellence Meets Canadian Innovation
+                            <p className="!text-white/90 text-lg sm:text-xl font-bold tracking-wide italic leading-tight border-l-4 border-[#d0302b] pl-6">
+                                Where CBSE structure meets Canadian instructional excellence.
                             </p>
                         </motion.div>
                     </div>

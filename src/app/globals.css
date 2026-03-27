@@ -75,10 +75,10 @@ body::before {
 /* H1 - Page Banner Headers */
 h1 {
   font-family: var(--font-heading);
-  font-size: clamp(40px, 6vw, 64px);
-  font-weight: 800;
   color: var(--text-heading);
   letter-spacing: -0.02em;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 600;
   line-height: 1.1;
   text-transform: none !important;
 }

@@ -22,26 +22,28 @@ export default function About() {
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
 
         {/* HERO SECTION — Who We Are */}
-        <section className="py-24 px-4 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center bg-[#d0302b]">
+        <section className="py-16 sm:py-24 px-4 relative overflow-hidden min-h-[350px] sm:min-h-[450px] flex items-center bg-slate-900">
           <div className="absolute inset-0 z-0">
             <Image 
               src="/images/Image22_000.png" 
               alt="About Mapleford" 
               fill
-              className="object-cover opacity-40"
+              className="object-cover opacity-60"
               priority
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-transparent" />
           </div>
-          <div className="relative z-10 max-w-4xl mx-auto">
+          <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              className="max-w-2xl bg-white/10 backdrop-blur-md border border-white/20 p-8 sm:p-12 rounded-[2.5rem] shadow-2xl"
             >
-              <h1 className="text-[40px] sm:text-[56px] lg:text-[72px] font-bold !text-white leading-tight mb-4 tracking-tighter">
+              <h1 className="text-[32px] sm:text-[48px] lg:text-[60px] font-semibold !text-white leading-tight mb-6 tracking-tighter">
                 Who We Are
               </h1>
-              <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
+              <p className="!text-white/90 text-lg sm:text-xl font-bold tracking-wide italic leading-tight border-l-4 border-[#d0302b] pl-6">
                 Rooted in Legacy. Ready for Tomorrow.
               </p>
             </motion.div>
@@ -200,7 +202,7 @@ export default function About() {
                   <div className="lg:col-span-8 space-y-6 order-2 lg:order-1">
                     <div className="space-y-2">
                       <h3 className="text-2xl lg:text-3xl font-bold text-white tracking-tighter">CH Swetha Reddy</h3>
-                      <p className="text-white/60 font-bold tracking-widest text-sm">Assistant Director</p>
+                      <p className="text-white/60 font-bold tracking-widest text-sm">Associate Director</p>
                     </div>
                     <h4 className="text-xl lg:text-2xl font-bold text-white/90 tracking-tighter">Driven by Purpose</h4>
                     <div className="w-20 h-1.5 bg-white/30 rounded-full" />
@@ -211,7 +213,7 @@ export default function About() {
                   </div>
                   <div className="lg:col-span-4 order-1 lg:order-2">
                     <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white/10">
-                      <Image src="/images/02--Swetha Madam.jpg" alt="CH Swetha Reddy" fill className="object-cover" />
+                      <Image src="/images/12(a)--Swetha Madam.jpg" alt="CH Swetha Reddy" fill className="object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                     </div>
                   </div>
