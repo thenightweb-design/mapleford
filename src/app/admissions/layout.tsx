@@ -1,14 +1,9 @@
-import type { Metadata } from "next";
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Admissions | Enroll Now for 2024–25",
-  description:
-    "Begin your child's journey at Mapleford International School. Our admissions process includes enquiry, student interaction, documentation, and onboarding. Apply for Nursery to Grade 10 today.",
-  openGraph: {
-    title: "Admissions at Mapleford International School",
-    description:
-      "Join Mapleford International School, Hyderabad — where global education meets Indian values. Admissions open for Nursery to Grade 10.",
-  },
+  title: 'Admissions Open 2026-27 | Start Your Journey Today',
+  description: 'Join Mapleford International School, the premier CBSE school in Hayathnagar. Admissions open for Nursery to Grade 10. Start your child\'s global future today.',
+  keywords: ['school admissions Hyderabad', 'enrollment open 2026-27', 'private school admissions', 'top CBSE school in Hayathnagar'],
 };
 
 export default function AdmissionsLayout({

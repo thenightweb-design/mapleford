@@ -96,8 +96,8 @@ export default function Header() {
                 <Image
                   src="/ChatGPT Image Jan 14, 2026, 09_10_49 PM.png"
                   alt="Logo"
-                  width={250}
-                  height={72}
+                  width={320}
+                  height={92}
                   className="h-14 sm:h-16 lg:h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
                   priority
                 />
