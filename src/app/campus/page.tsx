@@ -69,26 +69,29 @@ export default function Campus() {
       <Header />
 
       <main className="pt-[90px] lg:pt-[120px]">
-        <section className="py-16 sm:py-24 px-4 text-center relative overflow-hidden min-h-[300px] sm:min-h-[400px] flex items-center justify-center bg-[#d0302b]">
+        <section className="py-20 sm:py-32 px-4 relative overflow-hidden min-h-[400px] flex items-center bg-slate-900">
           <div className="absolute inset-0 z-0">
             <Image 
               src="/images/Image24_000.png" 
               alt="Campus Background" 
-              fill 
-              className="object-cover opacity-40" 
+              fill
+              className="object-cover opacity-60" 
               priority
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent" />
           </div>
-          <div className="relative z-10 max-w-4xl mx-auto">
+          <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              className="max-w-3xl bg-white/5 backdrop-blur-md border border-white/10 p-10 sm:p-14 rounded-[3rem] shadow-2xl"
             >
-              <h1 className="text-[32px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
+              <p className="text-[#d0302b] tracking-[0.4em] text-xs font-bold mb-6 uppercase">Inspiring Infrastructure</p>
+              <h1 className="text-[36px] sm:text-[52px] lg:text-[64px] font-extrabold !text-white leading-[1.1] mb-6 tracking-tighter">
                 Campus
               </h1>
-              <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
+              <p className="!text-white/90 text-lg sm:text-xl font-medium leading-relaxed italic border-l-4 border-[#d0302b] pl-6">
                 Spaces that Inspire | Designed for Discovery | Purposefully Equipped
               </p>
             </motion.div>

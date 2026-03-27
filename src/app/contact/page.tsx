@@ -29,28 +29,29 @@ export default function Contact() {
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
 
         {/* BANNER — Red */}
-        <section className="py-16 sm:py-24 px-4 text-center relative overflow-hidden min-h-[300px] sm:min-h-[400px] flex items-center justify-center bg-[#d0302b]">
+        <section className="py-20 sm:py-32 px-4 relative overflow-hidden min-h-[400px] flex items-center bg-slate-900">
           <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/Image26_000.png"
-              alt="Contact Background"
+            <Image 
+              src="/images/Image26_000.png" 
+              alt="Contact Background" 
               fill
-              className="object-cover opacity-40"
+              className="object-cover opacity-60" 
               priority
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent" />
           </div>
-          <div className="relative z-10 max-w-4xl mx-auto">
+          <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              className="max-w-3xl bg-white/5 backdrop-blur-md border border-white/10 p-10 sm:p-14 rounded-[3rem] shadow-2xl"
             >
-              <h1
-                className="text-[32px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter "
-              >
+              <p className="text-[#d0302b] tracking-[0.4em] text-xs font-bold mb-6 uppercase">Get in Touch</p>
+              <h1 className="text-[36px] sm:text-[52px] lg:text-[64px] font-extrabold !text-white leading-[1.1] mb-6 tracking-tighter">
                 Contact Us
               </h1>
-              <p className="!text-white/90 text-xl sm:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight">
+              <p className="!text-white/90 text-lg sm:text-xl font-medium leading-relaxed italic border-l-4 border-[#d0302b] pl-6">
                 We&apos;re here to listen and help your child&apos;s journey.
               </p>
             </motion.div>
@@ -186,8 +187,13 @@ export default function Contact() {
             </div>
             <div className="relative h-[350px] sm:h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8242045580665!2d78.5833215!3d17.3333333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a1234567890%3A0x1234567890abcdef!2sHayathnagar%2C%20Hyderabad%2C%20Telangana%20500070!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-                width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d476.07943994593955!2d78.61484087402879!3d17.333126258670326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba02d6d66dddb%3A0x86420abb8c483eb8!2sMapleford%20International%20school!5e0!3m2!1sen!2sin!4v1774629760837!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
           </div>

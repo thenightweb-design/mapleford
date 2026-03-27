@@ -20,7 +20,7 @@ const steps = [
       'Complete the enquiry form and take the first step toward your child\'s future.'
     ],
     cta: 'ENQUIRE NOW',
-    image: '/images/admissions_step1.png',
+    image: '/images/admissions_step1_new.png',
     bg: 'white',
   },
   {
@@ -59,7 +59,7 @@ const steps = [
       'With warmth and clarity, families are guided every step of the way. Marking the beginning of a meaningful and inspiring journey together.'
     ],
     cta: null,
-    image: '/images/admissions_step4.png',
+    image: '/images/admissions_step4_new.png',
     bg: 'red',
   }
 ];
@@ -88,25 +88,30 @@ export default function Admissions() {
 
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
 
-        {/* BANNER */}
-        <section className="py-16 sm:py-24 px-4 text-center relative overflow-hidden min-h-[300px] sm:min-h-[420px] flex items-center justify-center bg-[#d0302b]">
+        <section className="py-20 sm:py-32 px-4 relative overflow-hidden min-h-[400px] flex items-center bg-slate-900">
           <div className="absolute inset-0 z-0">
             <Image 
               src="/images/Image25.png" 
               alt="Admissions Background" 
               fill
-              className="object-cover opacity-40" 
+              className="object-cover opacity-60" 
               priority
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent" />
           </div>
-          <div className="relative z-10 max-w-4xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <p className="!text-white/80 tracking-[0.3em] text-sm font-bold mb-4">Your Journey Starts Here</p>
-              <h1 className="text-[32px] sm:text-[54px] lg:text-[68px] font-bold !text-white leading-tight mb-4 tracking-tighter ">
+          <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-2xl bg-white/5 backdrop-blur-md border border-white/10 p-10 sm:p-14 rounded-[3rem] shadow-2xl"
+            >
+              <p className="text-[#d0302b] tracking-[0.4em] text-xs font-bold mb-6 uppercase">Your Journey Starts Here</p>
+              <h1 className="text-[36px] sm:text-[52px] lg:text-[64px] font-extrabold !text-white leading-[1.1] mb-6 tracking-tighter">
                 Admissions
               </h1>
-              <p className="!text-white/90 text-xl lg:text-2xl max-w-2xl mx-auto font-bold tracking-wide italic leading-tight ">
-                A Holistic Education for a Global Future
+              <p className="!text-white/90 text-lg sm:text-xl font-medium leading-relaxed italic border-l-4 border-[#d0302b] pl-6">
+                A Holistic Education for a Global Future. Join us and shape your child&apos;s tomorrow.
               </p>
             </motion.div>
           </div>
