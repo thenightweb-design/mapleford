@@ -1,0 +1,21 @@
+{
+  "name": "Mapleford International School",
+  "short_name": "Mapleford",
+  "description": "Premium CBSE school in Hayathnagar, Hyderabad, blending academic excellence with Canadian pedagogy.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d0302b",
+  "icons": [
+    {
+      "src": "/SHEI.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/SHEI.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

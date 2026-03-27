@@ -1,14 +1,9 @@
-import type { Metadata } from "next";
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Curriculum | CBSE + Canadian Pedagogy",
-  description:
-    "Mapleford International School offers a unique curriculum blending CBSE academic excellence with Maple Bear Canadian pedagogy. Covering Pre-School, Elementary, Middle School, and High School.",
-  openGraph: {
-    title: "Curriculum | CBSE & Canadian Pedagogy at Mapleford",
-    description:
-      "World-class education for Nursery to Grade 10 — CBSE aligned, Canadian inspired. Discover Mapleford's holistic curriculum pathway.",
-  },
+  title: 'CBSE & Canadian Curriculum | Maple Bear Pedagogy',
+  description: 'Experience a unique blend of CBSE academic excellence and Canadian pedagogy at Mapleford International School. We focus on critical thinking and real-world application.',
+  keywords: ['CBSE curriculum', 'Canadian pedagogy', 'Maple Bear Global Schools', 'experiential learning', 'top curriculum Hyderabad'],
 };
 
 export default function CurriculumLayout({
