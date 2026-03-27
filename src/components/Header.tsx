@@ -82,12 +82,21 @@ export default function Header() {
         style={{
           background: '#FFFFFF',
           borderBottom: isScrolled ? '1px solid rgba(214, 178, 94, 0.2)' : '1px solid rgba(214, 178, 94, 0.15)',
-          height: isScrolled ? '70px' : '90px',
-          '@media (min-width: 1024px)': {
-            height: isScrolled ? '100px' : '130px'
-          }
-        } as any}
+          height: isScrolled ? 'var(--header-height-scrolled)' : 'var(--header-height-normal)'
+        }}
       >
+        <style jsx>{`
+          header {
+            --header-height-normal: 90px;
+            --header-height-scrolled: 70px;
+          }
+          @media (min-width: 1024px) {
+            header {
+              --header-height-normal: 130px;
+              --header-height-scrolled: 100px;
+            }
+          }
+        `}</style>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="flex justify-between items-center h-full">
             {/* Left - Logo */}
