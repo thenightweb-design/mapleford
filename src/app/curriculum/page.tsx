@@ -13,7 +13,7 @@ const curriculumStages = [
         title: "Pre-School",
         grades: "Nursery | JKG | UKG",
         description: "Our play-based, inquiry-led Maple Bear early learning model nurtures social-emotional growth while building strong foundations in early literacy and numeracy. With a strong focus on English language development, children learn through storytelling, songs, games, and creative play. The program encourages curiosity, problem-solving, confidence, and resilience, preparing young learners for future academic success.",
-        img: "/images/stage_preschool.png"
+        img: "/images/Preschool.png"
     },
     {
         title: "Elementary School",
@@ -41,7 +41,7 @@ export default function Curriculum() {
             <Header />
             <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
                 {/* SECTION 1 — HERO BANNER */}
-                <section className="py-16 sm:py-24 px-4 relative overflow-hidden min-h-[350px] sm:min-h-[450px] flex items-center bg-slate-900">
+                <section className="py-12 sm:py-16 px-4 relative overflow-hidden min-h-[300px] sm:min-h-[400px] flex items-center bg-slate-900">
                     <div className="absolute inset-0 z-0">
                         <Image 
                             src="/images/Image23.png" 
@@ -74,9 +74,9 @@ export default function Curriculum() {
                     <div className="max-w-6xl mx-auto">
                         <motion.div
                             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-                            className="bg-white rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-20 shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)] border border-gray-50 text-center"
+                            className="bg-white rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-10 shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)] border border-gray-50 text-center"
                         >
-                            <p className="text-xl sm:text-2xl lg:text-3xl leading-relaxed text-[#000000] font-medium">
+                            <p className="text-xl sm:text-2xl lg:text-3xl leading-snug text-[#000000] font-medium">
                                 At Mapleford International School, learning is shaped by a powerful collaboration with <span className="text-[#d0302b] font-bold underline decoration-red-200 underline-offset-8">Maple Bear Global Schools, Canada</span>, a world leader in bilingual, inquiry-based education operating across 35+ countries and 450+ schools. This association helps students benefit from the proven strengths of the Canadian education system, consistently ranked among the world’s best, while staying firmly aligned to India’s esteemed CBSE framework.
                             </p>
                         </motion.div>
@@ -84,7 +84,7 @@ export default function Curriculum() {
                 </section>
 
                 {/* The Mapleford Edge */}
-                <section className="py-20 bg-white overflow-hidden">
+                <section className="py-12 bg-white overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex flex-col items-center gap-12 text-center">
                             {/* Unified Shadow Box containing Title, Description, and Images */}
@@ -94,18 +94,18 @@ export default function Curriculum() {
                                 viewport={{ once: true, margin: "-100px" }}
                                 variants={fadeInUp}
                                 transition={{ duration: 0.8 }}
-                                className="w-full max-w-[1400px] mx-auto bg-white rounded-3xl shadow-[0_30px_100px_rgba(0,0,0,0.08)] p-8 md:p-14 border border-gray-50 flex flex-col items-center"
+                                className="w-full max-w-[1400px] mx-auto bg-white rounded-3xl shadow-[0_30px_100px_rgba(0,0,0,0.08)] p-6 md:p-10 border border-gray-50 flex flex-col items-center"
                             >
                                 {/* Title and Description */}
                                 <div className="max-w-5xl mx-auto mb-16">
                                     <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold mb-8 leading-tight tracking-tighter ">
                                         The Mapleford Edge
                                     </h2>
-                                    <div className="space-y-6 text-lg lg:text-xl text-[#333333] leading-relaxed">
-                                        <p className="text-xl leading-relaxed">
+                                    <div className="space-y-6 text-lg lg:text-xl text-[#333333] leading-snug">
+                                        <p className="text-xl leading-snug">
                                             Rooted in the proud three-decade legacy of Megacity High School, a purposeful, progressive co-educational institution, Mapleford International School carries forward time-tested values while redefining learning in a rapidly changing world.
                                         </p>
-                                        <p className="text-xl leading-relaxed">
+                                        <p className="text-xl leading-snug">
                                             Anchored in the strength of the CBSE curriculum and enriched through global learning pathways through our academic collaboration with Maple Bear Global Schools, Canada, students gain international perspectives through contemporary teaching approaches and the confidence to navigate global opportunities.
                                         </p>
                                     </div>
@@ -153,9 +153,9 @@ export default function Curriculum() {
                 </section>
 
                 {/* SECTION 3 — SEAMLESS BLEND */}
-                <section className="py-12 bg-slate-50 px-4 overflow-hidden">
+                <section className="py-8 bg-slate-50 px-4 overflow-hidden">
                     <div className="max-w-7xl mx-auto">
-                        <div className="text-center mb-24">
+                        <div className="text-center mb-8">
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                                 <h2 className="text-[22px] sm:text-[38px] lg:text-[48px] font-bold mb-8 text-[#000000] leading-tight tracking-tighter ">
                                     A Seamless Blend <br className="hidden sm:block" /> of Two Powerful Systems
@@ -168,7 +168,7 @@ export default function Curriculum() {
                             </motion.div>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-40">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-8">
                             <motion.div
                                 initial={{ opacity: 0, x: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -216,7 +216,7 @@ export default function Curriculum() {
                         {/* What this means for learners */}
                         <motion.div
                             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-                            className="bg-white p-8 sm:p-16 rounded-[3rem] shadow-2xl relative overflow-hidden mb-20"
+                            className="bg-white p-8 sm:p-16 rounded-[3rem] shadow-2xl relative overflow-hidden mb-10"
                         >
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
                                 <div className="relative z-10 flex flex-col justify-center">
@@ -255,7 +255,7 @@ export default function Curriculum() {
                 </section>
 
                 {/* SECTION 4 — CURRICULUM PATHWAY */}
-                <section className="py-12 bg-[#d0302b] relative overflow-hidden px-4">
+                <section className="py-8 bg-[#d0302b] relative overflow-hidden px-4">
                     <div className="max-w-7xl mx-auto relative z-10">
                         <div className="flex flex-col lg:flex-row gap-20 items-center">
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="w-full lg:w-1/2">
@@ -295,9 +295,9 @@ export default function Curriculum() {
                 </section>
 
                 {/* SECTION 5 — THE STAGES */}
-                <section className="py-12 bg-white px-4">
+                <section className="py-8 bg-white px-4">
                     <div className="max-w-7xl mx-auto">
-                        <div className="space-y-16">
+                        <div className="space-y-10">
                             {curriculumStages.map((stage, idx) => (
                                 <motion.div
                                     key={idx}
@@ -339,7 +339,7 @@ export default function Curriculum() {
                 </section>
 
                 {/* SECTION 6 — FINAL CTA */}
-                <section className="py-12 bg-[#d0302b] px-4 relative overflow-hidden">
+                <section className="py-8 bg-[#d0302b] px-4 relative overflow-hidden">
                     <div className="max-w-5xl mx-auto text-center space-y-12 relative z-10">
                         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                             <h2 className="text-[32px] sm:text-[54px] lg:text-[68px] font-bold text-white leading-none tracking-tighter ">
