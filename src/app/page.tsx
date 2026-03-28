@@ -302,7 +302,7 @@ export default function Home() {
                                 stage: 'Pre-School',
                                 grades: 'Nursery - UKG',
                                 description: 'Play-based early learning that builds curiosity, confidence, and strong foundations.',
-                                image: '/images/Pre-School.JPG'
+                                image: '/images/Preschool.png'
                             },
                             {
                                 id: 'elementary',
