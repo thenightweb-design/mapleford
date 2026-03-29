@@ -59,7 +59,7 @@ const steps = [
       'With warmth and clarity, families are guided every step of the way. Marking the beginning of a meaningful and inspiring journey together.'
     ],
     cta: null,
-    image: '/images/admissions_step4_new.png',
+    image: '/images/BRT_4058.JPG',
     bg: 'red',
   }
 ];
