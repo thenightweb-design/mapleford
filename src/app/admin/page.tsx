@@ -29,13 +29,26 @@ interface Blog {
   updatedAt: string;
 }
 
+interface GalleryItem {
+  _id: string;
+  title: string;
+  imageUrl: string;
+  category: string;
+  description: string;
+  createdAt: string;
+}
+
+
 export default function AdminPanel() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginData, setLoginData] = useState({ username: '', password: '' });
   const [activeTab, setActiveTab] = useState('users');
   const [inquiries, setInquiries] = useState<Inquiry[]>([]);
   const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [galleryItems, setGalleryItems] = useState<GalleryItem[]>([]);
   const [editingBlog, setEditingBlog] = useState<Blog | null>(null);
+  const [editingGallery, setEditingGallery] = useState<GalleryItem | null>(null);
+  
   const [blogForm, setBlogForm] = useState({
     title: '',
     content: '',
@@ -44,6 +57,14 @@ export default function AdminPanel() {
     featuredImage: '',
     published: false
   });
+
+  const [galleryForm, setGalleryForm] = useState({
+    title: '',
+    imageUrl: '',
+    category: 'General',
+    description: ''
+  });
+
 
   useEffect(() => {
     const token = localStorage.getItem('adminToken');
@@ -56,18 +77,22 @@ export default function AdminPanel() {
   const fetchData = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const [inquiriesRes, blogsRes] = await Promise.all([
+      const [inquiriesRes, blogsRes, galleryRes] = await Promise.all([
         fetch('/api/inquiries', { headers: { Authorization: `Bearer ${token}` } }),
-        fetch('/api/blogs/admin', { headers: { Authorization: `Bearer ${token}` } })
+        fetch('/api/blogs/admin', { headers: { Authorization: `Bearer ${token}` } }),
+        fetch('/api/gallery', { headers: { Authorization: `Bearer ${token}` } })
       ]);
       const inquiriesData = await inquiriesRes.json();
       const blogsData = await blogsRes.json();
+      const galleryData = await galleryRes.json();
       setInquiries(inquiriesData);
       setBlogs(blogsData);
+      setGalleryItems(galleryData);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   };
+
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -185,6 +210,59 @@ export default function AdminPanel() {
     }
   };
 
+  const handleGallerySubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const token = localStorage.getItem('adminToken');
+      const method = editingGallery ? 'PUT' : 'POST';
+      const url = editingGallery ? `/api/gallery/${editingGallery._id}` : '/api/gallery';
+
+      const res = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify(galleryForm)
+      });
+
+      if (res.ok) {
+        setGalleryForm({ title: '', imageUrl: '', category: 'General', description: '' });
+        setEditingGallery(null);
+        fetchData();
+      }
+    } catch (error) {
+      console.error('Error saving gallery item:', error);
+    }
+  };
+
+  const deleteGalleryItem = async (id: string) => {
+    if (confirm('Are you sure you want to delete this image?')) {
+      try {
+        const token = localStorage.getItem('adminToken');
+        await fetch(`/api/gallery/${id}`, {
+          method: 'DELETE',
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        fetchData();
+      } catch (error) {
+        console.error('Error deleting gallery item:', error);
+      }
+    }
+  };
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setGalleryForm({ ...galleryForm, imageUrl: reader.result as string });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+
   if (!isLoggedIn) {
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -281,7 +359,18 @@ export default function AdminPanel() {
             >
               Blog Management ({blogs.length})
             </button>
+            <button
+              onClick={() => setActiveTab('gallery')}
+              className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                activeTab === 'gallery'
+                  ? 'border-red-500 text-red-600'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
+            >
+              Gallery Management ({galleryItems.length})
+            </button>
           </nav>
+
         </div>
 
         {activeTab === 'users' && (
@@ -491,7 +580,146 @@ export default function AdminPanel() {
             </div>
           </motion.div>
         )}
+
+        {activeTab === 'gallery' && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="space-y-8"
+          >
+            <div className="bg-white shadow rounded-lg overflow-hidden">
+              <div className="px-4 py-5 sm:p-6">
+                <h3 className="text-lg leading-6 font-medium text-gray-900 mb-4">
+                  {editingGallery ? 'Edit Gallery Image' : 'Add New Gallery Image'}
+                </h3>
+                <form onSubmit={handleGallerySubmit}>
+                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700">Title</label>
+                      <input
+                        type="text"
+                        value={galleryForm.title}
+                        onChange={(e) => setGalleryForm({ ...galleryForm, title: e.target.value })}
+                        className="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700">Category</label>
+                      <select
+                        value={galleryForm.category}
+                        onChange={(e) => setGalleryForm({ ...galleryForm, category: e.target.value })}
+                        className="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                      >
+                        <option value="General">General</option>
+                        <option value="Campus">Campus</option>
+                        <option value="Events">Events</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Academics">Academics</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="mt-6">
+                    <label className="block text-sm font-medium text-gray-700">Description (Optional)</label>
+                    <textarea
+                      rows={3}
+                      value={galleryForm.description}
+                      onChange={(e) => setGalleryForm({ ...galleryForm, description: e.target.value })}
+                      className="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                    />
+                  </div>
+                  <div className="mt-6">
+                    <label className="block text-sm font-medium text-gray-700">Upload Image</label>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleFileUpload}
+                      className="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-red-50 file:text-red-700 hover:file:bg-red-100"
+                    />
+                    {galleryForm.imageUrl && (
+                      <div className="mt-4 relative w-full h-48 rounded-lg overflow-hidden border">
+                         {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={galleryForm.imageUrl} alt="Preview" className="w-full h-full object-cover" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="mt-6 flex justify-end space-x-3">
+                    {editingGallery && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setEditingGallery(null);
+                          setGalleryForm({ title: '', imageUrl: '', category: 'General', description: '' });
+                        }}
+                        className="bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400"
+                      >
+                        Cancel
+                      </button>
+                    )}
+                    <button
+                      type="submit"
+                      className="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition-colors"
+                    >
+                      {editingGallery ? 'Update' : 'Add'} Image
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div className="bg-white shadow rounded-lg overflow-hidden">
+              <div className="px-4 py-5 sm:p-6">
+                <h3 className="text-lg leading-6 font-medium text-gray-900 mb-4">Existing Gallery Images</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {galleryItems.map((item) => (
+                    <div key={item._id} className="border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                      <div className="aspect-video relative">
+                         {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={item.imageUrl} alt={item.title} className="w-full h-full object-cover" />
+                        <div className="absolute top-2 right-2">
+                          <span className="bg-black/50 text-white text-[10px] px-2 py-1 rounded-full backdrop-blur-sm">
+                            {item.category}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h4 className="font-bold text-gray-900 truncate">{item.title}</h4>
+                        <p className="text-sm text-gray-500 mt-1 line-clamp-2">{item.description}</p>
+                        <div className="mt-4 flex justify-end space-x-2">
+                          <button
+                            onClick={() => {
+                              setEditingGallery(item);
+                              setGalleryForm({
+                                title: item.title,
+                                imageUrl: item.imageUrl,
+                                category: item.category,
+                                description: item.description
+                              });
+                            }}
+                            className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                          >
+                            Edit
+                          </button>
+                          <button
+                            onClick={() => deleteGalleryItem(item._id)}
+                            className="text-red-600 hover:text-red-800 text-sm font-medium"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {galleryItems.length === 0 && (
+                  <p className="text-center text-gray-500 py-8">No images found in gallery.</p>
+                )}
+              </div>
+            </div>
+          </motion.div>
+        )}
       </main>
+
     </div>
   );
 }

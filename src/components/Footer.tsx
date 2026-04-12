@@ -42,7 +42,7 @@ export default function Footer() {
                   Telangana - 501505
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/K8rPz5TjxR8eR6HSA"
+                  href="https://www.google.com/maps/search/?api=1&query=Mapleford+International+school+Hayathnagar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[14px] font-bold underline underline-offset-4 hover:opacity-80 transition-opacity flex items-center gap-2"

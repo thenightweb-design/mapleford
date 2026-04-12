@@ -37,6 +37,8 @@ export default function Header() {
     { title: 'Curriculum', href: '/curriculum' },
     { title: 'Campus', href: '/campus' },
     { title: 'Student Zone', href: '/student-zone' },
+
+
     { title: 'Admissions', href: '/admissions' },
     { title: 'Contact Us', href: '/contact' }
   ];
@@ -90,7 +92,15 @@ export default function Header() {
           <div className="flex justify-between items-center h-full">
             {/* Left - Logo */}
             <div className="flex items-center h-full gap-3 sm:gap-6">
-              <Link href="/" className="flex items-center h-full py-3">
+              <Link 
+                href="/" 
+                className="flex items-center h-full py-3"
+                onClick={() => {
+                  if (pathname === '/') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
+              >
                 <Image
                   src="/ChatGPT Image Jan 14, 2026, 09_10_49 PM.png"
                   alt="Logo"
@@ -100,6 +110,7 @@ export default function Header() {
                   priority
                 />
               </Link>
+
             </div>
 
             {/* Center - Desktop Navigation */}
@@ -158,6 +169,11 @@ export default function Header() {
                         : 'hover:bg-black/5'
                         }`}
                       style={{ fontFamily: '"Lato", sans-serif' }}
+                      onClick={() => {
+                        if (pathname === '/' && (item.href === '/' || !item.href)) {
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                      }}
                     >
                       {item.title}
                       {pathname === (item.href || '/') && (
@@ -167,6 +183,7 @@ export default function Header() {
                         />
                       )}
                     </Link>
+
                   )}
                 </div>
               ))}
@@ -250,7 +267,16 @@ export default function Header() {
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center py-1.5">
-                <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link 
+                  href="/" 
+                  className="flex items-center" 
+                  onClick={() => {
+                    if (pathname === '/') {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
                   <Image
                     src="/ChatGPT Image Jan 14, 2026, 09_10_49 PM.png"
                     alt="Mapleford International School Logo"
@@ -259,6 +285,7 @@ export default function Header() {
                     className="h-16 sm:h-20 w-auto"
                   />
                 </Link>
+
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center gap-2 text-[#000000] hover:text-[#000000] transition-all duration-300"
