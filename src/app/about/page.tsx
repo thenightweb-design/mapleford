@@ -133,17 +133,19 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative w-full flex items-center justify-center lg:mt-0 mt-8 h-[400px]"
+                className="relative w-full flex items-center justify-center lg:mt-0 mt-8 aspect-[846/618]"
               >
-                <div className="relative z-10 w-full max-w-[600px] h-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20">
+                <div className="relative z-10 w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20 bg-white">
                   <Image
                     src="/images/WhatsApp Image 2026-03-19 at 13.48.35.jpeg"
                     alt="Our School of Thought"
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
               </motion.div>
+
+
 
             </div>
           </div>
