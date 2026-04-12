@@ -86,9 +86,35 @@ export default function Contact() {
                         <div className="text-3xl w-12 h-12 rounded-2xl bg-white  flex items-center justify-center shrink-0">{item.icon}</div>
                         <div>
                           <p className="text-xs font-bold text-gray-400 tracking-widest mb-1">{item.title}</p>
-                          <p className="text-lg font-bold text-[#000000]">{item.value}</p>
+                          {item.title === "Our Location" ? (
+                            <a 
+                              href="https://www.google.com/maps/search/?api=1&query=Mapleford+International+school+Hayathnagar"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-lg font-bold text-[#000000] hover:text-[#d0302b] transition-colors"
+                            >
+                              {item.value}
+                            </a>
+                          ) : item.title === "Call Us" ? (
+                            <a 
+                              href={`tel:${item.value.replace(/\s/g, '')}`}
+                              className="text-lg font-bold text-[#000000] hover:text-[#d0302b] transition-colors"
+                            >
+                              {item.value}
+                            </a>
+                          ) : item.title === "Mail Us" ? (
+                            <a 
+                              href={`mailto:${item.value}`}
+                              className="text-lg font-bold text-[#000000] hover:text-[#d0302b] transition-colors"
+                            >
+                              {item.value}
+                            </a>
+                          ) : (
+                            <p className="text-lg font-bold text-[#000000]">{item.value}</p>
+                          )}
                           <p className="text-sm font-medium text-[#000000]">{item.desc}</p>
                         </div>
+
                       </div>
                     </motion.div>
                   ))}
@@ -184,6 +210,8 @@ export default function Contact() {
               <h2 className="text-[26px] sm:text-[38px] lg:text-[48px] font-bold text-white tracking-tighter ">Find Us Here</h2>
               <p className="text-white/80 mt-3 text-lg">Hayathnagar, Hyderabad, Telangana - 501505</p>
             </div>
+
+
             <div className="relative h-[350px] sm:h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d476.07943994593955!2d78.61484087402879!3d17.333126258670326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba02d6d66dddb%3A0x86420abb8c483eb8!2sMapleford%20International%20school!5e0!3m2!1sen!2sin!4v1774629760837!5m2!1sen!2sin"

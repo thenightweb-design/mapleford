@@ -20,7 +20,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 items-start">
 
           {/* Logo Section */}
-          <div className="flex flex-col items-center md:items-start pr-8 md:border-r md:border-white/10 pt-2 pb-0 h-full w-full">
+          <div className="flex flex-col items-center md:items-start md:pr-8 md:border-r md:border-white/10 py-6 md:py-2 h-full w-full">
+
             <Link href="/" className="inline-block transition-all hover:scale-105 duration-500">
               <Image
                 src="/images/footer-logo.png"
@@ -33,7 +34,8 @@ export default function Footer() {
           </div>
 
           {/* Location Section */}
-          <div className="flex flex-col items-center md:items-start px-8 md:border-r md:border-white/10 pt-2 pb-0 h-full w-full space-y-4">
+          <div className="flex flex-col items-center md:items-start md:px-8 md:border-r md:border-white/10 py-6 md:py-2 h-full w-full space-y-4">
+
             <div className="space-y-2 text-center md:text-left">
               <div className="flex flex-col gap-1">
                 <span className="text-[13px] uppercase tracking-widest font-bold" style={{ fontFamily: 'var(--font-body)', color: '#FFFFFF' }}>Location</span>
@@ -42,7 +44,9 @@ export default function Footer() {
                   Telangana - 501505
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/K8rPz5TjxR8eR6HSA"
+                  href="https://www.google.com/maps?cid=9674306750173953720&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=en&gl=IN&source=embed"
+
+
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[14px] font-bold underline underline-offset-4 hover:opacity-80 transition-opacity flex items-center gap-2"
@@ -56,7 +60,8 @@ export default function Footer() {
           </div>
 
           {/* Quick Connect Section */}
-          <div className="flex flex-col items-center md:items-start pl-8 pt-2 pb-0 h-full w-full space-y-2">
+          <div className="flex flex-col items-center md:items-start md:pl-8 py-6 md:py-2 h-full w-full space-y-2">
+
             <div className="text-center md:text-left space-y-2 w-full">
               <span className="text-[13px] uppercase tracking-widest font-bold" style={{ fontFamily: 'var(--font-body)', color: '#FFFFFF' }}>Quick Connect</span>
               <div className="space-y-1">
@@ -76,7 +81,7 @@ export default function Footer() {
         </div>
 
         {/* Navigation & Legal Links */}
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 pt-1 border-t border-white/10 mb-0">
+        <div className="flex flex-wrap justify-center gap-x-4 sm:gap-x-8 gap-y-2 sm:gap-y-4 pt-6 pb-6 border-t border-white/20 mb-0">
           {[
             { label: 'Mandatory Disclosure', href: '/mandatory-disclosure' },
             { label: 'Privacy Policy', href: '/privacy-policy' },
@@ -88,13 +93,14 @@ export default function Footer() {
             <Link
               key={link.label}
               href={link.href}
-              className="font-bold text-[14px] transition-all tracking-wide hover:opacity-80"
+              className="font-bold text-[12px] sm:text-[14px] transition-all tracking-wide hover:opacity-80 px-2"
               style={{ fontFamily: 'var(--font-body)', color: '#FFFFFF' }}
             >
               {link.label}
             </Link>
           ))}
         </div>
+
 
         {/* Global Branding Attribution */}
         <div className="text-center pt-2 border-t border-white/5 space-y-1 px-4">
