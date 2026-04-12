@@ -44,7 +44,8 @@ export default function Footer() {
                   Telangana - 501505
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/sNJS9t1NsUfLhnmL8?g_st=ic"
+                  href="https://www.google.com/maps?cid=9674306750173953720&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=en&gl=IN&source=embed"
+
 
                   target="_blank"
                   rel="noopener noreferrer"
@@ -80,7 +81,7 @@ export default function Footer() {
         </div>
 
         {/* Navigation & Legal Links */}
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 pt-1 border-t border-white/10 mb-0">
+        <div className="flex flex-wrap justify-center gap-x-4 sm:gap-x-8 gap-y-2 sm:gap-y-4 pt-6 pb-6 border-t border-white/20 mb-0">
           {[
             { label: 'Mandatory Disclosure', href: '/mandatory-disclosure' },
             { label: 'Privacy Policy', href: '/privacy-policy' },
@@ -92,13 +93,14 @@ export default function Footer() {
             <Link
               key={link.label}
               href={link.href}
-              className="font-bold text-[14px] transition-all tracking-wide hover:opacity-80"
+              className="font-bold text-[12px] sm:text-[14px] transition-all tracking-wide hover:opacity-80 px-2"
               style={{ fontFamily: 'var(--font-body)', color: '#FFFFFF' }}
             >
               {link.label}
             </Link>
           ))}
         </div>
+
 
         {/* Global Branding Attribution */}
         <div className="text-center pt-2 border-t border-white/5 space-y-1 px-4">
