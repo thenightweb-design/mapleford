@@ -36,9 +36,8 @@ export default function Header() {
     { title: 'About Us', href: '/about' },
     { title: 'Curriculum', href: '/curriculum' },
     { title: 'Campus', href: '/campus' },
+    { title: 'Gallery', href: '/gallery' },
     { title: 'Student Zone', href: '/student-zone' },
-
-
     { title: 'Admissions', href: '/admissions' },
     { title: 'Contact Us', href: '/contact' }
   ];

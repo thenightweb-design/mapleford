@@ -29,7 +29,7 @@ export default function AdmissionModal({ isOpen, onClose }: AdmissionModalProps)
             const res = await fetch('/api/inquiries', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({ ...formData, source: 'Admission Popup' })
             });
             if (res.ok) {
                 setFormSubmitted(true);
