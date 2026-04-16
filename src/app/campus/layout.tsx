@@ -1,15 +1,10 @@
 import { Metadata } from 'next';
+import { getPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Our Campus Facilities | Best Infrastructure in Hyderabad',
-  description: 'Explore our state-of-the-art campus in Hayathnagar, Hyderabad. Modern classrooms, secure buses, science labs, and sports arenas for holistic development.',
-  keywords: ['school facilities Hyderabad', 'modern classrooms', 'school laboratories', 'safe school transport', 'campus tour'],
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return await getPageMetadata('/campus');
+}
 
-export default function CampusLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function CampusLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

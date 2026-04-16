@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import connectDB from '@/lib/mongodb';
 import Gallery from '@/models/Gallery';
 import { verifyToken } from '@/lib/auth';
+import cloudinary from '@/lib/cloudinary';
+
 
 type Props = {
   params: Promise<{ id: string }>
@@ -41,6 +43,15 @@ export async function PUT(request: NextRequest, { params }: Props) {
     await connectDB();
     const { id } = await params;
     const body = await request.json();
+
+    // If imageUrl is base64, upload to Cloudinary
+    if (body.imageUrl && body.imageUrl.startsWith('data:image')) {
+      const uploadResponse = await cloudinary.uploader.upload(body.imageUrl, {
+        folder: 'mapleford/gallery',
+      });
+      body.imageUrl = uploadResponse.secure_url;
+    }
+
     const updatedItem = await Gallery.findByIdAndUpdate(id, body, { new: true });
 
     if (!updatedItem) {
@@ -53,3 +64,4 @@ export async function PUT(request: NextRequest, { params }: Props) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }
+

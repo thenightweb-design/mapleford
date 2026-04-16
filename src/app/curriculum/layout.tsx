@@ -1,15 +1,10 @@
 import { Metadata } from 'next';
+import { getPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'CBSE & Canadian Curriculum | Maple Bear Pedagogy',
-  description: 'Experience a unique blend of CBSE academic excellence and Canadian pedagogy at Mapleford International School. We focus on critical thinking and real-world application.',
-  keywords: ['CBSE curriculum', 'Canadian pedagogy', 'Maple Bear Global Schools', 'experiential learning', 'top curriculum Hyderabad'],
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return await getPageMetadata('/curriculum');
+}
 
-export default function CurriculumLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function CurriculumLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

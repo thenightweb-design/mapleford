@@ -3,6 +3,8 @@ import connectDB from '@/lib/mongodb';
 import Gallery from '@/models/Gallery';
 import { verifyToken } from '@/lib/auth';
 
+import cloudinary from '@/lib/cloudinary';
+
 // GET - Get all gallery images (public)
 export async function GET(request: NextRequest) {
   try {
@@ -25,6 +27,15 @@ export async function POST(request: NextRequest) {
 
     await connectDB();
     const body = await request.json();
+
+    // If imageUrl is base64, upload to Cloudinary
+    if (body.imageUrl && body.imageUrl.startsWith('data:image')) {
+      const uploadResponse = await cloudinary.uploader.upload(body.imageUrl, {
+        folder: 'mapleford/gallery',
+      });
+      body.imageUrl = uploadResponse.secure_url;
+    }
+
     const galleryItem = new Gallery(body);
     await galleryItem.save();
     return NextResponse.json(galleryItem, { status: 201 });
@@ -33,3 +44,4 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }
+
