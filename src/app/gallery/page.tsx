@@ -1,9 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '../../components/Footer';
+
 
 interface GalleryItem {
   _id: string;
@@ -59,34 +61,31 @@ export default function GalleryPage() {
 
       {/* ── Hero ── */}
       <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
-        <section className="relative bg-[#C8102E] py-16 sm:py-20 px-4 flex items-center justify-center" style={{ minHeight: '240px' }}>
-          <div className="absolute inset-0 opacity-10"
-            style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cubes.png')" }} />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent" />
-          <div className="relative z-10 text-center px-6 w-full max-w-3xl mx-auto">
-            <motion.p
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-[#D6B25E] text-[10px] sm:text-xs font-black uppercase tracking-[0.4em] mb-3"
+        <section className="py-16 sm:py-24 px-4 relative overflow-hidden min-h-[350px] sm:min-h-[450px] flex items-center bg-slate-900">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/BRT_4033.JPG"
+              alt="Mapleford Gallery"
+              fill
+              className="object-cover opacity-60"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-transparent" />
+          </div>
+          <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-2xl bg-white/10 backdrop-blur-md border border-white/20 p-8 sm:p-12 rounded-[2.5rem] shadow-2xl"
             >
-              Mapleford International School
-            </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tighter mb-4"
-            >
-              Our Gallery
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="text-white/70 text-sm sm:text-base max-w-xl mx-auto leading-relaxed"
-            >
-              Capturing moments of learning, growth, and joy at Mapleford.
-            </motion.p>
+              <h1 className="text-[32px] sm:text-[48px] lg:text-[60px] font-semibold !text-white leading-tight mb-6 tracking-tighter">
+                Our Gallery
+              </h1>
+              <p className="!text-white/90 text-lg sm:text-xl font-bold tracking-wide italic leading-tight border-l-4 border-[#d0302b] pl-6">
+                Capturing moments of learning, growth, and joy.
+              </p>
+            </motion.div>
           </div>
         </section>
       </div>
