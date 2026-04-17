@@ -58,16 +58,16 @@ export default function GalleryPage() {
       <Header />
 
       {/* ── Hero ── */}
-      <section className="relative pt-[85px] lg:pt-[120px]">
-        <div className="relative h-[35vh] sm:h-[40vh] flex items-center justify-center overflow-hidden bg-[#C8102E]">
+      <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
+        <section className="relative bg-[#C8102E] py-16 sm:py-20 px-4 flex items-center justify-center" style={{ minHeight: '240px' }}>
           <div className="absolute inset-0 opacity-10"
             style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cubes.png')" }} />
           <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent" />
-          <div className="relative z-10 text-center px-4">
+          <div className="relative z-10 text-center px-6 w-full max-w-3xl mx-auto">
             <motion.p
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-[#D6B25E] text-xs font-black uppercase tracking-[0.4em] mb-3"
+              className="text-[#D6B25E] text-[10px] sm:text-xs font-black uppercase tracking-[0.4em] mb-3"
             >
               Mapleford International School
             </motion.p>
@@ -75,7 +75,7 @@ export default function GalleryPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tighter mb-3"
+              className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tighter mb-4"
             >
               Our Gallery
             </motion.h1>
@@ -88,8 +88,9 @@ export default function GalleryPage() {
               Capturing moments of learning, growth, and joy at Mapleford.
             </motion.p>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
 
       {/* ── Content ── */}
       <section className="py-10 sm:py-16 bg-gray-50 min-h-[50vh]">
