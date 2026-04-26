@@ -202,7 +202,6 @@ export default function GalleryPage() {
                           {/* Hover overlay */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 sm:p-6">
                             <p className="text-[#D6B25E] text-[10px] font-black tracking-widest uppercase mb-1">{item.category}</p>
-                            <h3 className="text-white text-base sm:text-lg font-bold tracking-tight">{item.title}</h3>
                             {item.description && (
                               <p className="text-white/70 text-xs mt-1 line-clamp-2">{item.description}</p>
                             )}
@@ -256,7 +255,6 @@ export default function GalleryPage() {
                 <span className="inline-block px-3 py-1 bg-[#D6B25E]/20 text-[#D6B25E] text-[10px] font-black uppercase tracking-widest rounded-full mb-2">
                   {selected.category}
                 </span>
-                <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">{selected.title}</h2>
                 {selected.description && (
                   <p className="text-white/60 mt-2 max-w-xl mx-auto text-sm leading-relaxed">{selected.description}</p>
                 )}

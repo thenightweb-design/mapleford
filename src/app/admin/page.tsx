@@ -101,6 +101,7 @@ export default function AdminDashboard() {
   const [galForm, setGalForm] = useState({ title: '', imageUrl: '', category: 'General', description: '' });
   const [galEditId, setGalEditId] = useState<string | null>(null);
   const [galBusy, setGalBusy] = useState(false);
+  const galFileRef = useRef<HTMLInputElement>(null);
 
   const [seoForm, setSeoForm] = useState<SEOData>({ pagePath: '/', title: '', description: '', keywords: '', ogImage: '' });
   const [seoOk, setSeoOk] = useState(false);
@@ -155,7 +156,12 @@ export default function AdminDashboard() {
     e.preventDefault(); setGalBusy(true);
     const url = galEditId ? `/api/gallery/${galEditId}` : '/api/gallery';
     const res = await fetch(url, { method: galEditId ? 'PUT' : 'POST', headers: { ...H(), 'Content-Type': 'application/json' }, body: JSON.stringify(galForm) });
-    if (res.ok) { setGalForm({ title: '', imageUrl: '', category: 'General', description: '' }); setGalEditId(null); loadAll(); }
+    if (res.ok) { 
+      setGalForm({ title: '', imageUrl: '', category: 'General', description: '' }); 
+      setGalEditId(null); 
+      if (galFileRef.current) galFileRef.current.value = '';
+      loadAll(); 
+    }
     else {
       const err = await res.json();
       alert(`Error: ${err.error || 'Failed to save image'}`);
@@ -495,12 +501,7 @@ export default function AdminDashboard() {
                           <h3 className="text-sm font-black text-gray-900">{galEditId ? 'Edit Image' : 'Add New Image'}</h3>
                         </div>
                         <form onSubmit={saveGallery} className="space-y-4">
-                          <div>
-                            <Label>Title</Label>
-                            <input type="text" value={galForm.title}
-                              onChange={e => setGalForm({...galForm, title:e.target.value})}
-                              className={inp} placeholder="Optional title" />
-                          </div>
+
                           <div>
                             <Label>Category</Label>
                             <div className="space-y-2">
@@ -517,14 +518,11 @@ export default function AdminDashboard() {
                               )}
                             </div>
                           </div>
-                          <div>
-                            <Label>Description</Label>
-                            <textarea rows={2} value={galForm.description} onChange={e => setGalForm({...galForm, description:e.target.value})} className={`${inp} resize-none`} placeholder="Optional" />
-                          </div>
+
                           <div className="border-t border-[#e8d5a0]/40 pt-4 space-y-3">
                             <div>
                               <Label>Upload File</Label>
-                              <input type="file" accept="image/*"
+                                <input type="file" accept="image/*" ref={galFileRef}
                                 onChange={e => {
                                   const f = e.target.files?.[0]; if (!f) return;
                                   const r = new FileReader(); r.onloadend = () => setGalForm({...galForm, imageUrl: r.result as string}); r.readAsDataURL(f);
@@ -597,8 +595,7 @@ export default function AdminDashboard() {
                                   </div>
                                 </div>
                                 <div className="px-4 py-3">
-                                  <p className="text-sm font-semibold text-gray-900 truncate">{item.title}</p>
-                                  <div className="flex items-center justify-between mt-2">
+                                  <div className="flex items-center justify-between">
                                     <button onClick={() => {setGalForm({title:item.title,imageUrl:item.imageUrl,category:item.category,description:item.description}); setGalEditId(item._id); window.scrollTo({top:0});}}
                                       className="text-[11px] font-bold text-gray-400 hover:text-[#C8102E] transition-colors">Edit</button>
                                     <button onClick={() => deleteGal(item._id)}
