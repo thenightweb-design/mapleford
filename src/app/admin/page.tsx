@@ -156,6 +156,10 @@ export default function AdminDashboard() {
     const url = galEditId ? `/api/gallery/${galEditId}` : '/api/gallery';
     const res = await fetch(url, { method: galEditId ? 'PUT' : 'POST', headers: { ...H(), 'Content-Type': 'application/json' }, body: JSON.stringify(galForm) });
     if (res.ok) { setGalForm({ title: '', imageUrl: '', category: 'General', description: '' }); setGalEditId(null); loadAll(); }
+    else {
+      const err = await res.json();
+      alert(`Error: ${err.error || 'Failed to save image'}`);
+    }
     setGalBusy(false);
   };
   const deleteGal = async (id: string) => {
@@ -492,16 +496,26 @@ export default function AdminDashboard() {
                         </div>
                         <form onSubmit={saveGallery} className="space-y-4">
                           <div>
-                            <Label>Title *</Label>
-                            <input type="text" required value={galForm.title}
+                            <Label>Title</Label>
+                            <input type="text" value={galForm.title}
                               onChange={e => setGalForm({...galForm, title:e.target.value})}
-                              className={inp} placeholder="Sports Day 2025" />
+                              className={inp} placeholder="Optional title" />
                           </div>
                           <div>
                             <Label>Category</Label>
-                            <select value={galForm.category} onChange={e => setGalForm({...galForm, category:e.target.value})} className={inp}>
-                              {['General','Campus','Events','Sports','Academics'].map(c => <option key={c}>{c}</option>)}
-                            </select>
+                            <div className="space-y-2">
+                              <select value={galForm.category} onChange={e => setGalForm({...galForm, category:e.target.value})} className={inp}>
+                                {['General','Campus','Events','Sports','Academics','Other'].map(c => <option key={c}>{c}</option>)}
+                              </select>
+                              {galForm.category === 'Other' && (
+                                <input 
+                                  type="text" 
+                                  placeholder="Type new category name..." 
+                                  className={inp}
+                                  onChange={e => setGalForm({...galForm, category: e.target.value})}
+                                />
+                              )}
+                            </div>
                           </div>
                           <div>
                             <Label>Description</Label>
