@@ -39,7 +39,7 @@ export default function GalleryPage() {
     try {
       setLoading(true);
       setError(false);
-      const res = await fetch('/api/gallery');
+      const res = await fetch('/api/gallery', { cache: 'no-store' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       const gallery = Array.isArray(data) ? data : [];

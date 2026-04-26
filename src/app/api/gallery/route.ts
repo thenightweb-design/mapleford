@@ -5,6 +5,8 @@ import { verifyToken } from '@/lib/auth';
 
 import cloudinary from '@/lib/cloudinary';
 
+export const dynamic = 'force-dynamic';
+
 // GET - Get all gallery images (public)
 export async function GET(request: NextRequest) {
   try {
