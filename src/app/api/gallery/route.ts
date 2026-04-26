@@ -41,9 +41,12 @@ export async function POST(request: NextRequest) {
     const galleryItem = new Gallery(body);
     await galleryItem.save();
     return NextResponse.json(galleryItem, { status: 201 });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error creating gallery item:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    return NextResponse.json({ 
+      error: error.message || 'Internal server error',
+      details: error.http_code ? `Cloudinary Error ${error.http_code}` : undefined
+    }, { status: 500 });
   }
 }
 
