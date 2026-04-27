@@ -101,6 +101,8 @@ export default function AdminDashboard() {
   const [galForm, setGalForm] = useState({ title: '', imageUrl: '', category: 'General', description: '' });
   const [galEditId, setGalEditId] = useState<string | null>(null);
   const [galBusy, setGalBusy] = useState(false);
+  const [isBulk, setIsBulk] = useState(false);
+  const [bulkProgress, setBulkProgress] = useState<{current: number, total: number} | null>(null);
   const galFileRef = useRef<HTMLInputElement>(null);
 
   const [seoForm, setSeoForm] = useState<SEOData>({ pagePath: '/', title: '', description: '', keywords: '', ogImage: '' });
@@ -168,6 +170,50 @@ export default function AdminDashboard() {
     }
     setGalBusy(false);
   };
+  const handleBulkUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files || files.length === 0) return;
+    
+    if (!confirm(`Upload ${files.length} images to "${galForm.category}" category?`)) {
+      if (e.target) e.target.value = '';
+      return;
+    }
+
+    setGalBusy(true);
+    setBulkProgress({ current: 0, total: files.length });
+    
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      const base64 = await new Promise<string>((resolve) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result as string);
+        reader.readAsDataURL(file);
+      });
+      
+      try {
+        const res = await fetch('/api/gallery', {
+          method: 'POST',
+          headers: { ...H(), 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            imageUrl: base64,
+            category: galForm.category,
+            title: file.name.split('.')[0].replace(/[-_]/g, ' ')
+          })
+        });
+        if (!res.ok) throw new Error();
+      } catch (err) {
+        console.error(`Failed to upload ${file.name}`);
+      }
+      setBulkProgress({ current: i + 1, total: files.length });
+    }
+    
+    setBulkProgress(null);
+    setGalBusy(false);
+    if (e.target) e.target.value = '';
+    loadAll();
+    alert('Bulk upload completed successfully!');
+  };
+
   const deleteGal = async (id: string) => {
     if (!confirm('Remove image?')) return;
     await fetch(`/api/gallery/${id}`, { method: 'DELETE', headers: H() });
@@ -496,23 +542,100 @@ export default function AdminDashboard() {
                     {/* Form */}
                     <div className="lg:col-span-1">
                       <div className="bg-white rounded-2xl border border-[#e8d5a0]/60 p-6 shadow-sm sticky top-8">
-                        <div className="flex items-center space-x-2 mb-5">
-                          <div className="w-1 h-5 bg-gradient-to-b from-[#C8102E] to-[#D6B25E] rounded-full" />
-                          <h3 className="text-sm font-black text-gray-900">{galEditId ? 'Edit Image' : 'Add New Image'}</h3>
+                        <div className="flex items-center justify-between mb-5">
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1 h-5 bg-gradient-to-b from-[#C8102E] to-[#D6B25E] rounded-full" />
+                            <h3 className="text-sm font-black text-gray-900">{galEditId ? 'Edit Image' : isBulk ? 'Bulk Upload' : 'Add New Image'}</h3>
+                          </div>
+                          {!galEditId && (
+                            <button 
+                              type="button"
+                              onClick={() => setIsBulk(!isBulk)}
+                              className="text-[10px] font-bold text-[#D6B25E] hover:text-[#C8102E] uppercase tracking-widest border border-[#D6B25E]/30 px-2 py-1 rounded-lg transition-colors"
+                            >
+                              {isBulk ? 'Single Upload' : 'Bulk Upload'}
+                            </button>
+                          )}
                         </div>
+
+                        {isBulk ? (
+                          <div className="space-y-4">
+                            <div>
+                              <Label>Category for all images</Label>
+                              <div className="space-y-2">
+                                <select value={['General','Campus','Events','Sports','Academics'].includes(galForm.category) ? galForm.category : 'Other'} 
+                                  onChange={e => setGalForm({...galForm, category:e.target.value})} className={inp}>
+                                  {['General','Campus','Events','Sports','Academics','Other'].map(c => <option key={c}>{c}</option>)}
+                                </select>
+                                {(!['General','Campus','Events','Sports','Academics'].includes(galForm.category) || galForm.category === 'Other') && (
+                                  <input 
+                                    type="text" 
+                                    placeholder="Type custom category name..." 
+                                    className={inp}
+                                    value={galForm.category === 'Other' ? '' : galForm.category}
+                                    onChange={e => setGalForm({...galForm, category: e.target.value})}
+                                  />
+                                )}
+                              </div>
+                            </div>
+                            
+                            <div className={`border-2 border-dashed ${galBusy ? 'border-gray-200 bg-gray-50' : 'border-[#e8d5a0] bg-[#FFFDF7]'} rounded-2xl p-8 text-center transition-all`}>
+                              <input 
+                                type="file" 
+                                multiple 
+                                accept="image/*" 
+                                className="hidden" 
+                                id="bulk-file-input"
+                                onChange={handleBulkUpload}
+                                disabled={galBusy}
+                              />
+                              <label htmlFor="bulk-file-input" className={galBusy ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}>
+                                <div className="w-12 h-12 bg-[#FDF6E8] rounded-full flex items-center justify-center mx-auto mb-3">
+                                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8102E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                </div>
+                                <p className="text-sm font-bold text-gray-900">{galBusy ? 'Uploading...' : 'Click to select multiple images'}</p>
+                                <p className="text-xs text-gray-400 mt-1">Files will be uploaded one by one</p>
+                              </label>
+                            </div>
+
+                            {bulkProgress && (
+                              <div className="space-y-2 pt-2">
+                                <div className="flex justify-between text-[10px] font-black text-gray-500 uppercase tracking-widest">
+                                  <span>Progress</span>
+                                  <span>{bulkProgress.current} / {bulkProgress.total}</span>
+                                </div>
+                                <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
+                                  <motion.div 
+                                    className="h-full bg-[#C8102E]"
+                                    initial={{ width: 0 }}
+                                    animate={{ width: `${(bulkProgress.current / bulkProgress.total) * 100}%` }}
+                                    transition={{ type: "spring", bounce: 0, duration: 0.3 }}
+                                  />
+                                </div>
+                              </div>
+                            )}
+
+                            <div className="bg-[#FDF6E8] border border-[#D6B25E]/40 rounded-xl px-4 py-3">
+                              <p className="text-[10px] font-bold text-gray-700">Bulk Tips</p>
+                              <p className="text-[10px] text-gray-400 mt-0.5">Filename will be used as the image title. You can edit them individually after upload.</p>
+                            </div>
+                          </div>
+                        ) : (
                         <form onSubmit={saveGallery} className="space-y-4">
 
                           <div>
                             <Label>Category</Label>
                             <div className="space-y-2">
-                              <select value={galForm.category} onChange={e => setGalForm({...galForm, category:e.target.value})} className={inp}>
+                              <select value={['General','Campus','Events','Sports','Academics'].includes(galForm.category) ? galForm.category : 'Other'} 
+                                onChange={e => setGalForm({...galForm, category:e.target.value})} className={inp}>
                                 {['General','Campus','Events','Sports','Academics','Other'].map(c => <option key={c}>{c}</option>)}
                               </select>
-                              {galForm.category === 'Other' && (
+                              {(!['General','Campus','Events','Sports','Academics'].includes(galForm.category) || galForm.category === 'Other') && (
                                 <input 
                                   type="text" 
-                                  placeholder="Type new category name..." 
+                                  placeholder="Type custom category name..." 
                                   className={inp}
+                                  value={galForm.category === 'Other' ? '' : galForm.category}
                                   onChange={e => setGalForm({...galForm, category: e.target.value})}
                                 />
                               )}
@@ -556,6 +679,7 @@ export default function AdminDashboard() {
                             )}
                           </div>
                         </form>
+                        )}
 
                         {/* Live sync notice */}
                         <div className="mt-5 flex items-start space-x-2 bg-[#FDF6E8] border border-[#D6B25E]/40 rounded-xl px-4 py-3">
