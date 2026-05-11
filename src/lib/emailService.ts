@@ -154,3 +154,84 @@ export async function sendConfirmationEmail(inquiryData: InquiryData) {
     throw new Error('Failed to send confirmation email');
   }
 }
+
+export async function sendAdminNotificationEmail(inquiryData: any) {
+  const { parentName, email, contactNumber, childName, childDob, gradeApplying, message, source } = inquiryData;
+
+  const emailHtml = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <style>
+        body { font-family: sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px; }
+        .header { background: #d0302b; color: white; padding: 15px; border-radius: 8px 8px 0 0; text-align: center; }
+        .content { padding: 20px; }
+        .field { margin-bottom: 15px; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; }
+        .label { font-weight: bold; color: #666; font-size: 12px; text-transform: uppercase; }
+        .value { font-size: 16px; color: #111; }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h2>New Form Submission</h2>
+          <p>Source: ${source || 'Website'}</p>
+        </div>
+        <div class="content">
+          <div class="field">
+            <div class="label">Parent Name</div>
+            <div class="value">${parentName}</div>
+          </div>
+          <div class="field">
+            <div class="label">Email Address</div>
+            <div class="value">${email}</div>
+          </div>
+          <div class="field">
+            <div class="label">Contact Number</div>
+            <div class="value">${contactNumber}</div>
+          </div>
+          <div class="field">
+            <div class="label">Child's Name</div>
+            <div class="value">${childName}</div>
+          </div>
+          ${childDob ? `
+          <div class="field">
+            <div class="label">Child's Date of Birth</div>
+            <div class="value">${new Date(childDob).toLocaleDateString()}</div>
+          </div>` : ''}
+          <div class="field">
+            <div class="label">Grade Applying For / Subject</div>
+            <div class="value">${gradeApplying}</div>
+          </div>
+          ${message ? `
+          <div class="field">
+            <div class="label">Message</div>
+            <div class="value">${message}</div>
+          </div>` : ''}
+        </div>
+        <div style="text-align: center; font-size: 12px; color: #999; margin-top: 20px;">
+          This inquiry was received from the Maple Ford International School website.
+        </div>
+      </div>
+    </body>
+    </html>
+  `;
+
+  const mailOptions = {
+    from: `"Maple Ford Website" <${process.env.SMTP_USER}>`,
+    to: "info@maplefordinternational.com",
+    subject: `New Inquiry: ${parentName} - ${gradeApplying}`,
+    html: emailHtml,
+    replyTo: email
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    return { success: true };
+  } catch (error) {
+    console.error('Error sending admin notification:', error);
+    throw new Error('Failed to send admin notification');
+  }
+}

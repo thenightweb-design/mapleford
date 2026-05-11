@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import connectDB from '@/lib/mongodb';
 import Inquiry from '@/models/Inquiry';
 import { verifyToken } from '@/lib/auth';
-import { sendConfirmationEmail } from '@/lib/emailService';
+import { sendConfirmationEmail, sendAdminNotificationEmail } from '@/lib/emailService';
 
 // POST - Submit inquiry
 export async function POST(request: NextRequest) {
@@ -12,12 +12,17 @@ export async function POST(request: NextRequest) {
     const inquiry = new Inquiry(body);
     await inquiry.save();
 
-    // Send confirmation email (don't block the response if email fails)
+    // Send emails (don't block the response if email fails)
     try {
+      // Send confirmation to the user
       await sendConfirmationEmail(body);
-      console.log('Confirmation email sent successfully');
+      
+      // Send notification to the admin
+      await sendAdminNotificationEmail(body);
+      
+      console.log('Inquiry emails sent successfully');
     } catch (emailError) {
-      console.error('Failed to send confirmation email:', emailError);
+      console.error('Failed to send inquiry emails:', emailError);
       // Continue anyway - inquiry was saved successfully
     }
 
