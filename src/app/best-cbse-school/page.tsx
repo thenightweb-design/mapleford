@@ -71,11 +71,11 @@ export default function BestCBSESchool() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8 }}
                             >
-                                <p className="text-[#D6B25E] text-sm font-bold tracking-[0.3em] uppercase mb-5">Session 2026-27</p>
-                                <h1 className="text-[40px] sm:text-[56px] lg:text-[68px] font-bold text-white leading-[1.05] tracking-tight mb-6">
-                                    Admissions <br />Now Open
+                                <p className="text-white text-sm font-bold tracking-[0.3em] uppercase mb-5">Session 2026-27</p>
+                                <h1 className="text-[40px] sm:text-[56px] lg:text-[68px] font-bold leading-[1.05] tracking-tight mb-6">
+                                    <span className="text-[#d0302b]">Admissions</span> <br /><span className="text-[#d0302b]">Now Open</span>
                                 </h1>
-                                <p className="text-white/85 text-lg sm:text-xl font-medium leading-relaxed max-w-lg mb-8">
+                                <p className="text-white text-lg sm:text-xl font-medium leading-relaxed max-w-lg mb-8">
                                     Best CBSE School in Hayathnagar — blending Indian academic excellence with Canadian pedagogy.
                                 </p>
                                 <div className="flex flex-wrap gap-4">
@@ -201,7 +201,7 @@ export default function BestCBSESchool() {
                                 >
                                     <div className="text-4xl mb-5">{item.icon}</div>
                                     <h3 className="text-lg font-bold mb-3 text-[#000000]">{item.title}</h3>
-                                    <p className="text-[#555555] text-[15px] leading-relaxed">{item.desc}</p>
+                                    <p className="text-[#000000] text-[15px] leading-relaxed">{item.desc}</p>
                                 </motion.div>
                             ))}
                         </div>
@@ -322,13 +322,13 @@ export default function BestCBSESchool() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <button
                                     onClick={() => setIsModalOpen(true)}
-                                    className="px-10 py-4 bg-[#d0302b] hover:bg-[#b02824] text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-colors"
+                                    className="inline-block px-10 py-4 bg-[#d0302b] hover:bg-[#b02824] text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-colors cursor-pointer"
                                 >
                                     APPLY NOW
                                 </button>
                                 <a
                                     href="tel:+919346648486"
-                                    className="px-10 py-4 border-2 border-[#d0302b] text-[#d0302b] hover:bg-[#d0302b] hover:text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-colors text-center"
+                                    className="inline-block px-10 py-4 border-2 border-[#D6B25E] text-[#D6B25E] hover:bg-[#D6B25E] hover:text-white font-bold text-sm tracking-widest uppercase rounded-xl transition-colors text-center cursor-pointer"
                                 >
                                     CALL US
                                 </a>
@@ -340,8 +340,8 @@ export default function BestCBSESchool() {
             </div>
 
             {/* COPYRIGHT */}
-            <div className="bg-[#1A1A1A] py-5 text-center">
-                <p className="text-white/60 text-sm font-medium">
+            <div className="bg-[#d0302b] py-5 text-center">
+                <p className="text-white text-sm font-medium">
                     © {new Date().getFullYear()} Mapleford International School. All Rights Reserved.
                 </p>
             </div>
