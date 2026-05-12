@@ -75,7 +75,7 @@ export default function BestCBSESchool() {
                                 <h1 className="text-[40px] sm:text-[56px] lg:text-[68px] font-bold leading-[1.05] tracking-tight mb-6">
                                     <span className="text-[#d0302b]">Admissions</span> <br /><span className="text-[#d0302b]">Now Open</span>
                                 </h1>
-                                <p className="text-white text-lg sm:text-xl font-medium leading-relaxed max-w-lg mb-8">
+                                <p className="!text-white text-lg sm:text-xl font-medium leading-relaxed max-w-lg mb-8">
                                     Best CBSE School in Hayathnagar — blending Indian academic excellence with Canadian pedagogy.
                                 </p>
                                 <div className="flex flex-wrap gap-4">
@@ -200,8 +200,8 @@ export default function BestCBSESchool() {
                                     className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300"
                                 >
                                     <div className="text-4xl mb-5">{item.icon}</div>
-                                    <h3 className="text-lg font-bold mb-3 text-[#000000]">{item.title}</h3>
-                                    <p className="text-[#000000] text-[15px] leading-relaxed">{item.desc}</p>
+                                    <h3 className="text-lg font-bold mb-3 !text-black">{item.title}</h3>
+                                    <p className="text-[15px] leading-relaxed !text-black">{item.desc}</p>
                                 </motion.div>
                             ))}
                         </div>
