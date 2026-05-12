@@ -102,7 +102,10 @@ export default function BestCBSESchool() {
                                             <div className="w-12 h-1 bg-[#d0302b] rounded-full mt-3"></div>
                                         </div>
                                         <form onSubmit={handleSubmit} className="space-y-4">
-                                            <input required type="text" value={formData.parentName} onChange={e => setFormData({...formData, parentName: e.target.value})} className={inputClass} placeholder="Parent / Guardian Name" />
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                <input required type="text" value={formData.parentName} onChange={e => setFormData({...formData, parentName: e.target.value})} className={inputClass} placeholder="Parent Name" />
+                                                <input required type="text" value={formData.childName} onChange={e => setFormData({...formData, childName: e.target.value})} className={inputClass} placeholder="Child Name" />
+                                            </div>
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                                 <input required type="tel" value={formData.contactNumber} onChange={e => setFormData({...formData, contactNumber: e.target.value})} className={inputClass} placeholder="WhatsApp Number" />
                                                 <select required value={formData.gradeApplying} onChange={e => setFormData({...formData, gradeApplying: e.target.value})} className={`${inputClass} appearance-none cursor-pointer`}>
