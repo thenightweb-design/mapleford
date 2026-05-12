@@ -110,7 +110,7 @@ export async function sendAdminNotificationEmail(inquiryData: InquiryData) {
     const { data, error } = await resend.emails.send({
       from: `Maple Ford Website <${FROM_EMAIL}>`,
       to: [ADMIN_EMAIL],
-      reply_to: email,
+      replyTo: email,
       subject: `New Inquiry: ${parentName} - ${gradeApplying}`,
       html: emailHtml,
     });
