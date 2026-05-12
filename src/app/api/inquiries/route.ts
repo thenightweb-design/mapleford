@@ -13,18 +13,19 @@ export async function POST(request: NextRequest) {
     await inquiry.save();
 
     // Send emails (don't block the response if email fails)
-    try {
-      // Send confirmation to the user
-      await sendConfirmationEmail(body);
-      
-      // Send notification to the admin
-      await sendAdminNotificationEmail(body);
-      
-      console.log('Inquiry emails sent successfully');
-    } catch (emailError) {
-      console.error('Failed to send inquiry emails:', emailError);
-      // Continue anyway - inquiry was saved successfully
-    }
+    // Using Promise.allSettled to attempt both independently
+    Promise.allSettled([
+      sendConfirmationEmail(body)
+        .then(() => console.log('Confirmation email sent to user')),
+      sendAdminNotificationEmail(body)
+        .then(() => console.log('Notification email sent to admin'))
+    ]).then((results) => {
+      results.forEach((result, index) => {
+        if (result.status === 'rejected') {
+          console.error(`Email ${index === 0 ? 'Confirmation' : 'Notification'} failed:`, result.reason);
+        }
+      });
+    });
 
     return NextResponse.json({ message: 'Inquiry submitted successfully' }, { status: 201 });
   } catch (error) {

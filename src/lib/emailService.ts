@@ -1,16 +1,6 @@
-import nodemailer from "nodemailer";
+import { Resend } from 'resend';
 
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || "smtp.gmail.com",
-  port: Number(process.env.SMTP_PORT) || 587,
-  secure: false, // true for 465, false for other ports
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
-
-export default transporter;
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface InquiryData {
   parentName: string;
@@ -20,7 +10,11 @@ interface InquiryData {
   childDob: string;
   gradeApplying: string;
   message?: string;
+  source?: string;
 }
+
+const FROM_EMAIL = process.env.FROM_EMAIL || "onboarding@resend.dev";
+const ADMIN_EMAIL = "info@maplefordinternational.com";
 
 export async function sendConfirmationEmail(inquiryData: InquiryData) {
   const { parentName, email, childName, gradeApplying } = inquiryData;
@@ -33,59 +27,13 @@ export async function sendConfirmationEmail(inquiryData: InquiryData) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Admission Enquiry Confirmation</title>
       <style>
-        body {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          line-height: 1.6;
-          color: #333;
-          max-width: 600px;
-          margin: 0 auto;
-          padding: 20px;
-        }
-        .header {
-          background: linear-gradient(135deg, #d0302b, #8d211d);
-          color: white;
-          padding: 30px;
-          text-align: center;
-          border-radius: 8px 8px 0 0;
-        }
-        .header h1 {
-          margin: 0;
-          font-family: 'Playfair Display', Georgia, serif;
-          font-size: 28px;
-        }
-        .content {
-          background: #ffffff;
-          padding: 30px;
-          border: 1px solid #e0e0e0;
-          border-top: none;
-        }
-        .details {
-          background: #f8f8f8;
-          padding: 20px;
-          border-left: 4px solid #d0302b;
-          margin: 20px 0;
-        }
-        .details h3 {
-          color: #d0302b;
-          margin-top: 0;
-        }
-        .footer {
-          background: #f5f5f5;
-          padding: 20px;
-          text-align: center;
-          border-radius: 0 0 8px 8px;
-          font-size: 14px;
-          color: #666;
-        }
-        .button {
-          display: inline-block;
-          background: linear-gradient(135deg, #d0302b, #8d211d);
-          color: white;
-          padding: 12px 30px;
-          text-decoration: none;
-          border-radius: 6px;
-          margin: 20px 0;
-        }
+        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #d0302b, #8d211d); color: white; padding: 30px; text-align: center; border-radius: 8px 8px 0 0; }
+        .content { background: #ffffff; padding: 30px; border: 1px solid #e0e0e0; border-top: none; }
+        .details { background: #f8f8f8; padding: 20px; border-left: 4px solid #d0302b; margin: 20px 0; }
+        .details h3 { color: #d0302b; margin-top: 0; }
+        .footer { background: #f5f5f5; padding: 20px; text-align: center; border-radius: 0 0 8px 8px; font-size: 14px; color: #666; }
+        .button { display: inline-block; background: #d0302b; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; margin: 20px 0; }
       </style>
     </head>
     <body>
@@ -93,145 +41,87 @@ export async function sendConfirmationEmail(inquiryData: InquiryData) {
         <h1>🍁 Maple Ford International School</h1>
         <p style="margin: 10px 0 0 0; font-size: 16px;">Knowledge | Integrity | Excellence</p>
       </div>
-      
       <div class="content">
         <h2>Thank You for Your Interest!</h2>
         <p>Dear ${parentName},</p>
-        
         <p>Thank you for submitting an admission enquiry for <strong>${childName}</strong> at Maple Ford International School. We have successfully received your application and our admissions team will review it shortly.</p>
-        
         <div class="details">
           <h3>Enquiry Details:</h3>
           <p><strong>Child's Name:</strong> ${childName}</p>
           <p><strong>Grade Applying For:</strong> ${gradeApplying}</p>
           <p><strong>Parent/Guardian:</strong> ${parentName}</p>
         </div>
-        
-        <h3>What's Next?</h3>
-        <ul>
-          <li>Our admissions team will contact you within 2-3 business days</li>
-          <li>We will schedule a campus tour and interaction session</li>
-          <li>You'll receive information about the admission process and fee structure</li>
-        </ul>
-        
-        <p>In the meantime, feel free to explore our website to learn more about our programs, curriculum, and facilities.</p>
-        
         <center>
           <a href="https://wa.me/919346648486" class="button">Chat with Us on WhatsApp</a>
         </center>
-        
         <p style="margin-top: 30px; font-size: 14px; color: #666;">
-          If you have any immediate questions, please don't hesitate to contact us at:
-          <br><strong>Phone:</strong> +91 93466 48486
-          <br><strong>Email:</strong> admissions@maplefordinternational.com
+          If you have any immediate questions, please contact us at: admissions@maplefordinternational.com
         </p>
       </div>
-      
       <div class="footer">
         <p><strong>Maple Ford International School</strong></p>
         <p>Hayathnagar, Hyderabad</p>
-        <p style="font-size: 12px; margin-top: 15px;">
-          This is an automated confirmation email. Please do not reply directly to this email.
-        </p>
       </div>
     </body>
     </html>
   `;
 
-  const mailOptions = {
-    from: `"Maple Ford International School" <${process.env.SMTP_USER}>`,
-    to: email,
-    subject: `Admission Enquiry Confirmation - ${childName}`,
-    html: emailHtml,
-  };
-
   try {
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Message sent: %s', info.messageId);
-    return { success: true, messageId: info.messageId };
+    const { data, error } = await resend.emails.send({
+      from: `Maple Ford International School <${FROM_EMAIL}>`,
+      to: [email],
+      subject: `Admission Enquiry Confirmation - ${childName}`,
+      html: emailHtml,
+    });
+
+    if (error) {
+      console.error('Resend Error (Confirmation):', error);
+      throw error;
+    }
+    return { success: true, data };
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Failed to send confirmation email:', error);
     throw new Error('Failed to send confirmation email');
   }
 }
 
-export async function sendAdminNotificationEmail(inquiryData: any) {
+export async function sendAdminNotificationEmail(inquiryData: InquiryData) {
   const { parentName, email, contactNumber, childName, childDob, gradeApplying, message, source } = inquiryData;
 
   const emailHtml = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="utf-8">
-      <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px; }
-        .header { background: #d0302b; color: white; padding: 15px; border-radius: 8px 8px 0 0; text-align: center; }
-        .content { padding: 20px; }
-        .field { margin-bottom: 15px; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; }
-        .label { font-weight: bold; color: #666; font-size: 12px; text-transform: uppercase; }
-        .value { font-size: 16px; color: #111; }
-      </style>
-    </head>
-    <body>
-      <div class="container">
-        <div class="header">
-          <h2>New Form Submission</h2>
-          <p>Source: ${source || 'Website'}</p>
-        </div>
-        <div class="content">
-          <div class="field">
-            <div class="label">Parent Name</div>
-            <div class="value">${parentName}</div>
-          </div>
-          <div class="field">
-            <div class="label">Email Address</div>
-            <div class="value">${email}</div>
-          </div>
-          <div class="field">
-            <div class="label">Contact Number</div>
-            <div class="value">${contactNumber}</div>
-          </div>
-          <div class="field">
-            <div class="label">Child's Name</div>
-            <div class="value">${childName}</div>
-          </div>
-          ${childDob ? `
-          <div class="field">
-            <div class="label">Child's Date of Birth</div>
-            <div class="value">${new Date(childDob).toLocaleDateString()}</div>
-          </div>` : ''}
-          <div class="field">
-            <div class="label">Grade Applying For / Subject</div>
-            <div class="value">${gradeApplying}</div>
-          </div>
-          ${message ? `
-          <div class="field">
-            <div class="label">Message</div>
-            <div class="value">${message}</div>
-          </div>` : ''}
-        </div>
-        <div style="text-align: center; font-size: 12px; color: #999; margin-top: 20px;">
-          This inquiry was received from the Maple Ford International School website.
-        </div>
+    <div style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
+      <div style="background: #d0302b; color: white; padding: 15px; border-radius: 8px 8px 0 0; text-align: center;">
+        <h2>New Form Submission</h2>
+        <p>Source: ${source || 'Website'}</p>
       </div>
-    </body>
-    </html>
+      <div style="padding: 20px;">
+        <p><strong>Parent Name:</strong> ${parentName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Contact:</strong> ${contactNumber}</p>
+        <p><strong>Child's Name:</strong> ${childName}</p>
+        ${childDob ? `<p><strong>DOB:</strong> ${new Date(childDob).toLocaleDateString()}</p>` : ''}
+        <p><strong>Grade/Subject:</strong> ${gradeApplying}</p>
+        ${message ? `<p><strong>Message:</strong> ${message}</p>` : ''}
+      </div>
+    </div>
   `;
 
-  const mailOptions = {
-    from: `"Maple Ford Website" <${process.env.SMTP_USER}>`,
-    to: "info@maplefordinternational.com",
-    subject: `New Inquiry: ${parentName} - ${gradeApplying}`,
-    html: emailHtml,
-    replyTo: email
-  };
-
   try {
-    await transporter.sendMail(mailOptions);
-    return { success: true };
+    const { data, error } = await resend.emails.send({
+      from: `Maple Ford Website <${FROM_EMAIL}>`,
+      to: [ADMIN_EMAIL],
+      replyTo: email,
+      subject: `New Inquiry: ${parentName} - ${gradeApplying}`,
+      html: emailHtml,
+    });
+
+    if (error) {
+      console.error('Resend Error (Admin Notification):', error);
+      throw error;
+    }
+    return { success: true, data };
   } catch (error) {
-    console.error('Error sending admin notification:', error);
+    console.error('Failed to send admin notification:', error);
     throw new Error('Failed to send admin notification');
   }
 }
