@@ -152,12 +152,13 @@ export default function BestCBSESchool() {
                             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                                 <p className="text-[#d0302b] text-xs font-bold tracking-[0.3em] uppercase mb-3">About Us</p>
                                 <h2 className="text-[28px] sm:text-[36px] lg:text-[44px] font-bold leading-tight tracking-tight text-[#000000] mb-6">
-                                    Crafting Brilliant Minds
+                                    A New Era of Global Education
                                 </h2>
                                 <div className="w-16 h-1 bg-[#D6B25E] rounded-full mb-8" />
                                 <div className="space-y-5 text-lg leading-relaxed text-[#444444] mb-10">
-                                    <p>Mapleford International School stands as a beacon of modern education in Hayathnagar, Hyderabad. We blend the rigor of the <strong>CBSE curriculum</strong> with the global perspective of <strong>Canadian Maple Bear pedagogy</strong>.</p>
-                                    <p>Our 4-acre green campus is more than a school — it&apos;s an ecosystem designed to nurture curiosity, foster innovation, and build strong character in every student.</p>
+                                    <p>Mapleford International School brings a distinguished new standard of education to Hayathnagar, Hyderabad, where the excellence of the <strong>CBSE curriculum</strong> is enriched with the progressive strength of <strong>Canadian pedagogy</strong>.</p>
+                                    <p>Our approach places every child at the center of learning, encouraging curiosity, inquiry, creativity, collaboration, and confident communication.</p>
+                                    <p>Spacious 4-acre green campus, Mapleford is designed as a vibrant learning ecosystem where academic excellence, character formation, innovation, and global awareness grow together. We prepare learners not only to excel in examinations, but to lead with confidence, compassion, and purpose in a rapidly changing world.</p>
                                 </div>
                                 <button
                                     onClick={() => setIsModalOpen(true)}
@@ -203,49 +204,118 @@ export default function BestCBSESchool() {
                                     className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300"
                                 >
                                     <div className="text-4xl mb-5">{item.icon}</div>
-                                    <h3 className="text-lg font-bold mb-3 !text-black">{item.title}</h3>
-                                    <p className="text-[15px] leading-relaxed !text-black">{item.desc}</p>
+                                    <h3 className="text-lg font-bold mb-3 !text-black" style={{ color: '#000000' }}>{item.title}</h3>
+                                    <p className="text-[15px] leading-relaxed !text-black" style={{ color: '#000000' }}>{item.desc}</p>
                                 </motion.div>
                             ))}
                         </div>
                     </div>
                 </section>
 
-                {/* ========== SECTION 4: OUR FACILITIES ========== */}
-                <section className="py-20 lg:py-28 bg-white">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-16">
-                            <p className="text-[#d0302b] text-xs font-bold tracking-[0.3em] uppercase mb-3">Our Facilities</p>
-                            <h2 className="text-[28px] sm:text-[36px] lg:text-[48px] font-bold text-[#000000] tracking-tight">
-                                World-Class Infrastructure
-                            </h2>
-                            <div className="w-16 h-1 bg-[#D6B25E] mx-auto mt-5 rounded-full" />
-                        </motion.div>
+                {/* ========== SECTION 4: OUR FACILITIES — Synced with Campus Page ========== */}
+                <section id="facilities" className="py-24 bg-white px-4 relative overflow-hidden">
+                    <div className="max-w-7xl mx-auto relative z-10">
+                        <div className="text-center mb-20">
+                            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                                <p className="text-[#d0302b] text-xs font-bold tracking-[0.3em] uppercase mb-3">Our Facilities</p>
+                                <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] font-bold text-[#000000] tracking-tight leading-tight mb-6">
+                                    World-Class Infrastructure
+                                </h2>
+                                <div className="w-24 h-1.5 bg-[#d0302b] mx-auto rounded-full" />
+                            </motion.div>
+                        </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Academic Infrastructure — Alternating high-impact blocks */}
+                        <div className="space-y-24 mb-32">
                             {[
-                                { title: "Science & Computer Labs", desc: "State-of-the-art STEM labs equipped for hands-on experiments and digital learning.", img: "/images/campus_science_lab.png" },
-                                { title: "Library & Reading Rooms", desc: "A vibrant library with thousands of books and quiet reading spaces for focused study.", img: "/images/campus_library.png" },
-                                { title: "Sports Grounds", desc: "Expansive grounds for cricket, football, basketball, and athletics with professional coaching.", img: "/images/sports_football.png" },
-                                { title: "Smart Classrooms", desc: "Technology-integrated classrooms with smart boards for interactive and engaging learning.", img: "/images/campus_classroom.png" },
-                            ].map((facility, idx) => (
+                                {
+                                    title: "Smart & Well-ventilated Classrooms",
+                                    subtitle: "Smart. Bright. Engaging",
+                                    description: "Our classrooms are designed to be open, bright, and technology-enabled—spaces where students learn with focus and comfort. With digital boards and projectors, lessons become dynamic and visual.",
+                                    image: "/images/campus_classroom.png",
+                                },
+                                {
+                                    title: "Science Labs",
+                                    subtitle: "Explore. Experiment. Discover.",
+                                    description: "Dedicated Physics, Chemistry, and Biology laboratories provide students with hands-on learning experiences that bring science to life. Well-equipped and thoughtfully designed, these labs encourage observation and inquiry.",
+                                    image: "/images/campus_science_lab.png",
+                                },
+                                {
+                                    title: "Computer Lab",
+                                    subtitle: "Learn. Code. Innovate.",
+                                    description: "Our modern computer lab supports technology-integrated learning and digital literacy. With updated systems and guided instruction, students develop essential computing skills and responsible digital habits.",
+                                    image: "/images/campus_computer_lab.png",
+                                },
+                                {
+                                    title: "Library",
+                                    subtitle: "Quiet. Inviting. Inspiring.",
+                                    description: "Our library is a calm and welcoming space where curiosity finds direction. Stocked with a wide range of age-appropriate books and reference materials, it encourages research and reflection.",
+                                    image: "/images/campus_library.png",
+                                }
+                            ].map((fac, idx) => (
                                 <motion.div
                                     key={idx}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: idx * 0.1 }}
-                                    className="group bg-[#F8F8F8] rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+                                    initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+                                    className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20`}
                                 >
-                                    <div className="relative h-[250px] overflow-hidden">
-                                        <Image src={facility.img} alt={facility.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <div className="w-full lg:w-1/2 relative">
+                                        <div className="absolute -inset-4 bg-gray-50 rounded-[3rem] -z-10 rotate-1 opacity-50" />
+                                        <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-white group">
+                                            <img 
+                                                src={fac.image} 
+                                                alt={fac.title} 
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
+                                            />
+                                        </div>
                                     </div>
-                                    <div className="p-8">
-                                        <h3 className="text-xl font-bold text-[#000000] mb-2">{facility.title}</h3>
-                                        <p className="text-[#555555] text-[15px] leading-relaxed">{facility.desc}</p>
+                                    <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left px-4">
+                                        <div className="space-y-3">
+                                            <h3 className="text-3xl sm:text-4xl font-bold text-[#000000] tracking-tight leading-tight">{fac.title}</h3>
+                                            <p className="text-[#d0302b] text-xl font-bold italic">{fac.subtitle}</p>
+                                            <div className="w-16 h-1 bg-[#d0302b] rounded-full mx-auto lg:mx-0" />
+                                        </div>
+                                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                                            {fac.description}
+                                        </p>
                                     </div>
                                 </motion.div>
                             ))}
+                        </div>
+
+                        {/* Sports Arena Section */}
+                        <div className="bg-[#FFFDF7] rounded-[4rem] p-10 sm:p-20 border border-[#e8d5a0]/40 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-[#D6B25E]/5 rounded-full blur-3xl -mr-32 -mt-32" />
+                            <div className="relative z-10">
+                                <div className="text-center mb-16">
+                                    <h3 className="text-[28px] sm:text-[42px] font-bold text-[#000000] tracking-tight mb-4">Sports Arena</h3>
+                                    <div className="w-20 h-1.5 bg-[#D6B25E] mx-auto rounded-full" />
+                                    <p className="mt-6 text-xl text-gray-600 font-medium">Building strength, confidence, and teamwork</p>
+                                </div>
+                                
+                                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                                    {[
+                                        { icon: '🏏', name: 'Cricket' },
+                                        { icon: '🏀', name: 'Basketball' },
+                                        { icon: '⛸️', name: 'Skating' },
+                                        { icon: '🎾', name: 'Tennis' },
+                                        { icon: '⚽', name: 'Football' },
+                                        { icon: '🎽', name: 'Athletics' },
+                                        { icon: '🏸', name: 'Badminton' },
+                                        { icon: '🏊', name: 'Swimming' },
+                                        { icon: '🏟️', name: 'Indoor Play' },
+                                        { icon: '🪁', name: 'Kids Zone' }
+                                    ].map((sport, i) => (
+                                        <motion.div 
+                                            key={i}
+                                            whileHover={{ y: -5 }}
+                                            className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center justify-center group hover:shadow-xl hover:border-[#D6B25E]/30 transition-all duration-300"
+                                        >
+                                            <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">{sport.icon}</div>
+                                            <span className="text-xs font-black text-gray-900 uppercase tracking-[0.15em]">{sport.name}</span>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
