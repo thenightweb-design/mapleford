@@ -23,7 +23,7 @@ const academicFacilities = [
     title: "Mathematics Lab",
     subtitle: "Think. Solve. Apply.",
     description: "The Mathematics Lab transforms abstract concepts into practical understanding. Through activity-based learning and hands-on tools, students build logical reasoning, problem-solving skills, and confidence—making maths engaging, intuitive, and enjoyable.",
-    image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/campus_math_lab.png",
   },
   {
     title: "Computer Lab",
@@ -41,7 +41,7 @@ const academicFacilities = [
     title: "Resource Rooms",
     subtitle: "Supportive. Inclusive. Individualised.",
     description: "Dedicated resource rooms offer personalised academic and special education support in a nurturing setting. Designed to address diverse learning needs, these spaces ensure every child receives focused attention, encouragement, and the support required to learn at their own pace.",
-    image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200&fit=crop&q=80",
+    image: "/images/campus_resource_room.png",
   }
 ];
 
