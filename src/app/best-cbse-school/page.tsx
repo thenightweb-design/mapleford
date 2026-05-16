@@ -73,7 +73,7 @@ export default function BestCBSESchool() {
                             >
                                 <p className="text-white text-sm font-bold tracking-[0.3em] uppercase mb-5">Session 2026-27</p>
                                 <h1 className="text-[40px] sm:text-[56px] lg:text-[68px] font-bold leading-[1.05] tracking-tight mb-6">
-                                    <span className="text-[#d0302b]">Admissions</span> <br /><span className="text-[#d0302b]">Now Open</span>
+                                    <span className="text-white">Admissions</span> <br /><span className="text-white">Now Open</span>
                                 </h1>
                                 <p className="!text-white text-lg sm:text-xl font-medium leading-relaxed max-w-lg mb-8">
                                     Best CBSE School in Hayathnagar — blending Indian academic excellence with Canadian pedagogy.
