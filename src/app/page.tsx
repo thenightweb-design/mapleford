@@ -17,6 +17,67 @@ const testimonials = [
 ];
 
 export default function Home() {
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "School",
+        "name": "Mapleford International School",
+        "url": "https://www.maplefordinternational.com/",
+        "logo": "https://www.maplefordinternational.com/maple-ford-logo.png",
+        "image": "https://www.maplefordinternational.com/images/Image19.png",
+        "description": "Mapleford International School is one of the best CBSE and international schools in Hyderabad, offering holistic education with CBSE curriculum, global learning practices, modern infrastructure, and student-focused development.",
+        "telephone": "+91 9346648486",
+        "email": "info@maplefordinternational.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Shankar Nagar, Kuntloor Rd, Kolan Shiva Reddy Nagar, Hayathnagar Khalsa",
+            "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
+            "postalCode": "501505",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "17.33312",
+            "longitude": "78.61464"
+        },
+        "hasMap": "https://www.google.com/maps/place/Mapleford+International+School/",
+        "sameAs": [
+            "https://www.facebook.com/people/Mapleford-International-School/61586409117016/",
+            "https://www.instagram.com/maplefordintschool/",
+            "https://share.google/NuuP1CfPrBP72gMlg",
+            "https://www.justdial.com/Rangareddy/Mapleford-International-School-Near-Mother-Dairy-Hayath-Nagar/040PXX40-XX40-161118004753-M3T7_BZDET"
+        ],
+        "areaServed": [
+            "Hyderabad",
+            "Hayathnagar",
+            "LB Nagar",
+            "Vanasthalipuram",
+            "Nagole",
+            "Uppal"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91 9346648486",
+            "contactType": "Admissions",
+            "areaServed": "IN",
+            "availableLanguage": [
+                "English",
+                "Hindi",
+                "Telugu"
+            ]
+        },
+        "keywords": [
+            "Best International School in Hyderabad",
+            "Best CBSE School in Hyderabad",
+            "Top CBSE Schools in Hyderabad",
+            "CBSE Schools in Hayathnagar",
+            "International School in Hyderabad",
+            "School Admissions Hyderabad",
+            "CBSE Curriculum School",
+            "Mapleford International School"
+        ]
+    };
+
     const [showFrenchMotto, setShowFrenchMotto] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [steamIndex, setSteamIndex] = useState(0);
@@ -63,6 +124,12 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(schemaData),
+                }}
+            />
             <Header />
 
             {/* Hero Section with Video */}
