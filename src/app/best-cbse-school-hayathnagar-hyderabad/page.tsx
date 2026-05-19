@@ -7,7 +7,54 @@ import Header from '../../components/Header';
 
 import AdmissionModal from '../../components/AdmissionModal';
 
-export default function BestCBSESchool() {
+export default function HayathnagarPage() {
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "School",
+        "name": "Mapleford International School",
+        "url": "https://www.maplefordinternational.com/best-cbse-school-hayathnagar-hyderabad",
+        "logo": "https://www.maplefordinternational.com/maple-ford-logo.png",
+        "description": "Mapleford International School is one of the best CBSE schools in Hayathnagar, Hyderabad offering world-class education with CBSE curriculum and Canadian pedagogy.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Shankar Nagar, Kuntloor Rd, Kolan Shiva Reddy Nagar, Hayathnagar Khalsa",
+            "addressLocality": "Hayathnagar",
+            "addressRegion": "Telangana",
+            "postalCode": "501505",
+            "addressCountry": "India"
+        },
+        "areaServed": [
+            "Hayathnagar",
+            "Hyderabad",
+            "LB Nagar",
+            "Vanasthalipuram"
+        ],
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "17.33312",
+            "longitude": "78.61464"
+        },
+        "hasMap": "https://www.google.com/maps/place/Mapleford+International+School/",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91 9346648486",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://www.facebook.com/people/Mapleford-International-School/61586409117016/",
+            "https://www.instagram.com/maplefordintschool/",
+            "https://share.google/NuuP1CfPrBP72gMlg",
+            "https://www.justdial.com/Rangareddy/Mapleford-International-School-Near-Mother-Dairy-Hayath-Nagar/040PXX40-XX40-161118004753-M3T7_BZDET"
+        ],
+        "keywords": [
+            "Best CBSE school in Hayathnagar",
+            "Top CBSE schools in Hyderabad",
+            "CBSE school admissions 2026",
+            "International school in Hayathnagar",
+            "Mapleford International School"
+        ]
+    };
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -45,6 +92,12 @@ export default function BestCBSESchool() {
 
     return (
         <div className="min-h-screen bg-white font-sans text-[#000000]">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(schemaData),
+                }}
+            />
             <Header />
 
             <div className="pt-[90px] lg:pt-[120px] overflow-hidden">
