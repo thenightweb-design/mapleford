@@ -255,7 +255,7 @@ export default function Home() {
                                 className="w-full h-full rounded-3xl overflow-hidden shadow-2xl relative"
                             >
                                 <Image
-                                    src="/images/Image19.png"
+                                    src="/images/Home - Campus.png"
                                     alt="Mapleford International School Campus"
                                     fill
                                     className="object-cover"
@@ -376,7 +376,7 @@ export default function Home() {
                                 stage: 'Elementary School',
                                 grades: 'Grade 1 - 5',
                                 description: "Engaging and inquiry-led learning that blends CBSE milestones with Canadian instructional excellence.",
-                                image: '/images/Elementry.png'
+                                image: '/images/Home - Elementary.png'
                             },
                             {
                                 id: 'middle',

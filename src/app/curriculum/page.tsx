@@ -178,7 +178,7 @@ export default function Curriculum() {
                             >
                                 <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white w-full h-full">
                                     <Image 
-                                        src="/images/curriculum_blend.png" 
+                                        src="/images/Curriculum-Holistic Approach.png" 
                                         alt="Seamless Blend" 
                                         fill 
                                         className="object-cover" 
