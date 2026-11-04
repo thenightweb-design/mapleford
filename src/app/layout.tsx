@@ -87,6 +87,9 @@ export const metadata: Metadata = {
     ],
     shortcut: "/favicon-maple.png",
   },
+  verification: {
+    google: "HXWSAcBrKWSf74fDMJ8v60jyDXGI29CWgFGYs6yR1zU",
+  },
   robots: {
     index: true,
     follow: true,

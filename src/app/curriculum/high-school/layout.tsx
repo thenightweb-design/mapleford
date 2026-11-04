@@ -1,6 +1,8 @@
+export const dynamic = 'force-dynamic';
 import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const fallbackMetadata: Metadata = {
   title: "High School Programme | Grade 9 & Grade 10",
   description:
     "Mapleford's High School programme (Grade 9–10) offers a strong CBSE roadmap enriched with critical thinking frameworks, skill-based projects, and global connect opportunities.",
@@ -10,6 +12,10 @@ export const metadata: Metadata = {
       "Grade 9 and Grade 10 — CBSE excellence with global perspectives. Critical thinking, skill-based projects, and the Global Connect program at Mapleford International School.",
   },
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  return await getPageMetadata('/curriculum/high-school', fallbackMetadata);
+}
 
 export default function HighSchoolLayout({
   children,

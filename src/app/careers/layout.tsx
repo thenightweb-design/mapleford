@@ -1,6 +1,8 @@
+export const dynamic = 'force-dynamic';
 import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const fallbackMetadata: Metadata = {
   title: "Careers | Join Our Team",
   description:
     "Explore career opportunities at Mapleford International School, Hyderabad. We are looking for passionate educators, coordinators, and staff who share our commitment to excellence in international education.",
@@ -10,6 +12,10 @@ export const metadata: Metadata = {
       "Join a team of passionate educators shaping the next generation of leaders. View current openings at Mapleford International School, Hyderabad.",
   },
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  return await getPageMetadata('/careers', fallbackMetadata);
+}
 
 export default function CareersLayout({
   children,
