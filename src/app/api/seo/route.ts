@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import connectDB from '@/lib/mongodb';
 import SEO from '@/models/SEO';
 import { verifyToken } from '@/lib/auth';
@@ -37,6 +38,15 @@ export async function POST(request: NextRequest) {
       { title, description, keywords, ogImage, updatedAt: new Date() },
       { upsert: true, new: true }
     );
+
+    // Revalidate the affected page path and layout so changes reflect immediately
+    try {
+      revalidatePath(pagePath, 'layout');
+      revalidatePath(pagePath, 'page');
+      revalidatePath('/', 'layout');
+    } catch (revalidateErr) {
+      console.warn('Could not revalidate path cache:', revalidateErr);
+    }
 
     return NextResponse.json(seo);
   } catch (error) {

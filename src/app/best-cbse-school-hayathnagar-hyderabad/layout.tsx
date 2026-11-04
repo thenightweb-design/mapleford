@@ -1,6 +1,8 @@
+export const dynamic = 'force-dynamic';
 import { Metadata } from 'next';
+import { getPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+const fallbackMetadata: Metadata = {
     title: 'Best CBSE School in Hyderabad | Admissions Open 2026-27',
     description: 'Looking for the best CBSE school in Hayathnagar, Hyderabad? Mapleford International School offers world-class CBSE curriculum with Canadian pedagogy. Admissions open for 2026-27.',
     keywords: [
@@ -16,6 +18,10 @@ export const metadata: Metadata = {
         images: ['/images/Image19.png'],
     },
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+    return await getPageMetadata('/best-cbse-school-hayathnagar-hyderabad', fallbackMetadata);
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     return <>{children}</>;

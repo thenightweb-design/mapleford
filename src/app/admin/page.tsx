@@ -25,6 +25,33 @@ interface SEOData {
   _id?: string; pagePath: string; title: string; description: string; keywords?: string; ogImage?: string;
 }
 
+const AVAILABLE_PAGES = [
+  { path: '/', label: 'Home Page (/)' },
+  { path: '/best-cbse-school-hayathnagar-hyderabad', label: 'CBSE School Landing Page (/best-cbse-school-hayathnagar-hyderabad)' },
+  { path: '/about', label: 'About Us (/about)' },
+  { path: '/about/team', label: 'Our Team (/about/team)' },
+  { path: '/admissions', label: 'Admissions (/admissions)' },
+  { path: '/campus', label: 'Campus (/campus)' },
+  { path: '/curriculum', label: 'Curriculum (/curriculum)' },
+  { path: '/curriculum/pre-school', label: 'Curriculum - Pre-School (/curriculum/pre-school)' },
+  { path: '/curriculum/elementary', label: 'Curriculum - Elementary (/curriculum/elementary)' },
+  { path: '/curriculum/high-school', label: 'Curriculum - High School (/curriculum/high-school)' },
+  { path: '/programs', label: 'Programs (/programs)' },
+  { path: '/gallery', label: 'Gallery (/gallery)' },
+  { path: '/blogs', label: 'Blogs (/blogs)' },
+  { path: '/contact', label: 'Contact Us (/contact)' },
+  { path: '/enquiry', label: 'Enquiry (/enquiry)' },
+  { path: '/brochure', label: 'Brochure (/brochure)' },
+  { path: '/vision', label: 'Vision & Values (/vision)' },
+  { path: '/careers', label: 'Careers (/careers)' },
+  { path: '/student-zone', label: 'Student Zone (/student-zone)' },
+  { path: '/mandatory-disclosure', label: 'Mandatory Disclosure (/mandatory-disclosure)' },
+  { path: '/privacy-policy', label: 'Privacy Policy (/privacy-policy)' },
+  { path: '/refund-policy', label: 'Refund Policy (/refund-policy)' },
+  { path: '/shipping-policy', label: 'Shipping Policy (/shipping-policy)' },
+  { path: '/terms-of-service', label: 'Terms of Service (/terms-of-service)' },
+];
+
 /* ─── Nav ────────────────────────────────────────────────── */
 const NAV = [
   { id: 'overview',  label: 'Overview'      },
@@ -220,12 +247,36 @@ export default function AdminDashboard() {
     setGallery(p => p.filter(g => g._id !== id));
   };
 
+  const [seoBusy, setSeoBusy] = useState(false);
+  const [seoErr, setSeoErr] = useState('');
+
+  const handleSelectPage = (path: string) => {
+    const existing = seoList.find(s => s.pagePath === path);
+    if (existing) {
+      setSeoForm(existing);
+    } else {
+      setSeoForm({ pagePath: path, title: '', description: '', keywords: '', ogImage: '' });
+    }
+  };
+
   const saveSEO = async (e: React.FormEvent) => {
     e.preventDefault();
-    await fetch('/api/seo', { method: 'POST', headers: { ...H(), 'Content-Type': 'application/json' }, body: JSON.stringify(seoForm) });
-    setSeoOk(true); setTimeout(() => setSeoOk(false), 3000);
-    setSeoForm({ pagePath: '/', title: '', description: '', keywords: '', ogImage: '' });
-    loadAll();
+    setSeoBusy(true);
+    setSeoErr('');
+    try {
+      const res = await fetch('/api/seo', { method: 'POST', headers: { ...H(), 'Content-Type': 'application/json' }, body: JSON.stringify(seoForm) });
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.error || `Failed with status ${res.status}`);
+      }
+      setSeoOk(true); setTimeout(() => setSeoOk(false), 4000);
+      loadAll();
+    } catch (err: any) {
+      console.error('Error saving SEO:', err);
+      setSeoErr(err.message || 'Failed to save SEO settings');
+    } finally {
+      setSeoBusy(false);
+    }
   };
 
   const publishBlog = async (e: React.FormEvent) => {
@@ -746,19 +797,99 @@ export default function AdminDashboard() {
                           <div className="w-1 h-5 bg-gradient-to-b from-[#C8102E] to-[#D6B25E] rounded-full" />
                           <h3 className="text-sm font-black text-gray-900">Configure Page SEO</h3>
                         </div>
-                        <p className="text-xs text-gray-400 mb-5 pl-3">Changes load on next page visit.</p>
+                        <p className="text-xs text-gray-400 mb-5 pl-3">Changes reflect immediately across the website.</p>
                         <form onSubmit={saveSEO} className="space-y-4">
-                          <div><Label>Page Path *</Label><input type="text" required value={seoForm.pagePath} onChange={e => setSeoForm({...seoForm, pagePath:e.target.value})} className={inp} placeholder="/about" /><p className="text-[10px] text-gray-400 mt-1">e.g. /, /about, /admissions</p></div>
-                          <div><Label hint={`${seoForm.title.length}/60`}>Meta Title *</Label><input type="text" required maxLength={60} value={seoForm.title} onChange={e => setSeoForm({...seoForm, title:e.target.value})} className={inp} placeholder="About Us | Mapleford" /></div>
-                          <div><Label hint={`${seoForm.description.length}/160`}>Meta Description *</Label><textarea required rows={3} maxLength={160} value={seoForm.description} onChange={e => setSeoForm({...seoForm, description:e.target.value})} className={`${inp} resize-none`} placeholder="Compelling page description…" /></div>
-                          <div><Label hint="comma separated">Keywords</Label><input type="text" value={seoForm.keywords||''} onChange={e => setSeoForm({...seoForm, keywords:e.target.value})} className={inp} placeholder="CBSE school Hyderabad" /></div>
-                          <div><Label>OG Image URL</Label><input type="text" value={seoForm.ogImage||''} onChange={e => setSeoForm({...seoForm, ogImage:e.target.value})} className={inp} placeholder="https://…/image.jpg" /></div>
-                          <button type="submit" className="w-full bg-[#C8102E] hover:bg-[#a80d26] text-white py-3 rounded-xl text-sm font-black transition-all shadow-md shadow-red-100">
-                            Save SEO Settings
-                          </button>
+                          <div>
+                            <Label>Select Page *</Label>
+                            <select
+                              value={seoForm.pagePath}
+                              onChange={e => handleSelectPage(e.target.value)}
+                              className={inp}
+                            >
+                              {AVAILABLE_PAGES.map(p => (
+                                <option key={p.path} value={p.path}>
+                                  {p.label}
+                                </option>
+                              ))}
+                            </select>
+                            <p className="text-[10px] text-gray-400 mt-1">Or edit path manually below:</p>
+                            <input
+                              type="text"
+                              required
+                              value={seoForm.pagePath}
+                              onChange={e => setSeoForm({...seoForm, pagePath: e.target.value.trim()})}
+                              className={`${inp} mt-1.5`}
+                              placeholder="/about"
+                            />
+                          </div>
+                          <div>
+                            <Label hint={`${seoForm.title.length}/70`}>Meta Title *</Label>
+                            <input
+                              type="text"
+                              required
+                              maxLength={120}
+                              value={seoForm.title}
+                              onChange={e => setSeoForm({...seoForm, title: e.target.value})}
+                              className={inp}
+                              placeholder="About Us | Mapleford International School"
+                            />
+                          </div>
+                          <div>
+                            <Label hint={`${seoForm.description.length}/200`}>Meta Description *</Label>
+                            <textarea
+                              required
+                              rows={3}
+                              maxLength={300}
+                              value={seoForm.description}
+                              onChange={e => setSeoForm({...seoForm, description: e.target.value})}
+                              className={`${inp} resize-none`}
+                              placeholder="Compelling page description for search engines…"
+                            />
+                          </div>
+                          <div>
+                            <Label hint="comma separated">Keywords</Label>
+                            <input
+                              type="text"
+                              value={seoForm.keywords || ''}
+                              onChange={e => setSeoForm({...seoForm, keywords: e.target.value})}
+                              className={inp}
+                              placeholder="CBSE school Hyderabad, top school Hayathnagar"
+                            />
+                          </div>
+                          <div>
+                            <Label>OG Image URL</Label>
+                            <input
+                              type="text"
+                              value={seoForm.ogImage || ''}
+                              onChange={e => setSeoForm({...seoForm, ogImage: e.target.value})}
+                              className={inp}
+                              placeholder="https://…/image.jpg"
+                            />
+                          </div>
+                          <div className="flex gap-2 pt-2">
+                            <button
+                              type="submit"
+                              disabled={seoBusy}
+                              className="flex-1 bg-[#C8102E] hover:bg-[#a80d26] disabled:opacity-50 text-white py-3 rounded-xl text-sm font-black transition-all shadow-md shadow-red-100 cursor-pointer"
+                            >
+                              {seoBusy ? 'Saving...' : 'Save SEO Settings'}
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => setSeoForm({ pagePath: '/', title: '', description: '', keywords: '', ogImage: '' })}
+                              className="px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl text-xs font-bold transition-all cursor-pointer"
+                            >
+                              Clear
+                            </button>
+                          </div>
                           {seoOk && (
                             <div className="bg-green-50 border border-green-200 rounded-xl px-4 py-3 text-center">
-                              <p className="text-green-600 text-xs font-bold">✓ SEO settings saved!</p>
+                              <p className="text-green-600 text-xs font-bold">✓ SEO settings saved and updated live on the website!</p>
+                            </div>
+                          )}
+                          {seoErr && (
+                            <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-center">
+                              <p className="text-red-600 text-xs font-bold">✕ {seoErr}</p>
                             </div>
                           )}
                         </form>
@@ -766,25 +897,52 @@ export default function AdminDashboard() {
                     </div>
                     <div className="lg:col-span-3">
                       <div className="bg-white rounded-2xl border border-[#e8d5a0]/60 overflow-hidden shadow-sm">
-                        <div className="px-6 py-4 border-b border-[#e8d5a0]/40 bg-[#FFFDF7]">
-                          <h3 className="text-sm font-black text-gray-900">Configured Pages</h3>
-                          <p className="text-[10px] text-gray-400 mt-0.5">Click to load into editor</p>
+                        <div className="px-6 py-4 border-b border-[#e8d5a0]/40 bg-[#FFFDF7] flex items-center justify-between">
+                          <div>
+                            <h3 className="text-sm font-black text-gray-900">Configured Pages</h3>
+                            <p className="text-[10px] text-gray-400 mt-0.5">Click any page to load and edit its metadata</p>
+                          </div>
+                          <span className="text-[10px] font-bold px-2 py-0.5 bg-[#C8102E]/10 text-[#C8102E] rounded-full">
+                            {seoList.length} pages
+                          </span>
                         </div>
                         {seoList.length === 0
                           ? <Empty label="No pages configured" sub="Use the form to add SEO metadata for your pages." />
-                          : seoList.map((s, i) => (
-                            <button key={s._id} onClick={() => setSeoForm(s)}
-                              className={`w-full px-6 py-4 text-left hover:bg-[#FFFDF7] transition-colors ${i < seoList.length-1 ? 'border-b border-[#e8d5a0]/30' : ''} group`}>
-                              <div className="flex items-start justify-between">
-                                <div className="flex-1 min-w-0 pr-4">
-                                  <code className="text-[11px] font-black text-[#C8102E]">{s.pagePath}</code>
-                                  <p className="text-sm font-semibold text-gray-900 mt-0.5 truncate">{s.title}</p>
-                                  <p className="text-xs text-gray-400 mt-0.5 line-clamp-1">{s.description}</p>
-                                </div>
-                                <span className="text-[10px] font-bold text-[#D6B25E] group-hover:text-[#C8102E] transition-colors flex-shrink-0 mt-1">Edit →</span>
-                              </div>
-                            </button>
-                          ))
+                          : (
+                            <div className="divide-y divide-[#e8d5a0]/30 max-h-[600px] overflow-y-auto">
+                              {seoList.map((s) => (
+                                <button
+                                  key={s._id || s.pagePath}
+                                  type="button"
+                                  onClick={() => {
+                                    setSeoForm(s);
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                  }}
+                                  className="w-full px-6 py-4 text-left hover:bg-[#FFFDF7] transition-colors group cursor-pointer"
+                                >
+                                  <div className="flex items-start justify-between">
+                                    <div className="flex-1 min-w-0 pr-4">
+                                      <div className="flex items-center gap-2">
+                                        <code className="text-[11px] font-black text-[#C8102E] bg-red-50 px-2 py-0.5 rounded">
+                                          {s.pagePath}
+                                        </code>
+                                        {seoForm.pagePath === s.pagePath && (
+                                          <span className="text-[9px] font-bold text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded">
+                                            Currently Editing
+                                          </span>
+                                        )}
+                                      </div>
+                                      <p className="text-sm font-semibold text-gray-900 mt-1 truncate">{s.title}</p>
+                                      <p className="text-xs text-gray-400 mt-0.5 line-clamp-2">{s.description}</p>
+                                    </div>
+                                    <span className="text-[10px] font-bold text-[#D6B25E] group-hover:text-[#C8102E] transition-colors flex-shrink-0 mt-1">
+                                      Edit →
+                                    </span>
+                                  </div>
+                                </button>
+                              ))}
+                            </div>
+                          )
                         }
                       </div>
                     </div>
